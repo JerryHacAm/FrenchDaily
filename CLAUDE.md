@@ -29,7 +29,7 @@ See @README.md for the full project description
   /data/words.json, chosen by code. AI does NOT choose words. AI only checks
   and improves sentences.
 - The Claude API key lives in .env only. Never commit it, never use it in frontend code.
-- - Feedback language: English only, in simple plain English. French appears only
+- Feedback language: English only, in simple plain English. French appears only
   in corrected sentences, highlighted fixes, and example sentences.
 - The Claude model name is set in .env as CLAUDE_MODEL. Never hardcode it.
   Before using any API parameter you are not 100% sure about, check the docs

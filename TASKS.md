@@ -4,6 +4,10 @@
 - [ ] Set up Next.js project + Supabase connection — Loen drives, Jerry reviews — branch: feature/setup-loen
 
 ## Next up
+- [ ] Fix double bullet in CLAUDE.md feedback-language rule — @jerry
+- [ ] Move README commit off main onto a feature branch, get Loen's review — @jerry
+- [ ] Create /data/grammar_rules.json, /tests/sentences.json and .env.example — @jerry
+- [ ] Decide README open decisions (section 12) and record in DECISIONS.md — pair
 - [ ] Build curated word list (/data/words.json, ~1000 common words) — @jerry
 - [ ] Draft the AI feedback prompt for sentence checking — @jerry
 - [ ] Word picker: serve unseen words on demand, "Give me more words" button (test mode) — pair
@@ -19,3 +23,4 @@
 - [ ] Review and revise cost controls before public launch
 
 ## Done
+- [x] Write detailed README, trim CLAUDE.md, record English-only feedback decision (2026-10-07, Jerry)

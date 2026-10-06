@@ -230,7 +230,7 @@ For Jerry's own testing.
 
 ### Production mode (later, do not build yet)
 
-- Exactly 5 new-or-due words per day, the same for all users, stored in the database.
+- Minimum 5 words per day (`STREAK_MIN_WORDS`) to continue the streak, the same for all users, stored in the database. Doing more than the minimum is a paid option; Jerry will decide the details later.
 - Per-user daily check limit.
 - Rules finalized in `DECISIONS.md` before launch.
 
@@ -367,7 +367,7 @@ french-daily/
 - Level 2 and 3 sentence rules.
 
 **Phase 4: Production**
-- Switch to 5 shared words per day.
+- Switch to a minimum of 5 shared words per day (more words are a paid option, details to be decided).
 - Per-user limits, cost review, spend caps.
 - Public launch decisions.
 
@@ -383,6 +383,7 @@ french-daily/
 | 4 | Do review words count toward the daily 5? | Yes, so reviews do not feel like extra work. |
 | 5 | Audio: browser speech or generated files? | Browser speech first. |
 | 6 | How many words per theme and how long per theme? | About 5 to 7 days per theme to start. |
+| 7 | ~~Production: exactly 5 words per day, or a minimum of 5?~~ | **Decided: minimum 5.** Extra words will be paid; Jerry decides the details later. |
 
 Record final answers in `DECISIONS.md`.
 
