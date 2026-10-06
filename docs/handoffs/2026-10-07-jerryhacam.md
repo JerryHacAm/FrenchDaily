@@ -10,8 +10,6 @@
 Wrote the detailed README so the whole team and Claude share one description of the product. Trimmed CLAUDE.md to keep only rules for Claude and link to the README. Recorded the English-only feedback decision. All of this was committed as "Add detailed README" (3742014).
 
 ## 3. To do next (checklist)
-- [ ] Fix the stray `- - Feedback language` line in CLAUDE.md (double bullet)
-- [ ] Move the README commit onto a feature branch / get Loen to review it (see Notes)
 - [ ] Set up Next.js project + Supabase connection (Loen, `feature/setup-loen`)
 - [ ] Build curated word list `/data/words.json` (~1000 words) (Jerry)
 - [ ] Draft AI feedback prompt `/prompts/check-sentence.md` (Jerry)
@@ -20,7 +18,7 @@ Wrote the detailed README so the whole team and Claude share one description of 
 - [ ] Decide open questions in README section 12 (what counts as completed, day boundary, review words and daily 5, words per theme) and record in DECISIONS.md
 
 ## 4. Notes
-- **Workflow slip:** the README commit (3742014) was made directly on `main`, which our rules only allow for the one-time initial setup. Not pushed yet as far as git status shows. Decide with Loen whether to move it to a branch (e.g. `feature/readme-jerry`) before pushing.
-- README says the README's "Status" is pre-build; update it once the Next.js project exists.
-- README section 4 says production gives "exactly 5" words per day, while CLAUDE.md says "minimum 5". Reconcile when production rules are decided.
+- **Workflow slip:** the README commit (3742014) was made directly on `main` and is already on `origin/main`. Remaining changes (this handoff, minimum-5 wording, double-bullet fix) went through branch `feature/readme-handoff-jerry` and a PR.
+- Jerry decided production is **minimum 5** words per day (extra words paid, details later). README sections 4, 11 and 12 were updated to match.
+- README's "Status" is pre-build; update it once the Next.js project exists.
 - Handoffs folder had no earlier files.
