@@ -1,19 +1,11 @@
-# LearnFrench
+# French Daily
 
-## What we're building
-A web app that teaches French to beginners. Each day the user gets 5 words
-and writes 5 sentences or questions using each of them. And Claude AI checks, corrects, explains and feedback on each one. Completing at least 5 words in a day continues the streak.
+See @README.md for the full project description
 
 ## Team
 - Jerry: idea owner, learner, owns the AI feedback prompt.
 - Loen: more experienced with vibe coding.
 - We usually pair. One drives, one reviews. Only one person's Claude edits at a time.
-
-## Stack
-- TypeScript, Next.js (frontend + backend)
-- Supabase (Postgres database + auth)
-- Claude API (server-side only)
-- Vercel (hosting)
 
 ## Modes (controlled by env var APP_MODE = "test" | "production")
 ### Test mode (current, for Jerry's own testing)
@@ -37,7 +29,11 @@ and writes 5 sentences or questions using each of them. And Claude AI checks, co
   /data/words.json, chosen by code. AI does NOT choose words. AI only checks
   and improves sentences.
 - The Claude API key lives in .env only. Never commit it, never use it in frontend code.
-- Feedback language: English explanations only
+- - Feedback language: English only, in simple plain English. French appears only
+  in corrected sentences, highlighted fixes, and example sentences.
+- The Claude model name is set in .env as CLAUDE_MODEL. Never hardcode it.
+  Before using any API parameter you are not 100% sure about, check the docs
+  at https://docs.claude.com instead of guessing.
 
 ## Commands
 - Install: `npm install`

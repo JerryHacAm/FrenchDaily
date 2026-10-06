@@ -12,3 +12,7 @@ Revisit if: we decide on the production rules or launch publicly.
 ## 2026-10-06 — Test mode check cap of 50 per day
 Why: unlimited words means unlimited Claude API cost.
 Revisit if: the cap blocks normal testing.
+
+## 2026-10-07 — AI explanations are in English only
+Why: Jerry's choice for the first version; simplest to build and test.
+Revisit if: we add users who need explanations in another language.
