@@ -2,8 +2,8 @@
 
 A web app that teaches French to beginners through one habit: **write real sentences every day**. The user gets curated words, writes **two normal sentences and one question** for each one, and Claude AI checks, corrects, and explains each in a small, focused way. Completing at least 5 words per day keeps the streak alive.
 
-**Owner / learner:** Jerry (product, AI feedback prompt)
-**Developer:** Loen
+**Developer:** Jerry (product idea, AI feedback prompt)
+**Developer:** Loen (experience vibe-coder)
 **Status:** Pre-build. Repo and workflow files set up. No app code yet.
 
 > This README is the full project description for humans. Rules for Claude Code live in `CLAUDE.md`. Current work lives in `TASKS.md`. Past choices live in `DECISIONS.md`.
@@ -39,7 +39,7 @@ AI does **not** choose words. Fully random words are the biggest risk: a beginne
 
 Instead, code picks words from a curated list of about 1,000 high-frequency French words, **random only inside a controlled pool**:
 
-- **Level:** words are tagged by level (1 = absolute beginner, 2, 3). Users start at level 1 and move up.
+- **Level:** words are tagged by level (1 = absolute beginner, up to 5; see the level table in 3.3). Users start at level 1 and move up.
 - **Theme:** words are grouped into themes (food, travel, family, home, daily routine...). Run one theme for about a week so words reinforce each other.
 - **Frequency first:** the most common words come before rare ones.
 - **Part-of-speech mix:** every set includes a mix of nouns, verbs, and connectors/adjectives, so the words can actually form sentences together.
@@ -101,17 +101,41 @@ Without rules, users will write tiny, fast sentences ("J'aime la pomme") that te
 
 **Exercise format (all levels):** for each word the user writes **2 normal sentences (statements) and 1 question**. The word is completed only when all 3 have been submitted and checked.
 
-**Level 1 rule:** every sentence or question must contain
+**Goal:** users should be able to write and speak French the way a normal French person does in daily life (friends, work, shopping, texting), not like a literary author. Templates and levels favor natural everyday French (on, ça, il y a, pronouns, informal questions) over rare or formal forms.
+
+**Basic rule (all levels):** every sentence or question must contain
 1. the **target word** (any correct form, such as plural or conjugated),
 2. a **verb**,
-3. at least one **context element**: a reason, place, time, or description.
+3. for **statements only**: at least one **context element**: a reason, place, time, or description. Questions do not need one, because a question word (où, pourquoi, combien...) or a choice (ou) already gives context.
 
-The user sees a visible template with the word:
+**Random sentence structures (templates).** There is no single fixed template. Each of the 3 items shows a **different, randomly chosen template** with the word filled in, so the user practices many kinds of sentences and questions. The templates live in `/data/structures.json` and are **picked by code, never by AI**, like words:
 
+- Each template has a `type` (`statement` or `question`), a `level`, and `fits_pos` (which kinds of target word it works with).
+- For each word, code picks 2 statement templates and 1 question template for the user's level, at random, from templates whose `fits_pos` includes the word's part of speech.
+- The 3 templates for one word are all different, and recent templates are avoided so they do not repeat day after day.
+- The user sees the template and an example for their kind of word before writing.
+
+Template format (draft):
+
+```json
+{
+  "id": "q102",
+  "type": "question",
+  "level": 1,
+  "fits_pos": ["noun", "verb"],
+  "pattern": "Où est-ce que + subject + verb + object ?",
+  "examples": {
+    "noun": ["pomme", "Où est-ce que tu achètes les pommes ?"],
+    "verb": ["acheter", "Où est-ce que tu achètes ton pain ?"]
+  }
+}
 ```
-Subject + verb + [pomme] + context
-Example: "Je mange une pomme parce que j'ai faim."
-```
+
+**Slot idea:** a noun target word fills the object slot, a verb target word fills the verb slot, and an adjective target word fills the description slot. So most templates work for both nouns and verbs, and each template has one example per part of speech it fits.
+
+A first draft of **75 templates** (5 levels, 15 each: 9 statements and 6 questions) is in `/data/structures.json`. It was written from standard CEFR A1, A2 and B1 grammar topics plus common spoken French. Jerry reviews and edits the list.
+
+**Known gap:** adjectives fit only 1 to 3 templates per type and level, because there are fewer adjective words and they have fewer natural slots. That is enough for now, but check variety once the word list exists. Connectors and other word types (adverbs, prepositions) have no templates yet.
 
 Matching the model example from the project idea: *"I like eating ice cream because it is really sweet and cool."*
 
@@ -119,14 +143,18 @@ Matching the model example from the project idea: *"I like eating ice cream beca
 
 | Level | Requirement |
 |---|---|
-| 1 | Target word + verb + one context element. Minimum length: `MIN_SENTENCE_WORDS` (default 6). |
-| 2 | Also use a connector (parce que, mais, et, quand, donc). |
-| 3 | Harder question forms (est-ce que..., inversion) and more varied statements. |
+| 1 | Basic present tense: place, time, simple reason, negation, il y a, est-ce que / rising tone / où / combien. Minimum length: `MIN_SENTENCE_WORDS` (default 6). |
+| 2 | Everyday connectors (mais, quand, donc, et), passé composé, near future (aller + infinitive), devoir / pouvoir / avoir envie de, pourquoi / comment / quel. |
+| 3 | Natural spoken French: on, c'est, pronouns (le / la / les, en, y), ça fait ... que, je trouve que, pendant que, informal questions ("Tu as déjà ... ?", "Tu peux ... ?"). |
+| 4 | Telling stories and comparing: imparfait with passé composé, comparatives and superlatives, relative clauses (qui / que), ne ... plus / jamais, futur simple, avant de. |
+| 5 | Hypotheses and nuance: si + conditional, subjunctive after il faut que, plus-que-parfait, même si, lui / leur, polite requests, advice (tu devrais). |
+
+The 5 levels replace the earlier 3. Words in `/data/words.json` use the same level numbers 1 to 5 (see 3.1). Formal or literary forms (for example "Mangez-vous ... ?" style inversion everywhere) are avoided; spoken French usually uses est-ce que or a rising tone instead.
 
 **How it's enforced (cheap checks first, AI second):**
 
 1. **Code check:** non-empty, under a max length, contains the target word (or a recognizable form), meets `MIN_SENTENCE_WORDS`.
-2. **AI check:** confirms there is a verb and a context element, judges grammar, and returns whether the structure requirement was met.
+2. **AI check:** confirms there is a verb (and a context element for statements), checks the sentence follows the template it was given, judges grammar, and returns whether the structure requirement was met.
 
 A sentence or question that fails the structure requirement does not count yet, so the word is not completed and does not count toward the daily 5. The feedback tells the user what to add, and they can resubmit. The AI also checks that the third item really is a question and the other two are statements. See Open Decisions about what counts as "completed".
 
@@ -332,6 +360,7 @@ french-daily/
 │   └── handoffs/
 ├── data/
 │   ├── words.json
+│   ├── structures.json
 │   └── grammar_rules.json
 ├── prompts/
 │   └── check-sentence.md
@@ -366,7 +395,7 @@ french-daily/
 - Spaced repetition boxes and due-word serving.
 - Mistake tags and mistake-aware exercises.
 - Grammar rule set expansion.
-- Level 2 and 3 sentence rules.
+- Level 2 to 5 sentence rules.
 
 **Phase 4: Production**
 - Switch to a minimum of 5 shared words per day (more words are a paid option, details to be decided).

@@ -26,6 +26,9 @@ See @README.md for the full project description
 - A "day" uses user local time.
 
 ## Key rules
+- Sentence structures (templates) come from /data/structures.json, chosen at
+  random by code per item (2 statements + 1 question per word). AI does NOT
+  choose them.
 - Words come from our curated list of ~1000 common French words in
   /data/words.json, chosen by code. AI does NOT choose words. AI only checks
   and improves sentences.
