@@ -426,7 +426,7 @@ Record final answers in `DECISIONS.md`.
 - **Never push code to `main`.** Create a branch `feature/<task>-<name>`, commit small, push, open a **pull request (PR)**, and let the other person review before merging. (The one exception was the initial workflow-files commit.)
 - Session start: run `/note` in Claude Code. It pulls the latest `main` and reads the latest handoff and `TASKS.md`.
 - Session end: run `/end` to create a handoff file in `docs/handoffs/` (changes, what was done, to-do checklist, notes), update `TASKS.md`, push, and open a PR.
-- Nightly safety net: a scheduled task runs at 23:59 on each computer and does the same as `/end` if there is unpushed work, opening a draft PR. It never merges.
+- Nightly safety net: a scheduled task runs at about 23:57 on each computer and does the same as `/end` if there is unpushed work, opening a draft PR. It never merges.
 - Record major decisions in `DECISIONS.md`.
 - Step-by-step guide with a glossary and "what to do when it goes wrong": [`docs/WORKFLOW.md`](docs/WORKFLOW.md).
 

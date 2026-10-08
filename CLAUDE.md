@@ -60,7 +60,7 @@ Step-by-step guide for humans: docs/WORKFLOW.md.
 4. End: run /end. It writes the handoff, commits, pushes and opens a PR.
    The other person reviews before merging. Only a human merges.
 5. Nightly safety net: a scheduled task on each person's computer runs at
-   23:59 and does the same as /end without asking, if there is unsaved work.
+   about 23:57 and does the same as /end without asking, if there is unsaved work.
    Its PRs are drafts. It never merges, never force-pushes, never touches main.
 6. Record major decisions in DECISIONS.md.
 

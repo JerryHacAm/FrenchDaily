@@ -54,7 +54,7 @@ must be pushed there.
   handoff, and after your OK commits, pushes and opens (or updates) the PR.
 - Send the PR link to the other person.
 
-**Forgot `/end`?** The nightly save does it for you at 23:59 (section 5).
+**Forgot `/end`?** The nightly save does it for you just before midnight (section 5).
 
 ## 4. Reviewing the other person's PR
 
@@ -67,10 +67,10 @@ must be pushed there.
    **Ready for review** by its author.
 6. Afterwards, both people run `/note` (or `git pull` on main) to get the merged work.
 
-## 5. The nightly save (23:59)
+## 5. The nightly save (about 23:57)
 
 Each of us has a scheduled task in the Claude desktop app
-(sidebar → **Scheduled**) that runs every night at 23:59. If there is
+(sidebar → **Scheduled**) that runs every night at about 23:57 (set to 23:55; the app adds up to 2 minutes of random delay, so it still finishes before midnight). If there is
 unsaved or unpushed work, it:
 
 1. Moves the work off `main` onto a feature branch, if needed.
