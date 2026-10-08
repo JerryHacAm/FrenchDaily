@@ -22,4 +22,4 @@ Wrote the detailed README so the whole team and Claude share one description of 
 - Jerry decided production is **minimum 5** words per day (extra words paid, details later). README sections 4, 11 and 12 were updated to match.
 - README's "Status" is pre-build; update it once the Next.js project exists.
 - Handoffs folder had no earlier files.
-- The GitHub CLI (`gh`) is not installed, so the PR for `feature/readme-handoff-jerry` has to be opened in the browser. Optional fix: `winget install --id GitHub.cli`, restart the terminal, then `gh auth login`.
+- The GitHub CLI (`gh`) is installed and logged in. The PR for `feature/readme-handoff-jerry` is #1.
