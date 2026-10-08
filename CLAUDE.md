@@ -4,8 +4,15 @@ See @README.md for the full project description
 
 ## Team
 - Jerry: idea owner, learner, owns the AI feedback prompt.
-- Loen: more experienced with vibe coding.
+- Loen: more experienced with vibe coding. Prefers to be called "quantrungvu".
 - We usually pair. One drives, one reviews. Only one person's Claude edits at a time.
+- Both are vibe coders, not professional developers. Explain git and terminal
+  steps in plain words and say why, not just what.
+
+| Person | `git config user.name` | Handoff file / branch suffix |
+|---|---|---|
+| Jerry | JerryHacAm | `jerryhacam` |
+| Loen | quantrungvu0701-ops | `quantrungvu` |
 
 ## Modes (controlled by env var APP_MODE = "test" | "production")
 ### Test mode (current, for Jerry's own testing)
@@ -45,12 +52,17 @@ See @README.md for the full project description
 - Test: `npm test`
 
 ## Team workflow (follow every session)
-1. Start: `git pull`, read TASKS.md and the newest 2 files in docs/handoffs/.
+Step-by-step guide for humans: docs/WORKFLOW.md.
+1. Start: run /note (it pulls, then reads TASKS.md and the newest 2 handoffs).
 2. Never work on main (except the one-time initial setup commit). Branch name:
-   `feature/<task>-<name>`.
+   `feature/<task>-<suffix>` (suffix from the table above).
 3. Make small commits. Run tests before pushing.
-4. End: run /end, push, open a PR. The other person reviews before merging.
-5. Record major decisions in DECISIONS.md.
+4. End: run /end. It writes the handoff, commits, pushes and opens a PR.
+   The other person reviews before merging. Only a human merges.
+5. Nightly safety net: a scheduled task on each person's computer runs at
+   23:59 and does the same as /end without asking, if there is unsaved work.
+   Its PRs are drafts. It never merges, never force-pushes, never touches main.
+6. Record major decisions in DECISIONS.md.
 
 ## Do not
 - Edit files outside the task scope without asking.

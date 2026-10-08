@@ -8,10 +8,20 @@ Revisit if: the curated list feels stale or too small.
 Why: Jerry is testing the app first. Streak needs at least 5 completed words
 (STREAK_MIN_WORDS). Switched by APP_MODE env var.
 Revisit if: we decide on the production rules or launch publicly.
+Update: production is a minimum of 5, not exactly 5. See 2026-10-07 below.
 
 ## 2026-10-06 — Test mode check cap of 50 per day
 Why: unlimited words means unlimited Claude API cost.
 Revisit if: the cap blocks normal testing.
+
+## 2026-10-07 — AI explanations are in English only
+Why: Jerry's choice for the first version; simplest to build and test.
+Revisit if: we add users who need explanations in another language.
+
+## 2026-10-07 — Production: minimum 5 words per day, extra words are paid
+Why: Jerry's choice. The same minimum for all users keeps the streak rule
+simple. Doing more than 5 is a paid option; Jerry decides the details later.
+Revisit if: we set pricing or launch publicly.
 
 ## 2026-10-08 — Each word needs 2 normal sentences and 1 question
 Why: Jerry wants learners to practice both statements and questions for every
@@ -31,6 +41,9 @@ questions get context from the question word or a choice.
 Revisit if: level 5 feels too advanced, adjective variety is too low, or the
 context rule lets too many weak sentences through.
 
-## 2026-10-07 — AI explanations are in English only
-Why: Jerry's choice for the first version; simplest to build and test.
-Revisit if: we add users who need explanations in another language.
+## 2026-10-08 — Sync through GitHub every day, with a nightly 23:59 save
+Why: Claude Code sessions can't be shared between our computers, so GitHub is
+the only shared place. A scheduled task on each computer saves unpushed work
+at 23:59 (handoff, commit, push, draft PR) so nothing is lost and the other
+person always sees the latest state. It never merges; a human reviews every PR.
+Revisit if: the nightly drafts create noise, or we stop pairing on one screen.
