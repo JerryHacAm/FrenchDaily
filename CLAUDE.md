@@ -19,17 +19,21 @@ See @README.md for the full project description
 
 ## Streak rule
 - STREAK_MIN_WORDS = 5 (keep it as one named constant, never hardcode 5).
-- A word counts as completed when its sentence has been submitted and checked
-  by AI.
+- Each word needs 2 normal sentences and 1 question from the user.
+- A word counts as completed when all 3 (2 sentences + 1 question) have been
+  submitted and checked by AI.
 - A streak day = completing at least STREAK_MIN_WORDS words that day.
 - A "day" uses user local time.
 
 ## Key rules
+- Sentence structures (templates) come from /data/structures.json, chosen at
+  random by code per item (2 statements + 1 question per word). AI does NOT
+  choose them.
 - Words come from our curated list of ~1000 common French words in
   /data/words.json, chosen by code. AI does NOT choose words. AI only checks
   and improves sentences.
 - The Claude API key lives in .env only. Never commit it, never use it in frontend code.
-- - Feedback language: English only, in simple plain English. French appears only
+- Feedback language: English only, in simple plain English. French appears only
   in corrected sentences, highlighted fixes, and example sentences.
 - The Claude model name is set in .env as CLAUDE_MODEL. Never hardcode it.
   Before using any API parameter you are not 100% sure about, check the docs
