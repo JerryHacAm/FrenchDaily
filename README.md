@@ -1,6 +1,6 @@
 # French Daily
 
-A web app that teaches French to beginners through one habit: **write real sentences every day**. The user gets curated words, writes a sentence or question for each one, and Claude AI checks, corrects, and explains it in a small, focused way. Completing at least 5 words per day keeps the streak alive.
+A web app that teaches French to beginners through one habit: **write real sentences every day**. The user gets curated words, writes **two normal sentences and one question** for each one, and Claude AI checks, corrects, and explains each in a small, focused way. Completing at least 5 words per day keeps the streak alive.
 
 **Owner / learner:** Jerry (product, AI feedback prompt)
 **Developer:** Loen
@@ -22,9 +22,9 @@ The product succeeds if a user who spends about 10 minutes a day is writing noti
 
 1. The app serves a set of **curated words** matched to the user's level.
 2. Each word is shown on a **word card** (meaning, gender, audio).
-3. The user writes **one sentence or question per word**, following a **required sentence structure**.
-4. Code runs quick checks, then **Claude AI** reviews the sentence.
-5. The user sees **small, focused feedback**: the corrected sentence, one or two key mistakes, and two example sentences to learn from.
+3. The user writes **two normal sentences and one question per word** (3 in total), following a **required sentence structure**.
+4. Code runs quick checks, then **Claude AI** reviews each sentence or question.
+5. The user sees **small, focused feedback** for each one: the corrected sentence, one or two key mistakes, and two example sentences to learn from.
 6. Corrected sentences are **saved** for later review.
 7. Words and mistakes **come back later** through spaced repetition.
 8. Completing at least **5 words** in a day continues the **streak**.
@@ -99,7 +99,9 @@ Every word is shown with:
 
 Without rules, users will write tiny, fast sentences ("J'aime la pomme") that teach very little. Each exercise requires a minimum structure.
 
-**Level 1 rule:** every sentence must contain
+**Exercise format (all levels):** for each word the user writes **2 normal sentences (statements) and 1 question**. The word is completed only when all 3 have been submitted and checked.
+
+**Level 1 rule:** every sentence or question must contain
 1. the **target word** (any correct form, such as plural or conjugated),
 2. a **verb**,
 3. at least one **context element**: a reason, place, time, or description.
@@ -119,14 +121,14 @@ Matching the model example from the project idea: *"I like eating ice cream beca
 |---|---|
 | 1 | Target word + verb + one context element. Minimum length: `MIN_SENTENCE_WORDS` (default 6). |
 | 2 | Also use a connector (parce que, mais, et, quand, donc). |
-| 3 | Mix of statements and questions (est-ce que..., inversion). Some exercises request a specific form ("write a question"). |
+| 3 | Harder question forms (est-ce que..., inversion) and more varied statements. |
 
 **How it's enforced (cheap checks first, AI second):**
 
 1. **Code check:** non-empty, under a max length, contains the target word (or a recognizable form), meets `MIN_SENTENCE_WORDS`.
 2. **AI check:** confirms there is a verb and a context element, judges grammar, and returns whether the structure requirement was met.
 
-A sentence that fails the structure requirement does not count toward the daily 5 yet. The feedback tells the user what to add, and they can resubmit. See Open Decisions about what counts as "completed".
+A sentence or question that fails the structure requirement does not count yet, so the word is not completed and does not count toward the daily 5. The feedback tells the user what to add, and they can resubmit. The AI also checks that the third item really is a question and the other two are statements. See Open Decisions about what counts as "completed".
 
 ### 3.4 AI feedback: small and focused
 
@@ -184,8 +186,8 @@ Words seen once are forgotten. This is probably the biggest accelerator of learn
 | 4 | 14 days |
 | 5 | 30 days |
 
-- Sentence accepted without a major mistake: move up one box.
-- Sentence with a major mistake: back to box 1.
+- All 3 items (2 sentences + 1 question) accepted without a major mistake: move up one box.
+- Any item with a major mistake: back to box 1.
 - Each user-word pair stores `box` and `due_date`. Due words are served **before** new words.
 
 **Mistake reuse:**
@@ -250,12 +252,12 @@ A stack is the set of technologies an app is built from.
 
 ---
 
-## 6. System workflow (how one sentence is checked)
+## 6. System workflow (how one sentence or question is checked)
 
-Code drives the flow. AI is called at one step only.
+Code drives the flow. AI is called at one step only. This flow runs once for each of the 3 items per word (2 sentences + 1 question), so one word uses 3 checks from `MAX_CHECKS_PER_DAY`.
 
-1. **Input:** user submits the target word and their sentence.
-2. **Code checks:** checks remaining for today (cap), sentence not empty or too long, target word present, minimum length met.
+1. **Input:** user submits the target word, their sentence or question, and which type it is (statement or question).
+2. **Code checks:** checks remaining for today (cap), input not empty or too long, target word present, minimum length met, and a question ends with "?" (for the question item).
 3. **Build prompt:** combine the prompt file, grammar rule set, level, target word, and the user's sentence (optionally recent mistake tags).
 4. **Call Claude API** from the backend. Model comes from `CLAUDE_MODEL`.
 5. **Require JSON** output in the format in section 3.4.
@@ -349,7 +351,7 @@ french-daily/
 - Build `words.json` (~1,000 words with level, theme, gender, frequency).
 - Word picker with level, theme, and part-of-speech mix.
 - Word card with meaning, gender, and audio.
-- Sentence input with structure template and code checks.
+- Sentence input (2 sentences + 1 question per word) with structure template and code checks.
 - Claude check with JSON output, validation, and the 50-check cap.
 - Small feedback card with "More detail" and two example sentences.
 - Save corrected sentences.
@@ -377,7 +379,7 @@ french-daily/
 
 | # | Decision | Recommendation |
 |---|---|---|
-| 1 | What counts as a "completed" word? Submitted, meets structure, or fully correct? | Meets the structure requirement. Requiring perfect grammar punishes beginners and kills streaks. |
+| 1 | What counts as a "completed" word? **Partly decided:** all 3 items (2 sentences + 1 question) must be done. Still open: must each item be submitted, meet structure, or be fully correct? | Each item meets the structure requirement. Requiring perfect grammar punishes beginners and kills streaks. |
 | 2 | Day boundary: user local time or UTC? | User local time (feels fairer), but needs care in code. |
 | 3 | ~~Explanations in English only, or also Vietnamese?~~ | **Decided: English only.** Revisit if we add other interface languages. |
 | 4 | Do review words count toward the daily 5? | Yes, so reviews do not feel like extra work. |

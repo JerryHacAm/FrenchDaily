@@ -9,7 +9,7 @@
 - [ ] Build curated word list (/data/words.json, ~1000 common words) — @jerry
 - [ ] Draft the AI feedback prompt for sentence checking — @jerry
 - [ ] Word picker: serve unseen words on demand, "Give me more words" button (test mode) — pair
-- [ ] Sentence input page (one box per word) — pair
+- [ ] Sentence input page (three boxes per word: 2 sentences + 1 question) — pair
 - [ ] Connect Claude API to check/correct sentences, with MAX_CHECKS_PER_DAY cap — pair
 - [ ] Streak tracking using STREAK_MIN_WORDS = 5, decide timezone rule — pair
 - [ ] Login/accounts (Supabase auth) — pair

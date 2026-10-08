@@ -19,8 +19,9 @@ See @README.md for the full project description
 
 ## Streak rule
 - STREAK_MIN_WORDS = 5 (keep it as one named constant, never hardcode 5).
-- A word counts as completed when its sentence has been submitted and checked
-  by AI.
+- Each word needs 2 normal sentences and 1 question from the user.
+- A word counts as completed when all 3 (2 sentences + 1 question) have been
+  submitted and checked by AI.
 - A streak day = completing at least STREAK_MIN_WORDS words that day.
 - A "day" uses user local time.
 
