@@ -47,3 +47,43 @@ the only shared place. A scheduled task on each computer saves unpushed work
 at 23:59 (handoff, commit, push, draft PR) so nothing is lost and the other
 person always sees the latest state. It never merges; a human reviews every PR.
 Revisit if: the nightly drafts create noise, or we stop pairing on one screen.
+
+## 2026-10-09 — PROPOSED (needs Loen): a "day" is the user's local calendar date
+Proposal: the browser sends the user's timezone (for example "Europe/Paris",
+from `Intl.DateTimeFormat().resolvedOptions().timeZone`). The server works
+out today's date in that timezone and saves each check under that date as a
+plain date (2026-10-09), not a timestamp. Streaks compare these dates.
+Each user's timezone is saved in their profile. If it changes (travel), the
+new one is used from the next check, and a day is never counted twice.
+Why: local time feels fair ("I did it before bed"). UTC would end Jerry's
+day at 7am Vietnam time. Saving a plain date keeps streak math simple.
+Options we did not pick: UTC for everyone (simple, but unfair); the
+server's clock (wrong for anyone in a different timezone).
+Open for Loen: is a plain date column OK in the Supabase design (README 7,
+daily_progress.date)?
+Revisit if: people abuse timezone changes to gain extra days.
+
+## 2026-10-09 — Major vs minor mistakes
+Why: Jerry's choice. Major = wrong meaning or core grammar (gender or
+article, conjugation, agreement, wrong word, unclear meaning). Minor =
+accents, small spelling, punctuation, elision, a dropped "ne" in a negative.
+Only major mistakes send a word back to box 1 in spaced repetition. The
+default for each tag is in /data/grammar_rules.json ("severity").
+Revisit if: the test set shows the AI judging severity inconsistently.
+
+## 2026-10-09 — Feedback adds corrected_english, severity, structure_feedback
+Why: corrected_english lets learners check that their meaning came through.
+severity feeds spaced repetition. structure_feedback tells the user what to
+add when an item doesn't meet the structure. Format in README 3.4 and
+/prompts/check-sentence.md.
+Revisit if: the feedback card feels too busy.
+
+## 2026-10-09 — Word themes (17)
+food, home, family, daily-routine, travel, work-school, time,
+people-feelings, city-shopping, basics, hobbies-sport, body-health,
+weather-nature, clothes, transport, phone-internet, colors-numbers.
+Why: Jerry's pick, checked against common CEFR A1/A2 and DELF themes.
+words.json starts with levels 1-2 only (~300 words); levels 3-5 come later.
+Only nouns, verbs and adjectives for now, because structures.json has no
+templates for other word types.
+Revisit if: a theme feels too thin or too long for a week.
