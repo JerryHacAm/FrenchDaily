@@ -23,6 +23,7 @@ export type ItemView = {
   retypeTries: number;
   canSkip: boolean;
   fixOutcome: "self" | "shown" | "skipped" | null;
+  sentenceId: string | null;
 };
 
 export type PracticeView = {
@@ -94,6 +95,7 @@ export function buildPracticeView(state: LearnerState, content: Content, rules: 
             retypeTries: it.retypeTries,
             canSkip: it.stage === "retype" && it.retypeTries >= RETYPE_TRIES_BEFORE_SKIP,
             fixOutcome: it.fixOutcome,
+            sentenceId: it.sentenceId,
           };
         })
       : [];

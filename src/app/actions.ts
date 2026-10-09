@@ -4,7 +4,6 @@
 // is signed in (appDeps) and then calls a service in src/lib/services.
 // Never trust input from the browser: services validate everything.
 
-import { redirect } from "next/navigation";
 import { appDeps } from "@/lib/deps";
 import { saveProfile } from "@/lib/services/account";
 import { writeWeeklyReport } from "@/lib/services/coach";
@@ -33,6 +32,16 @@ async function withDeps<T>(fn: (deps: NonNullable<Awaited<ReturnType<typeof appD
 }
 
 const str = (v: unknown, max = 1000) => (typeof v === "string" ? v.slice(0, max) : "");
+
+/** Plain JSON only, and not too big (it comes from the browser). */
+function safeContext(context: unknown): Record<string, unknown> {
+  try {
+    const json = JSON.stringify(context ?? {});
+    return json.length <= 20_000 ? JSON.parse(json) : { truncated: true };
+  } catch {
+    return {};
+  }
+}
 
 // Practice -------------------------------------------------------------------
 export async function loadPracticeAction(timezone: string) {
@@ -70,22 +79,21 @@ export async function reportAction(sentenceId: string | null, note: string, cont
     reportFeedback(d, {
       sentenceId: sentenceId ? str(sentenceId, 64) : null,
       note: str(note, 1000),
-      context: JSON.parse(JSON.stringify(context ?? {}).slice(0, 20000) || "{}"),
+      context: safeContext(context),
     }),
   );
 }
 
 // Account --------------------------------------------------------------------
-export async function saveProfileAction(formData: FormData) {
-  const app = await appDeps();
-  if (!app) redirect("/login");
-  const result = await saveProfile(app.deps, {
-    name: str(formData.get("name"), 40),
-    level: Number(formData.get("level")),
-    timezone: str(formData.get("timezone"), 64) || undefined,
-  });
-  if (result.ok && formData.get("next") === "home") redirect("/");
-  return result;
+/** Used with useActionState: (previous result, form data) → new result. */
+export async function saveProfileAction(_prev: unknown, formData: FormData) {
+  return withDeps((d) =>
+    saveProfile(d, {
+      name: str(formData.get("name"), 40),
+      level: Number(formData.get("level")),
+      timezone: str(formData.get("timezone"), 64) || undefined,
+    }),
+  );
 }
 
 // Coach ----------------------------------------------------------------------
