@@ -43,3 +43,6 @@ next-env.d.ts
 
 # FrenchDaily
 .claude/capsule.md
+
+# Local development data (STORAGE=file)
+.data/
