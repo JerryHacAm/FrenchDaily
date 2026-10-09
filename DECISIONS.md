@@ -117,3 +117,12 @@ and the past uses être), which is a level 2 topic. Every reflexive verb has a
 "note" explaining why "se" is there, and the AI prompt explains it again when
 the learner leaves it out.
 Revisit if: daily-routine feels too thin at level 1 without them.
+
+## 2026-10-10 — Every theme has a level-1 verb; borrow from basics, never repeat
+Why: the word picker needs at least 1 verb per set. Added or moved level-1
+verbs so each theme has one (vivre, embrasser, marcher; sourire, monter,
+compter moved down from level 2). If a theme runs out of unseen verbs, the
+picker borrows an unseen verb from "basics". A word is never served twice as
+a new word; it only comes back through spaced-repetition reviews (for
+example after mistakes).
+Revisit if: basics runs out of level-1 verbs.

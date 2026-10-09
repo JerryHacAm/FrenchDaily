@@ -85,6 +85,9 @@ pick(user, count):
        theme  = user.current_theme
        pool   = words where level/theme match AND user has not seen them
        ensure the set has at least 1 verb and 1 noun (add a connector/adjective if possible)
+       if the theme has no unseen verb left, borrow an unseen verb from the
+         "basics" theme (same level); never serve a word the user has already
+         seen as a new word. Seen words only come back through reviews (3.5).
        sort by frequency_rank, pick randomly among the top candidates
 ```
 
