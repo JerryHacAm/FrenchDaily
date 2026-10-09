@@ -47,3 +47,23 @@ the only shared place. A scheduled task on each computer saves unpushed work
 at 23:59 (handoff, commit, push, draft PR) so nothing is lost and the other
 person always sees the latest state. It never merges; a human reviews every PR.
 Revisit if: the nightly drafts create noise, or we stop pairing on one screen.
+
+## 2026-10-10 — Method fixes after the method debate (full plan: docs/ROADMAP.md)
+Why: writing sentences is the core, but alone it fails beginners. Jerry and
+quantrungvu agreed: read → notice → write (mini-text + audio before writing),
+an easier level 1, fix-after-feedback (hint → fix → answer → retype), a weekly
+AI role-play, and tests for everything code decides.
+Revisit if: the pilot shows a step adds time without helping.
+
+## 2026-10-10 — AI coach, word bank and "quiet words"
+Why: our edge is knowing *why* a learner is wrong and which words they can
+*really use*. Code counts mistakes and words used on the learner's own; the AI
+only explains the numbers and recommends one focus. Recent words stay on
+screen as a word bank; words the learner never uses come back on later days.
+Revisit if: the coach advice feels generic or the word bank turns into copying.
+
+## 2026-10-10 — Keep 5 words per day; pilot is Jerry + quantrungvu
+Why: Jerry wants to keep the daily minimum. The new steps make a session
+longer, so we time the pilot and decide again with real data (ROADMAP F3).
+The AI grader test set stays: a wrong correction is our biggest trust risk.
+Revisit if: the pilot shows a day takes much more than ~15 minutes.

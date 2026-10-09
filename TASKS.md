@@ -1,8 +1,8 @@
 # Tasks
 
 ## In progress
+The full plan with phases and status lives in docs/ROADMAP.md.
 - [ ] Set up Next.js project + Supabase connection — Loen drives, Jerry reviews — branch: feature/setup-quantrungvu (PR #4 draft; app and Supabase connection done locally; Vercel deploy left; rotate the Supabase secret key first)
-- [ ] Clearer team workflow (docs/WORKFLOW.md, /note and /end, nightly 23:59 save) — Loen, Jerry reviews — branch: feature/workflow-quantrungvu
 
 ## Next up
 - [ ] Create /data/grammar_rules.json and /tests/sentences.json — @jerry
@@ -24,6 +24,8 @@
 - [ ] Review and revise cost controls before public launch
 
 ## Done
+- [x] Clearer team workflow, /note and /end, nightly save (2026-10-09, quantrungvu, PR #3)
+- [x] Roadmap after the method debate (2026-10-10, quantrungvu + Jerry) — docs/ROADMAP.md
 - [x] Write detailed README, trim CLAUDE.md, record English-only feedback decision (2026-10-07, Jerry)
 - [x] 2 sentences + 1 question per word, 5 levels, first draft of /data/structures.json (2026-10-08, Jerry)
 - [x] Capsule skill for AI-to-AI session handoff (2026-10-08, Jerry)
