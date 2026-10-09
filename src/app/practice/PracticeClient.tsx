@@ -277,7 +277,9 @@ function ItemStep({
 }) {
   const [text, setText] = useState(item.stage === "fix" ? (item.sentence ?? "") : "");
   const ref = useRef<HTMLTextAreaElement>(null);
-  useEffect(() => ref.current?.focus(), []);
+  useEffect(() => {
+    ref.current?.focus();
+  }, []);
 
   const submit = () => {
     if (!text.trim() || pending) return;

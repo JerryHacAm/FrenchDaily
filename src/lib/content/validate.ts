@@ -73,7 +73,7 @@ export function validateContent(input: {
   dup("roleplay_scenarios.json", input.scenarios.map((s) => s.id));
   for (const s of input.scenarios) {
     const at = `roleplay_scenarios.json ${s.id ?? "?"}`;
-    for (const key of ["id", "title", "title_fr", "setting", "character", "opening_fr", "opening_en"] as const) {
+    for (const key of ["id", "title", "title_fr", "intro", "setting", "character", "opening_fr", "opening_en"] as const) {
       if (!text(s[key])) problems.push(`${at}: "${key}" is missing`);
     }
     if (!level(s.min_level)) problems.push(`${at}: min_level must be 1 to 5`);

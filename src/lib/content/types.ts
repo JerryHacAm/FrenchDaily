@@ -54,6 +54,8 @@ export type Scenario = {
   title: string;
   title_fr: string;
   min_level: number;
+  /** Shown to the learner (English, "you…"). */
+  intro: string;
   /** English description of the situation, for the AI. */
   setting: string;
   /** Who the AI plays. */
