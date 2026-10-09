@@ -1,7 +1,7 @@
 # Tasks
 
 ## In progress
-- [ ] Set up Next.js project + Supabase connection — Loen drives, Jerry reviews — branch: feature/setup-quantrungvu (app + .env.example done; Supabase keys and Vercel deploy left)
+- [ ] Set up Next.js project + Supabase connection — Loen drives, Jerry reviews — branch: feature/setup-quantrungvu (PR #4 draft; app and Supabase connection done locally; Vercel deploy left; rotate the Supabase secret key first)
 - [ ] Clearer team workflow (docs/WORKFLOW.md, /note and /end, nightly 23:59 save) — Loen, Jerry reviews — branch: feature/workflow-quantrungvu
 
 ## Next up
