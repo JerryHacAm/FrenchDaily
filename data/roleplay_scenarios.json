@@ -1,0 +1,65 @@
+{
+  "_note": "Draft v0 by Claude for quantrungvu (2026-10-10). Jerry reviews. Weekly role-play scenarios (ROADMAP D1). setting and character are read by the AI; opening_fr is the AI's first line.",
+  "scenarios": [
+    {
+      "id": "cafe",
+      "title": "At the café",
+      "title_fr": "Au café",
+      "min_level": 1,
+      "setting": "A small café in Paris in the morning. The learner is a customer who wants to order a drink and something to eat, and maybe ask the price.",
+      "character": "a friendly waiter",
+      "opening_fr": "Bonjour ! Qu'est-ce que je vous sers ?",
+      "opening_en": "Hello! What can I get you?"
+    },
+    {
+      "id": "market",
+      "title": "At the market",
+      "title_fr": "Au marché",
+      "min_level": 1,
+      "setting": "An outdoor market on Saturday morning. The learner wants to buy fruit, vegetables or cheese and talk about quantities and prices.",
+      "character": "a cheerful market seller",
+      "opening_fr": "Bonjour ! Mes pommes sont très bonnes aujourd'hui. Vous voulez quoi ?",
+      "opening_en": "Hello! My apples are very good today. What would you like?"
+    },
+    {
+      "id": "new-friend",
+      "title": "Meeting someone new",
+      "title_fr": "Une nouvelle rencontre",
+      "min_level": 1,
+      "setting": "A party at a friend's flat. The learner meets someone new and talks about where they live, their family, their work or studies and what they like.",
+      "character": "Camille, a friendly French student",
+      "opening_fr": "Salut ! Je m'appelle Camille. Et toi, comment tu t'appelles ?",
+      "opening_en": "Hi! My name is Camille. And you, what's your name?"
+    },
+    {
+      "id": "directions",
+      "title": "Asking the way",
+      "title_fr": "Demander son chemin",
+      "min_level": 1,
+      "setting": "A street in a French town. The learner is looking for a place (the station, a shop, a restaurant) and asks for directions.",
+      "character": "a helpful local person",
+      "opening_fr": "Bonjour ! Vous cherchez quelque chose ?",
+      "opening_en": "Hello! Are you looking for something?"
+    },
+    {
+      "id": "weekend",
+      "title": "Weekend plans",
+      "title_fr": "Le week-end",
+      "min_level": 2,
+      "setting": "Friday afternoon at the office. A colleague asks the learner about their plans for the weekend and what they did last weekend.",
+      "character": "a friendly colleague",
+      "opening_fr": "Alors, qu'est-ce que tu fais ce week-end ?",
+      "opening_en": "So, what are you doing this weekend?"
+    },
+    {
+      "id": "station",
+      "title": "At the train station",
+      "title_fr": "À la gare",
+      "min_level": 2,
+      "setting": "The ticket office of a French train station. The learner wants a ticket to another city and asks about times, platform and price.",
+      "character": "a ticket office agent",
+      "opening_fr": "Bonjour, je peux vous aider ?",
+      "opening_en": "Hello, can I help you?"
+    }
+  ]
+}
