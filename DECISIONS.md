@@ -87,3 +87,33 @@ words.json starts with levels 1-2 only (~300 words); levels 3-5 come later.
 Only nouns, verbs and adjectives for now, because structures.json has no
 templates for other word types.
 Revisit if: a theme feels too thin or too long for a week.
+
+## 2026-10-10 — Words with masculine and feminine forms are one word
+Why: Jerry's choice. "ami" and "amie" are the same word to learn. Stored as
+one entry (gender "m/f", feminine "amie") and shown as "l'ami / l'amie".
+Either form counts as the target word. Adjectives also store their
+feminine form (grand / grande).
+Revisit if: a pair is too irregular to feel like one word.
+
+## 2026-10-10 — Learner picks a gender; their own sentences must match it
+Why: Jerry wants learners to build the habit of writing about themselves
+correctly (je suis fatiguée vs fatigué). Profile option: male, female, or
+not set. Word examples have a female version where needed (example_f). The
+AI marks the wrong form as a mistake (tag speaker-agreement, major). With
+"not set", both forms are accepted.
+Revisit if: learners find it annoying, or we need other options.
+
+## 2026-10-10 — Same word, different meaning: separate entries plus an N.B.
+Why: Jerry's choice. When a word comes back with another meaning, remind the
+learner of the meaning they already know. Meanings worth practicing get their
+own entry, linked both ways (temps weather/time, femme wife/woman, fille
+daughter/girl, garçon boy/waiter, souvenir gift/memory, gagner win/earn,
+rose pink/flower). Smaller ones are an N.B. only (été, cher, sale).
+Revisit if: the N.B. lines get noisy.
+
+## 2026-10-10 — Reflexive verbs are level 2, with an explanation of "se"
+Why: reflexive verbs need their own grammar (se changes with the person,
+and the past uses être), which is a level 2 topic. Every reflexive verb has a
+"note" explaining why "se" is there, and the AI prompt explains it again when
+the learner leaves it out.
+Revisit if: daily-routine feels too thin at level 1 without them.

@@ -12,6 +12,8 @@
 - [ ] Review /data/structures.json (75-template draft, 15 per level) — @jerry
 - [ ] Template picker: random, different templates per word (2 statements + 1 question), matched to the word's part of speech — pair
 - [ ] Word picker: serve unseen words on demand, "Give me more words" button (test mode) — pair
+- [ ] Learner gender in the profile (male / female / not set); use example_f and pass it to the AI check — pair
+- [ ] Word card: show both forms, the note, and the N.B. for other meanings — pair
 - [ ] Sentence input page (three boxes per word: 2 sentences + 1 question) — pair
 - [ ] Connect Claude API to check/correct sentences, with MAX_CHECKS_PER_DAY cap — pair
 - [ ] Streak tracking using STREAK_MIN_WORDS = 5, decide timezone rule — pair
