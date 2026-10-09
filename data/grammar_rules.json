@@ -128,6 +128,15 @@
       "wrong": ["une robe noir", "des chiens petit et rapide"]
     },
     {
+      "id": "speaker-agreement",
+      "level": 1,
+      "topic": "Words about yourself match your own gender",
+      "severity": "major",
+      "explain": "When you talk about yourself, adjectives and past forms with être match you: a woman writes je suis fatiguée and je suis allée, a man writes je suis fatigué and je suis allé.",
+      "correct": ["Je suis contente. (woman)", "Je suis content. (man)", "Je suis allée au parc. (woman)"],
+      "wrong": ["Je suis content. (woman)", "Je suis allée au parc. (man)"]
+    },
+    {
       "id": "adjective-position",
       "level": 1,
       "topic": "Most adjectives go after the noun",
@@ -258,7 +267,7 @@
       "level": 2,
       "topic": "Reflexive verbs (se lever, s'appeler)",
       "severity": "major",
-      "explain": "Reflexive verbs need a small pronoun that matches the subject: je me lève, tu te lèves, il se lève, nous nous levons.",
+      "explain": "Verbs with 'se' (se lever, s'habiller) are actions you do to yourself: 'lever' is to lift, 'se lever' is to lift yourself, so to get up. 'se' changes with the person: je me lève, tu te lèves, il se lève, nous nous levons. In the past they use être: je me suis levé(e).",
       "correct": ["Je me lève à sept heures.", "Tu t'appelles comment ?"],
       "wrong": ["Je lève à sept heures.", "Tu se appelles comment ?"]
     },

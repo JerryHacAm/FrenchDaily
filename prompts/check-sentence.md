@@ -13,7 +13,9 @@ Slots:
   {{word}}              target word in dictionary form, e.g. "pomme"
   {{word_english}}      its English meaning, e.g. "apple"
   {{word_pos}}          noun | verb | adjective
-  {{word_gender}}       m | f | (empty for verbs and adjectives)
+  {{word_gender}}       m | f | m/f (person noun with both forms) | (empty for verbs and adjectives)
+  {{word_feminine}}     feminine form from words.json "feminine" (e.g. "amie", "grande"), or "none"
+  {{learner_gender}}    male | female | not_set  (from the user's profile; which forms to use for "je")
   {{item_type}}         statement | question
   {{template_pattern}}  the template's pattern, e.g. "Subject + verb + object + place"
   {{template_example}}  the template's example for this part of speech
@@ -30,7 +32,8 @@ The student was given one French word and one sentence pattern, and wrote one {{
 ## The exercise
 
 - Student level: {{level}} (1 = absolute beginner, 5 = upper intermediate)
-- Target word: "{{word}}" ({{word_english}}), part of speech: {{word_pos}}, gender: {{word_gender}}
+- Target word: "{{word}}" ({{word_english}}), part of speech: {{word_pos}}, gender: {{word_gender}}, feminine form: {{word_feminine}}
+- The student is: {{learner_gender}}
 - Item type: {{item_type}}
 - Pattern they were asked to follow: {{template_pattern}}
 - Example of that pattern: {{template_example}}
@@ -39,7 +42,7 @@ The student was given one French word and one sentence pattern, and wrote one {{
 ## Step 1: structure check (structure_ok)
 
 structure_ok is true only if ALL of these are true:
-1. The target word is used, in any correct or nearly correct form (plural, conjugated, feminine, small spelling slip).
+1. The target word is used, in any correct or nearly correct form (plural, conjugated, feminine, small spelling slip). The feminine form above counts as the same word (for "ami", "amie" is fine). Use the meaning given above ({{word_english}}); if the student clearly used another meaning of the same French word, that still counts, but mention the meaning they were asked for in one example sentence.
 2. There is a verb.
 3. If item type is "statement": it is a statement, not a question, AND it has at least one context element: a reason, place, time, or description.
 4. If item type is "question": it is really a question (a question word, est-ce que, a choice with "ou", or a rising-tone sentence ending in "?").
@@ -56,6 +59,8 @@ If structure_ok is false, set structure_feedback to one short sentence telling t
 - Spoken everyday forms are fine and are NOT mistakes: "on" for "nous", rising-tone questions ("Tu viens ?"), question words at the end ("Tu vas où ?"), "ça".
 - In writing, a missing "ne" in a negative ("Je mange pas") is a minor mistake: fix it, but only mention it if there is no more important mistake.
 - Don't mark something as wrong if it's correct French, even if you would say it differently. If you're not sure it's wrong, it isn't.
+- The student's own gender: when the student talks about themselves with "je" (adjectives like fatigué, content, seul, and past forms with être like allé, levé), the ending must match them. If they are "female", use the feminine form (je suis fatiguée, je suis allée); if "male", the masculine form. If a female student writes the masculine form (or the other way round), it is a mistake: tag "speaker-agreement". If "not_set", accept either form and don't mark it. This builds the habit of writing about themselves correctly.
+- Reflexive verbs (verbs with "se", like se lever): if the target word is one and the student left out "se" or used the wrong one (je se lève), explain in plain words why it's there: "se" means you do the action to yourself ("lever" = to lift, "se lever" = to lift yourself = to get up), and it changes with the person (je me, tu te, il se). Tag "reflexive-verbs".
 - is_correct is true only if the corrected sentence is the same as the student's sentence (ignore spaces before ? and ! and a missing final full stop).
 
 ## Step 3: choose at most 2 mistakes to show
@@ -67,7 +72,7 @@ If structure_ok is false, set structure_feedback to one short sentence telling t
 
 ## Step 4: example sentences
 
-Write 2 new, natural, correct French sentences that use the target word, at the student's level or easier. Make them useful for daily life. If the student made a mistake, make one example show the correct form of that mistake. Give each one an English translation.
+Write 2 new, natural, correct French sentences that use the target word, at the student's level or easier. Make them useful for daily life. If the student made a mistake, make one example show the correct form of that mistake. Give each one an English translation. If an example uses "je" with an ending that depends on gender, match the student (female: je suis contente; male or not_set: je suis content).
 
 ## How to write explanations
 
