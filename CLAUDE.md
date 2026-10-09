@@ -48,8 +48,18 @@ See @README.md for the full project description
 
 ## Commands
 - Install: `npm install`
-- Run: `npm run dev`
-- Test: `npm test`
+- Run: `npm run dev` (then open http://localhost:3000)
+- Check before pushing: `npx tsc --noEmit`, `npm run lint`, `npm run build`
+- Test: `npm test` (no test runner yet; add one with the first real logic)
+
+## Code layout
+- Next.js 16 (App Router) in `src/`. This version is newer than most AI
+  training data: read @AGENTS.md and the docs it points to before writing
+  Next.js code.
+- All settings and secrets are read in `src/lib/config.ts` only. Import
+  constants from there; never read `process.env` elsewhere.
+- Server-only code starts with `import "server-only"` (keys, Supabase admin,
+  Claude calls). Supabase server code lives in `src/lib/supabase/`.
 
 ## Team workflow (follow every session)
 Step-by-step guide for humans: docs/WORKFLOW.md.
