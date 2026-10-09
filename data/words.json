@@ -1,0 +1,1931 @@
+{
+  "_note": "Starter list, draft v0 by Claude for quantrungvu (2026-10-10). Jerry reviews and grows it toward ~1000 words. frequency_rank values are approximate (smaller = more common). mini_text is the short text shown before writing (read -> notice -> write). 'forms' lists irregular forms the matcher can't guess; the app checks every example and mini_text uses the word (npm test).",
+  "words": [
+    {
+      "id": "w001",
+      "french": "pomme",
+      "english": "apple",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 1,
+      "theme": "food",
+      "frequency_rank": 900,
+      "audio": null,
+      "example": "Je mange une pomme le matin.",
+      "example_en": "I eat an apple in the morning.",
+      "mini_text": {
+        "fr": "Léa aime les fruits. Chaque matin, elle mange une pomme rouge. La pomme est bonne pour la santé.",
+        "en": "Léa likes fruit. Every morning, she eats a red apple. The apple is good for your health."
+      }
+    },
+    {
+      "id": "w002",
+      "french": "pain",
+      "english": "bread",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 1,
+      "theme": "food",
+      "frequency_rank": 600,
+      "audio": null,
+      "example": "J'achète du pain à la boulangerie.",
+      "example_en": "I buy bread at the bakery.",
+      "mini_text": {
+        "fr": "En France, on mange du pain tous les jours. Le matin, Paul achète une baguette. Le pain est encore chaud.",
+        "en": "In France, people eat bread every day. In the morning, Paul buys a baguette. The bread is still warm."
+      }
+    },
+    {
+      "id": "w003",
+      "french": "eau",
+      "english": "water",
+      "pos": "noun",
+      "gender": "f",
+      "article": "l'",
+      "level": 1,
+      "theme": "food",
+      "frequency_rank": 300,
+      "audio": null,
+      "example": "Je bois de l'eau quand j'ai soif.",
+      "example_en": "I drink water when I'm thirsty.",
+      "mini_text": {
+        "fr": "Il fait chaud aujourd'hui. Marc boit beaucoup d'eau. L'eau est fraîche.",
+        "en": "It's hot today. Marc drinks a lot of water. The water is cool."
+      }
+    },
+    {
+      "id": "w004",
+      "french": "café",
+      "english": "coffee",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 1,
+      "theme": "food",
+      "frequency_rank": 450,
+      "audio": null,
+      "example": "Je prends un café avec mon ami.",
+      "example_en": "I have a coffee with my friend.",
+      "mini_text": {
+        "fr": "Le matin, ma mère boit un café. Elle aime le café noir, sans sucre. Moi, je préfère le thé.",
+        "en": "In the morning, my mother drinks a coffee. She likes black coffee, without sugar. Me, I prefer tea."
+      }
+    },
+    {
+      "id": "w005",
+      "french": "fromage",
+      "english": "cheese",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 1,
+      "theme": "food",
+      "frequency_rank": 1100,
+      "audio": null,
+      "example": "Il y a beaucoup de fromage en France.",
+      "example_en": "There is a lot of cheese in France.",
+      "mini_text": {
+        "fr": "La France a plus de mille fromages. Le soir, on mange du fromage avec du pain. Mon fromage préféré est le camembert.",
+        "en": "France has more than a thousand cheeses. In the evening, people eat cheese with bread. My favourite cheese is camembert."
+      }
+    },
+    {
+      "id": "w006",
+      "french": "manger",
+      "english": "to eat",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "food",
+      "frequency_rank": 250,
+      "audio": null,
+      "example": "Nous mangeons à midi à la cantine.",
+      "example_en": "We eat at noon in the canteen.",
+      "mini_text": {
+        "fr": "Je mange avec ma famille le soir. Nous mangeons à huit heures. Mon frère mange très vite !",
+        "en": "I eat with my family in the evening. We eat at eight o'clock. My brother eats very fast!"
+      }
+    },
+    {
+      "id": "w007",
+      "french": "boire",
+      "english": "to drink",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "food",
+      "frequency_rank": 400,
+      "audio": null,
+      "example": "Elle boit un thé le soir.",
+      "example_en": "She drinks a tea in the evening.",
+      "mini_text": {
+        "fr": "Qu'est-ce que tu bois le matin ? Moi, je bois un jus d'orange. Mon père boit un café.",
+        "en": "What do you drink in the morning? Me, I drink an orange juice. My father drinks a coffee."
+      },
+      "forms": [
+        "bois",
+        "boit",
+        "buvons",
+        "buvez",
+        "boivent",
+        "bu",
+        "buvais",
+        "buvait"
+      ]
+    },
+    {
+      "id": "w008",
+      "french": "acheter",
+      "english": "to buy",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "food",
+      "frequency_rank": 350,
+      "audio": null,
+      "example": "J'achète des fruits au marché.",
+      "example_en": "I buy fruit at the market.",
+      "mini_text": {
+        "fr": "Le samedi, Sophie va au marché. Elle achète des tomates et du fromage. Elle n'achète pas de viande.",
+        "en": "On Saturdays, Sophie goes to the market. She buys tomatoes and cheese. She doesn't buy meat."
+      }
+    },
+    {
+      "id": "w009",
+      "french": "bon",
+      "english": "good",
+      "pos": "adjective",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "food",
+      "frequency_rank": 100,
+      "audio": null,
+      "example": "Ce gâteau est très bon.",
+      "example_en": "This cake is very good.",
+      "mini_text": {
+        "fr": "Ce restaurant est bon et pas cher. La soupe est bonne. Les desserts sont aussi très bons.",
+        "en": "This restaurant is good and not expensive. The soup is good. The desserts are also very good."
+      },
+      "forms": [
+        "bonne",
+        "bonnes",
+        "bons"
+      ]
+    },
+    {
+      "id": "w010",
+      "french": "chaud",
+      "english": "hot, warm",
+      "pos": "adjective",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "food",
+      "frequency_rank": 700,
+      "audio": null,
+      "example": "Le café est trop chaud.",
+      "example_en": "The coffee is too hot.",
+      "mini_text": {
+        "fr": "En été, il fait chaud à Paris. Je bois de l'eau froide, pas un thé chaud. La soupe chaude, c'est pour l'hiver !",
+        "en": "In summer, it's hot in Paris. I drink cold water, not a hot tea. Hot soup is for winter!"
+      }
+    },
+    {
+      "id": "w011",
+      "french": "restaurant",
+      "english": "restaurant",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 1,
+      "theme": "food",
+      "frequency_rank": 800,
+      "audio": null,
+      "example": "Nous allons au restaurant ce soir.",
+      "example_en": "We are going to the restaurant tonight.",
+      "mini_text": {
+        "fr": "Ce soir, on va au restaurant pour l'anniversaire de Julie. Le restaurant est près de la gare. Il est petit mais très bon.",
+        "en": "Tonight, we're going to the restaurant for Julie's birthday. The restaurant is near the station. It's small but very good."
+      }
+    },
+    {
+      "id": "w012",
+      "french": "cuisiner",
+      "english": "to cook",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "food",
+      "frequency_rank": 1500,
+      "audio": null,
+      "example": "Mon père cuisine le dimanche.",
+      "example_en": "My father cooks on Sundays.",
+      "mini_text": {
+        "fr": "J'aime cuisiner pour mes amis. Ce soir, je cuisine des pâtes. C'est simple et rapide.",
+        "en": "I like cooking for my friends. Tonight, I'm cooking pasta. It's simple and quick."
+      }
+    },
+    {
+      "id": "w013",
+      "french": "maison",
+      "english": "house, home",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 1,
+      "theme": "home",
+      "frequency_rank": 200,
+      "audio": null,
+      "example": "Ma maison est près de la mer.",
+      "example_en": "My house is near the sea.",
+      "mini_text": {
+        "fr": "Thomas habite dans une petite maison. La maison a un jardin. Le soir, il lit dans le jardin.",
+        "en": "Thomas lives in a small house. The house has a garden. In the evening, he reads in the garden."
+      }
+    },
+    {
+      "id": "w014",
+      "french": "chambre",
+      "english": "bedroom",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 1,
+      "theme": "home",
+      "frequency_rank": 650,
+      "audio": null,
+      "example": "Ma chambre est petite mais calme.",
+      "example_en": "My bedroom is small but quiet.",
+      "mini_text": {
+        "fr": "Dans ma chambre, il y a un lit et une table. La chambre est bleue. Le soir, je travaille dans ma chambre.",
+        "en": "In my bedroom, there is a bed and a table. The bedroom is blue. In the evening, I work in my bedroom."
+      }
+    },
+    {
+      "id": "w015",
+      "french": "table",
+      "english": "table",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 1,
+      "theme": "home",
+      "frequency_rank": 550,
+      "audio": null,
+      "example": "Les clés sont sur la table.",
+      "example_en": "The keys are on the table.",
+      "mini_text": {
+        "fr": "La famille mange à table à sept heures. La table est grande. Il y a des fleurs sur la table.",
+        "en": "The family eats at the table at seven o'clock. The table is big. There are flowers on the table."
+      }
+    },
+    {
+      "id": "w016",
+      "french": "lit",
+      "english": "bed",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 1,
+      "theme": "home",
+      "frequency_rank": 900,
+      "audio": null,
+      "example": "Le chat dort sur mon lit.",
+      "example_en": "The cat sleeps on my bed.",
+      "mini_text": {
+        "fr": "Mon lit est confortable. Le dimanche, je reste au lit jusqu'à dix heures. Mon chat dort aussi sur le lit.",
+        "en": "My bed is comfortable. On Sundays, I stay in bed until ten o'clock. My cat also sleeps on the bed."
+      }
+    },
+    {
+      "id": "w017",
+      "french": "cuisine",
+      "english": "kitchen",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 1,
+      "theme": "home",
+      "frequency_rank": 950,
+      "audio": null,
+      "example": "On mange dans la cuisine le matin.",
+      "example_en": "We eat in the kitchen in the morning.",
+      "mini_text": {
+        "fr": "La cuisine est la pièce préférée de ma mère. Elle est grande et claire. Le matin, on prend le petit déjeuner dans la cuisine.",
+        "en": "The kitchen is my mother's favourite room. It's big and bright. In the morning, we have breakfast in the kitchen."
+      }
+    },
+    {
+      "id": "w018",
+      "french": "habiter",
+      "english": "to live (somewhere)",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "home",
+      "frequency_rank": 500,
+      "audio": null,
+      "example": "J'habite à Lyon avec ma sœur.",
+      "example_en": "I live in Lyon with my sister.",
+      "mini_text": {
+        "fr": "Où est-ce que tu habites ? Moi, j'habite à Marseille. J'habite près de la mer.",
+        "en": "Where do you live? Me, I live in Marseille. I live near the sea."
+      }
+    },
+    {
+      "id": "w019",
+      "french": "dormir",
+      "english": "to sleep",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "home",
+      "frequency_rank": 750,
+      "audio": null,
+      "example": "Je dors huit heures par nuit.",
+      "example_en": "I sleep eight hours a night.",
+      "mini_text": {
+        "fr": "Le bébé dort beaucoup. La nuit, il dort dans sa petite chambre. Ses parents ne dorment pas beaucoup !",
+        "en": "The baby sleeps a lot. At night, he sleeps in his little bedroom. His parents don't sleep much!"
+      },
+      "forms": [
+        "dors",
+        "dort",
+        "dormons",
+        "dormez",
+        "dorment",
+        "dormi"
+      ]
+    },
+    {
+      "id": "w020",
+      "french": "grand",
+      "english": "big, tall",
+      "pos": "adjective",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "home",
+      "frequency_rank": 120,
+      "audio": null,
+      "example": "Paris est une grande ville.",
+      "example_en": "Paris is a big city.",
+      "mini_text": {
+        "fr": "Mon frère est très grand. Il habite dans un grand appartement. Sa cuisine est grande aussi.",
+        "en": "My brother is very tall. He lives in a big flat. His kitchen is big too."
+      }
+    },
+    {
+      "id": "w021",
+      "french": "petit",
+      "english": "small, little",
+      "pos": "adjective",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "home",
+      "frequency_rank": 140,
+      "audio": null,
+      "example": "J'ai un petit chien noir.",
+      "example_en": "I have a little black dog.",
+      "mini_text": {
+        "fr": "Ma ville est petite et calme. Il y a un petit marché le samedi. Les rues sont petites et jolies.",
+        "en": "My town is small and quiet. There's a small market on Saturdays. The streets are small and pretty."
+      }
+    },
+    {
+      "id": "w022",
+      "french": "fenêtre",
+      "english": "window",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 1,
+      "theme": "home",
+      "frequency_rank": 1200,
+      "audio": null,
+      "example": "J'ouvre la fenêtre le matin.",
+      "example_en": "I open the window in the morning.",
+      "mini_text": {
+        "fr": "Ma chambre a une grande fenêtre. Par la fenêtre, je vois la rue. Le matin, j'ouvre la fenêtre.",
+        "en": "My bedroom has a big window. Through the window, I see the street. In the morning, I open the window."
+      }
+    },
+    {
+      "id": "w023",
+      "french": "porte",
+      "english": "door",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 1,
+      "theme": "home",
+      "frequency_rank": 700,
+      "audio": null,
+      "example": "Ferme la porte, s'il te plaît.",
+      "example_en": "Close the door, please.",
+      "mini_text": {
+        "fr": "Quelqu'un frappe à la porte. J'ouvre la porte : c'est mon ami Paul ! Il entre et ferme la porte.",
+        "en": "Someone is knocking at the door. I open the door: it's my friend Paul! He comes in and closes the door."
+      }
+    },
+    {
+      "id": "w024",
+      "french": "mère",
+      "english": "mother",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 1,
+      "theme": "family",
+      "frequency_rank": 400,
+      "audio": null,
+      "example": "Ma mère travaille dans un hôpital.",
+      "example_en": "My mother works in a hospital.",
+      "mini_text": {
+        "fr": "Ma mère s'appelle Anne. Elle est professeur. Le soir, ma mère et moi regardons un film.",
+        "en": "My mother's name is Anne. She is a teacher. In the evening, my mother and I watch a film."
+      }
+    },
+    {
+      "id": "w025",
+      "french": "père",
+      "english": "father",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 1,
+      "theme": "family",
+      "frequency_rank": 380,
+      "audio": null,
+      "example": "Mon père cuisine très bien.",
+      "example_en": "My father cooks very well.",
+      "mini_text": {
+        "fr": "Mon père a cinquante ans. Il aime le sport et la musique. Le dimanche, mon père fait du vélo.",
+        "en": "My father is fifty. He likes sport and music. On Sundays, my father goes cycling."
+      }
+    },
+    {
+      "id": "w026",
+      "french": "frère",
+      "english": "brother",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 1,
+      "theme": "family",
+      "frequency_rank": 800,
+      "audio": null,
+      "example": "Mon frère a dix ans.",
+      "example_en": "My brother is ten years old.",
+      "mini_text": {
+        "fr": "J'ai un frère et une sœur. Mon frère s'appelle Léo. Il est petit mais il parle beaucoup !",
+        "en": "I have a brother and a sister. My brother's name is Léo. He's small but he talks a lot!"
+      }
+    },
+    {
+      "id": "w027",
+      "french": "sœur",
+      "english": "sister",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 1,
+      "theme": "family",
+      "frequency_rank": 850,
+      "audio": null,
+      "example": "Ma sœur habite à Paris.",
+      "example_en": "My sister lives in Paris.",
+      "mini_text": {
+        "fr": "Ma sœur est étudiante. Elle habite à Lyon. Le week-end, ma sœur rentre à la maison.",
+        "en": "My sister is a student. She lives in Lyon. At the weekend, my sister comes home."
+      }
+    },
+    {
+      "id": "w028",
+      "french": "ami",
+      "english": "friend",
+      "pos": "noun",
+      "gender": "m",
+      "article": "l'",
+      "level": 1,
+      "theme": "family",
+      "frequency_rank": 300,
+      "audio": null,
+      "example": "Mon ami Paul est très gentil.",
+      "example_en": "My friend Paul is very kind.",
+      "mini_text": {
+        "fr": "Mon meilleur ami s'appelle Hugo. On joue au foot ensemble. C'est un ami fidèle.",
+        "en": "My best friend's name is Hugo. We play football together. He's a loyal friend."
+      }
+    },
+    {
+      "id": "w029",
+      "french": "enfant",
+      "english": "child",
+      "pos": "noun",
+      "gender": "m",
+      "article": "l'",
+      "level": 1,
+      "theme": "family",
+      "frequency_rank": 320,
+      "audio": null,
+      "example": "Les enfants jouent dans le jardin.",
+      "example_en": "The children are playing in the garden.",
+      "mini_text": {
+        "fr": "Marie a deux enfants. Les enfants vont à l'école à huit heures. Le soir, ils font leurs devoirs.",
+        "en": "Marie has two children. The children go to school at eight o'clock. In the evening, they do their homework."
+      }
+    },
+    {
+      "id": "w030",
+      "french": "aimer",
+      "english": "to love, to like",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "family",
+      "frequency_rank": 150,
+      "audio": null,
+      "example": "J'aime le chocolat parce que c'est sucré.",
+      "example_en": "I like chocolate because it's sweet.",
+      "mini_text": {
+        "fr": "J'aime beaucoup la musique. Mon ami aime le sport. Nous aimons tous les deux le cinéma.",
+        "en": "I really like music. My friend likes sport. We both like cinema."
+      }
+    },
+    {
+      "id": "w031",
+      "french": "parler",
+      "english": "to speak, to talk",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "family",
+      "frequency_rank": 160,
+      "audio": null,
+      "example": "Je parle français avec mon professeur.",
+      "example_en": "I speak French with my teacher.",
+      "mini_text": {
+        "fr": "Est-ce que tu parles anglais ? Moi, je parle anglais et un peu français. Je parle français avec mes amis.",
+        "en": "Do you speak English? Me, I speak English and a little French. I speak French with my friends."
+      }
+    },
+    {
+      "id": "w032",
+      "french": "jeune",
+      "english": "young",
+      "pos": "adjective",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "family",
+      "frequency_rank": 450,
+      "audio": null,
+      "example": "Mon professeur est jeune et sympa.",
+      "example_en": "My teacher is young and nice.",
+      "mini_text": {
+        "fr": "Mon professeur est jeune. Il a vingt-cinq ans. Les jeunes aiment beaucoup ses cours.",
+        "en": "My teacher is young. He's twenty-five. Young people really like his classes."
+      }
+    },
+    {
+      "id": "w033",
+      "french": "gentil",
+      "english": "kind, nice",
+      "pos": "adjective",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "family",
+      "frequency_rank": 1300,
+      "audio": null,
+      "example": "Ma voisine est très gentille.",
+      "example_en": "My neighbour is very kind.",
+      "mini_text": {
+        "fr": "Le boulanger est très gentil. Il dit toujours bonjour. Sa femme est gentille aussi.",
+        "en": "The baker is very kind. He always says hello. His wife is kind too."
+      }
+    },
+    {
+      "id": "w034",
+      "french": "famille",
+      "english": "family",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 1,
+      "theme": "family",
+      "frequency_rank": 420,
+      "audio": null,
+      "example": "Ma famille habite à la campagne.",
+      "example_en": "My family lives in the countryside.",
+      "mini_text": {
+        "fr": "Ma famille est grande. J'ai trois frères et deux sœurs. Le dimanche, toute la famille mange ensemble.",
+        "en": "My family is big. I have three brothers and two sisters. On Sundays, the whole family eats together."
+      }
+    },
+    {
+      "id": "w035",
+      "french": "matin",
+      "english": "morning",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 1,
+      "theme": "routine",
+      "frequency_rank": 480,
+      "audio": null,
+      "example": "Le matin, je bois un café.",
+      "example_en": "In the morning, I drink a coffee.",
+      "mini_text": {
+        "fr": "Le matin, je me lève à sept heures. Je prends une douche et je mange. Le matin, j'écoute la radio.",
+        "en": "In the morning, I get up at seven o'clock. I take a shower and I eat. In the morning, I listen to the radio."
+      }
+    },
+    {
+      "id": "w036",
+      "french": "soir",
+      "english": "evening",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 1,
+      "theme": "routine",
+      "frequency_rank": 470,
+      "audio": null,
+      "example": "Le soir, je regarde un film.",
+      "example_en": "In the evening, I watch a film.",
+      "mini_text": {
+        "fr": "Le soir, je rentre à la maison à six heures. Je cuisine et je mange. Ce soir, je vais au cinéma.",
+        "en": "In the evening, I come home at six o'clock. I cook and I eat. Tonight, I'm going to the cinema."
+      }
+    },
+    {
+      "id": "w037",
+      "french": "jour",
+      "english": "day",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 1,
+      "theme": "routine",
+      "frequency_rank": 80,
+      "audio": null,
+      "example": "Je marche trente minutes par jour.",
+      "example_en": "I walk thirty minutes a day.",
+      "mini_text": {
+        "fr": "Il y a sept jours dans une semaine. Mon jour préféré est le samedi. Ce jour-là, je ne travaille pas.",
+        "en": "There are seven days in a week. My favourite day is Saturday. On that day, I don't work."
+      }
+    },
+    {
+      "id": "w038",
+      "french": "semaine",
+      "english": "week",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 1,
+      "theme": "routine",
+      "frequency_rank": 520,
+      "audio": null,
+      "example": "Je vais à la piscine deux fois par semaine.",
+      "example_en": "I go to the pool twice a week.",
+      "mini_text": {
+        "fr": "Cette semaine, je travaille beaucoup. La semaine prochaine, je suis en vacances. Je pars une semaine à la mer.",
+        "en": "This week, I'm working a lot. Next week, I'm on holiday. I'm going to the sea for a week."
+      }
+    },
+    {
+      "id": "w039",
+      "french": "travailler",
+      "english": "to work",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "routine",
+      "frequency_rank": 280,
+      "audio": null,
+      "example": "Je travaille dans un bureau à Paris.",
+      "example_en": "I work in an office in Paris.",
+      "mini_text": {
+        "fr": "Ma sœur travaille dans un hôpital. Elle travaille la nuit. Moi, je travaille le jour.",
+        "en": "My sister works in a hospital. She works at night. Me, I work during the day."
+      }
+    },
+    {
+      "id": "w040",
+      "french": "commencer",
+      "english": "to start",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "routine",
+      "frequency_rank": 390,
+      "audio": null,
+      "example": "Le film commence à huit heures.",
+      "example_en": "The film starts at eight o'clock.",
+      "mini_text": {
+        "fr": "L'école commence à huit heures et demie. Le cours de français commence à neuf heures. Nous commençons par une chanson.",
+        "en": "School starts at half past eight. The French class starts at nine o'clock. We start with a song."
+      }
+    },
+    {
+      "id": "w041",
+      "french": "finir",
+      "english": "to finish",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "routine",
+      "frequency_rank": 430,
+      "audio": null,
+      "example": "Je finis le travail à six heures.",
+      "example_en": "I finish work at six o'clock.",
+      "mini_text": {
+        "fr": "Je finis mes devoirs avant le dîner. Mon frère finit toujours en retard. Le film finit à minuit.",
+        "en": "I finish my homework before dinner. My brother always finishes late. The film ends at midnight."
+      }
+    },
+    {
+      "id": "w042",
+      "french": "prendre",
+      "english": "to take",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "routine",
+      "frequency_rank": 60,
+      "audio": null,
+      "example": "Je prends le bus pour aller au travail.",
+      "example_en": "I take the bus to go to work.",
+      "mini_text": {
+        "fr": "Le matin, je prends le métro. Mon ami prend son vélo. Nous prenons un café ensemble au travail.",
+        "en": "In the morning, I take the metro. My friend takes his bike. We have a coffee together at work."
+      },
+      "forms": [
+        "prends",
+        "prend",
+        "prenons",
+        "prenez",
+        "prennent",
+        "pris",
+        "prise",
+        "prenais",
+        "prenait"
+      ]
+    },
+    {
+      "id": "w043",
+      "french": "faire",
+      "english": "to do, to make",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "routine",
+      "frequency_rank": 25,
+      "audio": null,
+      "example": "Je fais du sport le samedi.",
+      "example_en": "I do sport on Saturdays.",
+      "mini_text": {
+        "fr": "Qu'est-ce que tu fais ce week-end ? Je fais les courses et je fais un gâteau. Mes amis font une fête.",
+        "en": "What are you doing this weekend? I'm doing the shopping and making a cake. My friends are having a party."
+      },
+      "forms": [
+        "fais",
+        "fait",
+        "faisons",
+        "faites",
+        "font",
+        "faisais",
+        "faisait",
+        "ferai",
+        "fera"
+      ]
+    },
+    {
+      "id": "w044",
+      "french": "heure",
+      "english": "hour, o'clock",
+      "pos": "noun",
+      "gender": "f",
+      "article": "l'",
+      "level": 1,
+      "theme": "routine",
+      "frequency_rank": 200,
+      "audio": null,
+      "example": "Je me lève à sept heures.",
+      "example_en": "I get up at seven o'clock.",
+      "mini_text": {
+        "fr": "Quelle heure est-il ? Il est huit heures. Le bus arrive dans une heure !",
+        "en": "What time is it? It's eight o'clock. The bus arrives in an hour!"
+      }
+    },
+    {
+      "id": "w045",
+      "french": "fatigué",
+      "english": "tired",
+      "pos": "adjective",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "routine",
+      "frequency_rank": 1400,
+      "audio": null,
+      "example": "Je suis fatigué parce que je travaille beaucoup.",
+      "example_en": "I'm tired because I work a lot.",
+      "mini_text": {
+        "fr": "Le vendredi soir, je suis très fatigué. Ma sœur est fatiguée aussi. Nous restons à la maison.",
+        "en": "On Friday evenings, I'm very tired. My sister is tired too. We stay at home."
+      }
+    },
+    {
+      "id": "w046",
+      "french": "ville",
+      "english": "city, town",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 1,
+      "theme": "city",
+      "frequency_rank": 260,
+      "audio": null,
+      "example": "J'habite dans une petite ville.",
+      "example_en": "I live in a small town.",
+      "mini_text": {
+        "fr": "Bordeaux est une belle ville. Il y a une grande rivière dans la ville. J'aime marcher dans la ville le soir.",
+        "en": "Bordeaux is a beautiful city. There's a big river in the city. I like walking in the city in the evening."
+      }
+    },
+    {
+      "id": "w047",
+      "french": "rue",
+      "english": "street",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 1,
+      "theme": "city",
+      "frequency_rank": 600,
+      "audio": null,
+      "example": "Ma maison est dans une rue calme.",
+      "example_en": "My house is on a quiet street.",
+      "mini_text": {
+        "fr": "J'habite dans une rue très calme. Dans ma rue, il y a une boulangerie. La rue est jolie au printemps.",
+        "en": "I live on a very quiet street. On my street, there's a bakery. The street is pretty in spring."
+      }
+    },
+    {
+      "id": "w048",
+      "french": "magasin",
+      "english": "shop",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 1,
+      "theme": "city",
+      "frequency_rank": 1000,
+      "audio": null,
+      "example": "Le magasin ferme à sept heures.",
+      "example_en": "The shop closes at seven o'clock.",
+      "mini_text": {
+        "fr": "Il y a un nouveau magasin dans ma rue. Le magasin vend des vêtements. Il est ouvert le dimanche.",
+        "en": "There's a new shop on my street. The shop sells clothes. It's open on Sundays."
+      }
+    },
+    {
+      "id": "w049",
+      "french": "gare",
+      "english": "train station",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 1,
+      "theme": "city",
+      "frequency_rank": 1050,
+      "audio": null,
+      "example": "Je vais à la gare en taxi.",
+      "example_en": "I'm going to the station by taxi.",
+      "mini_text": {
+        "fr": "La gare est au centre-ville. Mon train part de la gare à neuf heures. J'arrive à la gare en avance.",
+        "en": "The station is in the town centre. My train leaves from the station at nine o'clock. I arrive at the station early."
+      }
+    },
+    {
+      "id": "w050",
+      "french": "marché",
+      "english": "market",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 1,
+      "theme": "city",
+      "frequency_rank": 900,
+      "audio": null,
+      "example": "Le samedi, je vais au marché.",
+      "example_en": "On Saturdays, I go to the market.",
+      "mini_text": {
+        "fr": "Le marché est ouvert le mercredi et le samedi. On trouve des fruits et du fromage au marché. Il y a beaucoup de monde.",
+        "en": "The market is open on Wednesdays and Saturdays. You can find fruit and cheese at the market. There are a lot of people."
+      }
+    },
+    {
+      "id": "w051",
+      "french": "aller",
+      "english": "to go",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "city",
+      "frequency_rank": 30,
+      "audio": null,
+      "example": "Je vais au cinéma avec mes amis.",
+      "example_en": "I'm going to the cinema with my friends.",
+      "mini_text": {
+        "fr": "Où est-ce que tu vas ce soir ? Je vais chez mon ami. Nous allons au restaurant ensemble.",
+        "en": "Where are you going tonight? I'm going to my friend's place. We're going to the restaurant together."
+      },
+      "forms": [
+        "vais",
+        "vas",
+        "va",
+        "allons",
+        "allez",
+        "vont",
+        "allé",
+        "allée",
+        "allés",
+        "allais",
+        "allait",
+        "irai",
+        "ira"
+      ]
+    },
+    {
+      "id": "w052",
+      "french": "venir",
+      "english": "to come",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "city",
+      "frequency_rank": 70,
+      "audio": null,
+      "example": "Tu viens avec nous au parc ?",
+      "example_en": "Are you coming with us to the park?",
+      "mini_text": {
+        "fr": "Mon cousin vient de Belgique. Il vient chez nous en juillet. Tu viens aussi ?",
+        "en": "My cousin comes from Belgium. He's coming to our place in July. Are you coming too?"
+      },
+      "forms": [
+        "viens",
+        "vient",
+        "venons",
+        "venez",
+        "viennent",
+        "venu",
+        "venue",
+        "venais",
+        "venait",
+        "viendrai"
+      ]
+    },
+    {
+      "id": "w053",
+      "french": "chercher",
+      "english": "to look for",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "city",
+      "frequency_rank": 340,
+      "audio": null,
+      "example": "Je cherche mes clés partout.",
+      "example_en": "I'm looking for my keys everywhere.",
+      "mini_text": {
+        "fr": "Je cherche un appartement à Paris. Je cherche sur internet tous les jours. C'est difficile !",
+        "en": "I'm looking for a flat in Paris. I look on the internet every day. It's difficult!"
+      }
+    },
+    {
+      "id": "w054",
+      "french": "bus",
+      "english": "bus",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 1,
+      "theme": "city",
+      "frequency_rank": 1600,
+      "audio": null,
+      "example": "Je prends le bus à huit heures.",
+      "example_en": "I take the bus at eight o'clock.",
+      "mini_text": {
+        "fr": "Le bus numéro 5 va à la gare. Le matin, le bus est plein. Je lis un livre dans le bus.",
+        "en": "The number 5 bus goes to the station. In the morning, the bus is full. I read a book on the bus."
+      }
+    },
+    {
+      "id": "w055",
+      "french": "cher",
+      "english": "expensive",
+      "pos": "adjective",
+      "gender": null,
+      "article": null,
+      "level": 1,
+      "theme": "city",
+      "frequency_rank": 1250,
+      "audio": null,
+      "example": "Ce restaurant est trop cher pour moi.",
+      "example_en": "This restaurant is too expensive for me.",
+      "mini_text": {
+        "fr": "À Paris, les appartements sont chers. Le café coûte trois euros : ce n'est pas cher. Mais le train est cher.",
+        "en": "In Paris, flats are expensive. Coffee costs three euros: that's not expensive. But the train is expensive."
+      },
+      "forms": [
+        "chère",
+        "chères",
+        "chers"
+      ]
+    },
+    {
+      "id": "w056",
+      "french": "voiture",
+      "english": "car",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 1,
+      "theme": "city",
+      "frequency_rank": 620,
+      "audio": null,
+      "example": "Je vais au travail en voiture.",
+      "example_en": "I go to work by car.",
+      "mini_text": {
+        "fr": "Mon père a une vieille voiture rouge. Il prend la voiture pour aller au travail. Moi, je préfère le vélo.",
+        "en": "My father has an old red car. He takes the car to go to work. Me, I prefer the bike."
+      }
+    },
+    {
+      "id": "w057",
+      "french": "voyage",
+      "english": "trip, journey",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 2,
+      "theme": "travel",
+      "frequency_rank": 700,
+      "audio": null,
+      "example": "Notre voyage en Italie était super.",
+      "example_en": "Our trip to Italy was great.",
+      "mini_text": {
+        "fr": "L'été dernier, j'ai fait un long voyage en Espagne. Le voyage a duré trois semaines. C'était un voyage inoubliable.",
+        "en": "Last summer, I took a long trip to Spain. The trip lasted three weeks. It was an unforgettable trip."
+      }
+    },
+    {
+      "id": "w058",
+      "french": "voyager",
+      "english": "to travel",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "travel",
+      "frequency_rank": 1300,
+      "audio": null,
+      "example": "J'aime voyager en train parce que c'est calme.",
+      "example_en": "I like travelling by train because it's calm.",
+      "mini_text": {
+        "fr": "Ma tante adore voyager. L'année dernière, elle a voyagé au Japon. L'année prochaine, elle va voyager en Inde.",
+        "en": "My aunt loves travelling. Last year, she travelled to Japan. Next year, she's going to travel to India."
+      }
+    },
+    {
+      "id": "w059",
+      "french": "train",
+      "english": "train",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 2,
+      "theme": "travel",
+      "frequency_rank": 900,
+      "audio": null,
+      "example": "Le train pour Lyon part à dix heures.",
+      "example_en": "The train to Lyon leaves at ten o'clock.",
+      "mini_text": {
+        "fr": "J'ai pris le train pour aller à Lille. Le train était rapide. Dans le train, j'ai lu un livre.",
+        "en": "I took the train to go to Lille. The train was fast. On the train, I read a book."
+      }
+    },
+    {
+      "id": "w060",
+      "french": "billet",
+      "english": "ticket",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 2,
+      "theme": "travel",
+      "frequency_rank": 1700,
+      "audio": null,
+      "example": "J'ai acheté un billet pour le concert.",
+      "example_en": "I bought a ticket for the concert.",
+      "mini_text": {
+        "fr": "Je vais acheter mon billet de train sur internet. Le billet coûte quarante euros. N'oublie pas ton billet !",
+        "en": "I'm going to buy my train ticket online. The ticket costs forty euros. Don't forget your ticket!"
+      }
+    },
+    {
+      "id": "w061",
+      "french": "valise",
+      "english": "suitcase",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 2,
+      "theme": "travel",
+      "frequency_rank": 2500,
+      "audio": null,
+      "example": "Ma valise est trop lourde.",
+      "example_en": "My suitcase is too heavy.",
+      "mini_text": {
+        "fr": "Demain, je pars en vacances. Ce soir, je fais ma valise. Ma valise est petite, alors je prends peu de vêtements.",
+        "en": "Tomorrow, I'm going on holiday. Tonight, I'm packing my suitcase. My suitcase is small, so I'm taking few clothes."
+      }
+    },
+    {
+      "id": "w062",
+      "french": "partir",
+      "english": "to leave",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "travel",
+      "frequency_rank": 180,
+      "audio": null,
+      "example": "Nous partons en vacances demain matin.",
+      "example_en": "We're leaving on holiday tomorrow morning.",
+      "mini_text": {
+        "fr": "Le train part à huit heures. Je pars de la maison à sept heures. Hier, je suis parti en retard !",
+        "en": "The train leaves at eight o'clock. I leave home at seven o'clock. Yesterday, I left late!"
+      },
+      "forms": [
+        "pars",
+        "part",
+        "partons",
+        "partez",
+        "partent",
+        "parti",
+        "partie",
+        "partis",
+        "partais",
+        "partait"
+      ]
+    },
+    {
+      "id": "w063",
+      "french": "arriver",
+      "english": "to arrive",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "travel",
+      "frequency_rank": 190,
+      "audio": null,
+      "example": "Je suis arrivé à Paris hier soir.",
+      "example_en": "I arrived in Paris last night.",
+      "mini_text": {
+        "fr": "Le train arrive à midi. Mes amis arrivent à la gare. Nous sommes arrivés à l'hôtel à une heure.",
+        "en": "The train arrives at noon. My friends arrive at the station. We arrived at the hotel at one o'clock."
+      }
+    },
+    {
+      "id": "w064",
+      "french": "vacances",
+      "english": "holidays, vacation",
+      "pos": "noun",
+      "gender": "f",
+      "article": "les",
+      "level": 2,
+      "theme": "travel",
+      "frequency_rank": 950,
+      "audio": null,
+      "example": "Pendant les vacances, je vais à la mer.",
+      "example_en": "During the holidays, I go to the seaside.",
+      "mini_text": {
+        "fr": "Les vacances commencent la semaine prochaine. Cette année, je vais passer mes vacances à la montagne. J'ai besoin de vacances !",
+        "en": "The holidays start next week. This year, I'm going to spend my holidays in the mountains. I need a holiday!"
+      }
+    },
+    {
+      "id": "w065",
+      "french": "hôtel",
+      "english": "hotel",
+      "pos": "noun",
+      "gender": "m",
+      "article": "l'",
+      "level": 2,
+      "theme": "travel",
+      "frequency_rank": 1100,
+      "audio": null,
+      "example": "Notre hôtel est près de la plage.",
+      "example_en": "Our hotel is near the beach.",
+      "mini_text": {
+        "fr": "Nous avons réservé un hôtel à Nice. L'hôtel a une piscine. Le petit déjeuner à l'hôtel est excellent.",
+        "en": "We booked a hotel in Nice. The hotel has a swimming pool. Breakfast at the hotel is excellent."
+      }
+    },
+    {
+      "id": "w066",
+      "french": "plage",
+      "english": "beach",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 2,
+      "theme": "travel",
+      "frequency_rank": 1900,
+      "audio": null,
+      "example": "Les enfants jouent sur la plage.",
+      "example_en": "The children are playing on the beach.",
+      "mini_text": {
+        "fr": "En été, on va à la plage tous les jours. La plage est grande et propre. Je lis un livre sur la plage.",
+        "en": "In summer, we go to the beach every day. The beach is big and clean. I read a book on the beach."
+      }
+    },
+    {
+      "id": "w067",
+      "french": "bureau",
+      "english": "office, desk",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 2,
+      "theme": "work",
+      "frequency_rank": 650,
+      "audio": null,
+      "example": "Mon bureau est au troisième étage.",
+      "example_en": "My office is on the third floor.",
+      "mini_text": {
+        "fr": "J'arrive au bureau à neuf heures. Mon bureau est petit mais il a une fenêtre. Le vendredi, je travaille à la maison, pas au bureau.",
+        "en": "I get to the office at nine o'clock. My office is small but it has a window. On Fridays, I work from home, not at the office."
+      }
+    },
+    {
+      "id": "w068",
+      "french": "réunion",
+      "english": "meeting",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 2,
+      "theme": "work",
+      "frequency_rank": 1400,
+      "audio": null,
+      "example": "J'ai une réunion importante cet après-midi.",
+      "example_en": "I have an important meeting this afternoon.",
+      "mini_text": {
+        "fr": "Ce matin, j'ai eu une longue réunion. La réunion a commencé à neuf heures. Après la réunion, j'ai bu un café.",
+        "en": "This morning, I had a long meeting. The meeting started at nine o'clock. After the meeting, I drank a coffee."
+      }
+    },
+    {
+      "id": "w069",
+      "french": "projet",
+      "english": "project, plan",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 2,
+      "theme": "work",
+      "frequency_rank": 750,
+      "audio": null,
+      "example": "Nous avons un nouveau projet au travail.",
+      "example_en": "We have a new project at work.",
+      "mini_text": {
+        "fr": "Mon équipe travaille sur un grand projet. Le projet va durer six mois. C'est un projet intéressant.",
+        "en": "My team is working on a big project. The project is going to last six months. It's an interesting project."
+      }
+    },
+    {
+      "id": "w070",
+      "french": "occupé",
+      "english": "busy",
+      "pos": "adjective",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "work",
+      "frequency_rank": 2000,
+      "audio": null,
+      "example": "Je suis très occupé cette semaine.",
+      "example_en": "I'm very busy this week.",
+      "mini_text": {
+        "fr": "Ma mère est toujours occupée. Elle travaille et elle fait du sport. Ce soir, je ne suis pas occupé : on va au cinéma ?",
+        "en": "My mother is always busy. She works and she does sport. Tonight, I'm not busy: shall we go to the cinema?"
+      }
+    },
+    {
+      "id": "w071",
+      "french": "envoyer",
+      "english": "to send",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "work",
+      "frequency_rank": 800,
+      "audio": null,
+      "example": "J'envoie un message à mon ami.",
+      "example_en": "I send a message to my friend.",
+      "mini_text": {
+        "fr": "Hier, j'ai envoyé une carte postale à ma grand-mère. Elle m'envoie souvent des lettres. J'adore ça.",
+        "en": "Yesterday, I sent a postcard to my grandmother. She often sends me letters. I love that."
+      },
+      "forms": [
+        "envoie",
+        "envoies",
+        "envoient",
+        "enverrai",
+        "enverra"
+      ]
+    },
+    {
+      "id": "w072",
+      "french": "apprendre",
+      "english": "to learn",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "work",
+      "frequency_rank": 600,
+      "audio": null,
+      "example": "J'apprends le français depuis trois mois.",
+      "example_en": "I've been learning French for three months.",
+      "mini_text": {
+        "fr": "J'apprends le français avec une application. Mon frère apprend l'espagnol. Nous apprenons un peu chaque jour.",
+        "en": "I'm learning French with an app. My brother is learning Spanish. We learn a little every day."
+      },
+      "forms": [
+        "apprends",
+        "apprend",
+        "apprenons",
+        "apprenez",
+        "apprennent",
+        "appris",
+        "apprise"
+      ]
+    },
+    {
+      "id": "w073",
+      "french": "problème",
+      "english": "problem",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 2,
+      "theme": "work",
+      "frequency_rank": 550,
+      "audio": null,
+      "example": "J'ai un problème avec mon ordinateur.",
+      "example_en": "I have a problem with my computer.",
+      "mini_text": {
+        "fr": "Il y a un problème avec le train : il est en retard. Ce n'est pas un gros problème. Je prends le bus.",
+        "en": "There's a problem with the train: it's late. It's not a big problem. I'm taking the bus."
+      }
+    },
+    {
+      "id": "w074",
+      "french": "argent",
+      "english": "money",
+      "pos": "noun",
+      "gender": "m",
+      "article": "l'",
+      "level": 2,
+      "theme": "work",
+      "frequency_rank": 500,
+      "audio": null,
+      "example": "Je n'ai pas assez d'argent pour ce voyage.",
+      "example_en": "I don't have enough money for this trip.",
+      "mini_text": {
+        "fr": "Je mets de l'argent de côté pour les vacances. Je ne dépense pas beaucoup d'argent. L'argent ne fait pas le bonheur !",
+        "en": "I'm putting money aside for the holidays. I don't spend much money. Money doesn't buy happiness!"
+      }
+    },
+    {
+      "id": "w075",
+      "french": "facile",
+      "english": "easy",
+      "pos": "adjective",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "work",
+      "frequency_rank": 900,
+      "audio": null,
+      "example": "Cet exercice est facile pour moi.",
+      "example_en": "This exercise is easy for me.",
+      "mini_text": {
+        "fr": "Le français n'est pas toujours facile. Mais les phrases simples sont faciles. Avec du travail, ça devient facile.",
+        "en": "French isn't always easy. But simple sentences are easy. With work, it becomes easy."
+      }
+    },
+    {
+      "id": "w076",
+      "french": "difficile",
+      "english": "difficult",
+      "pos": "adjective",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "work",
+      "frequency_rank": 850,
+      "audio": null,
+      "example": "C'est difficile de se lever tôt.",
+      "example_en": "It's hard to get up early.",
+      "mini_text": {
+        "fr": "La grammaire française est parfois difficile. Pour moi, les verbes sont difficiles. Mais je n'abandonne pas !",
+        "en": "French grammar is sometimes difficult. For me, verbs are difficult. But I'm not giving up!"
+      }
+    },
+    {
+      "id": "w093",
+      "french": "nouveau",
+      "english": "new",
+      "pos": "adjective",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "work",
+      "frequency_rank": 280,
+      "audio": null,
+      "example": "J'ai un nouveau téléphone.",
+      "example_en": "I have a new phone.",
+      "mini_text": {
+        "fr": "Il y a un nouveau professeur à l'école. Il a une nouvelle voiture. Les nouveaux élèves l'aiment bien.",
+        "en": "There's a new teacher at the school. He has a new car. The new pupils like him."
+      },
+      "forms": [
+        "nouvelle",
+        "nouvelles",
+        "nouveaux",
+        "nouvel"
+      ]
+    },
+    {
+      "id": "w077",
+      "french": "content",
+      "english": "happy, pleased",
+      "pos": "adjective",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "feelings",
+      "frequency_rank": 1000,
+      "audio": null,
+      "example": "Je suis content parce que c'est le week-end.",
+      "example_en": "I'm happy because it's the weekend.",
+      "mini_text": {
+        "fr": "Aujourd'hui, je suis très content. J'ai réussi mon examen ! Mes parents sont contents aussi.",
+        "en": "Today, I'm very happy. I passed my exam! My parents are happy too."
+      }
+    },
+    {
+      "id": "w078",
+      "french": "triste",
+      "english": "sad",
+      "pos": "adjective",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "feelings",
+      "frequency_rank": 1600,
+      "audio": null,
+      "example": "Elle est triste parce que son chat est malade.",
+      "example_en": "She's sad because her cat is ill.",
+      "mini_text": {
+        "fr": "Le film est très triste. À la fin, tout le monde pleure. Je n'aime pas les films tristes.",
+        "en": "The film is very sad. At the end, everyone cries. I don't like sad films."
+      }
+    },
+    {
+      "id": "w079",
+      "french": "vouloir",
+      "english": "to want",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "feelings",
+      "frequency_rank": 40,
+      "audio": null,
+      "example": "Je veux apprendre à cuisiner.",
+      "example_en": "I want to learn to cook.",
+      "mini_text": {
+        "fr": "Qu'est-ce que tu veux faire ce soir ? Je veux aller au cinéma. Mes amis veulent rester à la maison.",
+        "en": "What do you want to do tonight? I want to go to the cinema. My friends want to stay at home."
+      },
+      "forms": [
+        "veux",
+        "veut",
+        "voulons",
+        "voulez",
+        "veulent",
+        "voulu",
+        "voulais",
+        "voulait",
+        "voudrais",
+        "voudrait"
+      ]
+    },
+    {
+      "id": "w080",
+      "french": "pouvoir",
+      "english": "can, to be able to",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "feelings",
+      "frequency_rank": 20,
+      "audio": null,
+      "example": "Est-ce que je peux ouvrir la fenêtre ?",
+      "example_en": "Can I open the window?",
+      "mini_text": {
+        "fr": "Tu peux m'aider, s'il te plaît ? Je ne peux pas porter cette valise seul. Nous pouvons la porter ensemble.",
+        "en": "Can you help me, please? I can't carry this suitcase alone. We can carry it together."
+      },
+      "forms": [
+        "peux",
+        "peut",
+        "pouvons",
+        "pouvez",
+        "peuvent",
+        "pu",
+        "pouvais",
+        "pouvait",
+        "pourrais",
+        "pourrait"
+      ]
+    },
+    {
+      "id": "w081",
+      "french": "penser",
+      "english": "to think",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "feelings",
+      "frequency_rank": 120,
+      "audio": null,
+      "example": "Je pense que ce film est intéressant.",
+      "example_en": "I think this film is interesting.",
+      "mini_text": {
+        "fr": "Qu'est-ce que tu penses de ce restaurant ? Je pense qu'il est très bon. Je pense souvent à mes vacances.",
+        "en": "What do you think of this restaurant? I think it's very good. I often think about my holidays."
+      }
+    },
+    {
+      "id": "w082",
+      "french": "idée",
+      "english": "idea",
+      "pos": "noun",
+      "gender": "f",
+      "article": "l'",
+      "level": 2,
+      "theme": "feelings",
+      "frequency_rank": 600,
+      "audio": null,
+      "example": "J'ai une bonne idée pour le week-end.",
+      "example_en": "I have a good idea for the weekend.",
+      "mini_text": {
+        "fr": "Pour l'anniversaire de Marie, j'ai une idée. On fait une fête surprise ! C'est une excellente idée.",
+        "en": "For Marie's birthday, I have an idea. Let's throw a surprise party! It's an excellent idea."
+      }
+    },
+    {
+      "id": "w083",
+      "french": "film",
+      "english": "film, movie",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 2,
+      "theme": "leisure",
+      "frequency_rank": 700,
+      "audio": null,
+      "example": "Ce film est drôle et un peu triste.",
+      "example_en": "This film is funny and a bit sad.",
+      "mini_text": {
+        "fr": "Hier soir, j'ai regardé un film français. Le film parle d'une famille à Paris. C'est un beau film.",
+        "en": "Last night, I watched a French film. The film is about a family in Paris. It's a beautiful film."
+      }
+    },
+    {
+      "id": "w084",
+      "french": "musique",
+      "english": "music",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 2,
+      "theme": "leisure",
+      "frequency_rank": 750,
+      "audio": null,
+      "example": "J'écoute de la musique dans le train.",
+      "example_en": "I listen to music on the train.",
+      "mini_text": {
+        "fr": "J'adore la musique. J'écoute de la musique tous les jours. Ma musique préférée, c'est le jazz.",
+        "en": "I love music. I listen to music every day. My favourite music is jazz."
+      }
+    },
+    {
+      "id": "w085",
+      "french": "sport",
+      "english": "sport",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 2,
+      "theme": "leisure",
+      "frequency_rank": 1000,
+      "audio": null,
+      "example": "Je fais du sport trois fois par semaine.",
+      "example_en": "I do sport three times a week.",
+      "mini_text": {
+        "fr": "Le sport est important pour la santé. Je fais du sport le matin. Mon sport préféré est le tennis.",
+        "en": "Sport is important for your health. I do sport in the morning. My favourite sport is tennis."
+      }
+    },
+    {
+      "id": "w086",
+      "french": "livre",
+      "english": "book",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 2,
+      "theme": "leisure",
+      "frequency_rank": 450,
+      "audio": null,
+      "example": "Je lis un livre avant de dormir.",
+      "example_en": "I read a book before sleeping.",
+      "mini_text": {
+        "fr": "J'aime les livres. En ce moment, je lis un livre sur l'histoire de France. C'est un livre passionnant.",
+        "en": "I like books. At the moment, I'm reading a book about the history of France. It's a fascinating book."
+      }
+    },
+    {
+      "id": "w087",
+      "french": "jouer",
+      "english": "to play",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "leisure",
+      "frequency_rank": 300,
+      "audio": null,
+      "example": "Les enfants jouent au foot dans le parc.",
+      "example_en": "The children play football in the park.",
+      "mini_text": {
+        "fr": "Mon frère joue de la guitare. Moi, je joue au tennis. Le samedi, nous jouons aux cartes en famille.",
+        "en": "My brother plays the guitar. Me, I play tennis. On Saturdays, we play cards as a family."
+      }
+    },
+    {
+      "id": "w088",
+      "french": "regarder",
+      "english": "to watch, to look at",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "leisure",
+      "frequency_rank": 220,
+      "audio": null,
+      "example": "Je regarde la télé le soir.",
+      "example_en": "I watch TV in the evening.",
+      "mini_text": {
+        "fr": "Le soir, ma famille regarde un film ensemble. Ma sœur regarde son téléphone. Moi, je regarde par la fenêtre !",
+        "en": "In the evening, my family watches a film together. My sister looks at her phone. Me, I look out of the window!"
+      }
+    },
+    {
+      "id": "w089",
+      "french": "écouter",
+      "english": "to listen (to)",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "leisure",
+      "frequency_rank": 500,
+      "audio": null,
+      "example": "J'écoute la radio dans la voiture.",
+      "example_en": "I listen to the radio in the car.",
+      "mini_text": {
+        "fr": "Écoute ! C'est ma chanson préférée. J'écoute cette chanson tous les jours. Mes amis écoutent du rap.",
+        "en": "Listen! It's my favourite song. I listen to this song every day. My friends listen to rap."
+      }
+    },
+    {
+      "id": "w090",
+      "french": "lire",
+      "english": "to read",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "leisure",
+      "frequency_rank": 350,
+      "audio": null,
+      "example": "J'aime lire le journal le dimanche.",
+      "example_en": "I like reading the newspaper on Sundays.",
+      "mini_text": {
+        "fr": "Ma grand-mère lit beaucoup. Elle lit deux livres par semaine. Moi, je lis des bandes dessinées.",
+        "en": "My grandmother reads a lot. She reads two books a week. Me, I read comics."
+      },
+      "forms": [
+        "lis",
+        "lit",
+        "lisons",
+        "lisez",
+        "lisent",
+        "lu",
+        "lisais",
+        "lisait",
+        "lirai"
+      ]
+    },
+    {
+      "id": "w091",
+      "french": "sortir",
+      "english": "to go out",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "leisure",
+      "frequency_rank": 330,
+      "audio": null,
+      "example": "Ce soir, je sors avec mes amis.",
+      "example_en": "Tonight, I'm going out with my friends.",
+      "mini_text": {
+        "fr": "Le samedi soir, nous sortons en ville. Hier, je suis sorti avec ma sœur. Nous sommes rentrés tard.",
+        "en": "On Saturday evenings, we go out in town. Yesterday, I went out with my sister. We came back late."
+      },
+      "forms": [
+        "sors",
+        "sort",
+        "sortons",
+        "sortez",
+        "sortent",
+        "sorti",
+        "sortie",
+        "sortis"
+      ]
+    },
+    {
+      "id": "w092",
+      "french": "week-end",
+      "english": "weekend",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 2,
+      "theme": "leisure",
+      "frequency_rank": 1200,
+      "audio": null,
+      "example": "Ce week-end, je vais à la campagne.",
+      "example_en": "This weekend, I'm going to the countryside.",
+      "mini_text": {
+        "fr": "Le week-end, je me repose. Samedi, je fais du sport et dimanche, je vois ma famille. J'adore le week-end !",
+        "en": "At the weekend, I rest. On Saturday, I do sport and on Sunday, I see my family. I love the weekend!"
+      }
+    },
+    {
+      "id": "w094",
+      "french": "beau",
+      "english": "beautiful, nice (weather)",
+      "pos": "adjective",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "weather",
+      "frequency_rank": 260,
+      "audio": null,
+      "example": "Il fait beau aujourd'hui.",
+      "example_en": "The weather is nice today.",
+      "mini_text": {
+        "fr": "Quel beau jour ! Il fait beau et chaud. Ma ville est belle au soleil.",
+        "en": "What a beautiful day! The weather is nice and warm. My town is beautiful in the sun."
+      },
+      "forms": [
+        "belle",
+        "belles",
+        "beaux",
+        "bel"
+      ]
+    },
+    {
+      "id": "w095",
+      "french": "temps",
+      "english": "time, weather",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 2,
+      "theme": "weather",
+      "frequency_rank": 90,
+      "audio": null,
+      "example": "Je n'ai pas le temps ce soir.",
+      "example_en": "I don't have time tonight.",
+      "mini_text": {
+        "fr": "Quel temps fait-il ? Aujourd'hui, il fait mauvais. Je n'ai pas le temps de sortir de toute façon.",
+        "en": "What's the weather like? Today, the weather is bad. I don't have time to go out anyway."
+      }
+    },
+    {
+      "id": "w096",
+      "french": "pluie",
+      "english": "rain",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 2,
+      "theme": "weather",
+      "frequency_rank": 1800,
+      "audio": null,
+      "example": "Je reste à la maison quand il y a de la pluie.",
+      "example_en": "I stay at home when there's rain.",
+      "mini_text": {
+        "fr": "En Bretagne, il y a souvent de la pluie. J'aime le bruit de la pluie. Sous la pluie, je lis un livre.",
+        "en": "In Brittany, there's often rain. I like the sound of the rain. In the rain, I read a book."
+      }
+    },
+    {
+      "id": "w097",
+      "french": "soleil",
+      "english": "sun",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 2,
+      "theme": "weather",
+      "frequency_rank": 950,
+      "audio": null,
+      "example": "Je mange dans le jardin quand il y a du soleil.",
+      "example_en": "I eat in the garden when it's sunny.",
+      "mini_text": {
+        "fr": "Aujourd'hui, il y a du soleil. Le soleil est chaud. Les enfants jouent au soleil.",
+        "en": "Today, it's sunny. The sun is hot. The children play in the sun."
+      }
+    },
+    {
+      "id": "w098",
+      "french": "froid",
+      "english": "cold",
+      "pos": "adjective",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "weather",
+      "frequency_rank": 850,
+      "audio": null,
+      "example": "J'ai froid parce que la fenêtre est ouverte.",
+      "example_en": "I'm cold because the window is open.",
+      "mini_text": {
+        "fr": "En hiver, il fait froid au Canada. L'eau du lac est froide. J'aime le froid quand il y a de la neige.",
+        "en": "In winter, it's cold in Canada. The water in the lake is cold. I like the cold when there's snow."
+      }
+    }
+  ]
+}

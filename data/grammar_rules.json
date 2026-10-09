@@ -1,0 +1,284 @@
+{
+  "_note": "Draft v0 by Claude for quantrungvu (2026-10-10). Jerry reviews and edits. The id of each rule is the mistake 'tag' used by the AI, the stats and the coach: change an id only together with tests/sentences.json. focus_pos = which kinds of target words are good practice for the rule (used by the coach's 'Practise this' button). Keep a rule with id 'other'.",
+  "rules": [
+    {
+      "id": "article-gender",
+      "level": 1,
+      "title": "Le/la, un/une (gender)",
+      "rule": "Every French noun is masculine or feminine. Use un/le with masculine nouns and une/la with feminine nouns.",
+      "wrong": "un pomme",
+      "right": "une pomme",
+      "focus_pos": ["noun"]
+    },
+    {
+      "id": "article-missing",
+      "level": 1,
+      "title": "Missing article",
+      "rule": "French nouns almost always need an article (le, la, un, une, des, du…), even where English has none.",
+      "wrong": "J'aime chocolat.",
+      "right": "J'aime le chocolat.",
+      "focus_pos": ["noun"]
+    },
+    {
+      "id": "partitive",
+      "level": 1,
+      "title": "Du, de la, des (some)",
+      "rule": "For an amount you don't count, use du, de la or de l'. After a negation, use de or d'.",
+      "wrong": "Je ne mange pas du pain.",
+      "right": "Je ne mange pas de pain.",
+      "focus_pos": ["noun"]
+    },
+    {
+      "id": "contraction",
+      "level": 1,
+      "title": "Au, aux, du, des",
+      "rule": "à + le becomes au, à + les becomes aux, de + le becomes du, de + les becomes des.",
+      "wrong": "Je vais à le marché.",
+      "right": "Je vais au marché.",
+      "focus_pos": ["noun"]
+    },
+    {
+      "id": "elision",
+      "level": 1,
+      "title": "J', l', d' before a vowel",
+      "rule": "Je, le, la, de, ne and que drop their last vowel before a word starting with a vowel or a silent h.",
+      "wrong": "Je aime l'eau.",
+      "right": "J'aime l'eau.",
+      "focus_pos": ["verb", "noun"]
+    },
+    {
+      "id": "verb-etre",
+      "level": 1,
+      "title": "Être (to be)",
+      "rule": "Être is irregular: je suis, tu es, il/elle/on est, nous sommes, vous êtes, ils/elles sont.",
+      "wrong": "Je es fatigué.",
+      "right": "Je suis fatigué.",
+      "focus_pos": ["adjective"]
+    },
+    {
+      "id": "verb-avoir",
+      "level": 1,
+      "title": "Avoir (to have) and age",
+      "rule": "Avoir is irregular: j'ai, tu as, il a, nous avons, vous avez, ils ont. French uses avoir for age: j'ai 20 ans.",
+      "wrong": "Je suis 20 ans.",
+      "right": "J'ai 20 ans.",
+      "focus_pos": ["noun"]
+    },
+    {
+      "id": "verb-er-present",
+      "level": 1,
+      "title": "-er verbs in the present",
+      "rule": "Regular -er verbs end in -e, -es, -e, -ons, -ez, -ent: je parle, tu parles, il parle, nous parlons, vous parlez, ils parlent.",
+      "wrong": "Nous parlez français.",
+      "right": "Nous parlons français.",
+      "focus_pos": ["verb"]
+    },
+    {
+      "id": "verb-irregular-present",
+      "level": 1,
+      "title": "Irregular verbs in the present",
+      "rule": "Common verbs like aller, faire, prendre, venir, vouloir and pouvoir are irregular: learn their forms (je vais, je fais, je prends…).",
+      "wrong": "Je alle au travail.",
+      "right": "Je vais au travail.",
+      "focus_pos": ["verb"]
+    },
+    {
+      "id": "subject-verb-agreement",
+      "level": 1,
+      "title": "Verb matches the subject",
+      "rule": "The verb ending must match who does the action (je, tu, il, nous, vous, ils).",
+      "wrong": "Les enfants joue.",
+      "right": "Les enfants jouent.",
+      "focus_pos": ["verb"]
+    },
+    {
+      "id": "adjective-agreement",
+      "level": 1,
+      "title": "Adjective matches the noun",
+      "rule": "Adjectives change with the noun: add -e for feminine and -s for plural (petit, petite, petits, petites).",
+      "wrong": "La maison est petit.",
+      "right": "La maison est petite.",
+      "focus_pos": ["adjective"]
+    },
+    {
+      "id": "adjective-position",
+      "level": 2,
+      "title": "Where the adjective goes",
+      "rule": "Most adjectives go after the noun. A few short common ones go before: beau, bon, grand, petit, jeune, vieux, nouveau.",
+      "wrong": "une rouge voiture",
+      "right": "une voiture rouge",
+      "focus_pos": ["adjective"]
+    },
+    {
+      "id": "negation",
+      "level": 1,
+      "title": "Ne … pas",
+      "rule": "To say 'not', put ne before the verb and pas after it: je ne mange pas.",
+      "wrong": "Je pas mange.",
+      "right": "Je ne mange pas.",
+      "focus_pos": ["verb"]
+    },
+    {
+      "id": "question-form",
+      "level": 1,
+      "title": "Asking questions",
+      "rule": "Ask with a rising voice (Tu viens ?), with est-ce que (Est-ce que tu viens ?), or with a question word (Où est-ce que tu habites ?).",
+      "wrong": "Où est-ce tu habites ?",
+      "right": "Où est-ce que tu habites ?",
+      "focus_pos": ["verb", "noun"]
+    },
+    {
+      "id": "preposition-place",
+      "level": 1,
+      "title": "À, en, au + places",
+      "rule": "Use à with cities (à Paris), en with most feminine countries (en France), au with masculine countries (au Japon), dans for inside a place.",
+      "wrong": "J'habite en Paris.",
+      "right": "J'habite à Paris.",
+      "focus_pos": ["noun"]
+    },
+    {
+      "id": "possessive",
+      "level": 1,
+      "title": "Mon, ma, mes",
+      "rule": "Mon/ma/mes match the thing owned, not the owner: mon père, ma mère, mes amis. Use mon before a feminine word starting with a vowel: mon amie.",
+      "wrong": "ma père",
+      "right": "mon père",
+      "focus_pos": ["noun"]
+    },
+    {
+      "id": "word-order",
+      "level": 1,
+      "title": "Word order",
+      "rule": "The usual order is subject + verb + rest. Short adverbs like souvent and bien usually come right after the verb.",
+      "wrong": "Je souvent mange au restaurant.",
+      "right": "Je mange souvent au restaurant.",
+      "focus_pos": ["verb"]
+    },
+    {
+      "id": "preposition-other",
+      "level": 2,
+      "title": "Fixed prepositions",
+      "rule": "Some verbs and expressions always take the same preposition: avoir besoin de, penser à, jouer au (sport) / du (instrument).",
+      "wrong": "J'ai besoin un café.",
+      "right": "J'ai besoin d'un café.",
+      "focus_pos": ["verb"]
+    },
+    {
+      "id": "futur-proche",
+      "level": 2,
+      "title": "Aller + infinitive (near future)",
+      "rule": "To talk about the near future, use aller in the present + a verb in the infinitive: je vais manger.",
+      "wrong": "Je vais mange ce soir.",
+      "right": "Je vais manger ce soir.",
+      "focus_pos": ["verb"]
+    },
+    {
+      "id": "passe-compose-auxiliary",
+      "level": 2,
+      "title": "Avoir or être in the past",
+      "rule": "Most verbs use avoir in the passé composé. Movement verbs like aller, venir, partir, arriver, sortir, rester use être.",
+      "wrong": "J'ai allé au cinéma.",
+      "right": "Je suis allé au cinéma.",
+      "focus_pos": ["verb"]
+    },
+    {
+      "id": "past-participle",
+      "level": 2,
+      "title": "Past participle form",
+      "rule": "Use the right past participle (mangé, fini, pris, fait) and, with être, add -e/-s to match the subject.",
+      "wrong": "Elle est allé à Paris.",
+      "right": "Elle est allée à Paris.",
+      "focus_pos": ["verb"]
+    },
+    {
+      "id": "pronoun",
+      "level": 3,
+      "title": "Object pronouns (le, la, lui, en, y)",
+      "rule": "Object pronouns go before the verb: je le mange, j'y vais, j'en veux.",
+      "wrong": "Je mange le.",
+      "right": "Je le mange.",
+      "focus_pos": ["verb", "noun"]
+    },
+    {
+      "id": "imparfait-passe-compose",
+      "level": 4,
+      "title": "Imparfait or passé composé",
+      "rule": "Use the imparfait for background and habits in the past (il faisait beau), and the passé composé for a finished action (je suis sorti).",
+      "wrong": "Quand j'étais petit, j'ai joué au foot tous les jours.",
+      "right": "Quand j'étais petit, je jouais au foot tous les jours.",
+      "focus_pos": ["verb"]
+    },
+    {
+      "id": "comparative",
+      "level": 4,
+      "title": "Comparing (plus, moins, aussi … que)",
+      "rule": "Compare with plus/moins/aussi + adjective + que. Bon becomes meilleur.",
+      "wrong": "Ce café est plus bon que l'autre.",
+      "right": "Ce café est meilleur que l'autre.",
+      "focus_pos": ["adjective"]
+    },
+    {
+      "id": "relative-pronoun",
+      "level": 4,
+      "title": "Qui or que",
+      "rule": "Use qui when the next word is a verb (the person who does), que when a new subject follows (the thing that I see).",
+      "wrong": "Le livre qui je lis est bon.",
+      "right": "Le livre que je lis est bon.",
+      "focus_pos": ["noun"]
+    },
+    {
+      "id": "conditional-si",
+      "level": 5,
+      "title": "Si + imparfait, conditionnel",
+      "rule": "For an imagined situation: si + imparfait, then the conditional: si j'avais le temps, je voyagerais.",
+      "wrong": "Si j'aurais le temps, je voyagerais.",
+      "right": "Si j'avais le temps, je voyagerais.",
+      "focus_pos": ["verb"]
+    },
+    {
+      "id": "subjunctive",
+      "level": 5,
+      "title": "Subjunctive after il faut que",
+      "rule": "After il faut que, je veux que, pour que and similar, use the subjunctive: il faut que je parte.",
+      "wrong": "Il faut que je pars.",
+      "right": "Il faut que je parte.",
+      "focus_pos": ["verb"]
+    },
+    {
+      "id": "vocabulary-choice",
+      "level": 1,
+      "title": "Word choice",
+      "rule": "The word exists but a French speaker would say something else here.",
+      "wrong": "J'ai fait une décision.",
+      "right": "J'ai pris une décision.",
+      "focus_pos": ["noun", "verb"]
+    },
+    {
+      "id": "spelling-accent",
+      "level": 1,
+      "title": "Spelling and accents",
+      "rule": "Accents are part of the spelling and can change the meaning: a (has) vs à (to/at), ou (or) vs où (where).",
+      "wrong": "Je suis a la maison.",
+      "right": "Je suis à la maison.",
+      "focus_pos": []
+    },
+    {
+      "id": "capital-punctuation",
+      "level": 1,
+      "title": "Capitals and punctuation",
+      "rule": "Start with a capital letter and end with a full stop or question mark. French puts a space before ? and !.",
+      "wrong": "je mange une pomme",
+      "right": "Je mange une pomme.",
+      "focus_pos": []
+    },
+    {
+      "id": "other",
+      "level": 1,
+      "title": "Other mistakes",
+      "rule": "A mistake that does not fit the other rules.",
+      "wrong": "",
+      "right": "",
+      "focus_pos": []
+    }
+  ]
+}
