@@ -4,7 +4,7 @@ A web app that teaches French to beginners through one habit: **write real sente
 
 **Developer:** Jerry (product idea, AI feedback prompt)
 **Developer:** Loen (experience vibe-coder)
-**Status:** Pre-build. Repo and workflow files set up. No app code yet.
+**Status:** Phase 0 (setup). Next.js app runs locally with a setup check page. Supabase keys and Vercel deploy still to do.
 
 > This README is the full project description for humans. Rules for Claude Code live in `CLAUDE.md`. Current work lives in `TASKS.md`. Past choices live in `DECISIONS.md`.
 
@@ -316,7 +316,7 @@ Code drives the flow. AI is called at one step only. This flow runs once for eac
 
 ## 8. Configuration (environment variables)
 
-Stored in `.env` (never committed). Provide `.env.example` with empty values.
+Stored in `.env` (never committed). `.env.example` lists them with empty values. Names starting with `NEXT_PUBLIC_` are visible in the browser, so never put a secret in one.
 
 ```
 APP_MODE=test
@@ -325,8 +325,8 @@ CLAUDE_MODEL=claude-haiku-4-5-20251001
 STREAK_MIN_WORDS=5
 MAX_CHECKS_PER_DAY=50
 MIN_SENTENCE_WORDS=6
-SUPABASE_URL=
-SUPABASE_ANON_KEY=
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
 SUPABASE_SERVICE_ROLE_KEY=
 ```
 
@@ -430,11 +430,11 @@ Record final answers in `DECISIONS.md`.
 - Record major decisions in `DECISIONS.md`.
 - Step-by-step guide with a glossary and "what to do when it goes wrong": [`docs/WORKFLOW.md`](docs/WORKFLOW.md).
 
-### Getting started (once code exists)
+### Getting started
 
 ```
-git clone <repo-url>
-cd french-daily
+git clone https://github.com/JerryHacAm/FrenchDaily.git
+cd FrenchDaily
 npm install
 cp .env.example .env     # then fill in the values
 npm run dev

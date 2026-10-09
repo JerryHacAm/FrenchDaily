@@ -1,11 +1,11 @@
 # Tasks
 
 ## In progress
-- [ ] Set up Next.js project + Supabase connection — Loen drives, Jerry reviews — branch: feature/setup-quantrungvu
+- [ ] Set up Next.js project + Supabase connection — Loen drives, Jerry reviews — branch: feature/setup-quantrungvu (app + .env.example done; Supabase keys and Vercel deploy left)
 - [ ] Clearer team workflow (docs/WORKFLOW.md, /note and /end, nightly 23:59 save) — Loen, Jerry reviews — branch: feature/workflow-quantrungvu
 
 ## Next up
-- [ ] Create /data/grammar_rules.json, /tests/sentences.json and .env.example — @jerry
+- [ ] Create /data/grammar_rules.json and /tests/sentences.json — @jerry
 - [ ] Decide README open decisions (section 12) and record in DECISIONS.md — pair
 - [ ] Build curated word list (/data/words.json, ~1000 common words) — @jerry
 - [ ] Draft the AI feedback prompt for sentence checking — @jerry
