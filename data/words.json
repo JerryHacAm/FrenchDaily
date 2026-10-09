@@ -1,5 +1,5 @@
 {
-  "_note": "Draft by Claude, levels 1-2 only (~300 words). Jerry to review. Only nouns, verbs and adjectives for now, because /data/structures.json has templates only for those. frequency_rank is an approximate rank in general French usage (1 = most common), estimated, not from a specific corpus.",
+  "_note": "Draft by Claude, levels 1-2 only. Jerry to review. Only nouns, verbs and adjectives for now, because /data/structures.json has templates only for those. frequency_rank is an estimate, not from a corpus. Field guide: gender is 'm', 'f', or 'm/f' (a person noun with both forms, one word: show as 'ami / amie'). feminine + article_f give the feminine form (nouns with m/f, and every adjective; same spelling when it doesn't change). example_f is the example for a female learner, only where 'je' needs agreement; otherwise use example for everyone. note is a short tip for the word card (e.g. why a verb has 'se'). other_meanings lists other common meanings of the same French word: word_id links to that meaning's own entry, or null when it is an N.B. only; nb is the reminder shown to the learner.",
   "themes": [
     "food",
     "home",
@@ -31,7 +31,12 @@
       "theme": "food",
       "frequency_rank": 1200,
       "audio": null,
-      "example": "Je mange une pomme le matin."
+      "example": "Je mange une pomme le matin.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0002",
@@ -44,7 +49,12 @@
       "theme": "food",
       "frequency_rank": 700,
       "audio": null,
-      "example": "J'achète du pain à la boulangerie."
+      "example": "J'achète du pain à la boulangerie.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0003",
@@ -57,7 +67,12 @@
       "theme": "food",
       "frequency_rank": 350,
       "audio": null,
-      "example": "Je bois de l'eau tous les jours."
+      "example": "Je bois de l'eau tous les jours.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0004",
@@ -70,7 +85,12 @@
       "theme": "food",
       "frequency_rank": 600,
       "audio": null,
-      "example": "Je prends un café avec du lait."
+      "example": "Je prends un café avec du lait.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0005",
@@ -83,7 +103,12 @@
       "theme": "food",
       "frequency_rank": 1500,
       "audio": null,
-      "example": "J'aime le fromage avec du pain."
+      "example": "J'aime le fromage avec du pain.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0006",
@@ -96,7 +121,12 @@
       "theme": "food",
       "frequency_rank": 400,
       "audio": null,
-      "example": "Nous mangeons au restaurant ce soir."
+      "example": "Nous mangeons au restaurant ce soir.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0007",
@@ -109,7 +139,12 @@
       "theme": "food",
       "frequency_rank": 665,
       "audio": null,
-      "example": "Je bois un thé le soir."
+      "example": "Je bois un thé le soir.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0008",
@@ -122,7 +157,12 @@
       "theme": "food",
       "frequency_rank": 1100,
       "audio": null,
-      "example": "Le repas est prêt dans dix minutes."
+      "example": "Le repas est prêt dans dix minutes.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0009",
@@ -135,7 +175,12 @@
       "theme": "food",
       "frequency_rank": 1400,
       "audio": null,
-      "example": "Je mets du lait dans mon café."
+      "example": "Je mets du lait dans mon café.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0010",
@@ -148,7 +193,12 @@
       "theme": "food",
       "frequency_rank": 1600,
       "audio": null,
-      "example": "Je ne mange pas de viande."
+      "example": "Je ne mange pas de viande.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0011",
@@ -161,7 +211,12 @@
       "theme": "food",
       "frequency_rank": 2200,
       "audio": null,
-      "example": "Ce soir, on mange du poulet avec du riz."
+      "example": "Ce soir, on mange du poulet avec du riz.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0012",
@@ -174,7 +229,12 @@
       "theme": "food",
       "frequency_rank": 2100,
       "audio": null,
-      "example": "Ce gâteau au chocolat est délicieux."
+      "example": "Ce gâteau au chocolat est délicieux.",
+      "feminine": "délicieuse",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0013",
@@ -187,7 +247,12 @@
       "theme": "food",
       "frequency_rank": 1800,
       "audio": null,
-      "example": "Je mange un fruit après le déjeuner."
+      "example": "Je mange un fruit après le déjeuner.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0014",
@@ -200,7 +265,12 @@
       "theme": "food",
       "frequency_rank": 1000,
       "audio": null,
-      "example": "Le déjeuner est à midi et demi."
+      "example": "Le déjeuner est à midi et demi.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0015",
@@ -213,7 +283,12 @@
       "theme": "food",
       "frequency_rank": 2400,
       "audio": null,
-      "example": "Je mange des légumes tous les jours."
+      "example": "Je mange des légumes tous les jours.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0016",
@@ -226,7 +301,12 @@
       "theme": "food",
       "frequency_rank": 2600,
       "audio": null,
-      "example": "J'ai cuisiné des pâtes pour mes amis."
+      "example": "J'ai cuisiné des pâtes pour mes amis.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0017",
@@ -239,7 +319,12 @@
       "theme": "food",
       "frequency_rank": 3000,
       "audio": null,
-      "example": "Tu veux goûter mon gâteau ?"
+      "example": "Tu veux goûter mon gâteau ?",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0018",
@@ -252,7 +337,12 @@
       "theme": "food",
       "frequency_rank": 3200,
       "audio": null,
-      "example": "Ce café est trop sucré pour moi."
+      "example": "Ce café est trop sucré pour moi.",
+      "feminine": "sucrée",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0019",
@@ -265,7 +355,12 @@
       "theme": "food",
       "frequency_rank": 1900,
       "audio": null,
-      "example": "J'ai acheté une bouteille d'eau."
+      "example": "J'ai acheté une bouteille d'eau.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0020",
@@ -278,7 +373,12 @@
       "theme": "food",
       "frequency_rank": 2800,
       "audio": null,
-      "example": "J'ai cassé une assiette ce matin."
+      "example": "J'ai cassé une assiette ce matin.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0021",
@@ -291,7 +391,12 @@
       "theme": "food",
       "frequency_rank": 2900,
       "audio": null,
-      "example": "Je cuisine souvent du riz avec des légumes."
+      "example": "Je cuisine souvent du riz avec des légumes.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0022",
@@ -304,7 +409,12 @@
       "theme": "food",
       "frequency_rank": 1700,
       "audio": null,
-      "example": "On a commandé une pizza hier soir."
+      "example": "On a commandé une pizza hier soir.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0023",
@@ -317,7 +427,12 @@
       "theme": "home",
       "frequency_rank": 180,
       "audio": null,
-      "example": "J'habite dans une grande maison."
+      "example": "J'habite dans une grande maison.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0024",
@@ -330,7 +445,12 @@
       "theme": "home",
       "frequency_rank": 900,
       "audio": null,
-      "example": "Mon appartement est près de la gare."
+      "example": "Mon appartement est près de la gare.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0025",
@@ -343,7 +463,12 @@
       "theme": "home",
       "frequency_rank": 500,
       "audio": null,
-      "example": "Ma chambre est petite mais jolie."
+      "example": "Ma chambre est petite mais jolie.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0026",
@@ -356,7 +481,12 @@
       "theme": "home",
       "frequency_rank": 810,
       "audio": null,
-      "example": "Je prépare le café dans la cuisine."
+      "example": "Je prépare le café dans la cuisine.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0027",
@@ -369,7 +499,12 @@
       "theme": "home",
       "frequency_rank": 450,
       "audio": null,
-      "example": "Les clés sont sur la table."
+      "example": "Les clés sont sur la table.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0028",
@@ -382,7 +517,12 @@
       "theme": "home",
       "frequency_rank": 720,
       "audio": null,
-      "example": "Je dors bien dans mon nouveau lit."
+      "example": "Je dors bien dans mon nouveau lit.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0029",
@@ -395,7 +535,12 @@
       "theme": "home",
       "frequency_rank": 750,
       "audio": null,
-      "example": "J'habite à Paris avec ma sœur."
+      "example": "J'habite à Paris avec ma sœur.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0030",
@@ -408,7 +553,12 @@
       "theme": "home",
       "frequency_rank": 380,
       "audio": null,
-      "example": "Tu peux fermer la porte, s'il te plaît ?"
+      "example": "Tu peux fermer la porte, s'il te plaît ?",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0031",
@@ -421,7 +571,12 @@
       "theme": "home",
       "frequency_rank": 680,
       "audio": null,
-      "example": "Je ferme la fenêtre parce qu'il fait froid."
+      "example": "Je ferme la fenêtre parce qu'il fait froid.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0032",
@@ -434,7 +589,12 @@
       "theme": "home",
       "frequency_rank": 420,
       "audio": null,
-      "example": "J'ouvre la fenêtre le matin."
+      "example": "J'ouvre la fenêtre le matin.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0033",
@@ -447,7 +607,12 @@
       "theme": "home",
       "frequency_rank": 850,
       "audio": null,
-      "example": "Le chat dort devant la fenêtre."
+      "example": "Le chat dort devant la fenêtre.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0034",
@@ -460,7 +625,12 @@
       "theme": "home",
       "frequency_rank": 3400,
       "audio": null,
-      "example": "On a regardé un film sur le canapé."
+      "example": "On a regardé un film sur le canapé.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0035",
@@ -473,7 +643,12 @@
       "theme": "home",
       "frequency_rank": 1750,
       "audio": null,
-      "example": "J'ai perdu ma clé ce matin."
+      "example": "J'ai perdu ma clé ce matin.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0036",
@@ -486,7 +661,12 @@
       "theme": "home",
       "frequency_rank": 2700,
       "audio": null,
-      "example": "J'ai rangé ma chambre ce week-end."
+      "example": "J'ai rangé ma chambre ce week-end.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0037",
@@ -499,7 +679,12 @@
       "theme": "home",
       "frequency_rank": 3100,
       "audio": null,
-      "example": "Je vais nettoyer la cuisine ce soir."
+      "example": "Je vais nettoyer la cuisine ce soir.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0038",
@@ -512,7 +697,12 @@
       "theme": "home",
       "frequency_rank": 2300,
       "audio": null,
-      "example": "Ce canapé est très confortable."
+      "example": "Ce canapé est très confortable.",
+      "feminine": "confortable",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0039",
@@ -525,20 +715,36 @@
       "theme": "home",
       "frequency_rank": 2500,
       "audio": null,
-      "example": "La cuisine est sale après la fête."
+      "example": "La cuisine est sale après la fête.",
+      "feminine": "sale",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": [
+        {
+          "word_id": null,
+          "english": "nasty",
+          "nb": "Before a noun, 'sale' means nasty or awful: un sale temps = awful weather. After a noun it means dirty."
+        }
+      ]
     },
     {
       "id": "w0040",
       "french": "voisin",
       "english": "neighbor",
       "pos": "noun",
-      "gender": "m",
+      "gender": "m/f",
       "article": "le",
       "level": 2,
       "theme": "home",
       "frequency_rank": 1350,
       "audio": null,
-      "example": "Notre voisin est très sympa."
+      "example": "Notre voisin est très sympa.",
+      "feminine": "voisine",
+      "article_f": "la",
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0041",
@@ -551,7 +757,12 @@
       "theme": "family",
       "frequency_rank": 310,
       "audio": null,
-      "example": "Ma famille habite à Lyon."
+      "example": "Ma famille habite à Lyon.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0042",
@@ -564,7 +775,12 @@
       "theme": "family",
       "frequency_rank": 265,
       "audio": null,
-      "example": "Ma mère travaille dans un hôpital."
+      "example": "Ma mère travaille dans un hôpital.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0043",
@@ -577,7 +793,12 @@
       "theme": "family",
       "frequency_rank": 275,
       "audio": null,
-      "example": "Mon père cuisine très bien."
+      "example": "Mon père cuisine très bien.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0044",
@@ -590,7 +811,12 @@
       "theme": "family",
       "frequency_rank": 560,
       "audio": null,
-      "example": "Mon frère a vingt ans."
+      "example": "Mon frère a vingt ans.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0045",
@@ -603,20 +829,30 @@
       "theme": "family",
       "frequency_rank": 610,
       "audio": null,
-      "example": "Ma sœur habite avec moi."
+      "example": "Ma sœur habite avec moi.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0046",
       "french": "enfant",
       "english": "child",
       "pos": "noun",
-      "gender": "m",
+      "gender": "m/f",
       "article": "l'",
       "level": 1,
       "theme": "family",
       "frequency_rank": 190,
       "audio": null,
-      "example": "L'enfant joue dans le jardin."
+      "example": "L'enfant joue dans le jardin.",
+      "feminine": "enfant",
+      "article_f": "l'",
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0047",
@@ -629,12 +865,17 @@
       "theme": "family",
       "frequency_rank": 620,
       "audio": null,
-      "example": "Leur fils va à l'école à pied."
+      "example": "Leur fils va à l'école à pied.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0048",
       "french": "fille",
-      "english": "daughter / girl",
+      "english": "daughter",
       "pos": "noun",
       "gender": "f",
       "article": "la",
@@ -642,7 +883,18 @@
       "theme": "family",
       "frequency_rank": 340,
       "audio": null,
-      "example": "Ma fille aime beaucoup les chats."
+      "example": "Ma fille aime beaucoup les chats.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": [
+        {
+          "word_id": "w0321",
+          "english": "girl",
+          "nb": "'fille' can also mean 'girl'."
+        }
+      ]
     },
     {
       "id": "w0049",
@@ -655,12 +907,17 @@
       "theme": "family",
       "frequency_rank": 640,
       "audio": null,
-      "example": "Son mari travaille à la banque."
+      "example": "Son mari travaille à la banque.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0050",
       "french": "femme",
-      "english": "woman / wife",
+      "english": "wife",
       "pos": "noun",
       "gender": "f",
       "article": "la",
@@ -668,7 +925,18 @@
       "theme": "family",
       "frequency_rank": 130,
       "audio": null,
-      "example": "Sa femme est professeur de français."
+      "example": "Sa femme travaille dans une école.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": [
+        {
+          "word_id": "w0320",
+          "english": "woman",
+          "nb": "'femme' can also mean 'woman'."
+        }
+      ]
     },
     {
       "id": "w0051",
@@ -681,7 +949,12 @@
       "theme": "family",
       "frequency_rank": 330,
       "audio": null,
-      "example": "Ma mère est encore jeune."
+      "example": "Ma mère est encore jeune.",
+      "feminine": "jeune",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0052",
@@ -694,7 +967,12 @@
       "theme": "family",
       "frequency_rank": 2000,
       "audio": null,
-      "example": "Ma grand-mère a quatre-vingts ans."
+      "example": "Ma grand-mère a quatre-vingts ans.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0053",
@@ -707,20 +985,30 @@
       "theme": "family",
       "frequency_rank": 2050,
       "audio": null,
-      "example": "Mon grand-père raconte des histoires."
+      "example": "Mon grand-père raconte des histoires.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0054",
       "french": "cousin",
       "english": "cousin",
       "pos": "noun",
-      "gender": "m",
+      "gender": "m/f",
       "article": "le",
       "level": 2,
       "theme": "family",
       "frequency_rank": 2650,
       "audio": null,
-      "example": "Mon cousin habite au Canada."
+      "example": "Mon cousin habite au Canada.",
+      "feminine": "cousine",
+      "article_f": "la",
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0055",
@@ -733,7 +1021,12 @@
       "theme": "family",
       "frequency_rank": 470,
       "audio": null,
-      "example": "Mes parents habitent à la campagne."
+      "example": "Mes parents habitent à la campagne.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0056",
@@ -746,7 +1039,12 @@
       "theme": "family",
       "frequency_rank": 2350,
       "audio": null,
-      "example": "Ma sœur s'est mariée l'année dernière."
+      "example": "Ma sœur s'est mariée l'année dernière.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": "'marier' means to marry two people (what the mayor does). 'se marier' is to get married. 'se' changes with the person: je me marie, tu te maries, on se marie. In the past, these verbs use 'être', so a woman adds -e: je me suis levé (man), je me suis levée (woman).",
+      "other_meanings": []
     },
     {
       "id": "w0057",
@@ -759,7 +1057,12 @@
       "theme": "family",
       "frequency_rank": 1250,
       "audio": null,
-      "example": "Mon fils est né en mars."
+      "example": "Mon fils est né en mars.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0058",
@@ -772,7 +1075,12 @@
       "theme": "family",
       "frequency_rank": 3300,
       "audio": null,
-      "example": "Tu ressembles beaucoup à ton père."
+      "example": "Tu ressembles beaucoup à ton père.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0059",
@@ -785,7 +1093,12 @@
       "theme": "family",
       "frequency_rank": 2450,
       "audio": null,
-      "example": "Mon frère est marié depuis deux ans."
+      "example": "Mon frère est marié depuis deux ans.",
+      "feminine": "mariée",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0060",
@@ -794,11 +1107,16 @@
       "pos": "verb",
       "gender": null,
       "article": null,
-      "level": 1,
+      "level": 2,
       "theme": "daily-routine",
       "frequency_rank": 1050,
       "audio": null,
-      "example": "Je me lève à sept heures."
+      "example": "Je me lève à sept heures.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": "'lever' means to lift. 'se lever' is to lift yourself, so: to get up. 'se' changes with the person: je me lève, tu te lèves, on se lève. In the past, these verbs use 'être', so a woman adds -e: je me suis levé (man), je me suis levée (woman).",
+      "other_meanings": []
     },
     {
       "id": "w0061",
@@ -807,11 +1125,16 @@
       "pos": "verb",
       "gender": null,
       "article": null,
-      "level": 1,
+      "level": 2,
       "theme": "daily-routine",
       "frequency_rank": 1950,
       "audio": null,
-      "example": "Je me couche tard le samedi."
+      "example": "Je me couche tard le samedi.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": "'coucher' means to put someone to bed. 'se coucher' is to put yourself to bed. 'se' changes with the person: je me couche, tu te couches, on se couche. In the past, these verbs use 'être', so a woman adds -e: je me suis levé (man), je me suis levée (woman).",
+      "other_meanings": []
     },
     {
       "id": "w0062",
@@ -824,7 +1147,12 @@
       "theme": "daily-routine",
       "frequency_rank": 880,
       "audio": null,
-      "example": "Je dors huit heures par nuit."
+      "example": "Je dors huit heures par nuit.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0063",
@@ -833,11 +1161,16 @@
       "pos": "verb",
       "gender": null,
       "article": null,
-      "level": 1,
+      "level": 2,
       "theme": "daily-routine",
       "frequency_rank": 3600,
       "audio": null,
-      "example": "Je me lave les mains avant le repas."
+      "example": "Je me lave les mains avant le repas.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": "'laver' means to wash something. 'se laver' is to wash yourself. 'se' changes with the person: je me lave, tu te laves, on se lave. In the past, these verbs use 'être', so a woman adds -e: je me suis levé (man), je me suis levée (woman).",
+      "other_meanings": []
     },
     {
       "id": "w0064",
@@ -850,7 +1183,12 @@
       "theme": "daily-routine",
       "frequency_rank": 3700,
       "audio": null,
-      "example": "Je prends une douche le matin."
+      "example": "Je prends une douche le matin.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0065",
@@ -863,7 +1201,12 @@
       "theme": "daily-routine",
       "frequency_rank": 2550,
       "audio": null,
-      "example": "Je prends mon petit-déjeuner à huit heures."
+      "example": "Je prends mon petit-déjeuner à huit heures.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0066",
@@ -872,11 +1215,16 @@
       "pos": "verb",
       "gender": null,
       "article": null,
-      "level": 1,
+      "level": 2,
       "theme": "daily-routine",
       "frequency_rank": 2750,
       "audio": null,
-      "example": "Je me réveille tôt le lundi."
+      "example": "Je me réveille tôt le lundi.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": "'réveiller' means to wake someone. 'se réveiller' is to wake yourself up. 'se' changes with the person: je me réveille, tu te réveilles, on se réveille. In the past, these verbs use 'être', so a woman adds -e: je me suis levé (man), je me suis levée (woman).",
+      "other_meanings": []
     },
     {
       "id": "w0067",
@@ -889,7 +1237,12 @@
       "theme": "daily-routine",
       "frequency_rank": 580,
       "audio": null,
-      "example": "Je rentre à la maison à six heures."
+      "example": "Je rentre à la maison à six heures.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0068",
@@ -902,7 +1255,12 @@
       "theme": "daily-routine",
       "frequency_rank": 1650,
       "audio": null,
-      "example": "Je suis fatigué après le travail."
+      "example": "Je suis fatigué après le travail.",
+      "feminine": "fatiguée",
+      "article_f": null,
+      "example_f": "Je suis fatiguée après le travail.",
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0069",
@@ -915,7 +1273,12 @@
       "theme": "daily-routine",
       "frequency_rank": 760,
       "audio": null,
-      "example": "Ma journée commence à sept heures."
+      "example": "Ma journée commence à sept heures.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0070",
@@ -928,7 +1291,12 @@
       "theme": "daily-routine",
       "frequency_rank": 155,
       "audio": null,
-      "example": "Je reste à la maison ce soir."
+      "example": "Je reste à la maison ce soir.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0071",
@@ -941,7 +1309,12 @@
       "theme": "daily-routine",
       "frequency_rank": 4200,
       "audio": null,
-      "example": "Mon réveil sonne à six heures et demie."
+      "example": "Mon réveil sonne à six heures et demie.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0072",
@@ -954,7 +1327,12 @@
       "theme": "daily-routine",
       "frequency_rank": 3800,
       "audio": null,
-      "example": "Je me suis habillé très vite ce matin."
+      "example": "Je me suis habillé très vite ce matin.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": "Je me suis habillée très vite ce matin.",
+      "note": "'habiller' means to dress someone. 's'habiller' is to dress yourself. 'se' becomes s' before a vowel: je m'habille, tu t'habilles, on s'habille. In the past, these verbs use 'être', so a woman adds -e: je me suis levé (man), je me suis levée (woman).",
+      "other_meanings": []
     },
     {
       "id": "w0073",
@@ -967,7 +1345,12 @@
       "theme": "daily-routine",
       "frequency_rank": 2850,
       "audio": null,
-      "example": "Je vais me préparer pour le travail."
+      "example": "Je vais me préparer pour le travail.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": "'préparer' means to prepare something. 'se préparer' is to get yourself ready. 'se' changes with the person: je me prépare, tu te prépares, on se prépare. In the past, these verbs use 'être', so a woman adds -e: je me suis levé (man), je me suis levée (woman).",
+      "other_meanings": []
     },
     {
       "id": "w0074",
@@ -980,7 +1363,12 @@
       "theme": "daily-routine",
       "frequency_rank": 1450,
       "audio": null,
-      "example": "J'ai l'habitude de boire un café le matin."
+      "example": "J'ai l'habitude de boire un café le matin.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0075",
@@ -993,7 +1381,12 @@
       "theme": "daily-routine",
       "frequency_rank": 4500,
       "audio": null,
-      "example": "Je me brosse les dents après le repas."
+      "example": "Je me brosse les dents après le repas.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": "'brosser' means to brush something. 'se brosser les dents' is to brush your own teeth. 'se' changes with the person: je me brosse, tu te brosses, on se brosse. In the past, these verbs use 'être', so a woman adds -e: je me suis levé (man), je me suis levée (woman).",
+      "other_meanings": []
     },
     {
       "id": "w0076",
@@ -1006,7 +1399,12 @@
       "theme": "daily-routine",
       "frequency_rank": 4400,
       "audio": null,
-      "example": "J'ai fait la vaisselle après le dîner."
+      "example": "J'ai fait la vaisselle après le dîner.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0077",
@@ -1019,7 +1417,12 @@
       "theme": "daily-routine",
       "frequency_rank": 2150,
       "audio": null,
-      "example": "Je suis très occupé cette semaine."
+      "example": "Je suis très occupé cette semaine.",
+      "feminine": "occupée",
+      "article_f": null,
+      "example_f": "Je suis très occupée cette semaine.",
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0078",
@@ -1032,7 +1435,12 @@
       "theme": "travel",
       "frequency_rank": 690,
       "audio": null,
-      "example": "Le voyage dure trois heures en train."
+      "example": "Le voyage dure trois heures en train.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0079",
@@ -1045,7 +1453,12 @@
       "theme": "travel",
       "frequency_rank": 1550,
       "audio": null,
-      "example": "J'aime voyager avec mes amis."
+      "example": "J'aime voyager avec mes amis.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0080",
@@ -1058,7 +1471,12 @@
       "theme": "travel",
       "frequency_rank": 1180,
       "audio": null,
-      "example": "Notre hôtel est près de la plage."
+      "example": "Notre hôtel est près de la plage.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0081",
@@ -1071,7 +1489,12 @@
       "theme": "travel",
       "frequency_rank": 1480,
       "audio": null,
-      "example": "On va à la plage cet après-midi."
+      "example": "On va à la plage cet après-midi.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0082",
@@ -1084,7 +1507,12 @@
       "theme": "travel",
       "frequency_rank": 235,
       "audio": null,
-      "example": "La France est un beau pays."
+      "example": "La France est un beau pays.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0083",
@@ -1097,7 +1525,12 @@
       "theme": "travel",
       "frequency_rank": 820,
       "audio": null,
-      "example": "J'aime nager dans la mer."
+      "example": "J'aime nager dans la mer.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0084",
@@ -1110,7 +1543,12 @@
       "theme": "travel",
       "frequency_rank": 3900,
       "audio": null,
-      "example": "Je prépare ma valise pour le voyage."
+      "example": "Je prépare ma valise pour le voyage.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0085",
@@ -1123,7 +1561,12 @@
       "theme": "travel",
       "frequency_rank": 1850,
       "audio": null,
-      "example": "Nous visitons Paris cette semaine."
+      "example": "Nous visitons Paris cette semaine.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0086",
@@ -1136,7 +1579,12 @@
       "theme": "travel",
       "frequency_rank": 145,
       "audio": null,
-      "example": "Je pars en vacances demain."
+      "example": "Je pars en vacances demain.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0087",
@@ -1149,7 +1597,12 @@
       "theme": "travel",
       "frequency_rank": 115,
       "audio": null,
-      "example": "Mes parents arrivent ce soir à la gare."
+      "example": "Mes parents arrivent ce soir à la gare.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0088",
@@ -1162,7 +1615,12 @@
       "theme": "travel",
       "frequency_rank": 1980,
       "audio": null,
-      "example": "J'ai acheté mon billet de train hier."
+      "example": "J'ai acheté mon billet de train hier.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0089",
@@ -1175,7 +1633,12 @@
       "theme": "travel",
       "frequency_rank": 4600,
       "audio": null,
-      "example": "Mon passeport est dans mon sac."
+      "example": "Mon passeport est dans mon sac.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0090",
@@ -1188,12 +1651,17 @@
       "theme": "travel",
       "frequency_rank": 3150,
       "audio": null,
-      "example": "J'ai réservé une chambre à l'hôtel."
+      "example": "J'ai réservé une chambre à l'hôtel.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0091",
       "french": "souvenir",
-      "english": "souvenir / memory",
+      "english": "souvenir (gift)",
       "pos": "noun",
       "gender": "m",
       "article": "le",
@@ -1201,7 +1669,18 @@
       "theme": "travel",
       "frequency_rank": 1720,
       "audio": null,
-      "example": "J'ai acheté un souvenir pour ma mère."
+      "example": "J'ai acheté un souvenir pour ma mère.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": [
+        {
+          "word_id": "w0323",
+          "english": "memory",
+          "nb": "'souvenir' can also mean 'memory'."
+        }
+      ]
     },
     {
       "id": "w0092",
@@ -1214,7 +1693,12 @@
       "theme": "travel",
       "frequency_rank": 3050,
       "audio": null,
-      "example": "Ma valise est trop lourde."
+      "example": "Ma valise est trop lourde.",
+      "feminine": "lourde",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0093",
@@ -1227,7 +1711,12 @@
       "theme": "travel",
       "frequency_rank": 1150,
       "audio": null,
-      "example": "J'ai oublié mon passeport à la maison."
+      "example": "J'ai oublié mon passeport à la maison.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0094",
@@ -1240,7 +1729,12 @@
       "theme": "work-school",
       "frequency_rank": 175,
       "audio": null,
-      "example": "Mon travail commence à neuf heures."
+      "example": "Mon travail commence à neuf heures.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0095",
@@ -1253,7 +1747,12 @@
       "theme": "work-school",
       "frequency_rank": 390,
       "audio": null,
-      "example": "Je travaille dans un bureau."
+      "example": "Je travaille dans un bureau.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0096",
@@ -1266,7 +1765,12 @@
       "theme": "work-school",
       "frequency_rank": 520,
       "audio": null,
-      "example": "Les enfants vont à l'école à pied."
+      "example": "Les enfants vont à l'école à pied.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0097",
@@ -1279,7 +1783,12 @@
       "theme": "work-school",
       "frequency_rank": 660,
       "audio": null,
-      "example": "Mon bureau est au troisième étage."
+      "example": "Mon bureau est au troisième étage.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0098",
@@ -1292,7 +1801,12 @@
       "theme": "work-school",
       "frequency_rank": 540,
       "audio": null,
-      "example": "J'apprends le français depuis un mois."
+      "example": "J'apprends le français depuis un mois.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0099",
@@ -1305,20 +1819,30 @@
       "theme": "work-school",
       "frequency_rank": 1520,
       "audio": null,
-      "example": "J'étudie le soir après le travail."
+      "example": "J'étudie le soir après le travail.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0100",
       "french": "professeur",
       "english": "teacher",
       "pos": "noun",
-      "gender": "m",
+      "gender": "m/f",
       "article": "le",
       "level": 1,
       "theme": "work-school",
       "frequency_rank": 1320,
       "audio": null,
-      "example": "Le professeur parle très lentement."
+      "example": "Le professeur parle très lentement.",
+      "feminine": "professeure",
+      "article_f": "la",
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0101",
@@ -1331,7 +1855,12 @@
       "theme": "work-school",
       "frequency_rank": 370,
       "audio": null,
-      "example": "Je lis un livre sur la France."
+      "example": "Je lis un livre sur la France.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0102",
@@ -1344,7 +1873,12 @@
       "theme": "work-school",
       "frequency_rank": 430,
       "audio": null,
-      "example": "Je lis le journal le matin."
+      "example": "Je lis le journal le matin.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0103",
@@ -1357,7 +1891,12 @@
       "theme": "work-school",
       "frequency_rank": 440,
       "audio": null,
-      "example": "J'écris un message à mon collègue."
+      "example": "J'écris un message à mon collègue.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0104",
@@ -1370,7 +1909,12 @@
       "theme": "work-school",
       "frequency_rank": 410,
       "audio": null,
-      "example": "J'ai un cours de français ce soir."
+      "example": "J'ai un cours de français ce soir.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0105",
@@ -1383,7 +1927,12 @@
       "theme": "work-school",
       "frequency_rank": 1080,
       "audio": null,
-      "example": "Ce livre est très intéressant."
+      "example": "Ce livre est très intéressant.",
+      "feminine": "intéressante",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0106",
@@ -1396,20 +1945,30 @@
       "theme": "work-school",
       "frequency_rank": 1420,
       "audio": null,
-      "example": "J'ai une réunion à dix heures."
+      "example": "J'ai une réunion à dix heures.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0107",
       "french": "patron",
       "english": "boss",
       "pos": "noun",
-      "gender": "m",
+      "gender": "m/f",
       "article": "le",
       "level": 2,
       "theme": "work-school",
       "frequency_rank": 2320,
       "audio": null,
-      "example": "Mon patron est en vacances cette semaine."
+      "example": "Mon patron est en vacances cette semaine.",
+      "feminine": "patronne",
+      "article_f": "la",
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0108",
@@ -1422,7 +1981,12 @@
       "theme": "work-school",
       "frequency_rank": 2250,
       "audio": null,
-      "example": "J'ai réussi mon examen de français."
+      "example": "J'ai réussi mon examen de français.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0109",
@@ -1435,7 +1999,12 @@
       "theme": "work-school",
       "frequency_rank": 940,
       "audio": null,
-      "example": "Mon frère a réussi son permis de conduire."
+      "example": "Mon frère a réussi son permis de conduire.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0110",
@@ -1448,7 +2017,12 @@
       "theme": "work-school",
       "frequency_rank": 2950,
       "audio": null,
-      "example": "Mon salaire arrive à la fin du mois."
+      "example": "Mon salaire arrive à la fin du mois.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0111",
@@ -1461,7 +2035,12 @@
       "theme": "work-school",
       "frequency_rank": 1380,
       "audio": null,
-      "example": "J'ai terminé mon travail à six heures."
+      "example": "J'ai terminé mon travail à six heures.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0112",
@@ -1474,7 +2053,12 @@
       "theme": "work-school",
       "frequency_rank": 1870,
       "audio": null,
-      "example": "C'est un étudiant très sérieux."
+      "example": "C'est un étudiant très sérieux.",
+      "feminine": "sérieuse",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0113",
@@ -1487,7 +2071,12 @@
       "theme": "time",
       "frequency_rank": 60,
       "audio": null,
-      "example": "Je bois du café tous les jours."
+      "example": "Je bois du café tous les jours.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0114",
@@ -1500,7 +2089,12 @@
       "theme": "time",
       "frequency_rank": 290,
       "audio": null,
-      "example": "Je travaille cinq jours par semaine."
+      "example": "Je travaille cinq jours par semaine.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0115",
@@ -1513,7 +2107,12 @@
       "theme": "time",
       "frequency_rank": 125,
       "audio": null,
-      "example": "Le film commence dans une heure."
+      "example": "Le film commence dans une heure.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0116",
@@ -1526,7 +2125,12 @@
       "theme": "time",
       "frequency_rank": 335,
       "audio": null,
-      "example": "Je cours le matin avant le travail."
+      "example": "Je cours le matin avant le travail.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0117",
@@ -1539,7 +2143,12 @@
       "theme": "time",
       "frequency_rank": 345,
       "audio": null,
-      "example": "Je sors avec mes amis le soir."
+      "example": "Je sors avec mes amis le soir.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0118",
@@ -1552,7 +2161,12 @@
       "theme": "time",
       "frequency_rank": 2120,
       "audio": null,
-      "example": "Je vois mes amis le week-end."
+      "example": "Je vois mes amis le week-end.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0119",
@@ -1565,7 +2179,12 @@
       "theme": "time",
       "frequency_rank": 360,
       "audio": null,
-      "example": "Je paie mon loyer chaque mois."
+      "example": "Je paie mon loyer chaque mois.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0120",
@@ -1578,7 +2197,12 @@
       "theme": "time",
       "frequency_rank": 150,
       "audio": null,
-      "example": "Cette année, j'apprends le français."
+      "example": "Cette année, j'apprends le français.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0121",
@@ -1591,7 +2215,12 @@
       "theme": "time",
       "frequency_rank": 255,
       "audio": null,
-      "example": "Le cours commence à neuf heures."
+      "example": "Le cours commence à neuf heures.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0122",
@@ -1604,7 +2233,12 @@
       "theme": "time",
       "frequency_rank": 530,
       "audio": null,
-      "example": "Je finis le travail à cinq heures."
+      "example": "Je finis le travail à cinq heures.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0123",
@@ -1617,7 +2251,12 @@
       "theme": "time",
       "frequency_rank": 215,
       "audio": null,
-      "example": "J'attends le bus depuis dix minutes."
+      "example": "J'attends le bus depuis dix minutes.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0124",
@@ -1630,7 +2269,12 @@
       "theme": "time",
       "frequency_rank": 590,
       "audio": null,
-      "example": "Je vais partir en vacances la semaine prochaine."
+      "example": "Je vais partir en vacances la semaine prochaine.",
+      "feminine": "prochaine",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0125",
@@ -1643,7 +2287,12 @@
       "theme": "time",
       "frequency_rank": 165,
       "audio": null,
-      "example": "La semaine dernière, j'ai vu un bon film."
+      "example": "La semaine dernière, j'ai vu un bon film.",
+      "feminine": "dernière",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0126",
@@ -1656,7 +2305,12 @@
       "theme": "time",
       "frequency_rank": 2180,
       "audio": null,
-      "example": "Le train est en retard ce matin."
+      "example": "Le train est en retard ce matin.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0127",
@@ -1669,7 +2323,12 @@
       "theme": "time",
       "frequency_rank": 1560,
       "audio": null,
-      "example": "J'ai un rendez-vous chez le dentiste demain."
+      "example": "J'ai un rendez-vous chez le dentiste demain.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0128",
@@ -1682,7 +2341,12 @@
       "theme": "time",
       "frequency_rank": 2380,
       "audio": null,
-      "example": "J'ai fêté mon anniversaire avec mes amis."
+      "example": "J'ai fêté mon anniversaire avec mes amis.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0129",
@@ -1695,7 +2359,12 @@
       "theme": "time",
       "frequency_rank": 3350,
       "audio": null,
-      "example": "Je me dépêche parce que je suis en retard."
+      "example": "Je me dépêche parce que je suis en retard.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": "This verb is always used with 'se'. Just learn it as one piece: je me dépêche, tu te dépêches, on se dépêche. In the past, these verbs use 'être', so a woman adds -e: je me suis levé (man), je me suis levée (woman).",
+      "other_meanings": []
     },
     {
       "id": "w0130",
@@ -1708,20 +2377,30 @@
       "theme": "time",
       "frequency_rank": 2720,
       "audio": null,
-      "example": "Le film a duré deux heures."
+      "example": "Le film a duré deux heures.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0131",
       "french": "ami",
       "english": "friend",
       "pos": "noun",
-      "gender": "m",
+      "gender": "m/f",
       "article": "l'",
       "level": 1,
       "theme": "people-feelings",
       "frequency_rank": 245,
       "audio": null,
-      "example": "Mon ami habite près de chez moi."
+      "example": "Mon ami habite près de chez moi.",
+      "feminine": "amie",
+      "article_f": "l'",
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0132",
@@ -1734,7 +2413,12 @@
       "theme": "people-feelings",
       "frequency_rank": 135,
       "audio": null,
-      "example": "Cet homme parle trois langues."
+      "example": "Cet homme parle trois langues.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0133",
@@ -1747,7 +2431,12 @@
       "theme": "people-feelings",
       "frequency_rank": 1060,
       "audio": null,
-      "example": "Je suis content de te voir."
+      "example": "Je suis content de te voir.",
+      "feminine": "contente",
+      "article_f": null,
+      "example_f": "Je suis contente de te voir.",
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0134",
@@ -1760,7 +2449,12 @@
       "theme": "people-feelings",
       "frequency_rank": 1490,
       "audio": null,
-      "example": "Mon petit frère est triste aujourd'hui."
+      "example": "Mon petit frère est triste aujourd'hui.",
+      "feminine": "triste",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0135",
@@ -1773,7 +2467,12 @@
       "theme": "people-feelings",
       "frequency_rank": 770,
       "audio": null,
-      "example": "Je suis heureux avec ma famille."
+      "example": "Je suis heureux avec ma famille.",
+      "feminine": "heureuse",
+      "article_f": null,
+      "example_f": "Je suis heureuse avec ma famille.",
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0136",
@@ -1786,7 +2485,12 @@
       "theme": "people-feelings",
       "frequency_rank": 2920,
       "audio": null,
-      "example": "Ton ami est vraiment sympa."
+      "example": "Ton ami est vraiment sympa.",
+      "feminine": "sympa",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0137",
@@ -1799,7 +2503,12 @@
       "theme": "people-feelings",
       "frequency_rank": 1990,
       "audio": null,
-      "example": "Ma voisine est très gentille."
+      "example": "Ma voisine est très gentille.",
+      "feminine": "gentille",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0138",
@@ -1812,7 +2521,12 @@
       "theme": "people-feelings",
       "frequency_rank": 710,
       "audio": null,
-      "example": "J'ai peur quand je suis seul la nuit."
+      "example": "J'ai peur quand je suis seul la nuit.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": "J'ai peur quand je suis seule la nuit.",
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0139",
@@ -1825,7 +2539,18 @@
       "theme": "people-feelings",
       "frequency_rank": 480,
       "audio": null,
-      "example": "Ce garçon joue au foot avec mon fils."
+      "example": "Ce garçon joue au foot avec mon fils.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": [
+        {
+          "word_id": "w0322",
+          "english": "waiter",
+          "nb": "'garçon' can also mean 'waiter'."
+        }
+      ]
     },
     {
       "id": "w0140",
@@ -1838,7 +2563,12 @@
       "theme": "people-feelings",
       "frequency_rank": 1680,
       "audio": null,
-      "example": "Le bébé dort dans sa chambre."
+      "example": "Le bébé dort dans sa chambre.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0141",
@@ -1851,7 +2581,12 @@
       "theme": "people-feelings",
       "frequency_rank": 1120,
       "audio": null,
-      "example": "On a beaucoup ri au restaurant hier."
+      "example": "On a beaucoup ri au restaurant hier.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0142",
@@ -1864,7 +2599,12 @@
       "theme": "people-feelings",
       "frequency_rank": 2060,
       "audio": null,
-      "example": "Le bébé a pleuré toute la nuit."
+      "example": "Le bébé a pleuré toute la nuit.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0143",
@@ -1877,7 +2617,12 @@
       "theme": "people-feelings",
       "frequency_rank": 225,
       "audio": null,
-      "example": "J'habite seul depuis un an."
+      "example": "J'habite seul depuis un an.",
+      "feminine": "seule",
+      "article_f": null,
+      "example_f": "J'habite seule depuis un an.",
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0144",
@@ -1890,7 +2635,12 @@
       "theme": "people-feelings",
       "frequency_rank": 545,
       "audio": null,
-      "example": "La chanson parle d'amour et de voyage."
+      "example": "La chanson parle d'amour et de voyage.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0145",
@@ -1903,7 +2653,12 @@
       "theme": "people-feelings",
       "frequency_rank": 1210,
       "audio": null,
-      "example": "Je me sens mieux aujourd'hui."
+      "example": "Je me sens mieux aujourd'hui.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": "'sentir' means to smell or feel something. 'se sentir' is how you feel inside (je me sens bien = I feel good). 'se' changes with the person: je me sens, tu te sens, on se sent. In the past, these verbs use 'être', so a woman adds -e: je me suis levé (man), je me suis levée (woman).",
+      "other_meanings": []
     },
     {
       "id": "w0146",
@@ -1916,7 +2671,12 @@
       "theme": "people-feelings",
       "frequency_rank": 3450,
       "audio": null,
-      "example": "Les enfants se sont bien amusés au parc."
+      "example": "Les enfants se sont bien amusés au parc.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": "'amuser' means to entertain someone. 's'amuser' is to entertain yourself, so: to have fun. 'se' becomes s' before a vowel: je m'amuse, tu t'amuses, on s'amuse. In the past, these verbs use 'être', so a woman adds -e: je me suis levé (man), je me suis levée (woman).",
+      "other_meanings": []
     },
     {
       "id": "w0147",
@@ -1929,7 +2689,12 @@
       "theme": "people-feelings",
       "frequency_rank": 2780,
       "audio": null,
-      "example": "Ma mère est inquiète quand je rentre tard."
+      "example": "Ma mère est inquiète quand je rentre tard.",
+      "feminine": "inquiète",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0148",
@@ -1942,7 +2707,12 @@
       "theme": "people-feelings",
       "frequency_rank": 3550,
       "audio": null,
-      "example": "Ta sœur sourit tout le temps."
+      "example": "Ta sœur sourit tout le temps.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0149",
@@ -1955,7 +2725,12 @@
       "theme": "city-shopping",
       "frequency_rank": 205,
       "audio": null,
-      "example": "J'habite dans une petite ville."
+      "example": "J'habite dans une petite ville.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0150",
@@ -1968,7 +2743,12 @@
       "theme": "city-shopping",
       "frequency_rank": 405,
       "audio": null,
-      "example": "Le café est dans cette rue."
+      "example": "Le café est dans cette rue.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0151",
@@ -1981,7 +2761,12 @@
       "theme": "city-shopping",
       "frequency_rank": 1580,
       "audio": null,
-      "example": "Ce magasin ouvre à neuf heures."
+      "example": "Ce magasin ouvre à neuf heures.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0152",
@@ -1994,7 +2779,12 @@
       "theme": "city-shopping",
       "frequency_rank": 625,
       "audio": null,
-      "example": "J'achète des fruits au marché."
+      "example": "J'achète des fruits au marché.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0153",
@@ -2007,7 +2797,12 @@
       "theme": "city-shopping",
       "frequency_rank": 1130,
       "audio": null,
-      "example": "Je vais au marché le dimanche."
+      "example": "Je vais au marché le dimanche.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0154",
@@ -2020,7 +2815,12 @@
       "theme": "city-shopping",
       "frequency_rank": 395,
       "audio": null,
-      "example": "Je n'ai pas d'argent sur moi."
+      "example": "Je n'ai pas d'argent sur moi.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0155",
@@ -2033,7 +2833,18 @@
       "theme": "city-shopping",
       "frequency_rank": 1360,
       "audio": null,
-      "example": "Ce restaurant est trop cher pour moi."
+      "example": "Ce restaurant est trop cher pour moi.",
+      "feminine": "chère",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": [
+        {
+          "word_id": null,
+          "english": "dear",
+          "nb": "Before a noun, 'cher' means dear: chère Marie = dear Marie. After a noun it means expensive."
+        }
+      ]
     },
     {
       "id": "w0156",
@@ -2046,7 +2857,12 @@
       "theme": "city-shopping",
       "frequency_rank": 1010,
       "audio": null,
-      "example": "Je paie mes courses au supermarché."
+      "example": "Je paie mes courses au supermarché.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0157",
@@ -2059,7 +2875,12 @@
       "theme": "city-shopping",
       "frequency_rank": 1240,
       "audio": null,
-      "example": "On mange au restaurant ce soir."
+      "example": "On mange au restaurant ce soir.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0158",
@@ -2072,7 +2893,12 @@
       "theme": "city-shopping",
       "frequency_rank": 1690,
       "audio": null,
-      "example": "La banque ferme à cinq heures."
+      "example": "La banque ferme à cinq heures.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0159",
@@ -2085,7 +2911,12 @@
       "theme": "city-shopping",
       "frequency_rank": 4100,
       "audio": null,
-      "example": "La boulangerie est en face de l'école."
+      "example": "La boulangerie est en face de l'école.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0160",
@@ -2098,7 +2929,12 @@
       "theme": "city-shopping",
       "frequency_rank": 860,
       "audio": null,
-      "example": "Il a vendu sa voiture la semaine dernière."
+      "example": "Il a vendu sa voiture la semaine dernière.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0161",
@@ -2111,7 +2947,12 @@
       "theme": "city-shopping",
       "frequency_rank": 495,
       "audio": null,
-      "example": "Le prix de ce pull est raisonnable."
+      "example": "Le prix de ce pull est raisonnable.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0162",
@@ -2124,7 +2965,12 @@
       "theme": "city-shopping",
       "frequency_rank": 3720,
       "audio": null,
-      "example": "Je suis allé au supermarché ce matin."
+      "example": "Je suis allé au supermarché ce matin.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": "Je suis allée au supermarché ce matin.",
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0163",
@@ -2137,7 +2983,12 @@
       "theme": "city-shopping",
       "frequency_rank": 3620,
       "audio": null,
-      "example": "Le musée est gratuit le dimanche."
+      "example": "Le musée est gratuit le dimanche.",
+      "feminine": "gratuite",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0164",
@@ -2150,7 +3001,12 @@
       "theme": "city-shopping",
       "frequency_rank": 3160,
       "audio": null,
-      "example": "J'ai dépensé trop d'argent ce mois-ci."
+      "example": "J'ai dépensé trop d'argent ce mois-ci.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0165",
@@ -2163,7 +3019,12 @@
       "theme": "city-shopping",
       "frequency_rank": 1310,
       "audio": null,
-      "example": "J'aime beaucoup mon nouveau quartier."
+      "example": "J'aime beaucoup mon nouveau quartier.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0166",
@@ -2176,7 +3037,12 @@
       "theme": "city-shopping",
       "frequency_rank": 2480,
       "audio": null,
-      "example": "Nous avons visité un musée à Lyon."
+      "example": "Nous avons visité un musée à Lyon.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0167",
@@ -2189,7 +3055,12 @@
       "theme": "city-shopping",
       "frequency_rank": 730,
       "audio": null,
-      "example": "J'ai choisi une robe pour la fête."
+      "example": "J'ai choisi une robe pour la fête.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0168",
@@ -2202,7 +3073,12 @@
       "theme": "basics",
       "frequency_rank": 2,
       "audio": null,
-      "example": "Je suis très content aujourd'hui."
+      "example": "Je suis très content aujourd'hui.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": "Je suis très contente aujourd'hui.",
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0169",
@@ -2215,7 +3091,12 @@
       "theme": "basics",
       "frequency_rank": 5,
       "audio": null,
-      "example": "J'ai un chat à la maison."
+      "example": "J'ai un chat à la maison.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0170",
@@ -2228,7 +3109,12 @@
       "theme": "basics",
       "frequency_rank": 22,
       "audio": null,
-      "example": "Qu'est-ce que tu fais ce soir ?"
+      "example": "Qu'est-ce que tu fais ce soir ?",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0171",
@@ -2241,7 +3127,12 @@
       "theme": "basics",
       "frequency_rank": 27,
       "audio": null,
-      "example": "Je vais au marché le samedi."
+      "example": "Je vais au marché le samedi.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0172",
@@ -2254,7 +3145,12 @@
       "theme": "basics",
       "frequency_rank": 40,
       "audio": null,
-      "example": "Je veux un café, s'il te plaît."
+      "example": "Je veux un café, s'il te plaît.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0173",
@@ -2267,7 +3163,12 @@
       "theme": "basics",
       "frequency_rank": 30,
       "audio": null,
-      "example": "Tu peux m'aider avec ce sac ?"
+      "example": "Tu peux m'aider avec ce sac ?",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0174",
@@ -2280,7 +3181,12 @@
       "theme": "basics",
       "frequency_rank": 55,
       "audio": null,
-      "example": "Tu viens chez moi ce soir ?"
+      "example": "Tu viens chez moi ce soir ?",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0175",
@@ -2293,7 +3199,12 @@
       "theme": "basics",
       "frequency_rank": 45,
       "audio": null,
-      "example": "Je vois la mer depuis ma fenêtre."
+      "example": "Je vois la mer depuis ma fenêtre.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0176",
@@ -2306,7 +3217,12 @@
       "theme": "basics",
       "frequency_rank": 35,
       "audio": null,
-      "example": "Il dit bonjour à la voisine."
+      "example": "Il dit bonjour à la voisine.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0177",
@@ -2319,7 +3235,12 @@
       "theme": "basics",
       "frequency_rank": 50,
       "audio": null,
-      "example": "Je ne sais pas où est la gare."
+      "example": "Je ne sais pas où est la gare.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0178",
@@ -2332,7 +3253,12 @@
       "theme": "basics",
       "frequency_rank": 120,
       "audio": null,
-      "example": "J'aime beaucoup le chocolat noir."
+      "example": "J'aime beaucoup le chocolat noir.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0179",
@@ -2345,7 +3271,12 @@
       "theme": "basics",
       "frequency_rank": 140,
       "audio": null,
-      "example": "Je parle un peu français."
+      "example": "Je parle un peu français.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0180",
@@ -2358,7 +3289,12 @@
       "theme": "basics",
       "frequency_rank": 48,
       "audio": null,
-      "example": "Je prends le bus pour aller au travail."
+      "example": "Je prends le bus pour aller au travail.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0181",
@@ -2371,7 +3307,12 @@
       "theme": "basics",
       "frequency_rank": 75,
       "audio": null,
-      "example": "Je donne un livre à mon frère."
+      "example": "Je donne un livre à mon frère.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0182",
@@ -2384,7 +3325,12 @@
       "theme": "basics",
       "frequency_rank": 80,
       "audio": null,
-      "example": "Mon frère est très grand."
+      "example": "Mon frère est très grand.",
+      "feminine": "grande",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0183",
@@ -2397,7 +3343,12 @@
       "theme": "basics",
       "frequency_rank": 85,
       "audio": null,
-      "example": "J'habite dans un petit appartement."
+      "example": "J'habite dans un petit appartement.",
+      "feminine": "petite",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0184",
@@ -2410,7 +3361,12 @@
       "theme": "basics",
       "frequency_rank": 90,
       "audio": null,
-      "example": "Ce gâteau est vraiment bon."
+      "example": "Ce gâteau est vraiment bon.",
+      "feminine": "bonne",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0185",
@@ -2423,7 +3379,12 @@
       "theme": "basics",
       "frequency_rank": 110,
       "audio": null,
-      "example": "J'ai un nouveau téléphone depuis lundi."
+      "example": "J'ai un nouveau téléphone depuis lundi.",
+      "feminine": "nouvelle",
+      "article_f": null,
+      "example_f": null,
+      "note": "Before a masculine word starting with a vowel or silent h, 'nouveau' becomes 'nouvel': un nouvel ami.",
+      "other_meanings": []
     },
     {
       "id": "w0186",
@@ -2436,7 +3397,12 @@
       "theme": "basics",
       "frequency_rank": 285,
       "audio": null,
-      "example": "C'est une très belle ville."
+      "example": "C'est une très belle ville.",
+      "feminine": "belle",
+      "article_f": null,
+      "example_f": null,
+      "note": "Before a masculine word starting with a vowel or silent h, 'beau' becomes 'bel': un bel hôtel.",
+      "other_meanings": []
     },
     {
       "id": "w0187",
@@ -2449,7 +3415,12 @@
       "theme": "basics",
       "frequency_rank": 565,
       "audio": null,
-      "example": "Ce café est vraiment mauvais."
+      "example": "Ce café est vraiment mauvais.",
+      "feminine": "mauvaise",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0188",
@@ -2462,7 +3433,12 @@
       "theme": "basics",
       "frequency_rank": 300,
       "audio": null,
-      "example": "Cet exercice est très facile."
+      "example": "Cet exercice est très facile.",
+      "feminine": "facile",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0189",
@@ -2475,7 +3451,12 @@
       "theme": "basics",
       "frequency_rank": 280,
       "audio": null,
-      "example": "C'est une bonne idée pour ce soir."
+      "example": "C'est une bonne idée pour ce soir.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0190",
@@ -2488,7 +3469,12 @@
       "theme": "basics",
       "frequency_rank": 240,
       "audio": null,
-      "example": "J'ai une question pour le professeur."
+      "example": "J'ai une question pour le professeur.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0191",
@@ -2501,7 +3487,12 @@
       "theme": "basics",
       "frequency_rank": 210,
       "audio": null,
-      "example": "Quel est ton nom de famille ?"
+      "example": "Quel est ton nom de famille ?",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0192",
@@ -2514,7 +3505,12 @@
       "theme": "basics",
       "frequency_rank": 62,
       "audio": null,
-      "example": "J'ai mis les clés sur la table."
+      "example": "J'ai mis les clés sur la table.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0193",
@@ -2527,7 +3523,12 @@
       "theme": "basics",
       "frequency_rank": 320,
       "audio": null,
-      "example": "Le français est difficile mais intéressant."
+      "example": "Le français est difficile mais intéressant.",
+      "feminine": "difficile",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0194",
@@ -2540,7 +3541,12 @@
       "theme": "basics",
       "frequency_rank": 250,
       "audio": null,
-      "example": "Ce rendez-vous est très important pour moi."
+      "example": "Ce rendez-vous est très important pour moi.",
+      "feminine": "importante",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0195",
@@ -2553,7 +3559,12 @@
       "theme": "basics",
       "frequency_rank": 260,
       "audio": null,
-      "example": "Il y a un problème avec mon ordinateur."
+      "example": "Il y a un problème avec mon ordinateur.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0196",
@@ -2566,7 +3577,12 @@
       "theme": "basics",
       "frequency_rank": 95,
       "audio": null,
-      "example": "J'ai trouvé mes clés sous le canapé."
+      "example": "J'ai trouvé mes clés sous le canapé.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0197",
@@ -2579,7 +3595,12 @@
       "theme": "basics",
       "frequency_rank": 100,
       "audio": null,
-      "example": "Je pense souvent à mes vacances."
+      "example": "Je pense souvent à mes vacances.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0198",
@@ -2592,7 +3613,12 @@
       "theme": "basics",
       "frequency_rank": 160,
       "audio": null,
-      "example": "Je cherche mon portefeuille depuis une heure."
+      "example": "Je cherche mon portefeuille depuis une heure.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0199",
@@ -2605,7 +3631,12 @@
       "theme": "basics",
       "frequency_rank": 230,
       "audio": null,
-      "example": "Mon voisin m'a aidé avec les courses."
+      "example": "Mon voisin m'a aidé avec les courses.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0200",
@@ -2618,7 +3649,12 @@
       "theme": "hobbies-sport",
       "frequency_rank": 375,
       "audio": null,
-      "example": "Je joue au tennis le samedi."
+      "example": "Je joue au tennis le samedi.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0201",
@@ -2631,7 +3667,12 @@
       "theme": "hobbies-sport",
       "frequency_rank": 1410,
       "audio": null,
-      "example": "Je fais du sport trois fois par semaine."
+      "example": "Je fais du sport trois fois par semaine.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0202",
@@ -2644,7 +3685,12 @@
       "theme": "hobbies-sport",
       "frequency_rank": 1030,
       "audio": null,
-      "example": "J'écoute de la musique dans le bus."
+      "example": "J'écoute de la musique dans le bus.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0203",
@@ -2657,7 +3703,12 @@
       "theme": "hobbies-sport",
       "frequency_rank": 790,
       "audio": null,
-      "example": "J'écoute la radio dans la voiture."
+      "example": "J'écoute la radio dans la voiture.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0204",
@@ -2670,7 +3721,12 @@
       "theme": "hobbies-sport",
       "frequency_rank": 228,
       "audio": null,
-      "example": "Je regarde la télé avec mes parents."
+      "example": "Je regarde la télé avec mes parents.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0205",
@@ -2683,7 +3739,12 @@
       "theme": "hobbies-sport",
       "frequency_rank": 950,
       "audio": null,
-      "example": "On regarde un film au cinéma ce soir."
+      "example": "On regarde un film au cinéma ce soir.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0206",
@@ -2696,7 +3757,12 @@
       "theme": "hobbies-sport",
       "frequency_rank": 2420,
       "audio": null,
-      "example": "Ma sœur chante très bien."
+      "example": "Ma sœur chante très bien.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0207",
@@ -2709,7 +3775,12 @@
       "theme": "hobbies-sport",
       "frequency_rank": 2870,
       "audio": null,
-      "example": "On danse souvent le samedi soir."
+      "example": "On danse souvent le samedi soir.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0208",
@@ -2722,7 +3793,12 @@
       "theme": "hobbies-sport",
       "frequency_rank": 3950,
       "audio": null,
-      "example": "Je nage à la piscine le mardi."
+      "example": "Je nage à la piscine le mardi.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0209",
@@ -2735,7 +3811,12 @@
       "theme": "hobbies-sport",
       "frequency_rank": 3070,
       "audio": null,
-      "example": "Mon fils joue au foot le mercredi."
+      "example": "Mon fils joue au foot le mercredi.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0210",
@@ -2748,7 +3829,12 @@
       "theme": "hobbies-sport",
       "frequency_rank": 2070,
       "audio": null,
-      "example": "Mon ami est très drôle."
+      "example": "Mon ami est très drôle.",
+      "feminine": "drôle",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0211",
@@ -2761,7 +3847,12 @@
       "theme": "hobbies-sport",
       "frequency_rank": 1170,
       "audio": null,
-      "example": "J'ai couru dans le parc ce matin."
+      "example": "J'ai couru dans le parc ce matin.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0212",
@@ -2774,7 +3865,12 @@
       "theme": "hobbies-sport",
       "frequency_rank": 595,
       "audio": null,
-      "example": "Ce jeu vidéo est vraiment génial."
+      "example": "Ce jeu vidéo est vraiment génial.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0213",
@@ -2787,7 +3883,12 @@
       "theme": "hobbies-sport",
       "frequency_rank": 3250,
       "audio": null,
-      "example": "Je suis allé à la piscine hier."
+      "example": "Je suis allé à la piscine hier.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": "Je suis allée à la piscine hier.",
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0214",
@@ -2800,7 +3901,12 @@
       "theme": "hobbies-sport",
       "frequency_rank": 1740,
       "audio": null,
-      "example": "On a regardé le match à la télé."
+      "example": "On a regardé le match à la télé.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0215",
@@ -2813,7 +3919,12 @@
       "theme": "hobbies-sport",
       "frequency_rank": 2560,
       "audio": null,
-      "example": "Le chocolat est mon dessert préféré."
+      "example": "Le chocolat est mon dessert préféré.",
+      "feminine": "préférée",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0216",
@@ -2826,12 +3937,17 @@
       "theme": "hobbies-sport",
       "frequency_rank": 4050,
       "audio": null,
-      "example": "Ma fille dessine des animaux pour le plaisir."
+      "example": "Ma fille dessine des animaux pour le plaisir.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0217",
       "french": "gagner",
-      "english": "to win / to earn",
+      "english": "to win",
       "pos": "verb",
       "gender": null,
       "article": null,
@@ -2839,7 +3955,18 @@
       "theme": "hobbies-sport",
       "frequency_rank": 650,
       "audio": null,
-      "example": "Notre équipe a gagné le match hier."
+      "example": "Notre équipe a gagné le match hier.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": [
+        {
+          "word_id": "w0324",
+          "english": "to earn",
+          "nb": "'gagner' can also mean 'to earn'."
+        }
+      ]
     },
     {
       "id": "w0218",
@@ -2852,7 +3979,12 @@
       "theme": "body-health",
       "frequency_rank": 315,
       "audio": null,
-      "example": "J'ai mal à la tête ce soir."
+      "example": "J'ai mal à la tête ce soir.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0219",
@@ -2865,7 +3997,12 @@
       "theme": "body-health",
       "frequency_rank": 295,
       "audio": null,
-      "example": "J'ai un stylo dans la main."
+      "example": "J'ai un stylo dans la main.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0220",
@@ -2878,20 +4015,30 @@
       "theme": "body-health",
       "frequency_rank": 1440,
       "audio": null,
-      "example": "Je suis malade depuis lundi."
+      "example": "Je suis malade depuis lundi.",
+      "feminine": "malade",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0221",
       "french": "médecin",
       "english": "doctor",
       "pos": "noun",
-      "gender": "m",
+      "gender": "m/f",
       "article": "le",
       "level": 1,
       "theme": "body-health",
       "frequency_rank": 1330,
       "audio": null,
-      "example": "Je vais chez le médecin demain."
+      "example": "Je vais chez le médecin demain.",
+      "feminine": "médecin",
+      "article_f": "la",
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0222",
@@ -2904,7 +4051,12 @@
       "theme": "body-health",
       "frequency_rank": 830,
       "audio": null,
-      "example": "Je vais au travail à pied."
+      "example": "Je vais au travail à pied.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0223",
@@ -2917,7 +4069,12 @@
       "theme": "body-health",
       "frequency_rank": 870,
       "audio": null,
-      "example": "Le bébé dort dans mes bras."
+      "example": "Le bébé dort dans mes bras.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0224",
@@ -2930,7 +4087,12 @@
       "theme": "body-health",
       "frequency_rank": 1220,
       "audio": null,
-      "example": "J'ai mal au dos après le sport."
+      "example": "J'ai mal au dos après le sport.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0225",
@@ -2943,7 +4105,12 @@
       "theme": "body-health",
       "frequency_rank": 3820,
       "audio": null,
-      "example": "La pharmacie est à côté de la banque."
+      "example": "La pharmacie est à côté de la banque.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0226",
@@ -2956,7 +4123,12 @@
       "theme": "body-health",
       "frequency_rank": 2140,
       "audio": null,
-      "example": "J'ai mal aux dents ce matin."
+      "example": "J'ai mal aux dents ce matin.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0227",
@@ -2969,7 +4141,12 @@
       "theme": "body-health",
       "frequency_rank": 570,
       "audio": null,
-      "example": "J'ai quelque chose dans l'œil."
+      "example": "J'ai quelque chose dans l'œil.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0228",
@@ -2982,7 +4159,12 @@
       "theme": "body-health",
       "frequency_rank": 1090,
       "audio": null,
-      "example": "Le sport est bon pour la santé."
+      "example": "Le sport est bon pour la santé.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0229",
@@ -2995,7 +4177,12 @@
       "theme": "body-health",
       "frequency_rank": 385,
       "audio": null,
-      "example": "Le corps a besoin de sommeil."
+      "example": "Le corps a besoin de sommeil.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0230",
@@ -3008,7 +4195,12 @@
       "theme": "body-health",
       "frequency_rank": 1370,
       "audio": null,
-      "example": "Mon grand-père est à l'hôpital."
+      "example": "Mon grand-père est à l'hôpital.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0231",
@@ -3021,7 +4213,12 @@
       "theme": "body-health",
       "frequency_rank": 2980,
       "audio": null,
-      "example": "Je vais me reposer ce week-end."
+      "example": "Je vais me reposer ce week-end.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": "'se reposer' is to give yourself a rest. 'se' changes with the person: je me repose, tu te reposes, on se repose. In the past, these verbs use 'être', so a woman adds -e: je me suis levé (man), je me suis levée (woman).",
+      "other_meanings": []
     },
     {
       "id": "w0232",
@@ -3034,7 +4231,12 @@
       "theme": "body-health",
       "frequency_rank": 5600,
       "audio": null,
-      "example": "J'ai toussé toute la nuit."
+      "example": "J'ai toussé toute la nuit.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0233",
@@ -3047,7 +4249,12 @@
       "theme": "body-health",
       "frequency_rank": 2470,
       "audio": null,
-      "example": "Je prends un médicament contre la toux."
+      "example": "Je prends un médicament contre la toux.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0234",
@@ -3060,12 +4267,17 @@
       "theme": "body-health",
       "frequency_rank": 4700,
       "audio": null,
-      "example": "Mon père a maigri cet été."
+      "example": "Mon père a maigri cet été.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0235",
       "french": "temps",
-      "english": "weather / time",
+      "english": "weather",
       "pos": "noun",
       "gender": "m",
       "article": "le",
@@ -3073,7 +4285,18 @@
       "theme": "weather-nature",
       "frequency_rank": 98,
       "audio": null,
-      "example": "Le temps est beau aujourd'hui."
+      "example": "Il fait beau temps aujourd'hui.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": [
+        {
+          "word_id": "w0319",
+          "english": "time",
+          "nb": "'temps' can also mean 'time'."
+        }
+      ]
     },
     {
       "id": "w0236",
@@ -3086,7 +4309,12 @@
       "theme": "weather-nature",
       "frequency_rank": 1040,
       "audio": null,
-      "example": "Le soleil est très fort aujourd'hui."
+      "example": "Le soleil est très fort aujourd'hui.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0237",
@@ -3099,7 +4327,12 @@
       "theme": "weather-nature",
       "frequency_rank": 1840,
       "audio": null,
-      "example": "Je n'aime pas la pluie."
+      "example": "Je n'aime pas la pluie.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0238",
@@ -3112,7 +4345,12 @@
       "theme": "weather-nature",
       "frequency_rank": 2610,
       "audio": null,
-      "example": "Il pleut beaucoup en novembre."
+      "example": "Il pleut beaucoup en novembre.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0239",
@@ -3125,7 +4363,12 @@
       "theme": "weather-nature",
       "frequency_rank": 960,
       "audio": null,
-      "example": "L'eau de la mer est froide."
+      "example": "L'eau de la mer est froide.",
+      "feminine": "froide",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0240",
@@ -3138,7 +4381,12 @@
       "theme": "weather-nature",
       "frequency_rank": 1160,
       "audio": null,
-      "example": "Il fait très chaud en août."
+      "example": "Il fait très chaud en août.",
+      "feminine": "chaude",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0241",
@@ -3151,7 +4399,12 @@
       "theme": "weather-nature",
       "frequency_rank": 2410,
       "audio": null,
-      "example": "Il y a de la neige sur la montagne."
+      "example": "Il y a de la neige sur la montagne.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0242",
@@ -3164,7 +4417,12 @@
       "theme": "weather-nature",
       "frequency_rank": 800,
       "audio": null,
-      "example": "Ma mère travaille dans le jardin."
+      "example": "Ma mère travaille dans le jardin.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0243",
@@ -3177,7 +4435,12 @@
       "theme": "weather-nature",
       "frequency_rank": 990,
       "audio": null,
-      "example": "Il y a un grand arbre devant la maison."
+      "example": "Il y a un grand arbre devant la maison.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0244",
@@ -3190,7 +4453,12 @@
       "theme": "weather-nature",
       "frequency_rank": 1300,
       "audio": null,
-      "example": "J'achète des fleurs pour ma mère."
+      "example": "J'achète des fleurs pour ma mère.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0245",
@@ -3203,7 +4471,18 @@
       "theme": "weather-nature",
       "frequency_rank": 455,
       "audio": null,
-      "example": "En été, je vais à la plage."
+      "example": "En été, je vais à la plage.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": [
+        {
+          "word_id": null,
+          "english": "been",
+          "nb": "'été' is also the past form of 'être' (to be): j'ai été malade = I have been sick."
+        }
+      ]
     },
     {
       "id": "w0246",
@@ -3216,7 +4495,12 @@
       "theme": "weather-nature",
       "frequency_rank": 1505,
       "audio": null,
-      "example": "Il fait froid en hiver."
+      "example": "Il fait froid en hiver.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0247",
@@ -3229,7 +4513,12 @@
       "theme": "weather-nature",
       "frequency_rank": 1270,
       "audio": null,
-      "example": "Nous sommes allés à la montagne en février."
+      "example": "Nous sommes allés à la montagne en février.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0248",
@@ -3242,7 +4531,12 @@
       "theme": "weather-nature",
       "frequency_rank": 4900,
       "audio": null,
-      "example": "Il a neigé toute la nuit."
+      "example": "Il a neigé toute la nuit.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0249",
@@ -3255,7 +4549,12 @@
       "theme": "weather-nature",
       "frequency_rank": 1015,
       "audio": null,
-      "example": "Il y a beaucoup d'étoiles dans le ciel."
+      "example": "Il y a beaucoup d'étoiles dans le ciel.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0250",
@@ -3268,7 +4567,12 @@
       "theme": "weather-nature",
       "frequency_rank": 2930,
       "audio": null,
-      "example": "Il y a beaucoup de nuages aujourd'hui."
+      "example": "Il y a beaucoup de nuages aujourd'hui.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0251",
@@ -3281,7 +4585,12 @@
       "theme": "weather-nature",
       "frequency_rank": 3520,
       "audio": null,
-      "example": "Le soleil a brillé tout l'après-midi."
+      "example": "Le soleil a brillé tout l'après-midi.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0252",
@@ -3294,7 +4603,12 @@
       "theme": "weather-nature",
       "frequency_rank": 2830,
       "audio": null,
-      "example": "Je me suis promené au bord de la mer."
+      "example": "Je me suis promené au bord de la mer.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": "Je me suis promenée au bord de la mer.",
+      "note": "'promener' means to walk someone (promener le chien = to walk the dog). 'se promener' is to walk yourself, so: to go for a walk. je me promène, tu te promènes, on se promène. In the past, these verbs use 'être', so a woman adds -e: je me suis levé (man), je me suis levée (woman).",
+      "other_meanings": []
     },
     {
       "id": "w0253",
@@ -3307,7 +4621,12 @@
       "theme": "clothes",
       "frequency_rank": 1960,
       "audio": null,
-      "example": "J'achète des vêtements pour l'hiver."
+      "example": "J'achète des vêtements pour l'hiver.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0254",
@@ -3320,7 +4639,12 @@
       "theme": "clothes",
       "frequency_rank": 3310,
       "audio": null,
-      "example": "Mon pantalon est trop long."
+      "example": "Mon pantalon est trop long.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0255",
@@ -3333,7 +4657,12 @@
       "theme": "clothes",
       "frequency_rank": 3020,
       "audio": null,
-      "example": "Mon père porte une chemise pour le travail."
+      "example": "Mon père porte une chemise pour le travail.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0256",
@@ -3346,7 +4675,12 @@
       "theme": "clothes",
       "frequency_rank": 2160,
       "audio": null,
-      "example": "Cette robe rouge est très jolie."
+      "example": "Cette robe rouge est très jolie.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0257",
@@ -3359,7 +4693,12 @@
       "theme": "clothes",
       "frequency_rank": 2340,
       "audio": null,
-      "example": "Mes chaussures sont sous le lit."
+      "example": "Mes chaussures sont sous le lit.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0258",
@@ -3372,7 +4711,12 @@
       "theme": "clothes",
       "frequency_rank": 305,
       "audio": null,
-      "example": "Je porte un pull quand il fait froid."
+      "example": "Je porte un pull quand il fait froid.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0259",
@@ -3385,7 +4729,12 @@
       "theme": "clothes",
       "frequency_rank": 4250,
       "audio": null,
-      "example": "Ce pull est chaud et doux."
+      "example": "Ce pull est chaud et doux.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0260",
@@ -3398,7 +4747,12 @@
       "theme": "clothes",
       "frequency_rank": 1460,
       "audio": null,
-      "example": "Tu as une très jolie robe."
+      "example": "Tu as une très jolie robe.",
+      "feminine": "jolie",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0261",
@@ -3411,7 +4765,12 @@
       "theme": "clothes",
       "frequency_rank": 3080,
       "audio": null,
-      "example": "Je mets mon manteau pour sortir."
+      "example": "Je mets mon manteau pour sortir.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0262",
@@ -3424,7 +4783,12 @@
       "theme": "clothes",
       "frequency_rank": 1280,
       "audio": null,
-      "example": "Mon téléphone est dans mon sac."
+      "example": "Mon téléphone est dans mon sac.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0263",
@@ -3437,7 +4801,12 @@
       "theme": "clothes",
       "frequency_rank": 740,
       "audio": null,
-      "example": "J'ai essayé ce pantalon au magasin."
+      "example": "J'ai essayé ce pantalon au magasin.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0264",
@@ -3450,7 +4819,12 @@
       "theme": "clothes",
       "frequency_rank": 1530,
       "audio": null,
-      "example": "Ce pull n'est pas à ma taille."
+      "example": "Ce pull n'est pas à ma taille.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0265",
@@ -3463,7 +4837,12 @@
       "theme": "clothes",
       "frequency_rank": 352,
       "audio": null,
-      "example": "Je vais changer de chemise avant la fête."
+      "example": "Je vais changer de chemise avant la fête.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0266",
@@ -3476,7 +4855,12 @@
       "theme": "clothes",
       "frequency_rank": 3760,
       "audio": null,
-      "example": "Mon grand-père porte toujours un chapeau."
+      "example": "Mon grand-père porte toujours un chapeau.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0267",
@@ -3489,7 +4873,12 @@
       "theme": "clothes",
       "frequency_rank": 2240,
       "audio": null,
-      "example": "Ma sœur aime beaucoup la mode."
+      "example": "Ma sœur aime beaucoup la mode.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0268",
@@ -3502,7 +4891,12 @@
       "theme": "clothes",
       "frequency_rank": 4420,
       "audio": null,
-      "example": "Tu es très élégant ce soir."
+      "example": "Tu es très élégant ce soir.",
+      "feminine": "élégante",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0269",
@@ -3515,7 +4909,12 @@
       "theme": "clothes",
       "frequency_rank": 2020,
       "audio": null,
-      "example": "Cette jupe est trop courte."
+      "example": "Cette jupe est trop courte.",
+      "feminine": "courte",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0270",
@@ -3528,7 +4927,12 @@
       "theme": "clothes",
       "frequency_rank": 2880,
       "audio": null,
-      "example": "J'ai enlevé mes chaussures à l'entrée."
+      "example": "J'ai enlevé mes chaussures à l'entrée.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0271",
@@ -3541,7 +4945,12 @@
       "theme": "transport",
       "frequency_rank": 505,
       "audio": null,
-      "example": "Je vais au travail en voiture."
+      "example": "Je vais au travail en voiture.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0272",
@@ -3554,7 +4963,12 @@
       "theme": "transport",
       "frequency_rank": 2490,
       "audio": null,
-      "example": "Je prends le bus tous les matins."
+      "example": "Je prends le bus tous les matins.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0273",
@@ -3567,7 +4981,12 @@
       "theme": "transport",
       "frequency_rank": 780,
       "audio": null,
-      "example": "Le train part à huit heures."
+      "example": "Le train part à huit heures.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0274",
@@ -3580,7 +4999,12 @@
       "theme": "transport",
       "frequency_rank": 3140,
       "audio": null,
-      "example": "Je prends le métro pour aller au bureau."
+      "example": "Je prends le métro pour aller au bureau.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0275",
@@ -3593,7 +5017,12 @@
       "theme": "transport",
       "frequency_rank": 2680,
       "audio": null,
-      "example": "Je vais à l'école à vélo."
+      "example": "Je vais à l'école à vélo.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0276",
@@ -3606,7 +5035,12 @@
       "theme": "transport",
       "frequency_rank": 1630,
       "audio": null,
-      "example": "La gare est loin de chez moi."
+      "example": "La gare est loin de chez moi.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0277",
@@ -3619,7 +5053,12 @@
       "theme": "transport",
       "frequency_rank": 1065,
       "audio": null,
-      "example": "Je prends l'avion pour aller à Rome."
+      "example": "Je prends l'avion pour aller à Rome.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0278",
@@ -3632,7 +5071,12 @@
       "theme": "transport",
       "frequency_rank": 1620,
       "audio": null,
-      "example": "J'ai conduit pendant trois heures."
+      "example": "J'ai conduit pendant trois heures.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0279",
@@ -3645,7 +5089,12 @@
       "theme": "transport",
       "frequency_rank": 2860,
       "audio": null,
-      "example": "Nous sommes arrivés à l'aéroport en retard."
+      "example": "Nous sommes arrivés à l'aéroport en retard.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0280",
@@ -3658,7 +5107,12 @@
       "theme": "transport",
       "frequency_rank": 475,
       "audio": null,
-      "example": "Elle est descendue du train à Lyon."
+      "example": "Elle est descendue du train à Lyon.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0281",
@@ -3671,7 +5125,12 @@
       "theme": "transport",
       "frequency_rank": 515,
       "audio": null,
-      "example": "Nous sommes montés dans le train à Paris."
+      "example": "Nous sommes montés dans le train à Paris.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0282",
@@ -3684,7 +5143,12 @@
       "theme": "transport",
       "frequency_rank": 1760,
       "audio": null,
-      "example": "Ce train est très rapide."
+      "example": "Ce train est très rapide.",
+      "feminine": "rapide",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0283",
@@ -3697,7 +5161,12 @@
       "theme": "transport",
       "frequency_rank": 3240,
       "audio": null,
-      "example": "Le bus est très lent le matin."
+      "example": "Le bus est très lent le matin.",
+      "feminine": "lente",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0284",
@@ -3710,7 +5179,12 @@
       "theme": "transport",
       "frequency_rank": 655,
       "audio": null,
-      "example": "La route est longue jusqu'à la mer."
+      "example": "La route est longue jusqu'à la mer.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0285",
@@ -3723,7 +5197,12 @@
       "theme": "transport",
       "frequency_rank": 2290,
       "audio": null,
-      "example": "J'ai eu mon permis de conduire l'année dernière."
+      "example": "J'ai eu mon permis de conduire l'année dernière.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0286",
@@ -3736,7 +5215,12 @@
       "theme": "phone-internet",
       "frequency_rank": 1110,
       "audio": null,
-      "example": "Mon téléphone est sur la table."
+      "example": "Mon téléphone est sur la table.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0287",
@@ -3749,7 +5233,12 @@
       "theme": "phone-internet",
       "frequency_rank": 1830,
       "audio": null,
-      "example": "J'ai un nouveau message de ma sœur."
+      "example": "J'ai un nouveau message de ma sœur.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0288",
@@ -3762,7 +5251,12 @@
       "theme": "phone-internet",
       "frequency_rank": 318,
       "audio": null,
-      "example": "J'appelle ma mère tous les dimanches."
+      "example": "J'appelle ma mère tous les dimanches.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0289",
@@ -3775,7 +5269,12 @@
       "theme": "phone-internet",
       "frequency_rank": 1770,
       "audio": null,
-      "example": "Je prends une photo de la tour Eiffel."
+      "example": "Je prends une photo de la tour Eiffel.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0290",
@@ -3788,7 +5287,12 @@
       "theme": "phone-internet",
       "frequency_rank": 2190,
       "audio": null,
-      "example": "J'ai un ordinateur pour le travail."
+      "example": "J'ai un ordinateur pour le travail.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0291",
@@ -3801,7 +5305,12 @@
       "theme": "phone-internet",
       "frequency_rank": 615,
       "audio": null,
-      "example": "J'envoie une photo à mon ami."
+      "example": "J'envoie une photo à mon ami.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0292",
@@ -3814,7 +5323,12 @@
       "theme": "phone-internet",
       "frequency_rank": 485,
       "audio": null,
-      "example": "Je réponds à ton message ce soir."
+      "example": "Je réponds à ton message ce soir.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0293",
@@ -3827,7 +5341,12 @@
       "theme": "phone-internet",
       "frequency_rank": 2360,
       "audio": null,
-      "example": "Je regarde une vidéo sur mon téléphone."
+      "example": "Je regarde une vidéo sur mon téléphone.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0294",
@@ -3840,7 +5359,12 @@
       "theme": "phone-internet",
       "frequency_rank": 535,
       "audio": null,
-      "example": "J'utilise mon ordinateur pour travailler."
+      "example": "J'utilise mon ordinateur pour travailler.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0295",
@@ -3853,7 +5377,12 @@
       "theme": "phone-internet",
       "frequency_rank": 1940,
       "audio": null,
-      "example": "Quel est ton numéro de téléphone ?"
+      "example": "Quel est ton numéro de téléphone ?",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0296",
@@ -3866,7 +5395,12 @@
       "theme": "phone-internet",
       "frequency_rank": 2040,
       "audio": null,
-      "example": "L'écran de mon téléphone est cassé."
+      "example": "L'écran de mon téléphone est cassé.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0297",
@@ -3879,7 +5413,12 @@
       "theme": "phone-internet",
       "frequency_rank": 2460,
       "audio": null,
-      "example": "J'utilise une application pour apprendre le français."
+      "example": "J'utilise une application pour apprendre le français.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0298",
@@ -3892,7 +5431,12 @@
       "theme": "phone-internet",
       "frequency_rank": 5100,
       "audio": null,
-      "example": "J'ai téléchargé une nouvelle application."
+      "example": "J'ai téléchargé une nouvelle application.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0299",
@@ -3905,7 +5449,12 @@
       "theme": "phone-internet",
       "frequency_rank": 3580,
       "audio": null,
-      "example": "Mon téléphone est cassé depuis hier."
+      "example": "Mon téléphone est cassé depuis hier.",
+      "feminine": "cassée",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0300",
@@ -3918,7 +5467,12 @@
       "theme": "phone-internet",
       "frequency_rank": 1590,
       "audio": null,
-      "example": "Il n'y a pas de réseau dans ce village."
+      "example": "Il n'y a pas de réseau dans ce village.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0301",
@@ -3931,7 +5485,12 @@
       "theme": "phone-internet",
       "frequency_rank": 4150,
       "audio": null,
-      "example": "Ma batterie est presque vide."
+      "example": "Ma batterie est presque vide.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0302",
@@ -3944,7 +5503,12 @@
       "theme": "colors-numbers",
       "frequency_rank": 1595,
       "audio": null,
-      "example": "Ma sœur a une voiture rouge."
+      "example": "Ma sœur a une voiture rouge.",
+      "feminine": "rouge",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0303",
@@ -3957,7 +5521,12 @@
       "theme": "colors-numbers",
       "frequency_rank": 1610,
       "audio": null,
-      "example": "Le ciel est bleu aujourd'hui."
+      "example": "Le ciel est bleu aujourd'hui.",
+      "feminine": "bleue",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0304",
@@ -3970,7 +5539,12 @@
       "theme": "colors-numbers",
       "frequency_rank": 2010,
       "audio": null,
-      "example": "La porte de ma maison est verte."
+      "example": "La porte de ma maison est verte.",
+      "feminine": "verte",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0305",
@@ -3983,7 +5557,12 @@
       "theme": "colors-numbers",
       "frequency_rank": 1045,
       "audio": null,
-      "example": "Je bois mon café noir le matin."
+      "example": "Je bois mon café noir le matin.",
+      "feminine": "noire",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0306",
@@ -3996,7 +5575,12 @@
       "theme": "colors-numbers",
       "frequency_rank": 1205,
       "audio": null,
-      "example": "Elle porte une chemise blanche."
+      "example": "Elle porte une chemise blanche.",
+      "feminine": "blanche",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0307",
@@ -4009,7 +5593,12 @@
       "theme": "colors-numbers",
       "frequency_rank": 2580,
       "audio": null,
-      "example": "Mon vélo est jaune et noir."
+      "example": "Mon vélo est jaune et noir.",
+      "feminine": "jaune",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0308",
@@ -4022,7 +5611,12 @@
       "theme": "colors-numbers",
       "frequency_rank": 1340,
       "audio": null,
-      "example": "J'aime la couleur de ta voiture."
+      "example": "J'aime la couleur de ta voiture.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0309",
@@ -4035,7 +5629,12 @@
       "theme": "colors-numbers",
       "frequency_rank": 2230,
       "audio": null,
-      "example": "Le ciel est gris en hiver."
+      "example": "Le ciel est gris en hiver.",
+      "feminine": "grise",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0310",
@@ -4048,7 +5647,12 @@
       "theme": "colors-numbers",
       "frequency_rank": 635,
       "audio": null,
-      "example": "Mon fils compte jusqu'à cent."
+      "example": "Mon fils compte jusqu'à cent.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0311",
@@ -4061,7 +5665,18 @@
       "theme": "colors-numbers",
       "frequency_rank": 2690,
       "audio": null,
-      "example": "Ma fille adore les vêtements roses."
+      "example": "Ma fille adore les vêtements roses.",
+      "feminine": "rose",
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": [
+        {
+          "word_id": "w0325",
+          "english": "rose (flower)",
+          "nb": "'rose' can also mean 'rose (flower)'."
+        }
+      ]
     },
     {
       "id": "w0312",
@@ -4074,7 +5689,12 @@
       "theme": "colors-numbers",
       "frequency_rank": 4620,
       "audio": null,
-      "example": "Mon chien a les yeux marron."
+      "example": "Mon chien a les yeux marron.",
+      "feminine": "marron",
+      "article_f": null,
+      "example_f": null,
+      "note": "'marron' never changes: des chaussures marron.",
+      "other_meanings": []
     },
     {
       "id": "w0313",
@@ -4087,7 +5707,12 @@
       "theme": "colors-numbers",
       "frequency_rank": 645,
       "audio": null,
-      "example": "Il y a un grand nombre de touristes en été."
+      "example": "Il y a un grand nombre de touristes en été.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0314",
@@ -4100,7 +5725,12 @@
       "theme": "colors-numbers",
       "frequency_rank": 1910,
       "audio": null,
-      "example": "J'ai mangé la moitié de la pizza."
+      "example": "J'ai mangé la moitié de la pizza.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0315",
@@ -4113,7 +5743,12 @@
       "theme": "colors-numbers",
       "frequency_rank": 3460,
       "audio": null,
-      "example": "J'ai invité une dizaine d'amis."
+      "example": "J'ai invité une dizaine d'amis.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0316",
@@ -4126,7 +5761,12 @@
       "theme": "colors-numbers",
       "frequency_rank": 4980,
       "audio": null,
-      "example": "On a peint la cuisine en jaune."
+      "example": "On a peint la cuisine en jaune.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     },
     {
       "id": "w0317",
@@ -4139,7 +5779,234 @@
       "theme": "colors-numbers",
       "frequency_rank": 6200,
       "audio": null,
-      "example": "Les enfants colorient des dessins à l'école."
+      "example": "Les enfants colorient des dessins à l'école.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
+    },
+    {
+      "id": "w0318",
+      "french": "faim",
+      "english": "hunger",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 1,
+      "theme": "food",
+      "frequency_rank": 1501,
+      "audio": null,
+      "example": "J'ai très faim après le sport.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
+    },
+    {
+      "id": "w0319",
+      "french": "temps",
+      "english": "time",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 1,
+      "theme": "time",
+      "frequency_rank": 61,
+      "audio": null,
+      "example": "Je n'ai pas le temps ce soir.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": [
+        {
+          "word_id": "w0235",
+          "english": "weather",
+          "nb": "'temps' can also mean 'weather'."
+        }
+      ]
+    },
+    {
+      "id": "w0320",
+      "french": "femme",
+      "english": "woman",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 1,
+      "theme": "people-feelings",
+      "frequency_rank": 151,
+      "audio": null,
+      "example": "Cette femme travaille à la banque.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": [
+        {
+          "word_id": "w0050",
+          "english": "wife",
+          "nb": "'femme' can also mean 'wife'."
+        }
+      ]
+    },
+    {
+      "id": "w0321",
+      "french": "fille",
+      "english": "girl",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 1,
+      "theme": "people-feelings",
+      "frequency_rank": 301,
+      "audio": null,
+      "example": "Une petite fille joue dans le jardin.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": [
+        {
+          "word_id": "w0048",
+          "english": "daughter",
+          "nb": "'fille' can also mean 'daughter'."
+        }
+      ]
+    },
+    {
+      "id": "w0322",
+      "french": "garçon",
+      "english": "waiter",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 2,
+      "theme": "city-shopping",
+      "frequency_rank": 4001,
+      "audio": null,
+      "example": "Le garçon nous apporte deux cafés.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": "Today most people say 'serveur' for a waiter, but you'll still hear 'garçon' in cafés.",
+      "other_meanings": [
+        {
+          "word_id": "w0139",
+          "english": "boy",
+          "nb": "'garçon' can also mean 'boy'."
+        }
+      ]
+    },
+    {
+      "id": "w0323",
+      "french": "souvenir",
+      "english": "memory",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 2,
+      "theme": "people-feelings",
+      "frequency_rank": 1201,
+      "audio": null,
+      "example": "J'ai de bons souvenirs de cet été.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": [
+        {
+          "word_id": "w0091",
+          "english": "souvenir (gift)",
+          "nb": "'souvenir' can also mean 'souvenir (gift)'."
+        }
+      ]
+    },
+    {
+      "id": "w0324",
+      "french": "gagner",
+      "english": "to earn",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "work-school",
+      "frequency_rank": 2201,
+      "audio": null,
+      "example": "Elle gagne bien sa vie comme médecin.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": [
+        {
+          "word_id": "w0217",
+          "english": "to win",
+          "nb": "'gagner' can also mean 'to win'."
+        }
+      ]
+    },
+    {
+      "id": "w0325",
+      "french": "rose",
+      "english": "rose (flower)",
+      "pos": "noun",
+      "gender": "f",
+      "article": "la",
+      "level": 2,
+      "theme": "weather-nature",
+      "frequency_rank": 3301,
+      "audio": null,
+      "example": "Il y a des roses dans le jardin.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": [
+        {
+          "word_id": "w0311",
+          "english": "pink",
+          "nb": "'rose' can also mean 'pink'."
+        }
+      ]
+    },
+    {
+      "id": "w0326",
+      "french": "cinéma",
+      "english": "cinema / movie theater",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 1,
+      "theme": "hobbies-sport",
+      "frequency_rank": 1301,
+      "audio": null,
+      "example": "On va au cinéma samedi soir.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
+    },
+    {
+      "id": "w0327",
+      "french": "chien",
+      "english": "dog",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 1,
+      "theme": "home",
+      "frequency_rank": 1101,
+      "audio": null,
+      "example": "Mon chien dort sur le canapé.",
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
     }
   ]
 }
