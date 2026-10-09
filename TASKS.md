@@ -1,22 +1,19 @@
 # Tasks
 
-## In progress
 The full plan with phases and status lives in docs/ROADMAP.md.
-- [ ] Set up Next.js project + Supabase connection — Loen drives, Jerry reviews — branch: feature/setup-quantrungvu (PR #4 draft; app and Supabase connection done locally; Vercel deploy left; rotate the Supabase secret key first)
+Going live, step by step: docs/SETUP.md.
+
+## In progress
+- [ ] Review and merge PR #5 (roadmap), then the MVP PR — Jerry
+- [ ] Go live: rotate Supabase secret key, run the SQL, Claude key + `npm run eval`, deploy to Vercel (docs/SETUP.md) — quantrungvu
 
 ## Next up
-- [ ] Create /data/grammar_rules.json and /tests/sentences.json — @jerry
-- [ ] Decide README open decisions (section 12) and record in DECISIONS.md — pair
-- [ ] Build curated word list (/data/words.json, ~1000 common words) — @jerry
-- [ ] Draft the AI feedback prompt for sentence checking — @jerry
-- [ ] Review /data/structures.json (75-template draft, 15 per level) — @jerry
-- [ ] Template picker: random, different templates per word (2 statements + 1 question), matched to the word's part of speech — pair
-- [ ] Word picker: serve unseen words on demand, "Give me more words" button (test mode) — pair
-- [ ] Sentence input page (three boxes per word: 2 sentences + 1 question) — pair
-- [ ] Connect Claude API to check/correct sentences, with MAX_CHECKS_PER_DAY cap — pair
-- [ ] Streak tracking using STREAK_MIN_WORDS = 5, decide timezone rule — pair
-- [ ] Login/accounts (Supabase auth) — pair
-- [ ] Deploy to Vercel — pair
+- [ ] Review the content drafts: data/words.json (98 words), data/grammar_rules.json, data/roleplay_scenarios.json, prompts/*.md, tests/sentences.json — @jerry
+- [ ] Confirm the open decisions built as recommended (README section 12: completed word, review words count, local day) — @jerry
+- [ ] Grow the word list toward ~1000 words (levels 1–5; levels 3–5 have no words yet) — @jerry
+- [ ] Start the 2-week pilot (Jerry + quantrungvu), then decide the daily load from /stats (ROADMAP F3) — pair
+- [ ] Improve the AI prompt with `npm run eval` until the test set passes — @jerry, pair
+- [ ] Error monitoring (ROADMAP A9) and reminders (E4) — later
 
 ## Later (production mode, not now)
 - [ ] Minimum 5 words per day (same for all users), stored in DB; extra words are paid
@@ -24,8 +21,10 @@ The full plan with phases and status lives in docs/ROADMAP.md.
 - [ ] Review and revise cost controls before public launch
 
 ## Done
+- [x] MVP: phases A–F of the roadmap built and tested locally (2026-10-10, quantrungvu) — branch feature/mvp-quantrungvu
+- [x] Roadmap after the method debate (2026-10-10, quantrungvu + Jerry) — docs/ROADMAP.md, PR #5
+- [x] Next.js + Supabase setup (2026-10-09, quantrungvu, PR #4)
 - [x] Clearer team workflow, /note and /end, nightly save (2026-10-09, quantrungvu, PR #3)
-- [x] Roadmap after the method debate (2026-10-10, quantrungvu + Jerry) — docs/ROADMAP.md
 - [x] Write detailed README, trim CLAUDE.md, record English-only feedback decision (2026-10-07, Jerry)
 - [x] 2 sentences + 1 question per word, 5 levels, first draft of /data/structures.json (2026-10-08, Jerry)
-- [x] Capsule skill for AI-to-AI session handoff (2026-10-08, Jerry)
+- [x] Capsule skill for AI session handoff (2026-10-08, Jerry)

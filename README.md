@@ -4,7 +4,7 @@ A web app that teaches French to beginners through one habit: **write real sente
 
 **Developer:** Jerry (product idea, AI feedback prompt)
 **Developer:** Loen (experience vibe-coder)
-**Status:** Phase 0 (setup). Next.js app runs locally with a setup check page. Supabase keys and Vercel deploy still to do.
+**Status:** MVP built (2026-10-10): the full learning loop, AI coach, word bank, quiet words, weekly role-play and pilot stats run locally. To go live: [`docs/SETUP.md`](docs/SETUP.md) (Supabase tables, Claude key, Vercel). Plan and progress: [`docs/ROADMAP.md`](docs/ROADMAP.md).
 
 > This README is the full project description for humans. Rules for Claude Code live in `CLAUDE.md`. Current work lives in `TASKS.md`. Past choices live in `DECISIONS.md`.
 
@@ -277,6 +277,8 @@ A stack is the set of technologies an app is built from.
 | Database + Auth | Supabase (Postgres) | Users, words seen, sentences, streaks |
 | AI | Claude API | Sentence checking and feedback, called server-side only |
 | Hosting | Vercel | Auto-deploys from GitHub |
+| Tests | Vitest | `npm test`: everything code decides (picker, streak, limits…) |
+| Checks | GitHub Actions | Type check, lint, tests and build on every PR |
 
 ---
 
@@ -291,46 +293,48 @@ Code drives the flow. AI is called at one step only. This flow runs once for eac
 5. **Require JSON** output in the format in section 3.4.
 6. **Validate result in code:** parse JSON, check required fields, limit mistakes to 2. If invalid, retry once, then show a friendly error. This step must never be skipped, or the app breaks mid-streak.
 7. **Save and update:** store the sentence and feedback, update the word's box and due date, update daily progress and streak.
-8. **Display** the feedback card.
+8. **Display** the feedback card. If there are mistakes: the learner sees **hints only**, tries to fix the sentence, then sees the answer and **retypes** it. Code compares these attempts, so this step costs no extra AI calls.
 
 **Principle:** anything code can do reliably (counting, limits, streaks, word selection, scheduling) is done by code. AI only does what needs language understanding: checking and explaining sentences.
 
 ---
 
-## 7. Data model (draft)
+## 7. Data model
 
-| Table | Key fields |
+As built (`supabase/migrations/20261010000000_init.sql`, decided 2026-10-10 in `DECISIONS.md`):
+
+| Table | What it holds |
 |---|---|
-| `users` | id, email, level, current_theme, created_at |
-| `words` | (loaded from `words.json`, or a mirrored table) id, french, english, pos, gender, level, theme, frequency_rank |
-| `user_words` | user_id, word_id, box, due_date, times_seen, last_seen |
-| `sentences` | id, user_id, word_id, original, corrected, structure_ok, is_correct, mistakes (json), examples (json), created_at |
-| `mistake_stats` | user_id, tag, count, last_seen |
-| `daily_progress` | user_id, date, completed_count, checks_used |
-| `streaks` | user_id, current, longest, freezes, last_completed_date |
-| `reports` | id, user_id, sentence_id, note, status, created_at |
+| `learner_state` | One JSON document per learner: profile, level, every word seen (review box, due date, times used on their own, mistake tags), mistake counts per day, streak, today's progress, the current practice batch, coach notes, the current role-play. Saved with a version number so two tabs can't overwrite each other. |
+| `sentences` | Every checked sentence with the full AI feedback (for the Review page). |
+| `reports` | "Report this" notes for Jerry. |
+| `ai_calls` | Tokens, cost, time and errors of every AI call. |
+| `events` | Small activity log (item checked, word completed…) used to measure time per day. |
 
-[Draft only] Loen should adjust this freely when setting up Supabase.
+Words, templates, grammar rules and role-play scenarios are not in the database: they are the JSON files in `/data`. Every table has row level security: a learner can only read and write their own rows. The shape of `learner_state` is defined in `src/lib/learning/state.ts`.
 
 ---
 
 ## 8. Configuration (environment variables)
 
-Stored in `.env` (never committed). `.env.example` lists them with empty values. Names starting with `NEXT_PUBLIC_` are visible in the browser, so never put a secret in one.
+Stored in `.env` (never committed). [`.env.example`](.env.example) lists every variable with a plain explanation. Names starting with `NEXT_PUBLIC_` are visible in the browser, so never put a secret in one. The main ones:
 
 ```
 APP_MODE=test
-CLAUDE_API_KEY=
-CLAUDE_MODEL=claude-haiku-4-5-20251001
+STORAGE=file                 # file (this computer) or supabase (real app)
+CLAUDE_API_KEY=              # empty = mock AI (fake feedback, free)
+CLAUDE_MODEL=claude-haiku-5-5
 STREAK_MIN_WORDS=5
 MAX_CHECKS_PER_DAY=50
 MIN_SENTENCE_WORDS=6
+MIN_SENTENCE_WORDS_LEVEL1=4
 NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_ANON_KEY=
 SUPABASE_SERVICE_ROLE_KEY=
+ADMIN_EMAILS=                # who can open /stats
 ```
 
-**Model choice:** start with Haiku (cheapest), compare against Sonnet using the test set, and upgrade only if explanation quality for beginners is not good enough. The model name is never hardcoded. Before using any API parameter you are unsure about, check https://docs.claude.com instead of guessing.
+**Model choice:** start with Haiku (cheapest; now `claude-haiku-5-5`), compare against Sonnet using the test set (`npm run eval`), and upgrade only if explanation quality for beginners is not good enough. The model name is never hardcoded. Before using any API parameter you are unsure about, check https://docs.claude.com instead of guessing.
 
 ---
 
@@ -343,64 +347,48 @@ SUPABASE_SERVICE_ROLE_KEY=
 
 ---
 
-## 10. Planned folder structure
+## 10. Folder structure
 
 ```
-french-daily/
-├── README.md
-├── CLAUDE.md
-├── TASKS.md
-├── DECISIONS.md
-├── .env.example
-├── .claude/
-│   └── commands/
-│       ├── note.md
-│       └── end.md
+FrenchDaily/
+├── README.md, CLAUDE.md, TASKS.md, DECISIONS.md, AGENTS.md
+├── .env.example              every setting, explained
+├── .github/workflows/ci.yml  automatic checks on every PR
+├── .claude/commands/         /note and /end
 ├── docs/
-│   └── handoffs/
-├── data/
-│   ├── words.json
-│   ├── structures.json
-│   └── grammar_rules.json
-├── prompts/
-│   └── check-sentence.md
-├── tests/
-│   └── sentences.json
-└── src/            (Next.js app, created in setup)
+│   ├── ROADMAP.md            the plan, phases and status
+│   ├── SETUP.md              going live: Supabase, Claude key, Vercel
+│   ├── WORKFLOW.md           how we work (git, PRs, nightly save)
+│   └── handoffs/             one note per session
+├── data/                     content (Jerry): words, templates, grammar rules, role-play scenarios
+├── prompts/                  AI instructions (Jerry): check-sentence, coach, role-play
+├── tests/sentences.json      AI grader test set (npm run eval)
+├── scripts/eval.ts           runs the AI grader test
+├── supabase/migrations/      database tables + security rules
+└── src/
+    ├── app/                  pages: / (Today), /practice, /review, /progress, /roleplay, /stats, /login
+    ├── components/           shared UI pieces
+    └── lib/
+        ├── learning/         pure rules: picker, review boxes, streak, pace, levels, coach numbers (tested)
+        ├── ai/               Claude client, prompts, answer formats, mock AI
+        ├── services/         the steps behind every button
+        ├── store/            storage: memory (tests), file (this computer), Supabase
+        └── content/          loads and checks /data
 ```
 
 ---
 
 ## 11. Roadmap
 
-**Phase 0: Setup** (Loen drives, Jerry reviews)
-- Next.js project, Supabase connection, `.env.example`, deploy a blank page to Vercel.
+The full plan, with the method debate, phases A–H, owners and status, is in [`docs/ROADMAP.md`](docs/ROADMAP.md). Short version:
 
-**Phase 1: Core loop (MVP, test mode)**
-- Build `words.json` (~1,000 words with level, theme, gender, frequency).
-- Word picker with level, theme, and part-of-speech mix.
-- Word card with meaning, gender, and audio.
-- Sentence input (2 sentences + 1 question per word) with structure template and code checks.
-- Claude check with JSON output, validation, and the 50-check cap.
-- Small feedback card with "More detail" and two example sentences.
-- Save corrected sentences.
-
-**Phase 2: Accounts and habit**
-- Supabase login.
-- Daily progress, streak with `STREAK_MIN_WORDS`, streak freezes, timezone rule.
-- Review page for saved sentences.
-- "Report this" button.
-
-**Phase 3: Retention**
-- Spaced repetition boxes and due-word serving.
-- Mistake tags and mistake-aware exercises.
-- Grammar rule set expansion.
-- Level 2 to 5 sentence rules.
-
-**Phase 4: Production**
-- Switch to a minimum of 5 shared words per day (more words are a paid option, details to be decided).
-- Per-user limits, cost review, spend caps.
-- Public launch decisions.
+- **A. Foundation** (tests, automatic checks, database, login, deploy): built; deploy needs accounts.
+- **B. Core loop** with read → notice → write, easier level 1, fix-after-feedback: built.
+- **C. Learner model and AI coach** (review boxes, mistakes, word bank, quiet words, pace, levels): built.
+- **D. Weekly role-play** (text): built. Speaking: after the pilot.
+- **E. Habit** (home, streak + freezes, installable): built. Reminders: later.
+- **F. Pilot** (Jerry + quantrungvu, `/stats`): ready to start.
+- **G. Launch** and **H. Later**: not now.
 
 ---
 
@@ -408,12 +396,12 @@ french-daily/
 
 | # | Decision | Recommendation |
 |---|---|---|
-| 1 | What counts as a "completed" word? **Partly decided:** all 3 items (2 sentences + 1 question) must be done. Still open: must each item be submitted, meet structure, or be fully correct? | Each item meets the structure requirement. Requiring perfect grammar punishes beginners and kills streaks. |
-| 2 | Day boundary: user local time or UTC? | User local time (feels fairer), but needs care in code. |
+| 1 | What counts as a "completed" word? **Partly decided:** all 3 items (2 sentences + 1 question) must be done. Still open: must each item be submitted, meet structure, or be fully correct? | Each item meets the structure requirement. Requiring perfect grammar punishes beginners and kills streaks. **Built this way; confirm.** |
+| 2 | Day boundary: user local time or UTC? | User local time (feels fairer), but needs care in code. **Built this way (CLAUDE.md rule).** |
 | 3 | ~~Explanations in English only, or also Vietnamese?~~ | **Decided: English only.** Revisit if we add other interface languages. |
-| 4 | Do review words count toward the daily 5? | Yes, so reviews do not feel like extra work. |
-| 5 | Audio: browser speech or generated files? | Browser speech first. |
-| 6 | How many words per theme and how long per theme? | About 5 to 7 days per theme to start. |
+| 4 | Do review words count toward the daily 5? | Yes, so reviews do not feel like extra work. **Built this way; confirm.** |
+| 5 | Audio: browser speech or generated files? | Browser speech first. **Built this way.** |
+| 6 | How many words per theme and how long per theme? | About 5 to 7 days per theme to start. **Built: `THEME_DAYS=7`.** |
 | 7 | ~~Production: exactly 5 words per day, or a minimum of 5?~~ | **Decided: minimum 5.** Extra words will be paid; Jerry decides the details later. |
 
 Record final answers in `DECISIONS.md`.
@@ -429,6 +417,7 @@ Record final answers in `DECISIONS.md`.
 - Nightly safety net: a scheduled task runs at about 23:57 on each computer and does the same as `/end` if there is unpushed work, opening a draft PR. It never merges.
 - Record major decisions in `DECISIONS.md`.
 - Step-by-step guide with a glossary and "what to do when it goes wrong": [`docs/WORKFLOW.md`](docs/WORKFLOW.md).
+- Every PR runs automatic checks (type check, lint, tests, build). A red ✗ means something must be fixed before merging.
 
 ### Getting started
 
@@ -436,9 +425,12 @@ Record final answers in `DECISIONS.md`.
 git clone https://github.com/JerryHacAm/FrenchDaily.git
 cd FrenchDaily
 npm install
-cp .env.example .env     # then fill in the values
-npm run dev
+cp .env.example .env     # works as is: local file storage + mock AI
+npm run dev              # http://localhost:3000
+npm test                 # automatic tests
 ```
+
+To use the real AI and database, follow [`docs/SETUP.md`](docs/SETUP.md).
 
 ---
 

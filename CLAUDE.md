@@ -49,17 +49,45 @@ See @README.md for the full project description
 ## Commands
 - Install: `npm install`
 - Run: `npm run dev` (then open http://localhost:3000)
-- Check before pushing: `npx tsc --noEmit`, `npm run lint`, `npm run build`
-- Test: `npm test` (no test runner yet; add one with the first real logic)
+- Test: `npm test` (Vitest, `src/**/*.test.ts`)
+- Before pushing: `npm run check` (type check + lint + tests) and `npm run build`
+- AI grader test: `npm run eval` (real AI calls if CLAUDE_API_KEY is set; run
+  before changing prompts/ or CLAUDE_MODEL)
+- Going live (Supabase, Claude key, Vercel): docs/SETUP.md
 
 ## Code layout
 - Next.js 16 (App Router) in `src/`. This version is newer than most AI
   training data: read @AGENTS.md and the docs it points to before writing
-  Next.js code.
+  Next.js code. `cacheComponents` is on: anything that reads cookies, the
+  user or today's date must sit inside `<Suspense>` (pages call
+  `getContext()`/`appDeps()` inside a Suspense child).
 - All settings and secrets are read in `src/lib/config.ts` only. Import
-  constants from there; never read `process.env` elsewhere.
-- Server-only code starts with `import "server-only"` (keys, Supabase admin,
-  Claude calls). Supabase server code lives in `src/lib/supabase/`.
+  constants from there; never read `process.env` elsewhere (exception:
+  `src/proxy.ts`, see its comment).
+- Server-only code starts with `import "server-only"` (keys, Supabase,
+  Claude calls).
+- `src/lib/learning/`: pure rules (no I/O), every function takes `Rules` and
+  "today" as parameters. Everything code decides lives here and is tested.
+- `src/lib/services/`: the steps behind each button (load → change → save).
+  They receive `Deps` (store, ai, clock…) so tests run them with MemoryStore +
+  MockAi. `src/app/actions.ts` is a thin wrapper around them.
+- `src/lib/ai/`: Claude calls with structured JSON output (`schemas.ts`),
+  prompt text from `/prompts`, and `mock.ts` for no-key development.
+- `src/lib/store/`: `STORAGE=file` (local JSON, no login) or `supabase`.
+- Content in `/data` and `/prompts` belongs to Jerry: Claude may draft or fix
+  it, but marks drafts. `npm test` validates every JSON file in `/data`.
+- Rule for the coach: code counts, AI explains. Never let the AI invent
+  numbers; give it the numbers from `coachStats()`.
+
+## Gotchas (learned the hard way)
+- Claude's file-edit tool sometimes isn't noticed by the dev server: if a
+  change doesn't show, touch the file from the shell or restart `npm run dev`.
+- In client components, write `useEffect(() => { ... })` with braces: newer
+  browsers return a Promise from `scrollIntoView`, and an effect returning a
+  Promise crashes React.
+- The built-in browser pane may stay on "Loading…" while hidden; take a
+  screenshot (or open the page in a normal browser) before assuming a bug.
+- Supabase URL is `https://<project-id>.supabase.co` (no `/rest/v1`).
 
 ## Team workflow (follow every session)
 Step-by-step guide for humans: docs/WORKFLOW.md.

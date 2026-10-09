@@ -105,6 +105,8 @@ export type PracticeSession = {
 
 export type CoachNote = {
   date: string;
+  /** "welcome" notes are replaced as soon as there is data to coach on. */
+  source?: "welcome" | "ai" | "code";
   headline: string;
   message: string;
   focusTag: string | null;

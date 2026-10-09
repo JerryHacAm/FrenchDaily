@@ -194,6 +194,8 @@ describe("coach service", () => {
     const progress = await getProgress(deps);
     expect(progress.stats.completedToday).toBe(1);
     expect(progress.boxes[1]).toBe(1);
+    const coached = await getDailyNote(deps); // welcome note is replaced once there is data
+    expect(coached?.source).not.toBe("welcome");
     const report = data(await writeWeeklyReport(deps));
     expect(report.weekStart).toBe("2026-10-05");
   });

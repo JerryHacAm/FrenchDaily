@@ -25,27 +25,30 @@ export async function getDailyNote(deps: Deps): Promise<CoachNote | null> {
   const loaded = await load(deps);
   const { state, today } = loaded;
   if (!state.profile.onboarded) return null;
-  if (state.coach.daily?.date === today) return state.coach.daily;
+  const hasData = state.recentItems.length >= 3;
+  const cached = state.coach.daily;
+  if (cached?.date === today && !(cached.source === "welcome" && hasData)) return cached;
 
   const stats = coachStats(state, deps.content, today, deps.rules);
   let note: CoachNote;
-  const hasData = state.recentItems.length >= 3;
   if (hasData) {
     try {
       const r = await callAi(deps, "coach", () => deps.ai.coachNote(stats));
       note = {
         date: today,
+        source: "ai",
         headline: r.data.headline,
         message: r.data.message,
         focusTag: knownFocus(r.data.focus_tag, stats),
         actionLabel: r.data.action_label || "Practise now",
       };
     } catch {
-      note = { date: today, ...fallbackCoachNote(stats) };
+      note = { date: today, source: "code", ...fallbackCoachNote(stats) };
     }
   } else {
     note = {
       date: today,
+      source: "welcome",
       headline: "Welcome to French Daily",
       message: `Write sentences with ${deps.rules.streakMinWords} words today to start your streak. Your coach will spot patterns after a few sentences.`,
       focusTag: null,

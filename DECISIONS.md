@@ -67,3 +67,41 @@ Why: Jerry wants to keep the daily minimum. The new steps make a session
 longer, so we time the pilot and decide again with real data (ROADMAP F3).
 The AI grader test set stays: a wrong correction is our biggest trust risk.
 Revisit if: the pilot shows a day takes much more than ~15 minutes.
+
+## 2026-10-10 — Each learner's progress is one JSON document (learner_state)
+Why: the learning rules (picker, boxes, streak, coach numbers) are pure code
+that works on one object, which makes them easy to test (87 tests). One row
+per learner with a version number is simple and safe for the pilot. Things
+that only grow (sentences, AI calls, events, reports) are normal tables.
+Replaces the draft table list in README section 7.
+Revisit if: we need cross-learner queries on progress, or a state gets big
+(it should stay well under 1 MB even with 1000 words).
+
+## 2026-10-10 — Two storage modes and a mock AI
+Why: STORAGE=file lets anyone run the app with no database and no login;
+STORAGE=supabase is the real app. Without CLAUDE_API_KEY a mock AI gives fake
+feedback (only le/la and j'), so screens can be built and tested for free.
+A yellow bar shows when the mock is on, so nobody mistakes it for real feedback.
+Revisit if: the two modes drift apart (the same tests run on both stores).
+
+## 2026-10-10 — Default model claude-haiku-5-5
+Why: the README said "start with Haiku (cheapest)". Haiku 5.5 is the current
+Haiku and about 10× cheaper than Haiku 4.5 ($0.10 / $0.50 per million tokens).
+The model stays in .env (CLAUDE_MODEL); `npm run eval` compares models.
+Revisit if: `npm run eval` shows explanation quality is not good enough.
+
+## 2026-10-10 — Built the open-decision recommendations (Jerry to confirm)
+Why: the code needed an answer to run. Completed word = all 3 items meet the
+structure rule (grammar does not have to be perfect). Review words count
+toward the daily 5. Day = the learner's local time (browser time zone).
+Browser speech for audio. 7 days per theme. Each is one setting or one
+function, easy to change.
+Revisit if: Jerry disagrees with any of them (README section 12).
+
+## 2026-10-10 — Fix-after-feedback costs no extra AI calls
+Why: the AI's first answer already contains the fixes, so code compares the
+learner's fix and retype with it. One try to fix, then the answer; after 2
+failed retypes the learner may skip. A word used on the learner's own counts
+as its review only when it was due (so spacing stays honest).
+Revisit if: learners fix sentences in a different but correct way and get
+told "not quite" too often (then add one AI re-check for the fix).
