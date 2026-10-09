@@ -174,11 +174,14 @@ If the sentence is already correct, say so and still give the two example senten
 ```json
 {
   "structure_ok": true,
+  "structure_feedback": null,
   "is_correct": false,
   "corrected_sentence": "Je mange une pomme parce que j'ai faim.",
+  "corrected_english": "I'm eating an apple because I'm hungry.",
   "mistakes": [
     {
       "tag": "article-gender",
+      "severity": "major",
       "original": "un pomme",
       "fix": "une pomme",
       "short_explanation": "'Pomme' is feminine, so it takes 'une'.",
