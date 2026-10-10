@@ -79,3 +79,4 @@ Loen's app and my content were written on the same day in different formats, so 
 - Old saved mistakes keep their tag names. Since no real users exist yet, nothing to migrate.
 - The forms "a" (avoir) was left out on purpose: without accents it matches "à" in almost every sentence.
 - Day boundary: Loen built it as proposed (local date from the browser), so the PROPOSED mark was removed in DECISIONS.md.
+- CI type check failed on GitHub: `PageProps`/`LayoutProps` are types Next.js generates (in `.next`), which a fresh copy doesn't have. Fixed: `npm run typecheck` now runs `next typegen` first.
