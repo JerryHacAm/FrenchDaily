@@ -1,25 +1,25 @@
 # Tasks
 
+The full plan with phases and status lives in docs/ROADMAP.md.
+Going live, step by step: docs/SETUP.md.
+
 ## In progress
-- [ ] Set up Next.js project + Supabase connection — Loen drives, Jerry reviews — branch: feature/setup-quantrungvu (PR #4 draft; app and Supabase connection done locally; Vercel deploy left; rotate the Supabase secret key first)
-- [ ] Clearer team workflow (docs/WORKFLOW.md, /note and /end, nightly 23:59 save) — Loen, Jerry reviews — branch: feature/workflow-quantrungvu
-- [ ] Content set: grammar rules, test sentences, word list (levels 1-2), AI feedback prompt — Jerry, Loen reviews — branch: feature/content-jerryhacam (PR open; Jerry still to read through words.json and the prompt)
+- [ ] Merge main into the content branch (Loen's formats, Jerry's content, m/f in code) — Jerry drives, quantrungvu reviews — branch: feature/content-jerryhacam (PR #7)
+- [ ] Go live: rotate Supabase secret key, run the SQL, Claude key + `npm run eval`, deploy to Vercel (docs/SETUP.md) — quantrungvu
 
 ## Next up
-- [ ] Review day-boundary proposal in DECISIONS.md — Loen
-- [ ] Extend /data/words.json to levels 3-5 (toward ~1000 words) — @jerry
-- [ ] Run tests/sentences.json against the Claude API once the check is connected — pair
-- [ ] Decide README open decisions (section 12) and record in DECISIONS.md — pair
-- [ ] Review /data/structures.json (75-template draft, 15 per level) — @jerry
-- [ ] Template picker: random, different templates per word (2 statements + 1 question), matched to the word's part of speech — pair
-- [ ] Word picker: serve unseen words on demand, "Give me more words" button (test mode) — pair
-- [ ] Learner gender in the profile (male / female / not set); use example_f and pass it to the AI check — pair
-- [ ] Word card: show both forms, the note, and the N.B. for other meanings — pair
-- [ ] Sentence input page (three boxes per word: 2 sentences + 1 question) — pair
-- [ ] Connect Claude API to check/correct sentences, with MAX_CHECKS_PER_DAY cap — pair
-- [ ] Streak tracking using STREAK_MIN_WORDS = 5, timezone rule proposed in DECISIONS.md — pair
-- [ ] Login/accounts (Supabase auth) — pair
-- [ ] Deploy to Vercel — pair
+- [ ] Review the Claude drafts in data/words.json: example_en and mini_text for ~310 words, forms — @jerry
+- [ ] Review the merged data/grammar_rules.json (quantrungvu's tag names, Jerry's explanations) and tests/sentences.json — @jerry
+- [ ] Review data/roleplay_scenarios.json and prompts/coach.md, prompts/roleplay.md — @jerry
+- [ ] Confirm the open decisions built as recommended (README section 12: completed word, review words count, local day) — @jerry
+- [ ] Learner gender in the profile (male / female / not set): send it to the AI check, use example_f on the word card, un-skip test j31 — pair
+- [ ] Word card: show the note and the N.B. for other meanings — pair
+- [ ] Add corrected_english to the AI answer (schemas.ts + FeedbackCard) — pair
+- [ ] Check the word picker borrows an unseen verb from "basics" when a theme has none left (DECISIONS 2026-10-10) — pair
+- [ ] Grow the word list toward ~1000 words (levels 3–5 have no words yet) — @jerry
+- [ ] Start the 2-week pilot (Jerry + quantrungvu), then decide the daily load from /stats (ROADMAP F3) — pair
+- [ ] Improve the AI prompt with `npm run eval` until the test set passes — @jerry, pair
+- [ ] Error monitoring (ROADMAP A9) and reminders (E4) — later
 
 ## Later (production mode, not now)
 - [ ] Minimum 5 words per day (same for all users), stored in DB; extra words are paid
@@ -27,7 +27,11 @@
 - [ ] Review and revise cost controls before public launch
 
 ## Done
+- [x] MVP: phases A–F of the roadmap built and tested locally (2026-10-10, quantrungvu) — branch feature/mvp-quantrungvu
+- [x] Roadmap after the method debate (2026-10-10, quantrungvu + Jerry) — docs/ROADMAP.md, PR #5
+- [x] Next.js + Supabase setup (2026-10-09, quantrungvu, PR #4)
+- [x] Clearer team workflow, /note and /end, nightly save (2026-10-09, quantrungvu, PR #3)
 - [x] Grammar rules, 35 test sentences, 330-word list (levels 1-2), AI prompt draft; learner gender, m/f words, N.B. meanings, reflexive verbs at level 2 (2026-10-10, Jerry)
 - [x] Write detailed README, trim CLAUDE.md, record English-only feedback decision (2026-10-07, Jerry)
 - [x] 2 sentences + 1 question per word, 5 levels, first draft of /data/structures.json (2026-10-08, Jerry)
-- [x] Capsule skill for AI-to-AI session handoff (2026-10-08, Jerry)
+- [x] Capsule skill for AI session handoff (2026-10-08, Jerry)

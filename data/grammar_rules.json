@@ -1,338 +1,882 @@
 {
-  "_note": "Draft by Claude, levels 1-2 only. Jerry to review. Each rule id is also a mistake 'tag' in the AI feedback. severity: 'major' = wrong meaning or core grammar (sends the word back to box 1 in spaced repetition); 'minor' = accents, small spelling, punctuation. The AI uses this file as its reference so explanations stay consistent. 'explain' is the plain-English line the AI should build its short_explanation from.",
+  "_note": "Merged 2026-10-10 from Jerry's and quantrungvu's drafts (Claude). Jerry reviews. id = the mistake 'tag' used by the AI, stats and coach (quantrungvu's names kept; change an id only together with tests/sentences.json). rule = plain-English explanation the AI builds its short_explanation from. severity: 'major' = wrong meaning or core grammar (word goes back to box 1); 'minor' = accents, small spelling, punctuation. wrong/right = the main example; examples = all of Jerry's examples. focus_pos = kinds of target words that are good practice for the rule (coach's 'Practise this' button). Keep a rule with id 'other'.",
   "rules": [
     {
       "id": "article-gender",
       "level": 1,
-      "topic": "Articles and noun gender",
+      "title": "Le/la, un/une (gender)",
       "severity": "major",
-      "explain": "Every French noun is masculine or feminine. Use le / un for masculine and la / une for feminine.",
-      "correct": ["une pomme", "le livre", "la maison"],
-      "wrong": ["un pomme", "la livre", "le maison"]
-    },
-    {
-      "id": "article-elision",
-      "level": 1,
-      "topic": "le / la become l' before a vowel or silent h",
-      "severity": "minor",
-      "explain": "Before a vowel or a silent h, le and la shorten to l'.",
-      "correct": ["l'école", "l'hôtel", "l'ami"],
-      "wrong": ["la école", "le hôtel", "le ami"]
+      "rule": "Every French noun is masculine or feminine. Use le / un for masculine and la / une for feminine.",
+      "wrong": "un pomme",
+      "right": "une pomme",
+      "focus_pos": [
+        "noun"
+      ],
+      "examples": {
+        "wrong": [
+          "un pomme",
+          "la livre",
+          "le maison"
+        ],
+        "right": [
+          "une pomme",
+          "le livre",
+          "la maison"
+        ]
+      }
     },
     {
       "id": "article-missing",
       "level": 1,
-      "topic": "Nouns usually need an article",
+      "title": "Missing article",
       "severity": "major",
-      "explain": "In French a noun almost always needs a small word in front of it, like le, une or des.",
-      "correct": ["J'aime le chocolat.", "Il a une voiture."],
-      "wrong": ["J'aime chocolat.", "Il a voiture."]
+      "rule": "In French a noun almost always needs a small word in front of it, like le, une or des.",
+      "wrong": "J'aime chocolat.",
+      "right": "J'aime le chocolat.",
+      "focus_pos": [
+        "noun"
+      ],
+      "examples": {
+        "wrong": [
+          "J'aime chocolat.",
+          "Il a voiture."
+        ],
+        "right": [
+          "J'aime le chocolat.",
+          "Il a une voiture."
+        ]
+      }
     },
     {
-      "id": "article-partitive",
+      "id": "partitive",
       "level": 1,
-      "topic": "du / de la / des for 'some'",
+      "title": "Du, de la, des (some)",
       "severity": "major",
-      "explain": "For an amount of something you can't count, like bread or water, use du, de la or de l'.",
-      "correct": ["Je bois de l'eau.", "Elle mange du pain."],
-      "wrong": ["Je bois l'eau tous les jours.", "Elle mange pain."]
+      "rule": "For an amount of something you can't count, like bread or water, use du, de la or de l'.",
+      "wrong": "Je bois l'eau tous les jours.",
+      "right": "Je bois de l'eau.",
+      "focus_pos": [
+        "noun"
+      ],
+      "examples": {
+        "wrong": [
+          "Je bois l'eau tous les jours.",
+          "Elle mange pain."
+        ],
+        "right": [
+          "Je bois de l'eau.",
+          "Elle mange du pain."
+        ]
+      }
     },
     {
-      "id": "article-after-negation",
+      "id": "contraction",
       "level": 1,
-      "topic": "un / une / du / des become de after a negative",
+      "title": "Au, aux, du, des",
       "severity": "major",
-      "explain": "After ne ... pas, un, une, du, de la and des change to de (or d').",
-      "correct": ["Je n'ai pas de voiture.", "Il ne boit pas d'eau."],
-      "wrong": ["Je n'ai pas une voiture.", "Il ne boit pas de l'eau."]
+      "rule": "à le always becomes au, and à les becomes aux. de le becomes du, and de les becomes des.",
+      "wrong": "Je vais à le marché.",
+      "right": "Je vais au marché.",
+      "focus_pos": [
+        "noun"
+      ],
+      "examples": {
+        "wrong": [
+          "Je vais à le marché.",
+          "Il parle de le film."
+        ],
+        "right": [
+          "Je vais au marché.",
+          "Il parle du film."
+        ]
+      }
     },
     {
-      "id": "contraction-a-de",
+      "id": "elision",
       "level": 1,
-      "topic": "à + le = au, de + le = du",
-      "severity": "major",
-      "explain": "à le always becomes au, and à les becomes aux. de le becomes du, and de les becomes des.",
-      "correct": ["Je vais au marché.", "Il parle du film."],
-      "wrong": ["Je vais à le marché.", "Il parle de le film."]
+      "title": "J', l', d' before a vowel",
+      "severity": "minor",
+      "rule": "Before a vowel or a silent h, short words drop their last vowel: je becomes j', le and la become l', and de, ne and que become d', n' and qu'.",
+      "wrong": "la école",
+      "right": "l'école",
+      "focus_pos": [
+        "verb",
+        "noun"
+      ],
+      "examples": {
+        "wrong": [
+          "la école",
+          "le hôtel",
+          "le ami",
+          "Je aime le café.",
+          "Je habite ici."
+        ],
+        "right": [
+          "l'école",
+          "l'hôtel",
+          "l'ami",
+          "J'aime le café.",
+          "J'habite ici."
+        ]
+      }
     },
     {
-      "id": "verb-etre-conjugation",
+      "id": "verb-etre",
       "level": 1,
-      "topic": "être (to be)",
+      "title": "Être (to be)",
       "severity": "major",
-      "explain": "être goes: je suis, tu es, il/elle/on est, nous sommes, vous êtes, ils/elles sont.",
-      "correct": ["Nous sommes fatigués.", "Ils sont au parc."],
-      "wrong": ["Nous sont fatigués.", "Ils est au parc."]
+      "rule": "être goes: je suis, tu es, il/elle/on est, nous sommes, vous êtes, ils/elles sont.",
+      "wrong": "Nous sont fatigués.",
+      "right": "Nous sommes fatigués.",
+      "focus_pos": [
+        "adjective"
+      ],
+      "examples": {
+        "wrong": [
+          "Nous sont fatigués.",
+          "Ils est au parc."
+        ],
+        "right": [
+          "Nous sommes fatigués.",
+          "Ils sont au parc."
+        ]
+      }
     },
     {
-      "id": "verb-avoir-conjugation",
+      "id": "verb-avoir",
       "level": 1,
-      "topic": "avoir (to have)",
+      "title": "Avoir (to have) and age",
       "severity": "major",
-      "explain": "avoir goes: j'ai, tu as, il/elle/on a, nous avons, vous avez, ils/elles ont.",
-      "correct": ["J'ai un chat.", "Elles ont faim."],
-      "wrong": ["Je ai un chat.", "Elles a faim."]
-    },
-    {
-      "id": "avoir-expressions",
-      "level": 1,
-      "topic": "avoir for age, hunger, thirst, cold...",
-      "severity": "major",
-      "explain": "French uses avoir (to have), not être, for age, hunger, thirst, being cold or hot, and being afraid.",
-      "correct": ["J'ai vingt ans.", "Tu as froid ?"],
-      "wrong": ["Je suis vingt ans.", "Tu es froid ?"]
+      "rule": "avoir goes: j'ai, tu as, il/elle/on a, nous avons, vous avez, ils/elles ont.",
+      "wrong": "Je ai un chat.",
+      "right": "J'ai un chat.",
+      "focus_pos": [
+        "noun"
+      ],
+      "examples": {
+        "wrong": [
+          "Je ai un chat.",
+          "Elles a faim."
+        ],
+        "right": [
+          "J'ai un chat.",
+          "Elles ont faim."
+        ]
+      }
     },
     {
       "id": "verb-er-present",
       "level": 1,
-      "topic": "Regular -er verbs in the present",
+      "title": "-er verbs in the present",
       "severity": "major",
-      "explain": "For -er verbs, remove -er and add: -e, -es, -e, -ons, -ez, -ent.",
-      "correct": ["Tu parles français.", "Nous mangeons à midi."],
-      "wrong": ["Tu parle français.", "Nous mangez à midi."]
+      "rule": "For -er verbs, remove -er and add: -e, -es, -e, -ons, -ez, -ent.",
+      "wrong": "Tu parle français.",
+      "right": "Tu parles français.",
+      "focus_pos": [
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "Tu parle français.",
+          "Nous mangez à midi."
+        ],
+        "right": [
+          "Tu parles français.",
+          "Nous mangeons à midi."
+        ]
+      }
     },
     {
       "id": "verb-irregular-present",
       "level": 1,
-      "topic": "Common irregular verbs in the present (aller, faire, prendre, vouloir, pouvoir...)",
+      "title": "Irregular verbs in the present",
       "severity": "major",
-      "explain": "Some very common verbs don't follow the normal pattern and have to be learned, like je vais, je fais, je prends, je veux, je peux.",
-      "correct": ["Je vais au travail.", "Ils font du sport."],
-      "wrong": ["J'alle au travail.", "Ils faisent du sport."]
+      "rule": "Some very common verbs don't follow the normal pattern and have to be learned, like je vais, je fais, je prends, je veux, je peux.",
+      "wrong": "J'alle au travail.",
+      "right": "Je vais au travail.",
+      "focus_pos": [
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "J'alle au travail.",
+          "Ils faisent du sport."
+        ],
+        "right": [
+          "Je vais au travail.",
+          "Ils font du sport."
+        ]
+      }
     },
     {
       "id": "subject-verb-agreement",
       "level": 1,
-      "topic": "The verb matches its subject",
+      "title": "Verb matches the subject",
       "severity": "major",
-      "explain": "The verb ending must match who is doing the action (je, tu, il, nous, vous, ils).",
-      "correct": ["Mes amis habitent à Paris.", "On mange ensemble."],
-      "wrong": ["Mes amis habite à Paris.", "On mangeons ensemble."]
-    },
-    {
-      "id": "subject-pronoun-elision",
-      "level": 1,
-      "topic": "je becomes j' before a vowel",
-      "severity": "minor",
-      "explain": "Before a vowel or a silent h, je shortens to j'.",
-      "correct": ["J'aime le café.", "J'habite ici."],
-      "wrong": ["Je aime le café.", "Je habite ici."]
+      "rule": "The verb ending must match who is doing the action (je, tu, il, nous, vous, ils).",
+      "wrong": "Mes amis habite à Paris.",
+      "right": "Mes amis habitent à Paris.",
+      "focus_pos": [
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "Mes amis habite à Paris.",
+          "On mangeons ensemble."
+        ],
+        "right": [
+          "Mes amis habitent à Paris.",
+          "On mange ensemble."
+        ]
+      }
     },
     {
       "id": "adjective-agreement",
       "level": 1,
-      "topic": "Adjectives match the noun",
+      "title": "Adjective matches the noun",
       "severity": "major",
-      "explain": "An adjective changes to match its noun: add -e for feminine and -s for plural.",
-      "correct": ["une robe noire", "des chiens petits et rapides"],
-      "wrong": ["une robe noir", "des chiens petit et rapide"]
-    },
-    {
-      "id": "speaker-agreement",
-      "level": 1,
-      "topic": "Words about yourself match your own gender",
-      "severity": "major",
-      "explain": "When you talk about yourself, adjectives and past forms with être match you: a woman writes je suis fatiguée and je suis allée, a man writes je suis fatigué and je suis allé.",
-      "correct": ["Je suis contente. (woman)", "Je suis content. (man)", "Je suis allée au parc. (woman)"],
-      "wrong": ["Je suis content. (woman)", "Je suis allée au parc. (man)"]
+      "rule": "An adjective changes to match its noun: add -e for feminine and -s for plural.",
+      "wrong": "une robe noir",
+      "right": "une robe noire",
+      "focus_pos": [
+        "adjective"
+      ],
+      "examples": {
+        "wrong": [
+          "une robe noir",
+          "des chiens petit et rapide"
+        ],
+        "right": [
+          "une robe noire",
+          "des chiens petits et rapides"
+        ]
+      }
     },
     {
       "id": "adjective-position",
-      "level": 1,
-      "topic": "Most adjectives go after the noun",
+      "level": 2,
+      "title": "Where the adjective goes",
       "severity": "minor",
-      "explain": "Most adjectives go after the noun. A few short common ones (grand, petit, bon, beau, jeune, vieux, nouveau) go before it.",
-      "correct": ["une voiture rouge", "un petit chien"],
-      "wrong": ["une rouge voiture", "un chien petit"]
+      "rule": "Most adjectives go after the noun. A few short common ones (grand, petit, bon, beau, jeune, vieux, nouveau) go before it.",
+      "wrong": "une rouge voiture",
+      "right": "une voiture rouge",
+      "focus_pos": [
+        "adjective"
+      ],
+      "examples": {
+        "wrong": [
+          "une rouge voiture",
+          "un chien petit"
+        ],
+        "right": [
+          "une voiture rouge",
+          "un petit chien"
+        ]
+      }
     },
     {
-      "id": "possessive-agreement",
+      "id": "negation",
       "level": 1,
-      "topic": "mon / ma / mes match the thing owned",
+      "title": "Ne … pas",
       "severity": "major",
-      "explain": "mon, ma and mes match the thing you own, not the owner. Use mon before a feminine word that starts with a vowel (mon amie).",
-      "correct": ["ma mère", "mon école", "mes livres"],
-      "wrong": ["mon mère", "ma école", "mon livres"]
-    },
-    {
-      "id": "negation-ne-pas",
-      "level": 1,
-      "topic": "Negation with ne ... pas",
-      "severity": "major",
-      "explain": "Put ne before the verb and pas after it. ne becomes n' before a vowel. (In casual speech people drop ne, but in writing keep it.)",
-      "correct": ["Je ne mange pas de viande.", "Il n'aime pas le froid."],
-      "wrong": ["Je mange pas ne de viande.", "Il ne aime pas le froid."]
+      "rule": "Put ne before the verb and pas after it. ne becomes n' before a vowel. (In casual speech people drop ne, but in writing keep it.)",
+      "wrong": "Je mange pas ne de viande.",
+      "right": "Je ne mange pas de viande.",
+      "focus_pos": [
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "Je mange pas ne de viande.",
+          "Il ne aime pas le froid."
+        ],
+        "right": [
+          "Je ne mange pas de viande.",
+          "Il n'aime pas le froid."
+        ]
+      }
     },
     {
       "id": "question-form",
       "level": 1,
-      "topic": "Asking questions (est-ce que, rising tone, question words)",
+      "title": "Asking questions",
       "severity": "major",
-      "explain": "Ask with est-ce que + normal sentence, or a normal sentence ending in '?'. Question words go first: Où est-ce que..., or at the end in casual speech: Tu vas où ?",
-      "correct": ["Est-ce que tu as faim ?", "Où est-ce que tu habites ?", "Tu habites où ?"],
-      "wrong": ["Est-ce tu as faim ?", "Où tu est-ce que habites ?"]
-    },
-    {
-      "id": "question-words",
-      "level": 1,
-      "topic": "Choosing the right question word",
-      "severity": "major",
-      "explain": "où = where, quand = when, combien = how much / how many, pourquoi = why, comment = how, qui = who, quoi / qu'est-ce que = what.",
-      "correct": ["Combien coûte le pain ?", "Pourquoi tu pars ?"],
-      "wrong": ["Comment coûte le pain ?", "Quand tu pars ? (when you meant why)"]
-    },
-    {
-      "id": "il-y-a",
-      "level": 1,
-      "topic": "il y a (there is / there are)",
-      "severity": "major",
-      "explain": "'There is' and 'there are' are both il y a. It never changes for plural.",
-      "correct": ["Il y a des chats dans le jardin.", "Il n'y a pas de pain."],
-      "wrong": ["Il y ont des chats dans le jardin.", "Il est un parc ici."]
+      "rule": "Ask with est-ce que + normal sentence, or a normal sentence ending in '?'. Question words go first: Où est-ce que..., or at the end in casual speech: Tu vas où ?",
+      "wrong": "Est-ce tu as faim ?",
+      "right": "Est-ce que tu as faim ?",
+      "focus_pos": [
+        "verb",
+        "noun"
+      ],
+      "examples": {
+        "wrong": [
+          "Est-ce tu as faim ?",
+          "Où tu est-ce que habites ?"
+        ],
+        "right": [
+          "Est-ce que tu as faim ?",
+          "Où est-ce que tu habites ?",
+          "Tu habites où ?"
+        ]
+      }
     },
     {
       "id": "preposition-place",
       "level": 1,
-      "topic": "Prepositions of place (à, en, au, dans, chez)",
+      "title": "À, en, au + places",
       "severity": "major",
-      "explain": "Use à for cities, en for feminine countries, au for masculine countries, dans for 'inside', chez for 'at someone's place'.",
-      "correct": ["J'habite à Lyon.", "Elle va en France.", "Je suis chez Marie."],
-      "wrong": ["J'habite en Lyon.", "Elle va à France.", "Je suis à Marie."]
+      "rule": "Use à for cities, en for feminine countries, au for masculine countries, dans for 'inside', chez for 'at someone's place'.",
+      "wrong": "J'habite en Lyon.",
+      "right": "J'habite à Lyon.",
+      "focus_pos": [
+        "noun"
+      ],
+      "examples": {
+        "wrong": [
+          "J'habite en Lyon.",
+          "Elle va à France.",
+          "Je suis à Marie."
+        ],
+        "right": [
+          "J'habite à Lyon.",
+          "Elle va en France.",
+          "Je suis chez Marie."
+        ]
+      }
     },
     {
-      "id": "preposition-time",
+      "id": "possessive",
       "level": 1,
-      "topic": "Time expressions (le lundi, à 8 heures, en juin)",
-      "severity": "minor",
-      "explain": "Use à for clock time, en for months and years, and le + day for 'every Monday'. Use no word at all for 'this Monday'.",
-      "correct": ["à huit heures", "en juin", "le lundi", "lundi, je travaille"],
-      "wrong": ["en huit heures", "à juin", "sur lundi"]
-    },
-    {
-      "id": "verb-infinitive-after-verb",
-      "level": 1,
-      "topic": "Second verb stays in the infinitive (aimer, vouloir, pouvoir + infinitive)",
+      "title": "Mon, ma, mes",
       "severity": "major",
-      "explain": "When two verbs follow each other, only the first changes. The second stays in its basic form (manger, aller).",
-      "correct": ["J'aime manger.", "Tu peux venir ?"],
-      "wrong": ["J'aime mange.", "Tu peux viens ?"]
-    },
-    {
-      "id": "passe-compose-auxiliary",
-      "level": 2,
-      "topic": "Passé composé: avoir or être",
-      "severity": "major",
-      "explain": "Most verbs use avoir in the past (j'ai mangé). Movement verbs like aller, venir, partir, arriver, and reflexive verbs, use être (je suis allé).",
-      "correct": ["Je suis allé au cinéma.", "J'ai mangé une pizza."],
-      "wrong": ["J'ai allé au cinéma.", "Je suis mangé une pizza."]
-    },
-    {
-      "id": "passe-compose-participle",
-      "level": 2,
-      "topic": "Passé composé: past participle form",
-      "severity": "major",
-      "explain": "The past form of -er verbs ends in -é (mangé). Many common verbs are irregular: fait, pris, vu, bu, eu, été, dit, écrit, lu, mis.",
-      "correct": ["J'ai pris le bus.", "Elle a fait ses devoirs."],
-      "wrong": ["J'ai prendu le bus.", "Elle a faisé ses devoirs."]
-    },
-    {
-      "id": "passe-compose-agreement",
-      "level": 2,
-      "topic": "Passé composé with être: agreement",
-      "severity": "minor",
-      "explain": "With être, the past form matches the subject: add -e for a woman and -s for plural.",
-      "correct": ["Elle est partie.", "Nous sommes arrivés."],
-      "wrong": ["Elle est parti.", "Nous sommes arrivé."]
-    },
-    {
-      "id": "near-future",
-      "level": 2,
-      "topic": "Near future: aller + infinitive",
-      "severity": "major",
-      "explain": "To say what you're going to do, use aller in the present + the basic form of the verb: je vais manger.",
-      "correct": ["Je vais partir demain.", "On va voir un film."],
-      "wrong": ["Je vais pars demain.", "On aller voir un film."]
-    },
-    {
-      "id": "modal-verbs",
-      "level": 2,
-      "topic": "devoir / pouvoir / vouloir / avoir envie de",
-      "severity": "major",
-      "explain": "je dois = I must, je peux = I can, je veux = I want, j'ai envie de = I feel like. The next verb stays in its basic form.",
-      "correct": ["Je dois travailler.", "J'ai envie de dormir."],
-      "wrong": ["Je dois travaille.", "J'ai envie dormir."]
-    },
-    {
-      "id": "reflexive-verbs",
-      "level": 2,
-      "topic": "Reflexive verbs (se lever, s'appeler)",
-      "severity": "major",
-      "explain": "Verbs with 'se' (se lever, s'habiller) are actions you do to yourself: 'lever' is to lift, 'se lever' is to lift yourself, so to get up. 'se' changes with the person: je me lève, tu te lèves, il se lève, nous nous levons. In the past they use être: je me suis levé(e).",
-      "correct": ["Je me lève à sept heures.", "Tu t'appelles comment ?"],
-      "wrong": ["Je lève à sept heures.", "Tu se appelles comment ?"]
-    },
-    {
-      "id": "connectors",
-      "level": 2,
-      "topic": "Linking ideas: mais, et, donc, parce que, quand",
-      "severity": "minor",
-      "explain": "mais = but, donc = so, parce que = because, quand = when. parce que becomes parce qu' before a vowel.",
-      "correct": ["Je reste ici parce qu'il pleut.", "Il est fatigué, donc il dort."],
-      "wrong": ["Je reste ici parce que il pleut.", "Il est fatigué, mais il dort. (when you meant 'so')"]
-    },
-    {
-      "id": "quel-agreement",
-      "level": 2,
-      "topic": "quel / quelle / quels / quelles",
-      "severity": "minor",
-      "explain": "quel (which / what) matches its noun: quel for masculine, quelle for feminine, and add -s for plural.",
-      "correct": ["Quelle heure est-il ?", "Quels films tu aimes ?"],
-      "wrong": ["Quel heure est-il ?", "Quel films tu aimes ?"]
+      "rule": "mon, ma and mes match the thing you own, not the owner. Use mon before a feminine word that starts with a vowel (mon amie).",
+      "wrong": "mon mère",
+      "right": "ma mère",
+      "focus_pos": [
+        "noun"
+      ],
+      "examples": {
+        "wrong": [
+          "mon mère",
+          "ma école",
+          "mon livres"
+        ],
+        "right": [
+          "ma mère",
+          "mon école",
+          "mes livres"
+        ]
+      }
     },
     {
       "id": "word-order",
       "level": 1,
-      "topic": "Basic word order",
+      "title": "Word order",
       "severity": "major",
-      "explain": "A normal French sentence goes subject + verb + the rest, like in English.",
-      "correct": ["Le matin, je bois un café.", "Je bois un café le matin."],
-      "wrong": ["Le matin bois je un café."]
+      "rule": "A normal French sentence goes subject + verb + the rest, like in English.",
+      "wrong": "Le matin bois je un café.",
+      "right": "Le matin, je bois un café.",
+      "focus_pos": [
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "Le matin bois je un café."
+        ],
+        "right": [
+          "Le matin, je bois un café.",
+          "Je bois un café le matin."
+        ]
+      }
     },
     {
-      "id": "word-choice",
-      "level": 1,
-      "topic": "Wrong word or false friend",
+      "id": "preposition-other",
+      "level": 2,
+      "title": "Fixed prepositions",
+      "rule": "Some verbs and expressions always take the same preposition: avoir besoin de, penser à, jouer au (sport) / du (instrument).",
+      "wrong": "J'ai besoin un café.",
+      "right": "J'ai besoin d'un café.",
+      "focus_pos": [
+        "verb"
+      ]
+    },
+    {
+      "id": "futur-proche",
+      "level": 2,
+      "title": "Aller + infinitive (near future)",
       "severity": "major",
-      "explain": "The word you used means something else in French, or is an English word written in a French way.",
-      "correct": ["J'ai hâte de partir.", "Je vais à la bibliothèque pour emprunter un livre."],
-      "wrong": ["Je suis excité de partir.", "Je vais à la librairie pour emprunter un livre."]
+      "rule": "To say what you're going to do, use aller in the present + the basic form of the verb: je vais manger.",
+      "wrong": "Je vais pars demain.",
+      "right": "Je vais partir demain.",
+      "focus_pos": [
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "Je vais pars demain.",
+          "On aller voir un film."
+        ],
+        "right": [
+          "Je vais partir demain.",
+          "On va voir un film."
+        ]
+      }
+    },
+    {
+      "id": "passe-compose-auxiliary",
+      "level": 2,
+      "title": "Avoir or être in the past",
+      "severity": "major",
+      "rule": "Most verbs use avoir in the past (j'ai mangé). Movement verbs like aller, venir, partir, arriver, and reflexive verbs, use être (je suis allé).",
+      "wrong": "J'ai allé au cinéma.",
+      "right": "Je suis allé au cinéma.",
+      "focus_pos": [
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "J'ai allé au cinéma.",
+          "Je suis mangé une pizza."
+        ],
+        "right": [
+          "Je suis allé au cinéma.",
+          "J'ai mangé une pizza."
+        ]
+      }
+    },
+    {
+      "id": "past-participle",
+      "level": 2,
+      "title": "Past participle form",
+      "severity": "major",
+      "rule": "The past form of -er verbs ends in -é (mangé). Many common verbs are irregular: fait, pris, vu, bu, eu, été, dit, écrit, lu, mis.",
+      "wrong": "J'ai prendu le bus.",
+      "right": "J'ai pris le bus.",
+      "focus_pos": [
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "J'ai prendu le bus.",
+          "Elle a faisé ses devoirs."
+        ],
+        "right": [
+          "J'ai pris le bus.",
+          "Elle a fait ses devoirs."
+        ]
+      }
+    },
+    {
+      "id": "pronoun",
+      "level": 3,
+      "title": "Object pronouns (le, la, lui, en, y)",
+      "rule": "Object pronouns go before the verb: je le mange, j'y vais, j'en veux.",
+      "wrong": "Je mange le.",
+      "right": "Je le mange.",
+      "focus_pos": [
+        "verb",
+        "noun"
+      ]
+    },
+    {
+      "id": "imparfait-passe-compose",
+      "level": 4,
+      "title": "Imparfait or passé composé",
+      "rule": "Use the imparfait for background and habits in the past (il faisait beau), and the passé composé for a finished action (je suis sorti).",
+      "wrong": "Quand j'étais petit, j'ai joué au foot tous les jours.",
+      "right": "Quand j'étais petit, je jouais au foot tous les jours.",
+      "focus_pos": [
+        "verb"
+      ]
+    },
+    {
+      "id": "comparative",
+      "level": 4,
+      "title": "Comparing (plus, moins, aussi … que)",
+      "rule": "Compare with plus/moins/aussi + adjective + que. Bon becomes meilleur.",
+      "wrong": "Ce café est plus bon que l'autre.",
+      "right": "Ce café est meilleur que l'autre.",
+      "focus_pos": [
+        "adjective"
+      ]
+    },
+    {
+      "id": "relative-pronoun",
+      "level": 4,
+      "title": "Qui or que",
+      "rule": "Use qui when the next word is a verb (the person who does), que when a new subject follows (the thing that I see).",
+      "wrong": "Le livre qui je lis est bon.",
+      "right": "Le livre que je lis est bon.",
+      "focus_pos": [
+        "noun"
+      ]
+    },
+    {
+      "id": "conditional-si",
+      "level": 5,
+      "title": "Si + imparfait, conditionnel",
+      "rule": "For an imagined situation: si + imparfait, then the conditional: si j'avais le temps, je voyagerais.",
+      "wrong": "Si j'aurais le temps, je voyagerais.",
+      "right": "Si j'avais le temps, je voyagerais.",
+      "focus_pos": [
+        "verb"
+      ]
+    },
+    {
+      "id": "subjunctive",
+      "level": 5,
+      "title": "Subjunctive after il faut que",
+      "rule": "After il faut que, je veux que, pour que and similar, use the subjunctive: il faut que je parte.",
+      "wrong": "Il faut que je pars.",
+      "right": "Il faut que je parte.",
+      "focus_pos": [
+        "verb"
+      ]
+    },
+    {
+      "id": "vocabulary-choice",
+      "level": 1,
+      "title": "Word choice",
+      "severity": "major",
+      "rule": "The word you used means something else in French, or is an English word written in a French way.",
+      "wrong": "Je suis excité de partir.",
+      "right": "J'ai hâte de partir.",
+      "focus_pos": [
+        "noun",
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "Je suis excité de partir.",
+          "Je vais à la librairie pour emprunter un livre."
+        ],
+        "right": [
+          "J'ai hâte de partir.",
+          "Je vais à la bibliothèque pour emprunter un livre."
+        ]
+      }
     },
     {
       "id": "spelling-accent",
       "level": 1,
-      "topic": "Accents and small spelling slips",
+      "title": "Spelling and accents",
       "severity": "minor",
-      "explain": "A missing or wrong accent, or a small typo, that doesn't change which word it is.",
-      "correct": ["très", "français", "école"],
-      "wrong": ["tres", "francais", "ecole"]
+      "rule": "A missing or wrong accent, or a small typo, that doesn't change which word it is.",
+      "wrong": "tres",
+      "right": "très",
+      "focus_pos": [],
+      "examples": {
+        "wrong": [
+          "tres",
+          "francais",
+          "ecole"
+        ],
+        "right": [
+          "très",
+          "français",
+          "école"
+        ]
+      }
     },
     {
-      "id": "punctuation",
+      "id": "capital-punctuation",
       "level": 1,
-      "topic": "Punctuation and capitals",
+      "title": "Capitals and punctuation",
       "severity": "minor",
-      "explain": "Start with a capital letter and end with a full stop, or with '?' for a question. French puts a space before ? ! : ;.",
-      "correct": ["Tu viens ?"],
-      "wrong": ["tu viens?"]
+      "rule": "Start with a capital letter and end with a full stop, or with '?' for a question. French puts a space before ? ! : ;.",
+      "wrong": "tu viens?",
+      "right": "Tu viens ?",
+      "focus_pos": [],
+      "examples": {
+        "wrong": [
+          "tu viens?"
+        ],
+        "right": [
+          "Tu viens ?"
+        ]
+      }
+    },
+    {
+      "id": "article-after-negation",
+      "level": 1,
+      "title": "un / une / du / des become de after a negative",
+      "severity": "major",
+      "rule": "After ne ... pas, un, une, du, de la and des change to de (or d').",
+      "wrong": "Je n'ai pas une voiture.",
+      "right": "Je n'ai pas de voiture.",
+      "focus_pos": [
+        "noun"
+      ],
+      "examples": {
+        "wrong": [
+          "Je n'ai pas une voiture.",
+          "Il ne boit pas de l'eau."
+        ],
+        "right": [
+          "Je n'ai pas de voiture.",
+          "Il ne boit pas d'eau."
+        ]
+      }
+    },
+    {
+      "id": "avoir-expressions",
+      "level": 1,
+      "title": "avoir for age, hunger, thirst, cold...",
+      "severity": "major",
+      "rule": "French uses avoir (to have), not être, for age, hunger, thirst, being cold or hot, and being afraid.",
+      "wrong": "Je suis vingt ans.",
+      "right": "J'ai vingt ans.",
+      "focus_pos": [
+        "noun",
+        "adjective"
+      ],
+      "examples": {
+        "wrong": [
+          "Je suis vingt ans.",
+          "Tu es froid ?"
+        ],
+        "right": [
+          "J'ai vingt ans.",
+          "Tu as froid ?"
+        ]
+      }
+    },
+    {
+      "id": "speaker-agreement",
+      "level": 1,
+      "title": "Words about yourself match your own gender",
+      "severity": "major",
+      "rule": "When you talk about yourself, adjectives and past forms with être match you: a woman writes je suis fatiguée and je suis allée, a man writes je suis fatigué and je suis allé.",
+      "wrong": "Je suis content. (woman)",
+      "right": "Je suis contente. (woman)",
+      "focus_pos": [
+        "adjective",
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "Je suis content. (woman)",
+          "Je suis allée au parc. (man)"
+        ],
+        "right": [
+          "Je suis contente. (woman)",
+          "Je suis content. (man)",
+          "Je suis allée au parc. (woman)"
+        ]
+      }
+    },
+    {
+      "id": "question-words",
+      "level": 1,
+      "title": "Choosing the right question word",
+      "severity": "major",
+      "rule": "où = where, quand = when, combien = how much / how many, pourquoi = why, comment = how, qui = who, quoi / qu'est-ce que = what.",
+      "wrong": "Comment coûte le pain ?",
+      "right": "Combien coûte le pain ?",
+      "focus_pos": [
+        "verb",
+        "noun"
+      ],
+      "examples": {
+        "wrong": [
+          "Comment coûte le pain ?",
+          "Quand tu pars ? (when you meant why)"
+        ],
+        "right": [
+          "Combien coûte le pain ?",
+          "Pourquoi tu pars ?"
+        ]
+      }
+    },
+    {
+      "id": "il-y-a",
+      "level": 1,
+      "title": "il y a (there is / there are)",
+      "severity": "major",
+      "rule": "'There is' and 'there are' are both il y a. It never changes for plural.",
+      "wrong": "Il y ont des chats dans le jardin.",
+      "right": "Il y a des chats dans le jardin.",
+      "focus_pos": [
+        "noun"
+      ],
+      "examples": {
+        "wrong": [
+          "Il y ont des chats dans le jardin.",
+          "Il est un parc ici."
+        ],
+        "right": [
+          "Il y a des chats dans le jardin.",
+          "Il n'y a pas de pain."
+        ]
+      }
+    },
+    {
+      "id": "preposition-time",
+      "level": 1,
+      "title": "Time expressions (le lundi, à 8 heures, en juin)",
+      "severity": "minor",
+      "rule": "Use à for clock time, en for months and years, and le + day for 'every Monday'. Use no word at all for 'this Monday'.",
+      "wrong": "en huit heures",
+      "right": "à huit heures",
+      "focus_pos": [
+        "noun"
+      ],
+      "examples": {
+        "wrong": [
+          "en huit heures",
+          "à juin",
+          "sur lundi"
+        ],
+        "right": [
+          "à huit heures",
+          "en juin",
+          "le lundi",
+          "lundi, je travaille"
+        ]
+      }
+    },
+    {
+      "id": "verb-infinitive-after-verb",
+      "level": 1,
+      "title": "Second verb stays in the infinitive (aimer, vouloir, pouvoir + infinitive)",
+      "severity": "major",
+      "rule": "When two verbs follow each other, only the first changes. The second stays in its basic form (manger, aller).",
+      "wrong": "J'aime mange.",
+      "right": "J'aime manger.",
+      "focus_pos": [
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "J'aime mange.",
+          "Tu peux viens ?"
+        ],
+        "right": [
+          "J'aime manger.",
+          "Tu peux venir ?"
+        ]
+      }
+    },
+    {
+      "id": "passe-compose-agreement",
+      "level": 2,
+      "title": "Passé composé with être: agreement",
+      "severity": "minor",
+      "rule": "With être, the past form matches the subject: add -e for a woman and -s for plural.",
+      "wrong": "Elle est parti.",
+      "right": "Elle est partie.",
+      "focus_pos": [
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "Elle est parti.",
+          "Nous sommes arrivé."
+        ],
+        "right": [
+          "Elle est partie.",
+          "Nous sommes arrivés."
+        ]
+      }
+    },
+    {
+      "id": "modal-verbs",
+      "level": 2,
+      "title": "devoir / pouvoir / vouloir / avoir envie de",
+      "severity": "major",
+      "rule": "je dois = I must, je peux = I can, je veux = I want, j'ai envie de = I feel like. The next verb stays in its basic form.",
+      "wrong": "Je dois travaille.",
+      "right": "Je dois travailler.",
+      "focus_pos": [
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "Je dois travaille.",
+          "J'ai envie dormir."
+        ],
+        "right": [
+          "Je dois travailler.",
+          "J'ai envie de dormir."
+        ]
+      }
+    },
+    {
+      "id": "reflexive-verbs",
+      "level": 2,
+      "title": "Reflexive verbs (se lever, s'appeler)",
+      "severity": "major",
+      "rule": "Verbs with 'se' (se lever, s'habiller) are actions you do to yourself: 'lever' is to lift, 'se lever' is to lift yourself, so to get up. 'se' changes with the person: je me lève, tu te lèves, il se lève, nous nous levons. In the past they use être: je me suis levé(e).",
+      "wrong": "Je lève à sept heures.",
+      "right": "Je me lève à sept heures.",
+      "focus_pos": [
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "Je lève à sept heures.",
+          "Tu se appelles comment ?"
+        ],
+        "right": [
+          "Je me lève à sept heures.",
+          "Tu t'appelles comment ?"
+        ]
+      }
+    },
+    {
+      "id": "connectors",
+      "level": 2,
+      "title": "Linking ideas: mais, et, donc, parce que, quand",
+      "severity": "minor",
+      "rule": "mais = but, donc = so, parce que = because, quand = when. parce que becomes parce qu' before a vowel.",
+      "wrong": "Je reste ici parce que il pleut.",
+      "right": "Je reste ici parce qu'il pleut.",
+      "focus_pos": [
+        "verb",
+        "adjective"
+      ],
+      "examples": {
+        "wrong": [
+          "Je reste ici parce que il pleut.",
+          "Il est fatigué, mais il dort. (when you meant 'so')"
+        ],
+        "right": [
+          "Je reste ici parce qu'il pleut.",
+          "Il est fatigué, donc il dort."
+        ]
+      }
+    },
+    {
+      "id": "quel-agreement",
+      "level": 2,
+      "title": "quel / quelle / quels / quelles",
+      "severity": "minor",
+      "rule": "quel (which / what) matches its noun: quel for masculine, quelle for feminine, and add -s for plural.",
+      "wrong": "Quel heure est-il ?",
+      "right": "Quelle heure est-il ?",
+      "focus_pos": [
+        "noun"
+      ],
+      "examples": {
+        "wrong": [
+          "Quel heure est-il ?",
+          "Quel films tu aimes ?"
+        ],
+        "right": [
+          "Quelle heure est-il ?",
+          "Quels films tu aimes ?"
+        ]
+      }
     },
     {
       "id": "other",
       "level": 1,
-      "topic": "Anything not covered above",
+      "title": "Other mistakes",
       "severity": "major",
-      "explain": "Use only when no other tag fits. Jerry reviews these to decide whether to add a new rule.",
-      "correct": [],
-      "wrong": []
+      "rule": "Use only when no other tag fits. Jerry reviews these to decide whether to add a new rule.",
+      "wrong": "",
+      "right": "",
+      "focus_pos": []
     }
   ]
 }

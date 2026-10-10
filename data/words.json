@@ -1,5 +1,5 @@
 {
-  "_note": "Draft by Claude, levels 1-2 only. Jerry to review. Only nouns, verbs and adjectives for now, because /data/structures.json has templates only for those. frequency_rank is an estimate, not from a corpus. Field guide: gender is 'm', 'f', or 'm/f' (a person noun with both forms, one word: show as 'ami / amie'). feminine + article_f give the feminine form (nouns with m/f, and every adjective; same spelling when it doesn't change). example_f is the example for a female learner, only where 'je' needs agreement; otherwise use example for everyone. note is a short tip for the word card (e.g. why a verb has 'se'). other_meanings lists other common meanings of the same French word: word_id links to that meaning's own entry, or null when it is an N.B. only; nb is the reminder shown to the learner.",
+  "_note": "Merged 2026-10-10 from Jerry's list (330 words) and quantrungvu's starter list (3 extra words: w0331-w0333). Drafts by Claude, levels 1-2 only. Jerry to review, especially example_en and mini_text, which Claude drafted for most words. Only nouns, verbs and adjectives for now, because /data/structures.json has templates only for those. frequency_rank is an estimate, not from a corpus. Field guide: gender is 'm', 'f', or 'm/f' (a person noun with both forms, one word: shown as 'le voisin / la voisine'). feminine + article_f give the feminine form (nouns with m/f, and every adjective; same spelling when it doesn't change). example_en is the English of example. mini_text is the short text shown before writing (read -> notice -> write); it must use the word. forms lists irregular forms the matcher can't guess (vais, allons for aller). example_f is the example for a female learner, only where 'je' needs agreement; otherwise use example for everyone. note is a short tip for the word card (e.g. why a verb has 'se'). other_meanings lists other common meanings of the same French word: word_id links to that meaning's own entry, or null when it is an N.B. only; nb is the reminder shown to the learner. npm test checks this file.",
   "themes": [
     "food",
     "home",
@@ -32,6 +32,11 @@
       "frequency_rank": 1200,
       "audio": null,
       "example": "Je mange une pomme le matin.",
+      "example_en": "I eat an apple in the morning.",
+      "mini_text": {
+        "fr": "Léa aime les fruits. Chaque matin, elle mange une pomme rouge. La pomme est bonne pour la santé.",
+        "en": "Léa likes fruit. Every morning, she eats a red apple. The apple is good for your health."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -50,6 +55,11 @@
       "frequency_rank": 700,
       "audio": null,
       "example": "J'achète du pain à la boulangerie.",
+      "example_en": "I buy bread at the bakery.",
+      "mini_text": {
+        "fr": "En France, on mange du pain tous les jours. Le matin, Paul achète une baguette. Le pain est encore chaud.",
+        "en": "In France, people eat bread every day. In the morning, Paul buys a baguette. The bread is still warm."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -68,6 +78,11 @@
       "frequency_rank": 350,
       "audio": null,
       "example": "Je bois de l'eau tous les jours.",
+      "example_en": "I drink water every day.",
+      "mini_text": {
+        "fr": "Il fait chaud aujourd'hui. Marc boit beaucoup d'eau. L'eau est fraîche.",
+        "en": "It's hot today. Marc drinks a lot of water. The water is cool."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -86,6 +101,11 @@
       "frequency_rank": 600,
       "audio": null,
       "example": "Je prends un café avec du lait.",
+      "example_en": "I'm having a coffee with milk.",
+      "mini_text": {
+        "fr": "Le matin, ma mère boit un café. Elle aime le café noir, sans sucre. Moi, je préfère le thé.",
+        "en": "In the morning, my mother drinks a coffee. She likes black coffee, without sugar. Me, I prefer tea."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -104,6 +124,11 @@
       "frequency_rank": 1500,
       "audio": null,
       "example": "J'aime le fromage avec du pain.",
+      "example_en": "I like cheese with bread.",
+      "mini_text": {
+        "fr": "La France a plus de mille fromages. Le soir, on mange du fromage avec du pain. Mon fromage préféré est le camembert.",
+        "en": "France has more than a thousand cheeses. In the evening, people eat cheese with bread. My favourite cheese is camembert."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -122,6 +147,11 @@
       "frequency_rank": 400,
       "audio": null,
       "example": "Nous mangeons au restaurant ce soir.",
+      "example_en": "We're eating at the restaurant tonight.",
+      "mini_text": {
+        "fr": "Je mange avec ma famille le soir. Nous mangeons à huit heures. Mon frère mange très vite !",
+        "en": "I eat with my family in the evening. We eat at eight o'clock. My brother eats very fast!"
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -140,6 +170,21 @@
       "frequency_rank": 665,
       "audio": null,
       "example": "Je bois un thé le soir.",
+      "example_en": "I drink tea in the evening.",
+      "mini_text": {
+        "fr": "Qu'est-ce que tu bois le matin ? Moi, je bois un jus d'orange. Mon père boit un café.",
+        "en": "What do you drink in the morning? Me, I drink an orange juice. My father drinks a coffee."
+      },
+      "forms": [
+        "bois",
+        "boit",
+        "buvons",
+        "buvez",
+        "boivent",
+        "bu",
+        "buvais",
+        "buvait"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -158,6 +203,11 @@
       "frequency_rank": 1100,
       "audio": null,
       "example": "Le repas est prêt dans dix minutes.",
+      "example_en": "The meal is ready in ten minutes.",
+      "mini_text": {
+        "fr": "Le soir, Paul prépare le repas pour sa famille. Il y a du poulet et du riz. Après le repas, tout le monde est content.",
+        "en": "In the evening, Paul makes the meal for his family. There is chicken and rice. After the meal, everyone is happy."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -176,6 +226,11 @@
       "frequency_rank": 1400,
       "audio": null,
       "example": "Je mets du lait dans mon café.",
+      "example_en": "I put milk in my coffee.",
+      "mini_text": {
+        "fr": "Le matin, Léa boit un grand verre de lait dans la cuisine. Elle n'aime pas le café. Le lait, c'est son petit plaisir.",
+        "en": "In the morning, Léa drinks a big glass of milk in the kitchen. She doesn't like coffee. Milk is her little treat."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -194,6 +249,11 @@
       "frequency_rank": 1600,
       "audio": null,
       "example": "Je ne mange pas de viande.",
+      "example_en": "I don't eat meat.",
+      "mini_text": {
+        "fr": "Marc est végétarien. Au restaurant, il ne prend pas de viande. Il n'aime pas la viande, alors il commande une salade.",
+        "en": "Marc is vegetarian. At the restaurant, he doesn't have meat. He doesn't like meat, so he orders a salad."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -212,6 +272,11 @@
       "frequency_rank": 2200,
       "audio": null,
       "example": "Ce soir, on mange du poulet avec du riz.",
+      "example_en": "Tonight, we're having chicken with rice.",
+      "mini_text": {
+        "fr": "Le dimanche, ma grand-mère fait un poulet rôti. Toute la famille mange chez elle à midi. Le poulet est toujours très bon.",
+        "en": "On Sundays, my grandmother makes a roast chicken. The whole family eats at her place at noon. The chicken is always really good."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -230,6 +295,11 @@
       "frequency_rank": 2100,
       "audio": null,
       "example": "Ce gâteau au chocolat est délicieux.",
+      "example_en": "This chocolate cake is delicious.",
+      "mini_text": {
+        "fr": "Ce soir, chez Sophie, il y a une soupe aux légumes. Son frère dit : « Ta soupe est délicieuse ! » Sophie est contente.",
+        "en": "Tonight, at Sophie's place, there's vegetable soup. Her brother says: \"Your soup is delicious!\" Sophie is happy."
+      },
       "feminine": "délicieuse",
       "article_f": null,
       "example_f": null,
@@ -248,6 +318,11 @@
       "frequency_rank": 1800,
       "audio": null,
       "example": "Je mange un fruit après le déjeuner.",
+      "example_en": "I eat a piece of fruit after lunch.",
+      "mini_text": {
+        "fr": "Au marché, Tom achète des fruits pour la semaine. Il aime les pommes et les bananes. Le soir, il mange un fruit devant la télé.",
+        "en": "At the market, Tom buys fruit for the week. He likes apples and bananas. In the evening, he eats a piece of fruit in front of the TV."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -266,6 +341,11 @@
       "frequency_rank": 1000,
       "audio": null,
       "example": "Le déjeuner est à midi et demi.",
+      "example_en": "Lunch is at half past twelve.",
+      "mini_text": {
+        "fr": "Au bureau, Julie a une heure pour le déjeuner. Elle mange avec ses collègues dans un petit café. Le déjeuner est rapide et pas cher.",
+        "en": "At the office, Julie has an hour for lunch. She eats with her colleagues in a small café. Lunch is quick and cheap."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -284,6 +364,11 @@
       "frequency_rank": 2400,
       "audio": null,
       "example": "Je mange des légumes tous les jours.",
+      "example_en": "I eat vegetables every day.",
+      "mini_text": {
+        "fr": "Samedi, Hugo est allé au marché et il a acheté des légumes. Ce soir, il va faire une soupe aux légumes pour ses enfants.",
+        "en": "On Saturday, Hugo went to the market and bought vegetables. Tonight, he's going to make a vegetable soup for his kids."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -302,6 +387,11 @@
       "frequency_rank": 2600,
       "audio": null,
       "example": "J'ai cuisiné des pâtes pour mes amis.",
+      "example_en": "I cooked pasta for my friends.",
+      "mini_text": {
+        "fr": "J'aime cuisiner pour mes amis. Ce soir, je cuisine des pâtes. C'est simple et rapide.",
+        "en": "I like cooking for my friends. Tonight, I'm cooking pasta. It's simple and quick."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -320,6 +410,11 @@
       "frequency_rank": 3000,
       "audio": null,
       "example": "Tu veux goûter mon gâteau ?",
+      "example_en": "Do you want to taste my cake?",
+      "mini_text": {
+        "fr": "Hier, Emma a fait une tarte aux pommes. Elle a dit à son frère : « Tu veux goûter ? » Il a goûté et il a adoré.",
+        "en": "Yesterday, Emma made an apple tart. She said to her brother: \"Do you want to taste it?\" He tasted it and loved it."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -338,6 +433,11 @@
       "frequency_rank": 3200,
       "audio": null,
       "example": "Ce café est trop sucré pour moi.",
+      "example_en": "This coffee is too sweet for me.",
+      "mini_text": {
+        "fr": "Lucas n'aime pas les desserts sucrés. Mais quand il va chez sa grand-mère, il mange toujours sa tarte très sucrée.",
+        "en": "Lucas doesn't like sweet desserts. But when he goes to his grandmother's, he always eats her very sweet tart."
+      },
       "feminine": "sucrée",
       "article_f": null,
       "example_f": null,
@@ -356,6 +456,11 @@
       "frequency_rank": 1900,
       "audio": null,
       "example": "J'ai acheté une bouteille d'eau.",
+      "example_en": "I bought a bottle of water.",
+      "mini_text": {
+        "fr": "Ce soir, Nina dîne chez des amis, donc elle a acheté une bouteille de vin. Elle a aussi pris une bouteille de jus pour les enfants.",
+        "en": "Tonight, Nina is having dinner at some friends' place, so she bought a bottle of wine. She also got a bottle of juice for the kids."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -374,6 +479,11 @@
       "frequency_rank": 2800,
       "audio": null,
       "example": "J'ai cassé une assiette ce matin.",
+      "example_en": "I broke a plate this morning.",
+      "mini_text": {
+        "fr": "Après le dîner, Paul a lavé les assiettes. Mais une assiette est tombée par terre, donc il va acheter une nouvelle assiette demain.",
+        "en": "After dinner, Paul washed the plates. But one plate fell on the floor, so he's going to buy a new plate tomorrow."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -392,6 +502,11 @@
       "frequency_rank": 2900,
       "audio": null,
       "example": "Je cuisine souvent du riz avec des légumes.",
+      "example_en": "I often cook rice with vegetables.",
+      "mini_text": {
+        "fr": "Chez Linh, on mange du riz presque tous les jours. Hier soir, elle a préparé du riz avec du poulet parce que ses parents sont venus.",
+        "en": "At Linh's place, they eat rice almost every day. Last night, she made rice with chicken because her parents came over."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -410,6 +525,11 @@
       "frequency_rank": 1700,
       "audio": null,
       "example": "On a commandé une pizza hier soir.",
+      "example_en": "We ordered a pizza last night.",
+      "mini_text": {
+        "fr": "Vendredi soir, Karim n'a pas cuisiné. Il a commandé des sushis sur son téléphone, et demain, il va commander une pizza.",
+        "en": "On Friday evening, Karim didn't cook. He ordered sushi on his phone, and tomorrow, he's going to order a pizza."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -428,6 +548,11 @@
       "frequency_rank": 180,
       "audio": null,
       "example": "J'habite dans une grande maison.",
+      "example_en": "I live in a big house.",
+      "mini_text": {
+        "fr": "Thomas habite dans une petite maison. La maison a un jardin. Le soir, il lit dans le jardin.",
+        "en": "Thomas lives in a small house. The house has a garden. In the evening, he reads in the garden."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -446,6 +571,11 @@
       "frequency_rank": 900,
       "audio": null,
       "example": "Mon appartement est près de la gare.",
+      "example_en": "My apartment is near the train station.",
+      "mini_text": {
+        "fr": "Claire habite dans un petit appartement en ville. Il y a deux chambres et un balcon. Son appartement n'est pas loin de son travail.",
+        "en": "Claire lives in a small apartment in town. There are two bedrooms and a balcony. Her apartment isn't far from her work."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -464,6 +594,11 @@
       "frequency_rank": 500,
       "audio": null,
       "example": "Ma chambre est petite mais jolie.",
+      "example_en": "My bedroom is small but pretty.",
+      "mini_text": {
+        "fr": "Dans ma chambre, il y a un lit et une table. La chambre est bleue. Le soir, je travaille dans ma chambre.",
+        "en": "In my bedroom, there is a bed and a table. The bedroom is blue. In the evening, I work in my bedroom."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -482,6 +617,11 @@
       "frequency_rank": 810,
       "audio": null,
       "example": "Je prépare le café dans la cuisine.",
+      "example_en": "I make the coffee in the kitchen.",
+      "mini_text": {
+        "fr": "La cuisine est la pièce préférée de ma mère. Elle est grande et claire. Le matin, on prend le petit déjeuner dans la cuisine.",
+        "en": "The kitchen is my mother's favourite room. It's big and bright. In the morning, we have breakfast in the kitchen."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -500,6 +640,11 @@
       "frequency_rank": 450,
       "audio": null,
       "example": "Les clés sont sur la table.",
+      "example_en": "The keys are on the table.",
+      "mini_text": {
+        "fr": "La famille mange à table à sept heures. La table est grande. Il y a des fleurs sur la table.",
+        "en": "The family eats at the table at seven o'clock. The table is big. There are flowers on the table."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -518,6 +663,11 @@
       "frequency_rank": 720,
       "audio": null,
       "example": "Je dors bien dans mon nouveau lit.",
+      "example_en": "I sleep well in my new bed.",
+      "mini_text": {
+        "fr": "Mon lit est confortable. Le dimanche, je reste au lit jusqu'à dix heures. Mon chat dort aussi sur le lit.",
+        "en": "My bed is comfortable. On Sundays, I stay in bed until ten o'clock. My cat also sleeps on the bed."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -536,6 +686,11 @@
       "frequency_rank": 750,
       "audio": null,
       "example": "J'habite à Paris avec ma sœur.",
+      "example_en": "I live in Paris with my sister.",
+      "mini_text": {
+        "fr": "Où est-ce que tu habites ? Moi, j'habite à Marseille. J'habite près de la mer.",
+        "en": "Where do you live? Me, I live in Marseille. I live near the sea."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -554,6 +709,11 @@
       "frequency_rank": 380,
       "audio": null,
       "example": "Tu peux fermer la porte, s'il te plaît ?",
+      "example_en": "Can you close the door, please?",
+      "mini_text": {
+        "fr": "Quelqu'un frappe à la porte. J'ouvre la porte : c'est mon ami Paul ! Il entre et ferme la porte.",
+        "en": "Someone is knocking at the door. I open the door: it's my friend Paul! He comes in and closes the door."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -572,6 +732,11 @@
       "frequency_rank": 680,
       "audio": null,
       "example": "Je ferme la fenêtre parce qu'il fait froid.",
+      "example_en": "I'm closing the window because it's cold.",
+      "mini_text": {
+        "fr": "Le soir, Ana ferme la porte de la maison à clé. Elle ferme aussi les fenêtres. Elle n'aime pas le bruit de la rue.",
+        "en": "In the evening, Ana locks the front door of the house. She also closes the windows. She doesn't like the noise from the street."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -590,6 +755,11 @@
       "frequency_rank": 420,
       "audio": null,
       "example": "J'ouvre la fenêtre le matin.",
+      "example_en": "I open the window in the morning.",
+      "mini_text": {
+        "fr": "Le magasin de Pierre ouvre à neuf heures. Le matin, il ouvre la porte et il dit bonjour aux clients.",
+        "en": "Pierre's shop opens at nine o'clock. In the morning, he opens the door and says hello to the customers."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -608,6 +778,11 @@
       "frequency_rank": 850,
       "audio": null,
       "example": "Le chat dort devant la fenêtre.",
+      "example_en": "The cat is sleeping in front of the window.",
+      "mini_text": {
+        "fr": "Ma chambre a une grande fenêtre. Par la fenêtre, je vois la rue. Le matin, j'ouvre la fenêtre.",
+        "en": "My bedroom has a big window. Through the window, I see the street. In the morning, I open the window."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -626,6 +801,11 @@
       "frequency_rank": 3400,
       "audio": null,
       "example": "On a regardé un film sur le canapé.",
+      "example_en": "We watched a film on the sofa.",
+      "mini_text": {
+        "fr": "Hier soir, Marie et son mari sont restés à la maison. Ils ont regardé une série sur le canapé, et le chat a dormi sur le canapé aussi.",
+        "en": "Last night, Marie and her husband stayed home. They watched a series on the sofa, and the cat slept on the sofa too."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -644,6 +824,11 @@
       "frequency_rank": 1750,
       "audio": null,
       "example": "J'ai perdu ma clé ce matin.",
+      "example_en": "I lost my key this morning.",
+      "mini_text": {
+        "fr": "Ce matin, Léo a cherché ses clés pendant vingt minutes. Finalement, il a trouvé la clé dans la poche de son manteau.",
+        "en": "This morning, Léo looked for his keys for twenty minutes. In the end, he found the key in his coat pocket."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -662,6 +847,11 @@
       "frequency_rank": 2700,
       "audio": null,
       "example": "J'ai rangé ma chambre ce week-end.",
+      "example_en": "I tidied my room this weekend.",
+      "mini_text": {
+        "fr": "Samedi, Inès va ranger son appartement parce que ses parents viennent dimanche. Elle a déjà rangé la cuisine hier soir.",
+        "en": "On Saturday, Inès is going to tidy her apartment because her parents are coming on Sunday. She already tidied the kitchen last night."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -680,6 +870,11 @@
       "frequency_rank": 3100,
       "audio": null,
       "example": "Je vais nettoyer la cuisine ce soir.",
+      "example_en": "I'm going to clean the kitchen tonight.",
+      "mini_text": {
+        "fr": "Après la fête, la maison est très sale. Demain matin, Julien va nettoyer le salon, et sa sœur va nettoyer la cuisine.",
+        "en": "After the party, the house is really dirty. Tomorrow morning, Julien is going to clean the living room, and his sister is going to clean the kitchen."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -698,6 +893,11 @@
       "frequency_rank": 2300,
       "audio": null,
       "example": "Ce canapé est très confortable.",
+      "example_en": "This sofa is very comfortable.",
+      "mini_text": {
+        "fr": "Thomas a acheté un nouveau lit la semaine dernière. Il est très confortable, donc maintenant il dort bien. Sa chambre est enfin confortable.",
+        "en": "Thomas bought a new bed last week. It's very comfortable, so now he sleeps well. His bedroom is finally comfortable."
+      },
       "feminine": "confortable",
       "article_f": null,
       "example_f": null,
@@ -716,6 +916,11 @@
       "frequency_rank": 2500,
       "audio": null,
       "example": "La cuisine est sale après la fête.",
+      "example_en": "The kitchen is dirty after the party.",
+      "mini_text": {
+        "fr": "Quand Max rentre du foot, ses vêtements sont toujours sales. Hier, il a mis son t-shirt sale dans la machine à laver.",
+        "en": "When Max comes home from football, his clothes are always dirty. Yesterday, he put his dirty T-shirt in the washing machine."
+      },
       "feminine": "sale",
       "article_f": null,
       "example_f": null,
@@ -740,6 +945,11 @@
       "frequency_rank": 1350,
       "audio": null,
       "example": "Notre voisin est très sympa.",
+      "example_en": "Our neighbor is very nice.",
+      "mini_text": {
+        "fr": "Ma voisine s'appelle Odile. Hier, elle a apporté un gâteau parce que je suis malade. Les voisins ici sont vraiment gentils.",
+        "en": "My neighbor's name is Odile. Yesterday, she brought a cake because I'm sick. The neighbors here are really kind."
+      },
       "feminine": "voisine",
       "article_f": "la",
       "example_f": null,
@@ -758,6 +968,11 @@
       "frequency_rank": 310,
       "audio": null,
       "example": "Ma famille habite à Lyon.",
+      "example_en": "My family lives in Lyon.",
+      "mini_text": {
+        "fr": "Ma famille est grande. J'ai trois frères et deux sœurs. Le dimanche, toute la famille mange ensemble.",
+        "en": "My family is big. I have three brothers and two sisters. On Sundays, the whole family eats together."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -776,6 +991,11 @@
       "frequency_rank": 265,
       "audio": null,
       "example": "Ma mère travaille dans un hôpital.",
+      "example_en": "My mother works in a hospital.",
+      "mini_text": {
+        "fr": "Ma mère s'appelle Anne. Elle est professeur. Le soir, ma mère et moi regardons un film.",
+        "en": "My mother's name is Anne. She is a teacher. In the evening, my mother and I watch a film."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -794,6 +1014,11 @@
       "frequency_rank": 275,
       "audio": null,
       "example": "Mon père cuisine très bien.",
+      "example_en": "My father cooks very well.",
+      "mini_text": {
+        "fr": "Mon père a cinquante ans. Il aime le sport et la musique. Le dimanche, mon père fait du vélo.",
+        "en": "My father is fifty. He likes sport and music. On Sundays, my father goes cycling."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -812,6 +1037,11 @@
       "frequency_rank": 560,
       "audio": null,
       "example": "Mon frère a vingt ans.",
+      "example_en": "My brother is twenty years old.",
+      "mini_text": {
+        "fr": "J'ai un frère et une sœur. Mon frère s'appelle Léo. Il est petit mais il parle beaucoup !",
+        "en": "I have a brother and a sister. My brother's name is Léo. He's small but he talks a lot!"
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -830,6 +1060,11 @@
       "frequency_rank": 610,
       "audio": null,
       "example": "Ma sœur habite avec moi.",
+      "example_en": "My sister lives with me.",
+      "mini_text": {
+        "fr": "Ma sœur est étudiante. Elle habite à Lyon. Le week-end, ma sœur rentre à la maison.",
+        "en": "My sister is a student. She lives in Lyon. At the weekend, my sister comes home."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -848,6 +1083,11 @@
       "frequency_rank": 190,
       "audio": null,
       "example": "L'enfant joue dans le jardin.",
+      "example_en": "The child is playing in the garden.",
+      "mini_text": {
+        "fr": "Marie a deux enfants. Les enfants vont à l'école à huit heures. Le soir, ils font leurs devoirs.",
+        "en": "Marie has two children. The children go to school at eight o'clock. In the evening, they do their homework."
+      },
       "feminine": "enfant",
       "article_f": "l'",
       "example_f": null,
@@ -866,6 +1106,11 @@
       "frequency_rank": 620,
       "audio": null,
       "example": "Leur fils va à l'école à pied.",
+      "example_en": "Their son walks to school.",
+      "mini_text": {
+        "fr": "Paul a un fils de dix ans. Le samedi, son fils joue au foot avec ses amis au parc.",
+        "en": "Paul has a ten-year-old son. On Saturdays, his son plays football with his friends at the park."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -884,6 +1129,11 @@
       "frequency_rank": 340,
       "audio": null,
       "example": "Ma fille aime beaucoup les chats.",
+      "example_en": "My daughter really likes cats.",
+      "mini_text": {
+        "fr": "Nadia a une fille. Sa fille a six ans et elle va à l'école près de la maison. Le soir, elles lisent une histoire ensemble.",
+        "en": "Nadia has a daughter. Her daughter is six and goes to the school near the house. In the evening, they read a story together."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -908,6 +1158,11 @@
       "frequency_rank": 640,
       "audio": null,
       "example": "Son mari travaille à la banque.",
+      "example_en": "Her husband works at the bank.",
+      "mini_text": {
+        "fr": "Le mari de Sophie est cuisinier. Il travaille dans un restaurant le soir. Le dimanche, son mari reste à la maison avec les enfants.",
+        "en": "Sophie's husband is a cook. He works in a restaurant in the evening. On Sundays, her husband stays home with the kids."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -926,6 +1181,11 @@
       "frequency_rank": 130,
       "audio": null,
       "example": "Sa femme travaille dans une école.",
+      "example_en": "His wife works in a school.",
+      "mini_text": {
+        "fr": "La femme de Marc s'appelle Julie. Elle est médecin à l'hôpital. Le week-end, Marc et sa femme font du vélo.",
+        "en": "Marc's wife is called Julie. She's a doctor at the hospital. On weekends, Marc and his wife go cycling."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -950,6 +1210,11 @@
       "frequency_rank": 330,
       "audio": null,
       "example": "Ma mère est encore jeune.",
+      "example_en": "My mother is still young.",
+      "mini_text": {
+        "fr": "Mon professeur est jeune. Il a vingt-cinq ans. Les jeunes aiment beaucoup ses cours.",
+        "en": "My teacher is young. He's twenty-five. Young people really like his classes."
+      },
       "feminine": "jeune",
       "article_f": null,
       "example_f": null,
@@ -968,6 +1233,11 @@
       "frequency_rank": 2000,
       "audio": null,
       "example": "Ma grand-mère a quatre-vingts ans.",
+      "example_en": "My grandmother is eighty years old.",
+      "mini_text": {
+        "fr": "Ma grand-mère habite à la campagne. Dimanche, on est allés chez elle et on a fait un gâteau. Ma grand-mère est très contente.",
+        "en": "My grandmother lives in the countryside. On Sunday, we went to her place and made a cake. My grandmother is very happy."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -986,6 +1256,11 @@
       "frequency_rank": 2050,
       "audio": null,
       "example": "Mon grand-père raconte des histoires.",
+      "example_en": "My grandfather tells stories.",
+      "mini_text": {
+        "fr": "Le grand-père de Tom a quatre-vingts ans. Hier, il a raconté son voyage en Italie. Tom adore écouter son grand-père.",
+        "en": "Tom's grandfather is eighty. Yesterday, he told the story of his trip to Italy. Tom loves listening to his grandfather."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1004,6 +1279,11 @@
       "frequency_rank": 2650,
       "audio": null,
       "example": "Mon cousin habite au Canada.",
+      "example_en": "My cousin lives in Canada.",
+      "mini_text": {
+        "fr": "Ma cousine Léa habite à Montréal. Cet été, elle va venir en France, donc on va visiter Paris avec mon cousin Marc.",
+        "en": "My cousin Léa lives in Montreal. This summer, she's going to come to France, so we're going to visit Paris with my cousin Marc."
+      },
       "feminine": "cousine",
       "article_f": "la",
       "example_f": null,
@@ -1022,6 +1302,11 @@
       "frequency_rank": 470,
       "audio": null,
       "example": "Mes parents habitent à la campagne.",
+      "example_en": "My parents live in the countryside.",
+      "mini_text": {
+        "fr": "Les parents de Julie habitent à Nice. Le week-end dernier, elle est allée chez ses parents en train pour l'anniversaire de son père.",
+        "en": "Julie's parents live in Nice. Last weekend, she went to her parents' place by train for her father's birthday."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1040,6 +1325,14 @@
       "frequency_rank": 2350,
       "audio": null,
       "example": "Ma sœur s'est mariée l'année dernière.",
+      "example_en": "My sister got married last year.",
+      "mini_text": {
+        "fr": "Anna et Paul vont se marier en juin. Ils se sont rencontrés à l'université. Après la fête, ils vont partir en voyage au Portugal.",
+        "en": "Anna and Paul are going to get married in June. They met at university. After the party, they're going to go on a trip to Portugal."
+      },
+      "forms": [
+        "mariée"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1058,6 +1351,15 @@
       "frequency_rank": 1250,
       "audio": null,
       "example": "Mon fils est né en mars.",
+      "example_en": "My son was born in March.",
+      "mini_text": {
+        "fr": "Le bébé de Claire est né hier soir à l'hôpital. C'est une fille ! Elle est née à minuit, donc toute la famille est fatiguée.",
+        "en": "Claire's baby was born last night at the hospital. It's a girl! She was born at midnight, so the whole family is tired."
+      },
+      "forms": [
+        "né",
+        "née"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1076,6 +1378,11 @@
       "frequency_rank": 3300,
       "audio": null,
       "example": "Tu ressembles beaucoup à ton père.",
+      "example_en": "You look a lot like your father.",
+      "mini_text": {
+        "fr": "Sur mes photos d'enfant, je ressemble à mon frère. Mais aujourd'hui, ma sœur dit que je ressemble à notre mère.",
+        "en": "In my childhood photos, I look like my brother. But today, my sister says that I look like our mother."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1094,6 +1401,11 @@
       "frequency_rank": 2450,
       "audio": null,
       "example": "Mon frère est marié depuis deux ans.",
+      "example_en": "My brother has been married for two years.",
+      "mini_text": {
+        "fr": "Ma cousine Inès est mariée depuis cinq ans. Elle a rencontré son mari au travail. Maintenant, ils habitent à Lyon avec leurs deux enfants.",
+        "en": "My cousin Inès has been married for five years. She met her husband at work. Now they live in Lyon with their two children."
+      },
       "feminine": "mariée",
       "article_f": null,
       "example_f": null,
@@ -1112,6 +1424,14 @@
       "frequency_rank": 1050,
       "audio": null,
       "example": "Je me lève à sept heures.",
+      "example_en": "I get up at seven o'clock.",
+      "mini_text": {
+        "fr": "Le lundi, Paul se lève à six heures parce qu'il commence tôt. Mais le dimanche, il aime se lever tard, vers dix heures.",
+        "en": "On Mondays, Paul gets up at six because he starts early. But on Sundays, he likes to get up late, around ten."
+      },
+      "forms": [
+        "lève"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1130,6 +1450,15 @@
       "frequency_rank": 1950,
       "audio": null,
       "example": "Je me couche tard le samedi.",
+      "example_en": "I go to bed late on Saturdays.",
+      "mini_text": {
+        "fr": "Hier soir, Léa s'est couchée à minuit parce qu'elle a regardé un film. Ce soir, elle va se coucher tôt.",
+        "en": "Last night, Léa went to bed at midnight because she watched a film. Tonight, she's going to go to bed early."
+      },
+      "forms": [
+        "couche",
+        "couchée"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1148,6 +1477,19 @@
       "frequency_rank": 880,
       "audio": null,
       "example": "Je dors huit heures par nuit.",
+      "example_en": "I sleep eight hours a night.",
+      "mini_text": {
+        "fr": "Le bébé dort beaucoup. La nuit, il dort dans sa petite chambre. Ses parents ne dorment pas beaucoup !",
+        "en": "The baby sleeps a lot. At night, he sleeps in his little bedroom. His parents don't sleep much!"
+      },
+      "forms": [
+        "dors",
+        "dort",
+        "dormons",
+        "dormez",
+        "dorment",
+        "dormi"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1166,6 +1508,14 @@
       "frequency_rank": 3600,
       "audio": null,
       "example": "Je me lave les mains avant le repas.",
+      "example_en": "I wash my hands before the meal.",
+      "mini_text": {
+        "fr": "Après le foot, Hugo est très sale. Il va se laver tout de suite, et ensuite il va dîner avec sa famille.",
+        "en": "After football, Hugo is really dirty. He's going to wash right away, and then he's going to have dinner with his family."
+      },
+      "forms": [
+        "lave"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1184,6 +1534,11 @@
       "frequency_rank": 3700,
       "audio": null,
       "example": "Je prends une douche le matin.",
+      "example_en": "I take a shower in the morning.",
+      "mini_text": {
+        "fr": "Karim fait du sport le matin. Après, il prend une douche rapide parce qu'il commence à neuf heures. Hier, il a oublié sa serviette pour la douche !",
+        "en": "Karim does sport in the morning. Afterwards, he takes a quick shower because he starts at nine. Yesterday, he forgot his towel for the shower!"
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1202,6 +1557,11 @@
       "frequency_rank": 2550,
       "audio": null,
       "example": "Je prends mon petit-déjeuner à huit heures.",
+      "example_en": "I have my breakfast at eight o'clock.",
+      "mini_text": {
+        "fr": "Le dimanche, Sarah prend un grand petit-déjeuner avec sa famille. Il y a du pain, du beurre et du chocolat chaud. C'est son petit-déjeuner préféré.",
+        "en": "On Sundays, Sarah has a big breakfast with her family. There is bread, butter and hot chocolate. It's her favorite breakfast."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1220,6 +1580,15 @@
       "frequency_rank": 2750,
       "audio": null,
       "example": "Je me réveille tôt le lundi.",
+      "example_en": "I wake up early on Mondays.",
+      "mini_text": {
+        "fr": "Ce matin, Nora s'est réveillée à cinq heures parce que le chat a miaulé. Demain, elle va se réveiller plus tard.",
+        "en": "This morning, Nora woke up at five because the cat meowed. Tomorrow, she's going to wake up later."
+      },
+      "forms": [
+        "réveille",
+        "réveillée"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1238,6 +1607,11 @@
       "frequency_rank": 580,
       "audio": null,
       "example": "Je rentre à la maison à six heures.",
+      "example_en": "I get home at six o'clock.",
+      "mini_text": {
+        "fr": "Le soir, Antoine rentre du travail à pied. Il rentre à sept heures et il prépare le dîner avec sa femme.",
+        "en": "In the evening, Antoine walks home from work. He gets home at seven and makes dinner with his wife."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1256,6 +1630,11 @@
       "frequency_rank": 1650,
       "audio": null,
       "example": "Je suis fatigué après le travail.",
+      "example_en": "I'm tired after work.",
+      "mini_text": {
+        "fr": "Le vendredi soir, je suis très fatigué. Ma sœur est fatiguée aussi. Nous restons à la maison.",
+        "en": "On Friday evenings, I'm very tired. My sister is tired too. We stay at home."
+      },
       "feminine": "fatiguée",
       "article_f": null,
       "example_f": "Je suis fatiguée après le travail.",
@@ -1274,6 +1653,11 @@
       "frequency_rank": 760,
       "audio": null,
       "example": "Ma journée commence à sept heures.",
+      "example_en": "My day starts at seven o'clock.",
+      "mini_text": {
+        "fr": "Aujourd'hui, Lucie a une longue journée au bureau. Le soir, elle est fatiguée. Elle dit : « Quelle journée ! »",
+        "en": "Today, Lucie has a long day at the office. In the evening, she's tired. She says: \"What a day!\""
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1292,6 +1676,11 @@
       "frequency_rank": 155,
       "audio": null,
       "example": "Je reste à la maison ce soir.",
+      "example_en": "I'm staying home tonight.",
+      "mini_text": {
+        "fr": "Aujourd'hui, il pleut. Max reste à la maison avec son chien. Il ne sort pas : il reste sur le canapé et il regarde un film.",
+        "en": "Today, it's raining. Max stays home with his dog. He doesn't go out: he stays on the sofa and watches a film."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1310,6 +1699,11 @@
       "frequency_rank": 4200,
       "audio": null,
       "example": "Mon réveil sonne à six heures et demie.",
+      "example_en": "My alarm clock goes off at half past six.",
+      "mini_text": {
+        "fr": "Ce matin, le réveil de Camille n'a pas sonné, donc elle est arrivée en retard au travail. Ce soir, elle va acheter un nouveau réveil.",
+        "en": "This morning, Camille's alarm clock didn't go off, so she got to work late. Tonight, she's going to buy a new alarm clock."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1328,6 +1722,15 @@
       "frequency_rank": 3800,
       "audio": null,
       "example": "Je me suis habillé très vite ce matin.",
+      "example_en": "I got dressed very quickly this morning.",
+      "mini_text": {
+        "fr": "Le matin, Inès s'habille en cinq minutes. Mais samedi, elle va à une fête, donc elle va prendre le temps de s'habiller.",
+        "en": "In the morning, Inès gets dressed in five minutes. But on Saturday, she's going to a party, so she's going to take her time getting dressed."
+      },
+      "forms": [
+        "habillé",
+        "habille"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": "Je me suis habillée très vite ce matin.",
@@ -1346,6 +1749,15 @@
       "frequency_rank": 2850,
       "audio": null,
       "example": "Je vais me préparer pour le travail.",
+      "example_en": "I'm going to get ready for work.",
+      "mini_text": {
+        "fr": "Ce soir, Thomas va au cinéma avec ses amis. Il a vingt minutes pour se préparer, donc il se prépare très vite.",
+        "en": "Tonight, Thomas is going to the cinema with his friends. He has twenty minutes to get ready, so he gets ready very quickly."
+      },
+      "forms": [
+        "préparer",
+        "prépare"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1364,6 +1776,11 @@
       "frequency_rank": 1450,
       "audio": null,
       "example": "J'ai l'habitude de boire un café le matin.",
+      "example_en": "I'm in the habit of drinking a coffee in the morning.",
+      "mini_text": {
+        "fr": "Chaque soir, Marie a une habitude : elle lit dans son lit. Mais hier, elle est sortie avec des amis, donc elle a changé ses habitudes.",
+        "en": "Every evening, Marie has a habit: she reads in bed. But yesterday, she went out with friends, so she changed her habits."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1382,6 +1799,14 @@
       "frequency_rank": 4500,
       "audio": null,
       "example": "Je me brosse les dents après le repas.",
+      "example_en": "I brush my teeth after the meal.",
+      "mini_text": {
+        "fr": "Le soir, Léo n'aime pas se brosser les dents. Mais sa mère dit : « Va te brosser les dents, maintenant ! » Donc il y va.",
+        "en": "In the evening, Léo doesn't like brushing his teeth. But his mom says: \"Go brush your teeth, now!\" So he goes."
+      },
+      "forms": [
+        "brosse"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1400,6 +1825,11 @@
       "frequency_rank": 4400,
       "audio": null,
       "example": "J'ai fait la vaisselle après le dîner.",
+      "example_en": "I did the dishes after dinner.",
+      "mini_text": {
+        "fr": "Chez Paul, il n'y a pas de lave-vaisselle. Ce soir, il a fait la vaisselle avec sa sœur, et demain, son frère va faire la vaisselle.",
+        "en": "At Paul's place, there's no dishwasher. Tonight, he did the dishes with his sister, and tomorrow, his brother is going to do the dishes."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1418,6 +1848,11 @@
       "frequency_rank": 2150,
       "audio": null,
       "example": "Je suis très occupé cette semaine.",
+      "example_en": "I'm very busy this week.",
+      "mini_text": {
+        "fr": "Ma mère est toujours occupée. Elle travaille et elle fait du sport. Ce soir, je ne suis pas occupé : on va au cinéma ?",
+        "en": "My mother is always busy. She works and she does sport. Tonight, I'm not busy: shall we go to the cinema?"
+      },
       "feminine": "occupée",
       "article_f": null,
       "example_f": "Je suis très occupée cette semaine.",
@@ -1436,6 +1871,11 @@
       "frequency_rank": 690,
       "audio": null,
       "example": "Le voyage dure trois heures en train.",
+      "example_en": "The trip takes three hours by train.",
+      "mini_text": {
+        "fr": "L'été dernier, j'ai fait un long voyage en Espagne. Le voyage a duré trois semaines. C'était un voyage inoubliable.",
+        "en": "Last summer, I took a long trip to Spain. The trip lasted three weeks. It was an unforgettable trip."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1454,6 +1894,11 @@
       "frequency_rank": 1550,
       "audio": null,
       "example": "J'aime voyager avec mes amis.",
+      "example_en": "I like traveling with my friends.",
+      "mini_text": {
+        "fr": "Ma tante adore voyager. L'année dernière, elle a voyagé au Japon. L'année prochaine, elle va voyager en Inde.",
+        "en": "My aunt loves travelling. Last year, she travelled to Japan. Next year, she's going to travel to India."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1472,6 +1917,11 @@
       "frequency_rank": 1180,
       "audio": null,
       "example": "Notre hôtel est près de la plage.",
+      "example_en": "Our hotel is near the beach.",
+      "mini_text": {
+        "fr": "Nous avons réservé un hôtel à Nice. L'hôtel a une piscine. Le petit déjeuner à l'hôtel est excellent.",
+        "en": "We booked a hotel in Nice. The hotel has a swimming pool. Breakfast at the hotel is excellent."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1490,6 +1940,11 @@
       "frequency_rank": 1480,
       "audio": null,
       "example": "On va à la plage cet après-midi.",
+      "example_en": "We're going to the beach this afternoon.",
+      "mini_text": {
+        "fr": "En été, on va à la plage tous les jours. La plage est grande et propre. Je lis un livre sur la plage.",
+        "en": "In summer, we go to the beach every day. The beach is big and clean. I read a book on the beach."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1508,6 +1963,11 @@
       "frequency_rank": 235,
       "audio": null,
       "example": "La France est un beau pays.",
+      "example_en": "France is a beautiful country.",
+      "mini_text": {
+        "fr": "Kenji habite au Japon. Cet été, il visite un nouveau pays : la France. Il aime beaucoup ce pays et sa cuisine.",
+        "en": "Kenji lives in Japan. This summer, he's visiting a new country: France. He really likes this country and its food."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1526,6 +1986,11 @@
       "frequency_rank": 820,
       "audio": null,
       "example": "J'aime nager dans la mer.",
+      "example_en": "I like swimming in the sea.",
+      "mini_text": {
+        "fr": "En août, Lina est à la mer avec ses parents. La mer est bleue et chaude. Elle nage tous les matins.",
+        "en": "In August, Lina is at the seaside with her parents. The sea is blue and warm. She swims every morning."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1544,6 +2009,11 @@
       "frequency_rank": 3900,
       "audio": null,
       "example": "Je prépare ma valise pour le voyage.",
+      "example_en": "I'm packing my suitcase for the trip.",
+      "mini_text": {
+        "fr": "Demain, je pars en vacances. Ce soir, je fais ma valise. Ma valise est petite, alors je prends peu de vêtements.",
+        "en": "Tomorrow, I'm going on holiday. Tonight, I'm packing my suitcase. My suitcase is small, so I'm taking few clothes."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1562,6 +2032,11 @@
       "frequency_rank": 1850,
       "audio": null,
       "example": "Nous visitons Paris cette semaine.",
+      "example_en": "We're visiting Paris this week.",
+      "mini_text": {
+        "fr": "Cette semaine, Ben et Sara sont à Rome. Aujourd'hui, ils visitent le Colisée. Demain, ils visitent un musée près de l'hôtel.",
+        "en": "This week, Ben and Sara are in Rome. Today, they're visiting the Colosseum. Tomorrow, they're visiting a museum near the hotel."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1580,6 +2055,23 @@
       "frequency_rank": 145,
       "audio": null,
       "example": "Je pars en vacances demain.",
+      "example_en": "I'm going on vacation tomorrow.",
+      "mini_text": {
+        "fr": "Le train part à huit heures. Je pars de la maison à sept heures. Hier, je suis parti en retard !",
+        "en": "The train leaves at eight o'clock. I leave home at seven o'clock. Yesterday, I left late!"
+      },
+      "forms": [
+        "pars",
+        "part",
+        "partons",
+        "partez",
+        "partent",
+        "parti",
+        "partie",
+        "partis",
+        "partais",
+        "partait"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1598,6 +2090,11 @@
       "frequency_rank": 115,
       "audio": null,
       "example": "Mes parents arrivent ce soir à la gare.",
+      "example_en": "My parents arrive at the station this evening.",
+      "mini_text": {
+        "fr": "Le train arrive à midi. Mes amis arrivent à la gare. Nous sommes arrivés à l'hôtel à une heure.",
+        "en": "The train arrives at noon. My friends arrive at the station. We arrived at the hotel at one o'clock."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1616,6 +2113,11 @@
       "frequency_rank": 1980,
       "audio": null,
       "example": "J'ai acheté mon billet de train hier.",
+      "example_en": "I bought my train ticket yesterday.",
+      "mini_text": {
+        "fr": "Je vais acheter mon billet de train sur internet. Le billet coûte quarante euros. N'oublie pas ton billet !",
+        "en": "I'm going to buy my train ticket online. The ticket costs forty euros. Don't forget your ticket!"
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1634,6 +2136,11 @@
       "frequency_rank": 4600,
       "audio": null,
       "example": "Mon passeport est dans mon sac.",
+      "example_en": "My passport is in my bag.",
+      "mini_text": {
+        "fr": "Paul part à Rome demain. Ce matin, il a cherché son passeport partout. Finalement, il a trouvé son passeport dans la voiture.",
+        "en": "Paul is leaving for Rome tomorrow. This morning, he looked everywhere for his passport. In the end, he found his passport in the car."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1652,6 +2159,11 @@
       "frequency_rank": 3150,
       "audio": null,
       "example": "J'ai réservé une chambre à l'hôtel.",
+      "example_en": "I booked a room at the hotel.",
+      "mini_text": {
+        "fr": "Léa va partir à Nice en juin. Hier, elle a réservé un hôtel près de la mer. Elle va aussi réserver une table au restaurant.",
+        "en": "Léa is going to Nice in June. Yesterday, she booked a hotel near the sea. She is also going to book a table at the restaurant."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1670,6 +2182,11 @@
       "frequency_rank": 1720,
       "audio": null,
       "example": "J'ai acheté un souvenir pour ma mère.",
+      "example_en": "I bought a souvenir for my mother.",
+      "mini_text": {
+        "fr": "Marc est à Paris pour le week-end. Il achète un souvenir pour sa sœur, mais les souvenirs sont chers près de la tour Eiffel.",
+        "en": "Marc is in Paris for the weekend. He is buying a souvenir for his sister, but souvenirs are expensive near the Eiffel Tower."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1694,6 +2211,11 @@
       "frequency_rank": 3050,
       "audio": null,
       "example": "Ma valise est trop lourde.",
+      "example_en": "My suitcase is too heavy.",
+      "mini_text": {
+        "fr": "Sophie part en vacances demain. Sa valise est lourde parce qu'elle a mis dix livres dedans. Son mari dit : « C'est trop lourd ! »",
+        "en": "Sophie is going on vacation tomorrow. Her suitcase is heavy because she put ten books in it. Her husband says: \"It's too heavy!\""
+      },
       "feminine": "lourde",
       "article_f": null,
       "example_f": null,
@@ -1712,6 +2234,11 @@
       "frequency_rank": 1150,
       "audio": null,
       "example": "J'ai oublié mon passeport à la maison.",
+      "example_en": "I forgot my passport at home.",
+      "mini_text": {
+        "fr": "Ce matin, Hugo est parti au travail, mais il a oublié ses clés. Il oublie toujours quelque chose quand il est pressé.",
+        "en": "This morning, Hugo left for work, but he forgot his keys. He always forgets something when he is in a hurry."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1730,6 +2257,11 @@
       "frequency_rank": 175,
       "audio": null,
       "example": "Mon travail commence à neuf heures.",
+      "example_en": "My work starts at nine o'clock.",
+      "mini_text": {
+        "fr": "Nadia aime son travail. Elle travaille dans une boulangerie à Lyon. Son travail commence à six heures du matin.",
+        "en": "Nadia likes her job. She works in a bakery in Lyon. Her work starts at six in the morning."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1748,6 +2280,11 @@
       "frequency_rank": 390,
       "audio": null,
       "example": "Je travaille dans un bureau.",
+      "example_en": "I work in an office.",
+      "mini_text": {
+        "fr": "Ma sœur travaille dans un hôpital. Elle travaille la nuit. Moi, je travaille le jour.",
+        "en": "My sister works in a hospital. She works at night. Me, I work during the day."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1766,6 +2303,11 @@
       "frequency_rank": 520,
       "audio": null,
       "example": "Les enfants vont à l'école à pied.",
+      "example_en": "The children walk to school.",
+      "mini_text": {
+        "fr": "Le matin, Tom va à l'école avec sa sœur. L'école n'est pas loin de la maison. Ils aiment bien leur professeur.",
+        "en": "In the morning, Tom goes to school with his sister. The school is not far from the house. They really like their teacher."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1784,6 +2326,11 @@
       "frequency_rank": 660,
       "audio": null,
       "example": "Mon bureau est au troisième étage.",
+      "example_en": "My office is on the third floor.",
+      "mini_text": {
+        "fr": "J'arrive au bureau à neuf heures. Mon bureau est petit mais il a une fenêtre. Le vendredi, je travaille à la maison, pas au bureau.",
+        "en": "I get to the office at nine o'clock. My office is small but it has a window. On Fridays, I work from home, not at the office."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1802,6 +2349,20 @@
       "frequency_rank": 540,
       "audio": null,
       "example": "J'apprends le français depuis un mois.",
+      "example_en": "I have been learning French for a month.",
+      "mini_text": {
+        "fr": "J'apprends le français avec une application. Mon frère apprend l'espagnol. Nous apprenons un peu chaque jour.",
+        "en": "I'm learning French with an app. My brother is learning Spanish. We learn a little every day."
+      },
+      "forms": [
+        "apprends",
+        "apprend",
+        "apprenons",
+        "apprenez",
+        "apprennent",
+        "appris",
+        "apprise"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1820,6 +2381,11 @@
       "frequency_rank": 1520,
       "audio": null,
       "example": "J'étudie le soir après le travail.",
+      "example_en": "I study in the evening after work.",
+      "mini_text": {
+        "fr": "Karim étudie l'anglais à la bibliothèque. Il étudie le soir parce qu'il travaille dans la journée. Il a un examen lundi.",
+        "en": "Karim studies English at the library. He studies in the evening because he works during the day. He has an exam on Monday."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1838,6 +2404,11 @@
       "frequency_rank": 1320,
       "audio": null,
       "example": "Le professeur parle très lentement.",
+      "example_en": "The teacher speaks very slowly.",
+      "mini_text": {
+        "fr": "Ma professeure de français s'appelle Claire. Elle est très gentille et elle parle lentement. Tous les élèves aiment cette professeure.",
+        "en": "My French teacher's name is Claire. She is very kind and she speaks slowly. All the students like this teacher."
+      },
       "feminine": "professeure",
       "article_f": "la",
       "example_f": null,
@@ -1856,6 +2427,11 @@
       "frequency_rank": 370,
       "audio": null,
       "example": "Je lis un livre sur la France.",
+      "example_en": "I'm reading a book about France.",
+      "mini_text": {
+        "fr": "J'aime les livres. En ce moment, je lis un livre sur l'histoire de France. C'est un livre passionnant.",
+        "en": "I like books. At the moment, I'm reading a book about the history of France. It's a fascinating book."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1874,6 +2450,22 @@
       "frequency_rank": 430,
       "audio": null,
       "example": "Je lis le journal le matin.",
+      "example_en": "I read the newspaper in the morning.",
+      "mini_text": {
+        "fr": "Ma grand-mère lit beaucoup. Elle lit deux livres par semaine. Moi, je lis des bandes dessinées.",
+        "en": "My grandmother reads a lot. She reads two books a week. Me, I read comics."
+      },
+      "forms": [
+        "lis",
+        "lit",
+        "lisons",
+        "lisez",
+        "lisent",
+        "lu",
+        "lisais",
+        "lisait",
+        "lirai"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1892,6 +2484,11 @@
       "frequency_rank": 440,
       "audio": null,
       "example": "J'écris un message à mon collègue.",
+      "example_en": "I'm writing a message to my colleague.",
+      "mini_text": {
+        "fr": "Anna habite à Paris. Sa famille est au Canada. Le dimanche, elle écrit une lettre à sa grand-mère. Elle écrit en français !",
+        "en": "Anna lives in Paris. Her family is in Canada. On Sundays, she writes a letter to her grandmother. She writes in French!"
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1910,6 +2507,11 @@
       "frequency_rank": 410,
       "audio": null,
       "example": "J'ai un cours de français ce soir.",
+      "example_en": "I have a French class this evening.",
+      "mini_text": {
+        "fr": "Le mardi, Julie a un cours de danse. Le cours commence à sept heures dans une petite salle. Il y a dix élèves.",
+        "en": "On Tuesdays, Julie has a dance class. The class starts at seven o'clock in a small room. There are ten students."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1928,6 +2530,11 @@
       "frequency_rank": 1080,
       "audio": null,
       "example": "Ce livre est très intéressant.",
+      "example_en": "This book is very interesting.",
+      "mini_text": {
+        "fr": "Lucas regarde un film sur l'Afrique. Le film est très intéressant. Sa copine trouve l'histoire intéressante aussi.",
+        "en": "Lucas is watching a film about Africa. The film is very interesting. His girlfriend finds the story interesting too."
+      },
       "feminine": "intéressante",
       "article_f": null,
       "example_f": null,
@@ -1946,6 +2553,11 @@
       "frequency_rank": 1420,
       "audio": null,
       "example": "J'ai une réunion à dix heures.",
+      "example_en": "I have a meeting at ten o'clock.",
+      "mini_text": {
+        "fr": "Ce matin, j'ai eu une longue réunion. La réunion a commencé à neuf heures. Après la réunion, j'ai bu un café.",
+        "en": "This morning, I had a long meeting. The meeting started at nine o'clock. After the meeting, I drank a coffee."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -1964,6 +2576,11 @@
       "frequency_rank": 2320,
       "audio": null,
       "example": "Mon patron est en vacances cette semaine.",
+      "example_en": "My boss is on vacation this week.",
+      "mini_text": {
+        "fr": "Hier, ma patronne a organisé une grande réunion. Elle parle beaucoup, mais elle est sympa. Après, la patronne a invité toute l'équipe au restaurant.",
+        "en": "Yesterday, my boss organized a big meeting. She talks a lot, but she is nice. Afterwards, the boss invited the whole team to a restaurant."
+      },
       "feminine": "patronne",
       "article_f": "la",
       "example_f": null,
@@ -1982,6 +2599,11 @@
       "frequency_rank": 2250,
       "audio": null,
       "example": "J'ai réussi mon examen de français.",
+      "example_en": "I passed my French exam.",
+      "mini_text": {
+        "fr": "Demain, Inès a un examen de maths. Elle a étudié tout le week-end, donc elle n'a pas peur. Après l'examen, elle va voir ses amis.",
+        "en": "Tomorrow, Inès has a math exam. She studied all weekend, so she isn't scared. After the exam, she is going to see her friends."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2000,6 +2622,11 @@
       "frequency_rank": 940,
       "audio": null,
       "example": "Mon frère a réussi son permis de conduire.",
+      "example_en": "My brother passed his driving test.",
+      "mini_text": {
+        "fr": "Le mois dernier, Malik a réussi son examen de cuisine. Il est très content. Maintenant, il veut réussir dans un grand restaurant.",
+        "en": "Last month, Malik passed his cooking exam. He is very happy. Now he wants to succeed in a big restaurant."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2018,6 +2645,11 @@
       "frequency_rank": 2950,
       "audio": null,
       "example": "Mon salaire arrive à la fin du mois.",
+      "example_en": "My salary comes in at the end of the month.",
+      "mini_text": {
+        "fr": "Léo a un nouveau travail. Son salaire est bon, mais son loyer à Paris est cher. Avec son premier salaire, il a acheté un vélo.",
+        "en": "Léo has a new job. His salary is good, but his rent in Paris is expensive. With his first salary, he bought a bike."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2036,6 +2668,11 @@
       "frequency_rank": 1380,
       "audio": null,
       "example": "J'ai terminé mon travail à six heures.",
+      "example_en": "I finished my work at six o'clock.",
+      "mini_text": {
+        "fr": "Ce soir, Claire a terminé son travail tard. Elle est fatiguée, donc elle va rentrer en taxi. Demain, elle va terminer à cinq heures.",
+        "en": "This evening, Claire finished work late. She is tired, so she is going to go home by taxi. Tomorrow, she is going to finish at five o'clock."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2054,6 +2691,11 @@
       "frequency_rank": 1870,
       "audio": null,
       "example": "C'est un étudiant très sérieux.",
+      "example_en": "He's a very serious student.",
+      "mini_text": {
+        "fr": "Emma est une élève sérieuse. Elle fait ses devoirs tous les soirs. Son frère n'est pas très sérieux : il a joué aux jeux vidéo toute la journée.",
+        "en": "Emma is a serious student. She does her homework every evening. Her brother isn't very serious: he played video games all day."
+      },
       "feminine": "sérieuse",
       "article_f": null,
       "example_f": null,
@@ -2072,6 +2714,11 @@
       "frequency_rank": 60,
       "audio": null,
       "example": "Je bois du café tous les jours.",
+      "example_en": "I drink coffee every day.",
+      "mini_text": {
+        "fr": "Il y a sept jours dans une semaine. Mon jour préféré est le samedi. Ce jour-là, je ne travaille pas.",
+        "en": "There are seven days in a week. My favourite day is Saturday. On that day, I don't work."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2090,6 +2737,11 @@
       "frequency_rank": 290,
       "audio": null,
       "example": "Je travaille cinq jours par semaine.",
+      "example_en": "I work five days a week.",
+      "mini_text": {
+        "fr": "Cette semaine, je travaille beaucoup. La semaine prochaine, je suis en vacances. Je pars une semaine à la mer.",
+        "en": "This week, I'm working a lot. Next week, I'm on holiday. I'm going to the sea for a week."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2108,6 +2760,11 @@
       "frequency_rank": 125,
       "audio": null,
       "example": "Le film commence dans une heure.",
+      "example_en": "The movie starts in an hour.",
+      "mini_text": {
+        "fr": "Quelle heure est-il ? Il est huit heures. Le bus arrive dans une heure !",
+        "en": "What time is it? It's eight o'clock. The bus arrives in an hour!"
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2126,6 +2783,11 @@
       "frequency_rank": 335,
       "audio": null,
       "example": "Je cours le matin avant le travail.",
+      "example_en": "I go running in the morning before work.",
+      "mini_text": {
+        "fr": "Le matin, je me lève à sept heures. Je prends une douche et je mange. Le matin, j'écoute la radio.",
+        "en": "In the morning, I get up at seven o'clock. I take a shower and I eat. In the morning, I listen to the radio."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2144,6 +2806,11 @@
       "frequency_rank": 345,
       "audio": null,
       "example": "Je sors avec mes amis le soir.",
+      "example_en": "I go out with my friends in the evening.",
+      "mini_text": {
+        "fr": "Le soir, je rentre à la maison à six heures. Je cuisine et je mange. Ce soir, je vais au cinéma.",
+        "en": "In the evening, I come home at six o'clock. I cook and I eat. Tonight, I'm going to the cinema."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2162,6 +2829,11 @@
       "frequency_rank": 2120,
       "audio": null,
       "example": "Je vois mes amis le week-end.",
+      "example_en": "I see my friends on the weekend.",
+      "mini_text": {
+        "fr": "Le week-end, je me repose. Samedi, je fais du sport et dimanche, je vois ma famille. J'adore le week-end !",
+        "en": "At the weekend, I rest. On Saturday, I do sport and on Sunday, I see my family. I love the weekend!"
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2180,6 +2852,11 @@
       "frequency_rank": 360,
       "audio": null,
       "example": "Je paie mon loyer chaque mois.",
+      "example_en": "I pay my rent every month.",
+      "mini_text": {
+        "fr": "Ce mois-ci, Paul ne mange pas au restaurant. Il garde son argent parce qu'il part en Italie dans deux mois.",
+        "en": "This month, Paul isn't eating at restaurants. He is saving his money because he is going to Italy in two months."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2198,6 +2875,11 @@
       "frequency_rank": 150,
       "audio": null,
       "example": "Cette année, j'apprends le français.",
+      "example_en": "This year, I'm learning French.",
+      "mini_text": {
+        "fr": "Cette année, Marie habite à Montréal pour son travail. Elle aime la ville, mais l'hiver est très froid. C'est une belle année pour elle.",
+        "en": "This year, Marie lives in Montreal for her job. She likes the city, but the winter is very cold. It's a good year for her."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2216,6 +2898,11 @@
       "frequency_rank": 255,
       "audio": null,
       "example": "Le cours commence à neuf heures.",
+      "example_en": "The class starts at nine o'clock.",
+      "mini_text": {
+        "fr": "L'école commence à huit heures et demie. Le cours de français commence à neuf heures. Nous commençons par une chanson.",
+        "en": "School starts at half past eight. The French class starts at nine o'clock. We start with a song."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2234,6 +2921,11 @@
       "frequency_rank": 530,
       "audio": null,
       "example": "Je finis le travail à cinq heures.",
+      "example_en": "I finish work at five o'clock.",
+      "mini_text": {
+        "fr": "Je finis mes devoirs avant le dîner. Mon frère finit toujours en retard. Le film finit à minuit.",
+        "en": "I finish my homework before dinner. My brother always finishes late. The film ends at midnight."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2252,6 +2944,11 @@
       "frequency_rank": 215,
       "audio": null,
       "example": "J'attends le bus depuis dix minutes.",
+      "example_en": "I've been waiting for the bus for ten minutes.",
+      "mini_text": {
+        "fr": "Julie est à l'arrêt de bus. Elle attend depuis vingt minutes et il pleut. Elle n'aime pas attendre !",
+        "en": "Julie is at the bus stop. She has been waiting for twenty minutes and it's raining. She doesn't like waiting!"
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2270,6 +2967,11 @@
       "frequency_rank": 590,
       "audio": null,
       "example": "Je vais partir en vacances la semaine prochaine.",
+      "example_en": "I'm going on vacation next week.",
+      "mini_text": {
+        "fr": "Le mois prochain, Thomas va partir au Japon avec sa copine. Ils vont prendre l'avion samedi prochain. La semaine prochaine, ils vont faire les valises.",
+        "en": "Next month, Thomas is going to Japan with his girlfriend. They are taking the plane next Saturday. Next week, they are going to pack their suitcases."
+      },
       "feminine": "prochaine",
       "article_f": null,
       "example_f": null,
@@ -2288,6 +2990,11 @@
       "frequency_rank": 165,
       "audio": null,
       "example": "La semaine dernière, j'ai vu un bon film.",
+      "example_en": "Last week, I saw a good movie.",
+      "mini_text": {
+        "fr": "Le week-end dernier, Ana est allée à la mer avec ses amis. Ils ont mangé au restaurant. Le dernier soir, ils ont dansé sur la plage.",
+        "en": "Last weekend, Ana went to the seaside with her friends. They ate at a restaurant. On the last evening, they danced on the beach."
+      },
       "feminine": "dernière",
       "article_f": null,
       "example_f": null,
@@ -2306,6 +3013,11 @@
       "frequency_rank": 2180,
       "audio": null,
       "example": "Le train est en retard ce matin.",
+      "example_en": "The train is late this morning.",
+      "mini_text": {
+        "fr": "Ce matin, le bus de Karim est en retard. Il arrive au travail avec vingt minutes de retard, mais son patron n'est pas fâché.",
+        "en": "This morning, Karim's bus is late. He gets to work twenty minutes late, but his boss isn't angry."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2324,6 +3036,11 @@
       "frequency_rank": 1560,
       "audio": null,
       "example": "J'ai un rendez-vous chez le dentiste demain.",
+      "example_en": "I have a dentist appointment tomorrow.",
+      "mini_text": {
+        "fr": "Lucie a un rendez-vous chez le médecin à dix heures. Elle est partie tôt, mais le bus est en retard. Elle va appeler pour changer le rendez-vous.",
+        "en": "Lucie has a doctor's appointment at ten o'clock. She left early, but the bus is late. She is going to call to change the appointment."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2342,6 +3059,11 @@
       "frequency_rank": 2380,
       "audio": null,
       "example": "J'ai fêté mon anniversaire avec mes amis.",
+      "example_en": "I celebrated my birthday with my friends.",
+      "mini_text": {
+        "fr": "Samedi, c'est l'anniversaire de Léa. Ses amis vont faire une fête chez elle. Pour son anniversaire, ils ont acheté un gâteau au chocolat.",
+        "en": "Saturday is Léa's birthday. Her friends are going to throw a party at her place. For her birthday, they bought a chocolate cake."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2360,6 +3082,14 @@
       "frequency_rank": 3350,
       "audio": null,
       "example": "Je me dépêche parce que je suis en retard.",
+      "example_en": "I'm hurrying because I'm late.",
+      "mini_text": {
+        "fr": "Ce matin, Paul s'est levé tard. Il se dépêche parce que son train part à huit heures. Sa femme dit : « Dépêche-toi ! »",
+        "en": "This morning, Paul got up late. He is hurrying because his train leaves at eight o'clock. His wife says: \"Hurry up!\""
+      },
+      "forms": [
+        "dépêche"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2378,6 +3108,11 @@
       "frequency_rank": 2720,
       "audio": null,
       "example": "Le film a duré deux heures.",
+      "example_en": "The movie lasted two hours.",
+      "mini_text": {
+        "fr": "Hier soir, Camille est allée au théâtre. La pièce a duré trois heures, donc elle est rentrée tard. Le prochain spectacle va durer une heure seulement.",
+        "en": "Last night, Camille went to the theater. The play lasted three hours, so she got home late. The next show is going to last only one hour."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2396,6 +3131,11 @@
       "frequency_rank": 245,
       "audio": null,
       "example": "Mon ami habite près de chez moi.",
+      "example_en": "My friend lives near me.",
+      "mini_text": {
+        "fr": "Mon meilleur ami s'appelle Hugo. On joue au foot ensemble. C'est un ami fidèle.",
+        "en": "My best friend's name is Hugo. We play football together. He's a loyal friend."
+      },
       "feminine": "amie",
       "article_f": "l'",
       "example_f": null,
@@ -2414,6 +3154,11 @@
       "frequency_rank": 135,
       "audio": null,
       "example": "Cet homme parle trois langues.",
+      "example_en": "That man speaks three languages.",
+      "mini_text": {
+        "fr": "Il y a un homme devant la boulangerie. Cet homme vend des fleurs tous les matins. Il est très gentil avec les enfants.",
+        "en": "There is a man in front of the bakery. This man sells flowers every morning. He is very kind to children."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2432,6 +3177,11 @@
       "frequency_rank": 1060,
       "audio": null,
       "example": "Je suis content de te voir.",
+      "example_en": "I'm happy to see you.",
+      "mini_text": {
+        "fr": "Aujourd'hui, je suis très content. J'ai réussi mon examen ! Mes parents sont contents aussi.",
+        "en": "Today, I'm very happy. I passed my exam! My parents are happy too."
+      },
       "feminine": "contente",
       "article_f": null,
       "example_f": "Je suis contente de te voir.",
@@ -2450,6 +3200,11 @@
       "frequency_rank": 1490,
       "audio": null,
       "example": "Mon petit frère est triste aujourd'hui.",
+      "example_en": "My little brother is sad today.",
+      "mini_text": {
+        "fr": "Le film est très triste. À la fin, tout le monde pleure. Je n'aime pas les films tristes.",
+        "en": "The film is very sad. At the end, everyone cries. I don't like sad films."
+      },
       "feminine": "triste",
       "article_f": null,
       "example_f": null,
@@ -2468,6 +3223,11 @@
       "frequency_rank": 770,
       "audio": null,
       "example": "Je suis heureux avec ma famille.",
+      "example_en": "I'm happy with my family.",
+      "mini_text": {
+        "fr": "Clara est heureuse aujourd'hui. Son frère arrive de Londres ce soir. Ses parents sont heureux aussi, et ils préparent un grand dîner.",
+        "en": "Clara is happy today. Her brother is arriving from London this evening. Her parents are happy too, and they are making a big dinner."
+      },
       "feminine": "heureuse",
       "article_f": null,
       "example_f": "Je suis heureuse avec ma famille.",
@@ -2486,6 +3246,11 @@
       "frequency_rank": 2920,
       "audio": null,
       "example": "Ton ami est vraiment sympa.",
+      "example_en": "Your friend is really nice.",
+      "mini_text": {
+        "fr": "Le nouveau voisin de Marc s'appelle Ahmed. Il est très sympa et il aide tout le monde. Sa femme est sympa aussi.",
+        "en": "Marc's new neighbor is called Ahmed. He is very nice and he helps everyone. His wife is nice too."
+      },
       "feminine": "sympa",
       "article_f": null,
       "example_f": null,
@@ -2504,6 +3269,11 @@
       "frequency_rank": 1990,
       "audio": null,
       "example": "Ma voisine est très gentille.",
+      "example_en": "My neighbour is very kind.",
+      "mini_text": {
+        "fr": "Le boulanger est très gentil. Il dit toujours bonjour. Sa femme est gentille aussi.",
+        "en": "The baker is very kind. He always says hello. His wife is kind too."
+      },
       "feminine": "gentille",
       "article_f": null,
       "example_f": null,
@@ -2522,6 +3292,11 @@
       "frequency_rank": 710,
       "audio": null,
       "example": "J'ai peur quand je suis seul la nuit.",
+      "example_en": "I'm scared when I'm alone at night.",
+      "mini_text": {
+        "fr": "Le petit Noé a peur du noir. Le soir, sa mère laisse une lampe dans sa chambre. Avec la lampe, il n'a pas peur.",
+        "en": "Little Noé is afraid of the dark. In the evening, his mother leaves a lamp on in his room. With the lamp, he isn't scared."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": "J'ai peur quand je suis seule la nuit.",
@@ -2540,6 +3315,11 @@
       "frequency_rank": 480,
       "audio": null,
       "example": "Ce garçon joue au foot avec mon fils.",
+      "example_en": "That boy plays soccer with my son.",
+      "mini_text": {
+        "fr": "Dans le parc, il y a un garçon avec un chien. Le garçon lance une balle et le chien court. Ils sont très contents.",
+        "en": "In the park, there is a boy with a dog. The boy throws a ball and the dog runs. They are very happy."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2564,6 +3344,11 @@
       "frequency_rank": 1680,
       "audio": null,
       "example": "Le bébé dort dans sa chambre.",
+      "example_en": "The baby is sleeping in his room.",
+      "mini_text": {
+        "fr": "Sophie a un bébé de six mois. Le bébé s'appelle Jules. Il dort beaucoup le jour, mais il ne dort pas la nuit !",
+        "en": "Sophie has a six-month-old baby. The baby's name is Jules. He sleeps a lot during the day, but he doesn't sleep at night!"
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2582,6 +3367,15 @@
       "frequency_rank": 1120,
       "audio": null,
       "example": "On a beaucoup ri au restaurant hier.",
+      "example_en": "We laughed a lot at the restaurant yesterday.",
+      "mini_text": {
+        "fr": "Samedi, Hugo et ses amis ont regardé une comédie. Ils ont beaucoup ri. Hugo rit toujours très fort, donc tout le monde rit avec lui.",
+        "en": "On Saturday, Hugo and his friends watched a comedy. They laughed a lot. Hugo always laughs very loudly, so everyone laughs with him."
+      },
+      "forms": [
+        "ri",
+        "rit"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2600,6 +3394,11 @@
       "frequency_rank": 2060,
       "audio": null,
       "example": "Le bébé a pleuré toute la nuit.",
+      "example_en": "The baby cried all night.",
+      "mini_text": {
+        "fr": "Hier, la petite Lina a pleuré à l'école parce qu'elle a perdu son doudou. Le soir, sa mère l'a trouvé, et Lina ne pleure plus.",
+        "en": "Yesterday, little Lina cried at school because she lost her cuddly toy. In the evening, her mother found it, and Lina isn't crying anymore."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2618,6 +3417,11 @@
       "frequency_rank": 225,
       "audio": null,
       "example": "J'habite seul depuis un an.",
+      "example_en": "I've been living alone for a year.",
+      "mini_text": {
+        "fr": "Depuis septembre, Tom habite seul à Lille. Le soir, il mange seul, mais le week-end, il va voir ses amis.",
+        "en": "Since September, Tom has been living alone in Lille. In the evening, he eats alone, but on weekends, he goes to see his friends."
+      },
       "feminine": "seule",
       "article_f": null,
       "example_f": "J'habite seule depuis un an.",
@@ -2636,6 +3440,11 @@
       "frequency_rank": 545,
       "audio": null,
       "example": "La chanson parle d'amour et de voyage.",
+      "example_en": "The song is about love and travel.",
+      "mini_text": {
+        "fr": "Hier soir, Léa et Max ont regardé un film d'amour. C'est une belle histoire d'amour, mais Max a dormi pendant le film !",
+        "en": "Last night, Léa and Max watched a romantic film. It's a beautiful love story, but Max slept during the film!"
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2654,6 +3463,15 @@
       "frequency_rank": 1210,
       "audio": null,
       "example": "Je me sens mieux aujourd'hui.",
+      "example_en": "I feel better today.",
+      "mini_text": {
+        "fr": "Hier, Marie est restée au lit parce qu'elle a eu de la fièvre. Aujourd'hui, elle se sent mieux, donc elle va retourner au travail.",
+        "en": "Yesterday, Marie stayed in bed because she had a fever. Today, she feels better, so she is going to go back to work."
+      },
+      "forms": [
+        "sens",
+        "sent"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2672,6 +3490,15 @@
       "frequency_rank": 3450,
       "audio": null,
       "example": "Les enfants se sont bien amusés au parc.",
+      "example_en": "The children had a lot of fun at the park.",
+      "mini_text": {
+        "fr": "Samedi, Léo est allé à une fête chez son cousin. Il s'est bien amusé. Ce soir, ses amis vont s'amuser au bowling.",
+        "en": "On Saturday, Léo went to a party at his cousin's place. He had a lot of fun. Tonight, his friends are going to have fun at the bowling alley."
+      },
+      "forms": [
+        "amusés",
+        "amusé"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2690,6 +3517,11 @@
       "frequency_rank": 2780,
       "audio": null,
       "example": "Ma mère est inquiète quand je rentre tard.",
+      "example_en": "My mother gets worried when I come home late.",
+      "mini_text": {
+        "fr": "Paul n'a pas répondu au téléphone ce soir. Sa mère est inquiète, donc elle appelle son frère. Lui, il n'est pas inquiet.",
+        "en": "Paul didn't answer the phone this evening. His mother is worried, so she calls his brother. He isn't worried."
+      },
       "feminine": "inquiète",
       "article_f": null,
       "example_f": null,
@@ -2708,6 +3540,11 @@
       "frequency_rank": 3550,
       "audio": null,
       "example": "Ta sœur sourit tout le temps.",
+      "example_en": "Your sister smiles all the time.",
+      "mini_text": {
+        "fr": "Au café, la serveuse sourit à tous les clients. Elle est toujours de bonne humeur. Les clients sourient aussi.",
+        "en": "At the café, the waitress smiles at all the customers. She is always in a good mood. The customers smile too."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2726,6 +3563,11 @@
       "frequency_rank": 205,
       "audio": null,
       "example": "J'habite dans une petite ville.",
+      "example_en": "I live in a small town.",
+      "mini_text": {
+        "fr": "Bordeaux est une belle ville. Il y a une grande rivière dans la ville. J'aime marcher dans la ville le soir.",
+        "en": "Bordeaux is a beautiful city. There's a big river in the city. I like walking in the city in the evening."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2744,6 +3586,11 @@
       "frequency_rank": 405,
       "audio": null,
       "example": "Le café est dans cette rue.",
+      "example_en": "The café is on this street.",
+      "mini_text": {
+        "fr": "J'habite dans une rue très calme. Dans ma rue, il y a une boulangerie. La rue est jolie au printemps.",
+        "en": "I live on a very quiet street. On my street, there's a bakery. The street is pretty in spring."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2762,6 +3609,11 @@
       "frequency_rank": 1580,
       "audio": null,
       "example": "Ce magasin ouvre à neuf heures.",
+      "example_en": "This shop opens at nine o'clock.",
+      "mini_text": {
+        "fr": "Il y a un nouveau magasin dans ma rue. Le magasin vend des vêtements. Il est ouvert le dimanche.",
+        "en": "There's a new shop on my street. The shop sells clothes. It's open on Sundays."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2780,6 +3632,11 @@
       "frequency_rank": 625,
       "audio": null,
       "example": "J'achète des fruits au marché.",
+      "example_en": "I buy fruit at the market.",
+      "mini_text": {
+        "fr": "Le samedi, Sophie va au marché. Elle achète des tomates et du fromage. Elle n'achète pas de viande.",
+        "en": "On Saturdays, Sophie goes to the market. She buys tomatoes and cheese. She doesn't buy meat."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2798,6 +3655,11 @@
       "frequency_rank": 1130,
       "audio": null,
       "example": "Je vais au marché le dimanche.",
+      "example_en": "I go to the market on Sundays.",
+      "mini_text": {
+        "fr": "Le marché est ouvert le mercredi et le samedi. On trouve des fruits et du fromage au marché. Il y a beaucoup de monde.",
+        "en": "The market is open on Wednesdays and Saturdays. You can find fruit and cheese at the market. There are a lot of people."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2816,6 +3678,11 @@
       "frequency_rank": 395,
       "audio": null,
       "example": "Je n'ai pas d'argent sur moi.",
+      "example_en": "I don't have any money on me.",
+      "mini_text": {
+        "fr": "Je mets de l'argent de côté pour les vacances. Je ne dépense pas beaucoup d'argent. L'argent ne fait pas le bonheur !",
+        "en": "I'm putting money aside for the holidays. I don't spend much money. Money doesn't buy happiness!"
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2834,6 +3701,16 @@
       "frequency_rank": 1360,
       "audio": null,
       "example": "Ce restaurant est trop cher pour moi.",
+      "example_en": "This restaurant is too expensive for me.",
+      "mini_text": {
+        "fr": "À Paris, les appartements sont chers. Le café coûte trois euros : ce n'est pas cher. Mais le train est cher.",
+        "en": "In Paris, flats are expensive. Coffee costs three euros: that's not expensive. But the train is expensive."
+      },
+      "forms": [
+        "chère",
+        "chères",
+        "chers"
+      ],
       "feminine": "chère",
       "article_f": null,
       "example_f": null,
@@ -2858,6 +3735,14 @@
       "frequency_rank": 1010,
       "audio": null,
       "example": "Je paie mes courses au supermarché.",
+      "example_en": "I pay for my groceries at the supermarket.",
+      "mini_text": {
+        "fr": "Au café, Marc prend un thé et un croissant. Il paie avec sa carte. Son amie paie en espèces.",
+        "en": "At the café, Marc has a tea and a croissant. He pays by card. His friend pays in cash."
+      },
+      "forms": [
+        "paie"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2876,6 +3761,11 @@
       "frequency_rank": 1240,
       "audio": null,
       "example": "On mange au restaurant ce soir.",
+      "example_en": "We're eating at a restaurant tonight.",
+      "mini_text": {
+        "fr": "Ce soir, on va au restaurant pour l'anniversaire de Julie. Le restaurant est près de la gare. Il est petit mais très bon.",
+        "en": "Tonight, we're going to the restaurant for Julie's birthday. The restaurant is near the station. It's small but very good."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2894,6 +3784,11 @@
       "frequency_rank": 1690,
       "audio": null,
       "example": "La banque ferme à cinq heures.",
+      "example_en": "The bank closes at five o'clock.",
+      "mini_text": {
+        "fr": "Ce matin, Nora est allée à la banque pour ouvrir un compte. Elle a attendu une heure parce qu'il y a beaucoup de monde à la banque le samedi.",
+        "en": "This morning, Nora went to the bank to open an account. She waited an hour because there are a lot of people at the bank on Saturdays."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2912,6 +3807,11 @@
       "frequency_rank": 4100,
       "audio": null,
       "example": "La boulangerie est en face de l'école.",
+      "example_en": "The bakery is across from the school.",
+      "mini_text": {
+        "fr": "Tous les matins, Pierre va à la boulangerie près de chez lui. Hier, il a acheté deux croissants. Cette boulangerie fait le meilleur pain du quartier.",
+        "en": "Every morning, Pierre goes to the bakery near his home. Yesterday, he bought two croissants. This bakery makes the best bread in the neighborhood."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2930,6 +3830,11 @@
       "frequency_rank": 860,
       "audio": null,
       "example": "Il a vendu sa voiture la semaine dernière.",
+      "example_en": "He sold his car last week.",
+      "mini_text": {
+        "fr": "Julien va déménager à Marseille. Il a vendu son canapé et sa table sur Internet. Maintenant, il veut vendre son vélo.",
+        "en": "Julien is going to move to Marseille. He sold his sofa and his table online. Now he wants to sell his bike."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2948,6 +3853,11 @@
       "frequency_rank": 495,
       "audio": null,
       "example": "Le prix de ce pull est raisonnable.",
+      "example_en": "The price of this sweater is reasonable.",
+      "mini_text": {
+        "fr": "Au marché, Lucie regarde le prix des fraises. Le prix est un peu cher, mais les fraises sont belles, donc elle achète une boîte.",
+        "en": "At the market, Lucie looks at the price of the strawberries. The price is a bit high, but the strawberries are nice, so she buys a box."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -2966,6 +3876,11 @@
       "frequency_rank": 3720,
       "audio": null,
       "example": "Je suis allé au supermarché ce matin.",
+      "example_en": "I went to the supermarket this morning.",
+      "mini_text": {
+        "fr": "Samedi dernier, Hélène est allée au supermarché avec ses enfants. Ils ont attendu vingt minutes à la caisse du supermarché.",
+        "en": "Last Saturday, Hélène went to the supermarket with her children. They waited twenty minutes at the supermarket checkout."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": "Je suis allée au supermarché ce matin.",
@@ -2984,6 +3899,11 @@
       "frequency_rank": 3620,
       "audio": null,
       "example": "Le musée est gratuit le dimanche.",
+      "example_en": "The museum is free on Sundays.",
+      "mini_text": {
+        "fr": "Ce week-end, le concert dans le parc est gratuit. Marie va y aller avec ses amis. L'entrée est gratuite, mais les boissons sont chères.",
+        "en": "This weekend, the concert in the park is free. Marie is going to go with her friends. Entry is free, but the drinks are expensive."
+      },
       "feminine": "gratuite",
       "article_f": null,
       "example_f": null,
@@ -3002,6 +3922,11 @@
       "frequency_rank": 3160,
       "audio": null,
       "example": "J'ai dépensé trop d'argent ce mois-ci.",
+      "example_en": "I spent too much money this month.",
+      "mini_text": {
+        "fr": "Hier, Sarah a fait les magasins avec sa sœur. Elle a dépensé cent euros pour des chaussures. Ce mois-ci, elle ne va plus dépenser d'argent !",
+        "en": "Yesterday, Sarah went shopping with her sister. She spent a hundred euros on shoes. This month, she isn't going to spend any more money!"
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3020,6 +3945,11 @@
       "frequency_rank": 1310,
       "audio": null,
       "example": "J'aime beaucoup mon nouveau quartier.",
+      "example_en": "I really like my new neighborhood.",
+      "mini_text": {
+        "fr": "Ali habite dans un quartier calme près du centre. Il y a une boulangerie, un parc et un petit marché. Il adore son quartier.",
+        "en": "Ali lives in a quiet neighborhood near the center. There is a bakery, a park and a small market. He loves his neighborhood."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3038,6 +3968,11 @@
       "frequency_rank": 2480,
       "audio": null,
       "example": "Nous avons visité un musée à Lyon.",
+      "example_en": "We visited a museum in Lyon.",
+      "mini_text": {
+        "fr": "Dimanche, Claire et Paul sont allés au musée du Louvre. Ils ont vu la Joconde. Ce musée est très grand, donc ils vont revenir le mois prochain.",
+        "en": "On Sunday, Claire and Paul went to the Louvre museum. They saw the Mona Lisa. This museum is very big, so they are going to come back next month."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3056,6 +3991,11 @@
       "frequency_rank": 730,
       "audio": null,
       "example": "J'ai choisi une robe pour la fête.",
+      "example_en": "I chose a dress for the party.",
+      "mini_text": {
+        "fr": "Au restaurant, Emma ne sait pas quoi choisir. Finalement, elle a choisi une pizza, et son mari a choisi une salade.",
+        "en": "At the restaurant, Emma doesn't know what to choose. In the end, she chose a pizza, and her husband chose a salad."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3074,6 +4014,16 @@
       "frequency_rank": 2,
       "audio": null,
       "example": "Je suis très content aujourd'hui.",
+      "example_en": "I'm very happy today.",
+      "mini_text": {
+        "fr": "Je m'appelle Lina et je suis étudiante. Ma sœur est infirmière à Lyon. Nous sommes très proches.",
+        "en": "My name is Lina and I am a student. My sister is a nurse in Lyon. We are very close."
+      },
+      "forms": [
+        "suis",
+        "est",
+        "sommes"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": "Je suis très contente aujourd'hui.",
@@ -3092,6 +4042,15 @@
       "frequency_rank": 5,
       "audio": null,
       "example": "J'ai un chat à la maison.",
+      "example_en": "I have a cat at home.",
+      "mini_text": {
+        "fr": "Marc a trente ans. Il a un petit appartement à Nantes. Ses parents ont une maison à la campagne.",
+        "en": "Marc is thirty years old. He has a small apartment in Nantes. His parents have a house in the countryside."
+      },
+      "forms": [
+        "ai",
+        "ont"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3110,6 +4069,22 @@
       "frequency_rank": 22,
       "audio": null,
       "example": "Qu'est-ce que tu fais ce soir ?",
+      "example_en": "What are you doing tonight?",
+      "mini_text": {
+        "fr": "Qu'est-ce que tu fais ce week-end ? Je fais les courses et je fais un gâteau. Mes amis font une fête.",
+        "en": "What are you doing this weekend? I'm doing the shopping and making a cake. My friends are having a party."
+      },
+      "forms": [
+        "fais",
+        "fait",
+        "faisons",
+        "faites",
+        "font",
+        "faisais",
+        "faisait",
+        "ferai",
+        "fera"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3128,6 +4103,26 @@
       "frequency_rank": 27,
       "audio": null,
       "example": "Je vais au marché le samedi.",
+      "example_en": "I go to the market on Saturdays.",
+      "mini_text": {
+        "fr": "Où est-ce que tu vas ce soir ? Je vais chez mon ami. Nous allons au restaurant ensemble.",
+        "en": "Where are you going tonight? I'm going to my friend's place. We're going to the restaurant together."
+      },
+      "forms": [
+        "vais",
+        "vas",
+        "va",
+        "allons",
+        "allez",
+        "vont",
+        "allé",
+        "allée",
+        "allés",
+        "allais",
+        "allait",
+        "irai",
+        "ira"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3146,6 +4141,23 @@
       "frequency_rank": 40,
       "audio": null,
       "example": "Je veux un café, s'il te plaît.",
+      "example_en": "I'd like a coffee, please.",
+      "mini_text": {
+        "fr": "Qu'est-ce que tu veux faire ce soir ? Je veux aller au cinéma. Mes amis veulent rester à la maison.",
+        "en": "What do you want to do tonight? I want to go to the cinema. My friends want to stay at home."
+      },
+      "forms": [
+        "veux",
+        "veut",
+        "voulons",
+        "voulez",
+        "veulent",
+        "voulu",
+        "voulais",
+        "voulait",
+        "voudrais",
+        "voudrait"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3164,6 +4176,23 @@
       "frequency_rank": 30,
       "audio": null,
       "example": "Tu peux m'aider avec ce sac ?",
+      "example_en": "Can you help me with this bag?",
+      "mini_text": {
+        "fr": "Tu peux m'aider, s'il te plaît ? Je ne peux pas porter cette valise seul. Nous pouvons la porter ensemble.",
+        "en": "Can you help me, please? I can't carry this suitcase alone. We can carry it together."
+      },
+      "forms": [
+        "peux",
+        "peut",
+        "pouvons",
+        "pouvez",
+        "peuvent",
+        "pu",
+        "pouvais",
+        "pouvait",
+        "pourrais",
+        "pourrait"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3182,6 +4211,23 @@
       "frequency_rank": 55,
       "audio": null,
       "example": "Tu viens chez moi ce soir ?",
+      "example_en": "Are you coming to my place tonight?",
+      "mini_text": {
+        "fr": "Mon cousin vient de Belgique. Il vient chez nous en juillet. Tu viens aussi ?",
+        "en": "My cousin comes from Belgium. He's coming to our place in July. Are you coming too?"
+      },
+      "forms": [
+        "viens",
+        "vient",
+        "venons",
+        "venez",
+        "viennent",
+        "venu",
+        "venue",
+        "venais",
+        "venait",
+        "viendrai"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3200,6 +4246,15 @@
       "frequency_rank": 45,
       "audio": null,
       "example": "Je vois la mer depuis ma fenêtre.",
+      "example_en": "I can see the sea from my window.",
+      "mini_text": {
+        "fr": "Le samedi, Léa va au parc avec son chien. Elle voit ses amis près du lac. Tu vois le petit bateau ?",
+        "en": "On Saturdays, Léa goes to the park with her dog. She sees her friends near the lake. Do you see the little boat?"
+      },
+      "forms": [
+        "vois",
+        "voit"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3218,6 +4273,14 @@
       "frequency_rank": 35,
       "audio": null,
       "example": "Il dit bonjour à la voisine.",
+      "example_en": "He says hello to the neighbor.",
+      "mini_text": {
+        "fr": "Au café, Paul dit bonjour à la serveuse. Elle dit : « Un café, comme d'habitude ? » Paul répond oui avec un sourire.",
+        "en": "At the café, Paul says hello to the waitress. She says: \"A coffee, as usual?\" Paul says yes with a smile."
+      },
+      "forms": [
+        "dit"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3236,6 +4299,15 @@
       "frequency_rank": 50,
       "audio": null,
       "example": "Je ne sais pas où est la gare.",
+      "example_en": "I don't know where the train station is.",
+      "mini_text": {
+        "fr": "Marie cherche la pharmacie dans une petite ville. Elle demande à un homme, mais il ne sait pas. Et toi, tu sais où est la pharmacie ?",
+        "en": "Marie is looking for the pharmacy in a small town. She asks a man, but he doesn't know. What about you, do you know where the pharmacy is?"
+      },
+      "forms": [
+        "sais",
+        "sait"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3254,6 +4326,11 @@
       "frequency_rank": 120,
       "audio": null,
       "example": "J'aime beaucoup le chocolat noir.",
+      "example_en": "I really like dark chocolate.",
+      "mini_text": {
+        "fr": "J'aime beaucoup la musique. Mon ami aime le sport. Nous aimons tous les deux le cinéma.",
+        "en": "I really like music. My friend likes sport. We both like cinema."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3272,6 +4349,11 @@
       "frequency_rank": 140,
       "audio": null,
       "example": "Je parle un peu français.",
+      "example_en": "I speak a little French.",
+      "mini_text": {
+        "fr": "Est-ce que tu parles anglais ? Moi, je parle anglais et un peu français. Je parle français avec mes amis.",
+        "en": "Do you speak English? Me, I speak English and a little French. I speak French with my friends."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3290,6 +4372,22 @@
       "frequency_rank": 48,
       "audio": null,
       "example": "Je prends le bus pour aller au travail.",
+      "example_en": "I take the bus to go to work.",
+      "mini_text": {
+        "fr": "Le matin, je prends le métro. Mon ami prend son vélo. Nous prenons un café ensemble au travail.",
+        "en": "In the morning, I take the metro. My friend takes his bike. We have a coffee together at work."
+      },
+      "forms": [
+        "prends",
+        "prend",
+        "prenons",
+        "prenez",
+        "prennent",
+        "pris",
+        "prise",
+        "prenais",
+        "prenait"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3308,6 +4406,11 @@
       "frequency_rank": 75,
       "audio": null,
       "example": "Je donne un livre à mon frère.",
+      "example_en": "I give a book to my brother.",
+      "mini_text": {
+        "fr": "Aujourd'hui, c'est l'anniversaire de Tom. Sa sœur lui donne un gâteau au chocolat. Ses parents donnent un vélo rouge.",
+        "en": "Today is Tom's birthday. His sister gives him a chocolate cake. His parents give him a red bike."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3326,6 +4429,11 @@
       "frequency_rank": 80,
       "audio": null,
       "example": "Mon frère est très grand.",
+      "example_en": "My brother is very tall.",
+      "mini_text": {
+        "fr": "Mon frère est très grand. Il habite dans un grand appartement. Sa cuisine est grande aussi.",
+        "en": "My brother is very tall. He lives in a big flat. His kitchen is big too."
+      },
       "feminine": "grande",
       "article_f": null,
       "example_f": null,
@@ -3344,6 +4452,11 @@
       "frequency_rank": 85,
       "audio": null,
       "example": "J'habite dans un petit appartement.",
+      "example_en": "I live in a small apartment.",
+      "mini_text": {
+        "fr": "Ma ville est petite et calme. Il y a un petit marché le samedi. Les rues sont petites et jolies.",
+        "en": "My town is small and quiet. There's a small market on Saturdays. The streets are small and pretty."
+      },
       "feminine": "petite",
       "article_f": null,
       "example_f": null,
@@ -3362,6 +4475,16 @@
       "frequency_rank": 90,
       "audio": null,
       "example": "Ce gâteau est vraiment bon.",
+      "example_en": "This cake is really good.",
+      "mini_text": {
+        "fr": "Ce restaurant est bon et pas cher. La soupe est bonne. Les desserts sont aussi très bons.",
+        "en": "This restaurant is good and not expensive. The soup is good. The desserts are also very good."
+      },
+      "forms": [
+        "bonne",
+        "bonnes",
+        "bons"
+      ],
       "feminine": "bonne",
       "article_f": null,
       "example_f": null,
@@ -3380,6 +4503,17 @@
       "frequency_rank": 110,
       "audio": null,
       "example": "J'ai un nouveau téléphone depuis lundi.",
+      "example_en": "I've had a new phone since Monday.",
+      "mini_text": {
+        "fr": "Il y a un nouveau professeur à l'école. Il a une nouvelle voiture. Les nouveaux élèves l'aiment bien.",
+        "en": "There's a new teacher at the school. He has a new car. The new pupils like him."
+      },
+      "forms": [
+        "nouvelle",
+        "nouvelles",
+        "nouveaux",
+        "nouvel"
+      ],
       "feminine": "nouvelle",
       "article_f": null,
       "example_f": null,
@@ -3398,6 +4532,17 @@
       "frequency_rank": 285,
       "audio": null,
       "example": "C'est une très belle ville.",
+      "example_en": "It's a very beautiful city.",
+      "mini_text": {
+        "fr": "Quel beau jour ! Il fait beau et chaud. Ma ville est belle au soleil.",
+        "en": "What a beautiful day! The weather is nice and warm. My town is beautiful in the sun."
+      },
+      "forms": [
+        "belle",
+        "belles",
+        "beaux",
+        "bel"
+      ],
       "feminine": "belle",
       "article_f": null,
       "example_f": null,
@@ -3416,6 +4561,11 @@
       "frequency_rank": 565,
       "audio": null,
       "example": "Ce café est vraiment mauvais.",
+      "example_en": "This coffee is really bad.",
+      "mini_text": {
+        "fr": "Hier soir, Hugo a essayé un nouveau restaurant. Il a trouvé la pizza mauvaise et le service lent, donc il ne va pas y retourner.",
+        "en": "Last night, Hugo tried a new restaurant. He found the pizza bad and the service slow, so he isn't going to go back."
+      },
       "feminine": "mauvaise",
       "article_f": null,
       "example_f": null,
@@ -3434,6 +4584,11 @@
       "frequency_rank": 300,
       "audio": null,
       "example": "Cet exercice est très facile.",
+      "example_en": "This exercise is very easy.",
+      "mini_text": {
+        "fr": "Le français n'est pas toujours facile. Mais les phrases simples sont faciles. Avec du travail, ça devient facile.",
+        "en": "French isn't always easy. But simple sentences are easy. With work, it becomes easy."
+      },
       "feminine": "facile",
       "article_f": null,
       "example_f": null,
@@ -3452,6 +4607,11 @@
       "frequency_rank": 280,
       "audio": null,
       "example": "C'est une bonne idée pour ce soir.",
+      "example_en": "That's a good idea for tonight.",
+      "mini_text": {
+        "fr": "Pour l'anniversaire de Marie, j'ai une idée. On fait une fête surprise ! C'est une excellente idée.",
+        "en": "For Marie's birthday, I have an idea. Let's throw a surprise party! It's an excellent idea."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3470,6 +4630,11 @@
       "frequency_rank": 240,
       "audio": null,
       "example": "J'ai une question pour le professeur.",
+      "example_en": "I have a question for the teacher.",
+      "mini_text": {
+        "fr": "En classe, Sophie lève la main. Elle a une question pour le professeur. C'est une bonne question, et il répond avec un sourire.",
+        "en": "In class, Sophie raises her hand. She has a question for the teacher. It's a good question, and he answers with a smile."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3488,6 +4653,11 @@
       "frequency_rank": 210,
       "audio": null,
       "example": "Quel est ton nom de famille ?",
+      "example_en": "What's your last name?",
+      "mini_text": {
+        "fr": "Au bureau, une dame demande à Paul : « Quel est votre nom ? » Paul dit son nom et son prénom. Elle écrit son nom sur une carte.",
+        "en": "At the office, a lady asks Paul: \"What is your name?\" Paul gives his last name and his first name. She writes his name on a card."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3506,6 +4676,15 @@
       "frequency_rank": 62,
       "audio": null,
       "example": "J'ai mis les clés sur la table.",
+      "example_en": "I put the keys on the table.",
+      "mini_text": {
+        "fr": "Ce matin, Julie a mis son manteau parce qu'il fait froid. Elle met aussi un bonnet, mais elle a oublié ses gants.",
+        "en": "This morning, Julie put on her coat because it's cold. She also puts on a hat, but she forgot her gloves."
+      },
+      "forms": [
+        "mis",
+        "met"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3524,6 +4703,11 @@
       "frequency_rank": 320,
       "audio": null,
       "example": "Le français est difficile mais intéressant.",
+      "example_en": "French is difficult but interesting.",
+      "mini_text": {
+        "fr": "La grammaire française est parfois difficile. Pour moi, les verbes sont difficiles. Mais je n'abandonne pas !",
+        "en": "French grammar is sometimes difficult. For me, verbs are difficult. But I'm not giving up!"
+      },
       "feminine": "difficile",
       "article_f": null,
       "example_f": null,
@@ -3542,6 +4726,11 @@
       "frequency_rank": 250,
       "audio": null,
       "example": "Ce rendez-vous est très important pour moi.",
+      "example_en": "This appointment is very important to me.",
+      "mini_text": {
+        "fr": "Demain, Karim a un entretien très important. Il va mettre une chemise propre et partir tôt, parce que la ponctualité est importante.",
+        "en": "Tomorrow, Karim has a very important interview. He's going to wear a clean shirt and leave early, because being on time is important."
+      },
       "feminine": "importante",
       "article_f": null,
       "example_f": null,
@@ -3560,6 +4749,11 @@
       "frequency_rank": 260,
       "audio": null,
       "example": "Il y a un problème avec mon ordinateur.",
+      "example_en": "There's a problem with my computer.",
+      "mini_text": {
+        "fr": "Il y a un problème avec le train : il est en retard. Ce n'est pas un gros problème. Je prends le bus.",
+        "en": "There's a problem with the train: it's late. It's not a big problem. I'm taking the bus."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3578,6 +4772,11 @@
       "frequency_rank": 95,
       "audio": null,
       "example": "J'ai trouvé mes clés sous le canapé.",
+      "example_en": "I found my keys under the sofa.",
+      "mini_text": {
+        "fr": "Samedi, Léo a perdu son chat. Il a cherché dans tout le quartier. Finalement, il a trouvé le chat chez la voisine, donc il est très content.",
+        "en": "On Saturday, Léo lost his cat. He looked all over the neighborhood. In the end, he found the cat at the neighbor's house, so he's very happy."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3596,6 +4795,11 @@
       "frequency_rank": 100,
       "audio": null,
       "example": "Je pense souvent à mes vacances.",
+      "example_en": "I often think about my vacation.",
+      "mini_text": {
+        "fr": "Qu'est-ce que tu penses de ce restaurant ? Je pense qu'il est très bon. Je pense souvent à mes vacances.",
+        "en": "What do you think of this restaurant? I think it's very good. I often think about my holidays."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3614,6 +4818,11 @@
       "frequency_rank": 160,
       "audio": null,
       "example": "Je cherche mon portefeuille depuis une heure.",
+      "example_en": "I've been looking for my wallet for an hour.",
+      "mini_text": {
+        "fr": "Je cherche un appartement à Paris. Je cherche sur internet tous les jours. C'est difficile !",
+        "en": "I'm looking for a flat in Paris. I look on the internet every day. It's difficult!"
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3632,6 +4841,11 @@
       "frequency_rank": 230,
       "audio": null,
       "example": "Mon voisin m'a aidé avec les courses.",
+      "example_en": "My neighbor helped me with the groceries.",
+      "mini_text": {
+        "fr": "Hier, Nina a déménagé. Ses amis l'ont aidée avec les cartons, donc elle va les aider aussi le mois prochain.",
+        "en": "Yesterday, Nina moved house. Her friends helped her with the boxes, so she's going to help them too next month."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3650,6 +4864,11 @@
       "frequency_rank": 375,
       "audio": null,
       "example": "Je joue au tennis le samedi.",
+      "example_en": "I play tennis on Saturdays.",
+      "mini_text": {
+        "fr": "Mon frère joue de la guitare. Moi, je joue au tennis. Le samedi, nous jouons aux cartes en famille.",
+        "en": "My brother plays the guitar. Me, I play tennis. On Saturdays, we play cards as a family."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3668,6 +4887,11 @@
       "frequency_rank": 1410,
       "audio": null,
       "example": "Je fais du sport trois fois par semaine.",
+      "example_en": "I do sport three times a week.",
+      "mini_text": {
+        "fr": "Le sport est important pour la santé. Je fais du sport le matin. Mon sport préféré est le tennis.",
+        "en": "Sport is important for your health. I do sport in the morning. My favourite sport is tennis."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3686,6 +4910,11 @@
       "frequency_rank": 1030,
       "audio": null,
       "example": "J'écoute de la musique dans le bus.",
+      "example_en": "I listen to music on the bus.",
+      "mini_text": {
+        "fr": "J'adore la musique. J'écoute de la musique tous les jours. Ma musique préférée, c'est le jazz.",
+        "en": "I love music. I listen to music every day. My favourite music is jazz."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3704,6 +4933,11 @@
       "frequency_rank": 790,
       "audio": null,
       "example": "J'écoute la radio dans la voiture.",
+      "example_en": "I listen to the radio in the car.",
+      "mini_text": {
+        "fr": "Écoute ! C'est ma chanson préférée. J'écoute cette chanson tous les jours. Mes amis écoutent du rap.",
+        "en": "Listen! It's my favourite song. I listen to this song every day. My friends listen to rap."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3722,6 +4956,11 @@
       "frequency_rank": 228,
       "audio": null,
       "example": "Je regarde la télé avec mes parents.",
+      "example_en": "I watch TV with my parents.",
+      "mini_text": {
+        "fr": "Le soir, ma famille regarde un film ensemble. Ma sœur regarde son téléphone. Moi, je regarde par la fenêtre !",
+        "en": "In the evening, my family watches a film together. My sister looks at her phone. Me, I look out of the window!"
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3740,6 +4979,11 @@
       "frequency_rank": 950,
       "audio": null,
       "example": "On regarde un film au cinéma ce soir.",
+      "example_en": "We're watching a movie at the cinema tonight.",
+      "mini_text": {
+        "fr": "Hier soir, j'ai regardé un film français. Le film parle d'une famille à Paris. C'est un beau film.",
+        "en": "Last night, I watched a French film. The film is about a family in Paris. It's a beautiful film."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3758,6 +5002,11 @@
       "frequency_rank": 2420,
       "audio": null,
       "example": "Ma sœur chante très bien.",
+      "example_en": "My sister sings very well.",
+      "mini_text": {
+        "fr": "Le dimanche, Emma chante dans une chorale. Elle chante bien, mais elle n'aime pas chanter seule.",
+        "en": "On Sundays, Emma sings in a choir. She sings well, but she doesn't like singing alone."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3776,6 +5025,11 @@
       "frequency_rank": 2870,
       "audio": null,
       "example": "On danse souvent le samedi soir.",
+      "example_en": "We often dance on Saturday nights.",
+      "mini_text": {
+        "fr": "Samedi dernier, Lucas et Inès sont allés à un mariage. Ils ont dansé toute la nuit, donc ce matin, ils ont mal aux pieds.",
+        "en": "Last Saturday, Lucas and Inès went to a wedding. They danced all night, so this morning their feet hurt."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3794,6 +5048,11 @@
       "frequency_rank": 3950,
       "audio": null,
       "example": "Je nage à la piscine le mardi.",
+      "example_en": "I swim at the pool on Tuesdays.",
+      "mini_text": {
+        "fr": "Cet été, Chloé a appris à nager à la mer. Maintenant, elle nage tous les jours, mais pas quand il y a des vagues.",
+        "en": "This summer, Chloé learned to swim in the sea. Now she swims every day, but not when there are waves."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3812,6 +5071,11 @@
       "frequency_rank": 3070,
       "audio": null,
       "example": "Mon fils joue au foot le mercredi.",
+      "example_en": "My son plays soccer on Wednesdays.",
+      "mini_text": {
+        "fr": "Le samedi, Mehdi joue au foot avec ses amis au parc. Il aime le foot parce que c'est un sport d'équipe.",
+        "en": "On Saturdays, Mehdi plays soccer with his friends at the park. He likes soccer because it's a team sport."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3830,6 +5094,11 @@
       "frequency_rank": 2070,
       "audio": null,
       "example": "Mon ami est très drôle.",
+      "example_en": "My friend is very funny.",
+      "mini_text": {
+        "fr": "Mon oncle Marc raconte toujours des histoires drôles. À table, tout le monde rit. Il est très drôle !",
+        "en": "My uncle Marc always tells funny stories. At the table, everyone laughs. He's very funny!"
+      },
       "feminine": "drôle",
       "article_f": null,
       "example_f": null,
@@ -3848,6 +5117,11 @@
       "frequency_rank": 1170,
       "audio": null,
       "example": "J'ai couru dans le parc ce matin.",
+      "example_en": "I went running in the park this morning.",
+      "mini_text": {
+        "fr": "Ce matin, Anna a couru au bord du lac. Elle court trois fois par semaine, parce qu'elle va faire un marathon en mai.",
+        "en": "This morning, Anna went running by the lake. She runs three times a week because she's going to do a marathon in May."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3866,6 +5140,11 @@
       "frequency_rank": 595,
       "audio": null,
       "example": "Ce jeu vidéo est vraiment génial.",
+      "example_en": "This video game is really great.",
+      "mini_text": {
+        "fr": "Le soir, Théo joue à un jeu vidéo avec son frère. Hier, il a gagné, mais sa mère a dit : « Les jeux, c'est fini, au lit ! »",
+        "en": "In the evening, Théo plays a video game with his brother. Yesterday he won, but his mother said: \"No more games, off to bed!\""
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3884,6 +5163,11 @@
       "frequency_rank": 3250,
       "audio": null,
       "example": "Je suis allé à la piscine hier.",
+      "example_en": "I went to the pool yesterday.",
+      "mini_text": {
+        "fr": "Le mercredi, Sarah va à la piscine avec sa fille. Hier, la piscine a fermé à midi, donc elles sont allées au parc.",
+        "en": "On Wednesdays, Sarah goes to the pool with her daughter. Yesterday the pool closed at noon, so they went to the park."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": "Je suis allée à la piscine hier.",
@@ -3902,6 +5186,11 @@
       "frequency_rank": 1740,
       "audio": null,
       "example": "On a regardé le match à la télé.",
+      "example_en": "We watched the match on TV.",
+      "mini_text": {
+        "fr": "Dimanche, Paul a invité ses amis pour regarder le match. Le match a fini tard et son équipe a perdu, mais ils ont mangé une bonne pizza.",
+        "en": "On Sunday, Paul invited his friends over to watch the match. The match ended late and his team lost, but they ate a good pizza."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3920,6 +5209,11 @@
       "frequency_rank": 2560,
       "audio": null,
       "example": "Le chocolat est mon dessert préféré.",
+      "example_en": "Chocolate is my favorite dessert.",
+      "mini_text": {
+        "fr": "Ma couleur préférée, c'est le bleu. Mon plat préféré, ce sont les pâtes, donc ma mère en a fait hier pour mon anniversaire.",
+        "en": "My favorite color is blue. My favorite dish is pasta, so my mother made some yesterday for my birthday."
+      },
       "feminine": "préférée",
       "article_f": null,
       "example_f": null,
@@ -3938,6 +5232,11 @@
       "frequency_rank": 4050,
       "audio": null,
       "example": "Ma fille dessine des animaux pour le plaisir.",
+      "example_en": "My daughter draws animals for fun.",
+      "mini_text": {
+        "fr": "Quand il pleut, Jules dessine dans sa chambre. Hier, il a dessiné un chat pour sa grand-mère, et elle a mis le dessin sur le frigo.",
+        "en": "When it rains, Jules draws in his room. Yesterday he drew a cat for his grandmother, and she put the drawing on the fridge."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3956,6 +5255,11 @@
       "frequency_rank": 650,
       "audio": null,
       "example": "Notre équipe a gagné le match hier.",
+      "example_en": "Our team won the match yesterday.",
+      "mini_text": {
+        "fr": "Samedi, l'équipe de Léa a gagné le tournoi de volley. Elles vont fêter ça ce soir, parce qu'elles ne gagnent pas souvent.",
+        "en": "On Saturday, Léa's team won the volleyball tournament. They're going to celebrate tonight, because they don't win often."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3980,6 +5284,11 @@
       "frequency_rank": 315,
       "audio": null,
       "example": "J'ai mal à la tête ce soir.",
+      "example_en": "I have a headache this evening.",
+      "mini_text": {
+        "fr": "Après le travail, Hugo a mal à la tête. Il ne regarde pas la télé. Il boit un verre d'eau et il va au lit tôt.",
+        "en": "After work, Hugo has a headache. He doesn't watch TV. He drinks a glass of water and goes to bed early."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -3998,6 +5307,11 @@
       "frequency_rank": 295,
       "audio": null,
       "example": "J'ai un stylo dans la main.",
+      "example_en": "I have a pen in my hand.",
+      "mini_text": {
+        "fr": "Avant le dîner, Lina lave ses mains. Elle a un verre dans la main gauche et une assiette dans la main droite.",
+        "en": "Before dinner, Lina washes her hands. She has a glass in her left hand and a plate in her right hand."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4016,6 +5330,11 @@
       "frequency_rank": 1440,
       "audio": null,
       "example": "Je suis malade depuis lundi.",
+      "example_en": "I've been sick since Monday.",
+      "mini_text": {
+        "fr": "Aujourd'hui, Paul est malade. Il ne va pas au travail et il reste au lit. Sa femme est malade aussi !",
+        "en": "Today Paul is sick. He isn't going to work and he's staying in bed. His wife is sick too!"
+      },
       "feminine": "malade",
       "article_f": null,
       "example_f": null,
@@ -4034,6 +5353,11 @@
       "frequency_rank": 1330,
       "audio": null,
       "example": "Je vais chez le médecin demain.",
+      "example_en": "I'm going to the doctor's tomorrow.",
+      "mini_text": {
+        "fr": "Clara a de la fièvre. Elle téléphone au médecin. Le médecin est très gentil et il arrive à six heures.",
+        "en": "Clara has a fever. She calls the doctor. The doctor is very kind and he arrives at six o'clock."
+      },
       "feminine": "médecin",
       "article_f": "la",
       "example_f": null,
@@ -4052,6 +5376,11 @@
       "frequency_rank": 830,
       "audio": null,
       "example": "Je vais au travail à pied.",
+      "example_en": "I walk to work.",
+      "mini_text": {
+        "fr": "Le dimanche, Marc va au marché à pied. Le soir, il a mal aux pieds, parce que le marché est loin.",
+        "en": "On Sundays, Marc walks to the market. In the evening his feet hurt, because the market is far away."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4070,6 +5399,11 @@
       "frequency_rank": 870,
       "audio": null,
       "example": "Le bébé dort dans mes bras.",
+      "example_en": "The baby is sleeping in my arms.",
+      "mini_text": {
+        "fr": "Paul porte un grand carton dans ses bras. Le carton est très lourd et Paul a mal au bras.",
+        "en": "Paul is carrying a big box in his arms. The box is very heavy and Paul's arm hurts."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4088,6 +5422,11 @@
       "frequency_rank": 1220,
       "audio": null,
       "example": "J'ai mal au dos après le sport.",
+      "example_en": "My back hurts after sports.",
+      "mini_text": {
+        "fr": "Hier, Nadia a porté des cartons toute la journée. Ce matin, elle a mal au dos, donc elle va rester sur le canapé.",
+        "en": "Yesterday, Nadia carried boxes all day. This morning her back hurts, so she's going to stay on the sofa."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4106,6 +5445,11 @@
       "frequency_rank": 3820,
       "audio": null,
       "example": "La pharmacie est à côté de la banque.",
+      "example_en": "The pharmacy is next to the bank.",
+      "mini_text": {
+        "fr": "Dimanche, Marc a mal à la gorge. Il est allé à la pharmacie, mais la pharmacie est fermée le dimanche.",
+        "en": "On Sunday, Marc has a sore throat. He went to the pharmacy, but the pharmacy is closed on Sundays."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4124,6 +5468,11 @@
       "frequency_rank": 2140,
       "audio": null,
       "example": "J'ai mal aux dents ce matin.",
+      "example_en": "My teeth hurt this morning.",
+      "mini_text": {
+        "fr": "Le soir, Tom ne veut pas se brosser les dents. Sa mère dit : « Les dents, c'est important ! »",
+        "en": "In the evening, Tom doesn't want to brush his teeth. His mother says: \"Teeth are important!\""
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4142,6 +5491,14 @@
       "frequency_rank": 570,
       "audio": null,
       "example": "J'ai quelque chose dans l'œil.",
+      "example_en": "I have something in my eye.",
+      "mini_text": {
+        "fr": "Ce matin, Inès a mal à l'œil droit. Elle a les yeux rouges, donc elle va appeler le médecin.",
+        "en": "This morning, Inès's right eye hurts. Her eyes are red, so she's going to call the doctor."
+      },
+      "forms": [
+        "yeux"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4160,6 +5517,11 @@
       "frequency_rank": 1090,
       "audio": null,
       "example": "Le sport est bon pour la santé.",
+      "example_en": "Sport is good for your health.",
+      "mini_text": {
+        "fr": "Depuis janvier, Martin fait du vélo tous les jours. Il a arrêté de fumer parce que sa santé est importante pour lui.",
+        "en": "Since January, Martin has been cycling every day. He quit smoking because his health is important to him."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4178,6 +5540,11 @@
       "frequency_rank": 385,
       "audio": null,
       "example": "Le corps a besoin de sommeil.",
+      "example_en": "The body needs sleep.",
+      "mini_text": {
+        "fr": "Après le marathon, Julien a mal partout. Son corps est très fatigué, donc il va dormir toute la journée.",
+        "en": "After the marathon, Julien hurts all over. His body is very tired, so he's going to sleep all day."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4196,6 +5563,11 @@
       "frequency_rank": 1370,
       "audio": null,
       "example": "Mon grand-père est à l'hôpital.",
+      "example_en": "My grandfather is in the hospital.",
+      "mini_text": {
+        "fr": "Hier, Sophie est tombée de vélo. Elle est allée à l'hôpital, mais ce n'est pas grave : elle va rentrer ce soir.",
+        "en": "Yesterday, Sophie fell off her bike. She went to the hospital, but it's not serious: she's going home tonight."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4214,6 +5586,14 @@
       "frequency_rank": 2980,
       "audio": null,
       "example": "Je vais me reposer ce week-end.",
+      "example_en": "I'm going to rest this weekend.",
+      "mini_text": {
+        "fr": "Cette semaine, Léa a beaucoup travaillé. Samedi, elle va se reposer à la maison, parce qu'elle est très fatiguée.",
+        "en": "This week, Léa worked a lot. On Saturday she's going to rest at home, because she's very tired."
+      },
+      "forms": [
+        "reposer"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4232,6 +5612,11 @@
       "frequency_rank": 5600,
       "audio": null,
       "example": "J'ai toussé toute la nuit.",
+      "example_en": "I coughed all night.",
+      "mini_text": {
+        "fr": "Cette semaine, Léo tousse beaucoup. Hier soir, il a toussé jusqu'à minuit, donc il va voir le médecin demain.",
+        "en": "This week, Léo is coughing a lot. Last night he coughed until midnight, so he's going to see the doctor tomorrow."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4250,6 +5635,11 @@
       "frequency_rank": 2470,
       "audio": null,
       "example": "Je prends un médicament contre la toux.",
+      "example_en": "I'm taking a medicine for my cough.",
+      "mini_text": {
+        "fr": "Hier, Sara est allée chez le médecin. Il lui a donné un médicament, et elle prend ce médicament après chaque repas.",
+        "en": "Yesterday, Sara went to the doctor. He gave her a medicine, and she takes this medicine after every meal."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4268,6 +5658,11 @@
       "frequency_rank": 4700,
       "audio": null,
       "example": "Mon père a maigri cet été.",
+      "example_en": "My father lost weight this summer.",
+      "mini_text": {
+        "fr": "Depuis mars, Julie mange moins de sucre et elle marche beaucoup. Elle a maigri de cinq kilos, donc elle est très contente.",
+        "en": "Since March, Julie has been eating less sugar and walking a lot. She has lost five kilos, so she's very happy."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4286,6 +5681,11 @@
       "frequency_rank": 98,
       "audio": null,
       "example": "Il fait beau temps aujourd'hui.",
+      "example_en": "The weather is nice today.",
+      "mini_text": {
+        "fr": "Quel temps fait-il ? Aujourd'hui, il fait mauvais. Je n'ai pas le temps de sortir de toute façon.",
+        "en": "What's the weather like? Today, the weather is bad. I don't have time to go out anyway."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4310,6 +5710,11 @@
       "frequency_rank": 1040,
       "audio": null,
       "example": "Le soleil est très fort aujourd'hui.",
+      "example_en": "The sun is very strong today.",
+      "mini_text": {
+        "fr": "Aujourd'hui, il y a du soleil. Le soleil est chaud. Les enfants jouent au soleil.",
+        "en": "Today, it's sunny. The sun is hot. The children play in the sun."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4328,6 +5733,11 @@
       "frequency_rank": 1840,
       "audio": null,
       "example": "Je n'aime pas la pluie.",
+      "example_en": "I don't like the rain.",
+      "mini_text": {
+        "fr": "En Bretagne, il y a souvent de la pluie. J'aime le bruit de la pluie. Sous la pluie, je lis un livre.",
+        "en": "In Brittany, there's often rain. I like the sound of the rain. In the rain, I read a book."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4346,6 +5756,14 @@
       "frequency_rank": 2610,
       "audio": null,
       "example": "Il pleut beaucoup en novembre.",
+      "example_en": "It rains a lot in November.",
+      "mini_text": {
+        "fr": "Aujourd'hui, il pleut à Paris. Marie ne sort pas : elle reste à la maison avec un livre. Il pleut souvent en automne.",
+        "en": "Today it's raining in Paris. Marie isn't going out: she's staying at home with a book. It often rains in the fall."
+      },
+      "forms": [
+        "pleut"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4364,6 +5782,11 @@
       "frequency_rank": 960,
       "audio": null,
       "example": "L'eau de la mer est froide.",
+      "example_en": "The sea water is cold.",
+      "mini_text": {
+        "fr": "En hiver, il fait froid au Canada. L'eau du lac est froide. J'aime le froid quand il y a de la neige.",
+        "en": "In winter, it's cold in Canada. The water in the lake is cold. I like the cold when there's snow."
+      },
       "feminine": "froide",
       "article_f": null,
       "example_f": null,
@@ -4382,6 +5805,11 @@
       "frequency_rank": 1160,
       "audio": null,
       "example": "Il fait très chaud en août.",
+      "example_en": "It's very hot in August.",
+      "mini_text": {
+        "fr": "En été, il fait chaud à Paris. Je bois de l'eau froide, pas un thé chaud. La soupe chaude, c'est pour l'hiver !",
+        "en": "In summer, it's hot in Paris. I drink cold water, not a hot tea. Hot soup is for winter!"
+      },
       "feminine": "chaude",
       "article_f": null,
       "example_f": null,
@@ -4400,6 +5828,11 @@
       "frequency_rank": 2410,
       "audio": null,
       "example": "Il y a de la neige sur la montagne.",
+      "example_en": "There's snow on the mountain.",
+      "mini_text": {
+        "fr": "En décembre, Lucas est allé dans les Alpes. Il y a eu beaucoup de neige, donc il a fait du ski tous les jours.",
+        "en": "In December, Lucas went to the Alps. There was a lot of snow, so he went skiing every day."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4418,6 +5851,11 @@
       "frequency_rank": 800,
       "audio": null,
       "example": "Ma mère travaille dans le jardin.",
+      "example_en": "My mother is working in the garden.",
+      "mini_text": {
+        "fr": "Le dimanche, Paul mange dans le jardin avec sa famille. Il y a des tomates et des fleurs dans son jardin.",
+        "en": "On Sundays, Paul eats in the garden with his family. There are tomatoes and flowers in his garden."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4436,6 +5874,11 @@
       "frequency_rank": 990,
       "audio": null,
       "example": "Il y a un grand arbre devant la maison.",
+      "example_en": "There's a big tree in front of the house.",
+      "mini_text": {
+        "fr": "Dans le parc, il y a un très vieil arbre. Les enfants jouent sous l'arbre l'après-midi.",
+        "en": "In the park there is a very old tree. The children play under the tree in the afternoon."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4454,6 +5897,11 @@
       "frequency_rank": 1300,
       "audio": null,
       "example": "J'achète des fleurs pour ma mère.",
+      "example_en": "I'm buying flowers for my mother.",
+      "mini_text": {
+        "fr": "Le samedi, Anne va au marché. Elle achète des fleurs jaunes pour sa table. Les fleurs sentent bon.",
+        "en": "On Saturdays, Anne goes to the market. She buys yellow flowers for her table. The flowers smell nice."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4472,6 +5920,11 @@
       "frequency_rank": 455,
       "audio": null,
       "example": "En été, je vais à la plage.",
+      "example_en": "In summer, I go to the beach.",
+      "mini_text": {
+        "fr": "L'été, Nicolas ne travaille pas. Il va à la mer avec ses enfants. Ils aiment l'été parce qu'il fait chaud.",
+        "en": "In the summer, Nicolas doesn't work. He goes to the seaside with his children. They love summer because it's hot."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4496,6 +5949,11 @@
       "frequency_rank": 1505,
       "audio": null,
       "example": "Il fait froid en hiver.",
+      "example_en": "It's cold in winter.",
+      "mini_text": {
+        "fr": "En hiver, il fait nuit tôt. Le soir, Claire boit un chocolat chaud devant la télé. Elle adore l'hiver.",
+        "en": "In winter, it gets dark early. In the evening, Claire drinks a hot chocolate in front of the TV. She loves winter."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4514,6 +5972,11 @@
       "frequency_rank": 1270,
       "audio": null,
       "example": "Nous sommes allés à la montagne en février.",
+      "example_en": "We went to the mountains in February.",
+      "mini_text": {
+        "fr": "L'été dernier, Paul et Lina ont marché dans la montagne pendant trois jours. Ils ont dormi dans un petit chalet, mais il a fait froid.",
+        "en": "Last summer, Paul and Lina hiked in the mountains for three days. They slept in a little chalet, but it was cold."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4532,6 +5995,11 @@
       "frequency_rank": 4900,
       "audio": null,
       "example": "Il a neigé toute la nuit.",
+      "example_en": "It snowed all night.",
+      "mini_text": {
+        "fr": "Ce matin, il a neigé à Lyon. Les enfants sont contents, donc ils vont faire un bonhomme de neige après l'école.",
+        "en": "This morning it snowed in Lyon. The children are happy, so they're going to build a snowman after school."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4550,6 +6018,11 @@
       "frequency_rank": 1015,
       "audio": null,
       "example": "Il y a beaucoup d'étoiles dans le ciel.",
+      "example_en": "There are lots of stars in the sky.",
+      "mini_text": {
+        "fr": "Hier, il a plu et le ciel est resté gris. Ce soir, le ciel est clair, donc Emma va regarder les étoiles sur son balcon.",
+        "en": "Yesterday it rained and the sky stayed gray. Tonight the sky is clear, so Emma is going to look at the stars from her balcony."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4568,6 +6041,11 @@
       "frequency_rank": 2930,
       "audio": null,
       "example": "Il y a beaucoup de nuages aujourd'hui.",
+      "example_en": "There are a lot of clouds today.",
+      "mini_text": {
+        "fr": "Ce matin, il y a des nuages noirs au-dessus de la ville. Karim a pris son parapluie, parce qu'il va sûrement pleuvoir.",
+        "en": "This morning there are dark clouds over the city. Karim took his umbrella, because it's probably going to rain."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4586,6 +6064,11 @@
       "frequency_rank": 3520,
       "audio": null,
       "example": "Le soleil a brillé tout l'après-midi.",
+      "example_en": "The sun shone all afternoon.",
+      "mini_text": {
+        "fr": "Ce matin, il a plu, mais à midi le soleil brille. Léa va au parc parce que la mer brille sous le soleil.",
+        "en": "This morning it rained, but at noon the sun is shining. Léa goes to the park because the sea is shining in the sun."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4604,6 +6087,14 @@
       "frequency_rank": 2830,
       "audio": null,
       "example": "Je me suis promené au bord de la mer.",
+      "example_en": "I went for a walk by the sea.",
+      "mini_text": {
+        "fr": "Dimanche, Paul s'est promené dans la forêt avec son chien. Demain, il va se promener au bord du lac.",
+        "en": "On Sunday, Paul went for a walk in the forest with his dog. Tomorrow, he is going to go for a walk by the lake."
+      },
+      "forms": [
+        "promené"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": "Je me suis promenée au bord de la mer.",
@@ -4622,6 +6113,11 @@
       "frequency_rank": 1960,
       "audio": null,
       "example": "J'achète des vêtements pour l'hiver.",
+      "example_en": "I'm buying clothes for the winter.",
+      "mini_text": {
+        "fr": "Il fait froid ce matin. Sophie cherche un vêtement chaud dans son armoire. Ses vêtements d'été sont dans une boîte.",
+        "en": "It's cold this morning. Sophie is looking for something warm to wear in her wardrobe. Her summer clothes are in a box."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4640,6 +6136,11 @@
       "frequency_rank": 3310,
       "audio": null,
       "example": "Mon pantalon est trop long.",
+      "example_en": "My trousers are too long.",
+      "mini_text": {
+        "fr": "Marc cherche un pantalon noir pour le travail. Au magasin, il y a un pantalon bleu. Il n'est pas cher.",
+        "en": "Marc is looking for black trousers for work. At the shop, there are blue trousers. They aren't expensive."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4658,6 +6159,11 @@
       "frequency_rank": 3020,
       "audio": null,
       "example": "Mon père porte une chemise pour le travail.",
+      "example_en": "My father wears a shirt for work.",
+      "mini_text": {
+        "fr": "Le lundi, Thomas porte une chemise blanche au bureau. Le week-end, il ne met pas de chemise. Il aime les t-shirts.",
+        "en": "On Mondays, Thomas wears a white shirt at the office. At the weekend, he doesn't put on a shirt. He likes T-shirts."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4676,6 +6182,11 @@
       "frequency_rank": 2160,
       "audio": null,
       "example": "Cette robe rouge est très jolie.",
+      "example_en": "This red dress is very pretty.",
+      "mini_text": {
+        "fr": "Ce soir, Julie va à une fête. Elle met sa robe verte. Sa mère dit : « Ta robe est belle ! »",
+        "en": "Tonight, Julie is going to a party. She puts on her green dress. Her mother says: \"Your dress is beautiful!\""
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4694,6 +6205,11 @@
       "frequency_rank": 2340,
       "audio": null,
       "example": "Mes chaussures sont sous le lit.",
+      "example_en": "My shoes are under the bed.",
+      "mini_text": {
+        "fr": "Il pleut aujourd'hui. Hugo cherche ses chaussures noires dans l'entrée. Ses chaussures blanches ne sont pas pour la pluie.",
+        "en": "It's raining today. Hugo is looking for his black shoes in the hallway. His white shoes aren't for the rain."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4712,6 +6228,11 @@
       "frequency_rank": 305,
       "audio": null,
       "example": "Je porte un pull quand il fait froid.",
+      "example_en": "I wear a sweater when it's cold.",
+      "mini_text": {
+        "fr": "Aujourd'hui, il fait chaud à Nice. Emma porte une robe légère et des sandales. Son frère porte un grand sac pour la plage.",
+        "en": "Today it's hot in Nice. Emma is wearing a light dress and sandals. Her brother is carrying a big bag for the beach."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4730,6 +6251,11 @@
       "frequency_rank": 4250,
       "audio": null,
       "example": "Ce pull est chaud et doux.",
+      "example_en": "This sweater is warm and soft.",
+      "mini_text": {
+        "fr": "En hiver, Nina porte un gros pull bleu. Le matin, il fait froid à la maison. Elle a trois pulls dans son armoire.",
+        "en": "In winter, Nina wears a big blue sweater. In the morning, it's cold at home. She has three sweaters in her wardrobe."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4748,6 +6274,11 @@
       "frequency_rank": 1460,
       "audio": null,
       "example": "Tu as une très jolie robe.",
+      "example_en": "You have a very pretty dress.",
+      "mini_text": {
+        "fr": "Léa habite dans une jolie maison près de la mer. Son jardin est joli au printemps. Il y a des fleurs partout.",
+        "en": "Léa lives in a pretty house near the sea. Her garden is pretty in spring. There are flowers everywhere."
+      },
       "feminine": "jolie",
       "article_f": null,
       "example_f": null,
@@ -4766,6 +6297,11 @@
       "frequency_rank": 3080,
       "audio": null,
       "example": "Je mets mon manteau pour sortir.",
+      "example_en": "I put on my coat to go out.",
+      "mini_text": {
+        "fr": "Hier, il a neigé à Paris, donc Karim a mis son gros manteau. Au bureau, il a oublié son manteau sur une chaise.",
+        "en": "Yesterday it snowed in Paris, so Karim put on his thick coat. At the office, he forgot his coat on a chair."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4784,6 +6320,11 @@
       "frequency_rank": 1280,
       "audio": null,
       "example": "Mon téléphone est dans mon sac.",
+      "example_en": "My phone is in my bag.",
+      "mini_text": {
+        "fr": "Claire a un grand sac pour l'école. Dans son sac, il y a des livres et une pomme. Où est son stylo ?",
+        "en": "Claire has a big bag for school. In her bag, there are books and an apple. Where is her pen?"
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4802,6 +6343,11 @@
       "frequency_rank": 740,
       "audio": null,
       "example": "J'ai essayé ce pantalon au magasin.",
+      "example_en": "I tried on these trousers at the shop.",
+      "mini_text": {
+        "fr": "Samedi, Inès est allée au magasin. Elle a essayé trois robes, mais aucune n'est à sa taille. Demain, elle va essayer un autre magasin.",
+        "en": "On Saturday, Inès went to the shop. She tried on three dresses, but none of them is her size. Tomorrow, she is going to try another shop."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4820,6 +6366,11 @@
       "frequency_rank": 1530,
       "audio": null,
       "example": "Ce pull n'est pas à ma taille.",
+      "example_en": "This sweater isn't my size.",
+      "mini_text": {
+        "fr": "Au magasin, Lucas a trouvé une belle chemise, mais ce n'est pas sa taille. Il demande au vendeur : « Vous avez une taille plus grande ? »",
+        "en": "At the shop, Lucas found a nice shirt, but it isn't his size. He asks the salesperson: \"Do you have a bigger size?\""
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4838,6 +6389,11 @@
       "frequency_rank": 352,
       "audio": null,
       "example": "Je vais changer de chemise avant la fête.",
+      "example_en": "I'm going to change my shirt before the party.",
+      "mini_text": {
+        "fr": "Il a plu ce matin, donc Sarah a changé de chaussures au bureau. Ce soir, elle va changer de robe pour aller au restaurant.",
+        "en": "It rained this morning, so Sarah changed her shoes at the office. Tonight, she is going to change her dress to go to the restaurant."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4856,6 +6412,11 @@
       "frequency_rank": 3760,
       "audio": null,
       "example": "Mon grand-père porte toujours un chapeau.",
+      "example_en": "My grandfather always wears a hat.",
+      "mini_text": {
+        "fr": "Cet été, Paul a acheté un grand chapeau pour la plage. Le soleil est fort, donc il porte son chapeau tous les jours.",
+        "en": "This summer, Paul bought a big hat for the beach. The sun is strong, so he wears his hat every day."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4874,6 +6435,11 @@
       "frequency_rank": 2240,
       "audio": null,
       "example": "Ma sœur aime beaucoup la mode.",
+      "example_en": "My sister really loves fashion.",
+      "mini_text": {
+        "fr": "Ma cousine Chloé adore la mode. Elle a fait ses études à Paris, et elle va travailler pour une maison de mode.",
+        "en": "My cousin Chloé loves fashion. She studied in Paris, and she is going to work for a fashion house."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4892,6 +6458,11 @@
       "frequency_rank": 4420,
       "audio": null,
       "example": "Tu es très élégant ce soir.",
+      "example_en": "You look very elegant tonight.",
+      "mini_text": {
+        "fr": "Samedi, Hugo est allé au mariage de sa sœur. Il a mis un costume noir, donc il est très élégant. Sa sœur est élégante aussi.",
+        "en": "On Saturday, Hugo went to his sister's wedding. He put on a black suit, so he looks very elegant. His sister is elegant too."
+      },
       "feminine": "élégante",
       "article_f": null,
       "example_f": null,
@@ -4910,6 +6481,11 @@
       "frequency_rank": 2020,
       "audio": null,
       "example": "Cette jupe est trop courte.",
+      "example_en": "This skirt is too short.",
+      "mini_text": {
+        "fr": "Il fait chaud, donc Marie a mis une jupe courte. Son frère a les cheveux courts parce qu'il est allé chez le coiffeur hier.",
+        "en": "It's hot, so Marie put on a short skirt. Her brother has short hair because he went to the hairdresser yesterday."
+      },
       "feminine": "courte",
       "article_f": null,
       "example_f": null,
@@ -4928,6 +6504,11 @@
       "frequency_rank": 2880,
       "audio": null,
       "example": "J'ai enlevé mes chaussures à l'entrée.",
+      "example_en": "I took off my shoes at the entrance.",
+      "mini_text": {
+        "fr": "Quand Ali arrive chez sa grand-mère, il enlève toujours ses chaussures. Il fait chaud, donc il va enlever son pull aussi.",
+        "en": "When Ali arrives at his grandmother's, he always takes off his shoes. It's hot, so he is going to take off his sweater too."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4946,6 +6527,11 @@
       "frequency_rank": 505,
       "audio": null,
       "example": "Je vais au travail en voiture.",
+      "example_en": "I go to work by car.",
+      "mini_text": {
+        "fr": "Mon père a une vieille voiture rouge. Il prend la voiture pour aller au travail. Moi, je préfère le vélo.",
+        "en": "My father has an old red car. He takes the car to go to work. Me, I prefer the bike."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4964,6 +6550,11 @@
       "frequency_rank": 2490,
       "audio": null,
       "example": "Je prends le bus tous les matins.",
+      "example_en": "I take the bus every morning.",
+      "mini_text": {
+        "fr": "Le bus numéro 5 va à la gare. Le matin, le bus est plein. Je lis un livre dans le bus.",
+        "en": "The number 5 bus goes to the station. In the morning, the bus is full. I read a book on the bus."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -4982,6 +6573,11 @@
       "frequency_rank": 780,
       "audio": null,
       "example": "Le train part à huit heures.",
+      "example_en": "The train leaves at eight o'clock.",
+      "mini_text": {
+        "fr": "J'ai pris le train pour aller à Lille. Le train était rapide. Dans le train, j'ai lu un livre.",
+        "en": "I took the train to go to Lille. The train was fast. On the train, I read a book."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5000,6 +6596,11 @@
       "frequency_rank": 3140,
       "audio": null,
       "example": "Je prends le métro pour aller au bureau.",
+      "example_en": "I take the metro to go to the office.",
+      "mini_text": {
+        "fr": "Le matin, Karim prend le métro à huit heures. Il y a beaucoup de monde dans le métro. Il lit un livre.",
+        "en": "In the morning, Karim takes the metro at eight o'clock. There are a lot of people on the metro. He reads a book."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5018,6 +6619,11 @@
       "frequency_rank": 2680,
       "audio": null,
       "example": "Je vais à l'école à vélo.",
+      "example_en": "I go to school by bike.",
+      "mini_text": {
+        "fr": "Le samedi, Lucie fait du vélo avec son père. Ils vont au parc. Son vélo est bleu et très rapide.",
+        "en": "On Saturdays, Lucie goes cycling with her father. They go to the park. Her bike is blue and very fast."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5036,6 +6642,11 @@
       "frequency_rank": 1630,
       "audio": null,
       "example": "La gare est loin de chez moi.",
+      "example_en": "The train station is far from my house.",
+      "mini_text": {
+        "fr": "La gare est au centre-ville. Mon train part de la gare à neuf heures. J'arrive à la gare en avance.",
+        "en": "The station is in the town centre. My train leaves from the station at nine o'clock. I arrive at the station early."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5054,6 +6665,11 @@
       "frequency_rank": 1065,
       "audio": null,
       "example": "Je prends l'avion pour aller à Rome.",
+      "example_en": "I'm flying to Rome.",
+      "mini_text": {
+        "fr": "Cet été, Marc va en Espagne en avion. Il n'aime pas beaucoup l'avion. Le voyage dure deux heures.",
+        "en": "This summer, Marc is going to Spain by plane. He doesn't really like planes. The trip takes two hours."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5072,6 +6688,11 @@
       "frequency_rank": 1620,
       "audio": null,
       "example": "J'ai conduit pendant trois heures.",
+      "example_en": "I drove for three hours.",
+      "mini_text": {
+        "fr": "Samedi, Julien a conduit jusqu'à la mer avec ses amis. Demain, sa sœur va conduire parce qu'il est fatigué.",
+        "en": "On Saturday, Julien drove all the way to the sea with his friends. Tomorrow, his sister is going to drive because he is tired."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5090,6 +6711,11 @@
       "frequency_rank": 2860,
       "audio": null,
       "example": "Nous sommes arrivés à l'aéroport en retard.",
+      "example_en": "We arrived at the airport late.",
+      "mini_text": {
+        "fr": "Hier, Sophie est allée à l'aéroport en taxi. Son avion est parti à midi, donc elle est arrivée à l'aéroport très tôt.",
+        "en": "Yesterday, Sophie went to the airport by taxi. Her plane left at noon, so she arrived at the airport very early."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5108,6 +6734,11 @@
       "frequency_rank": 475,
       "audio": null,
       "example": "Elle est descendue du train à Lyon.",
+      "example_en": "She got off the train in Lyon.",
+      "mini_text": {
+        "fr": "Ce matin, Léo a pris le bus pour aller au travail. Il est descendu devant la poste, mais demain il va descendre à la gare.",
+        "en": "This morning, Léo took the bus to go to work. He got off in front of the post office, but tomorrow he is going to get off at the station."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5126,6 +6757,11 @@
       "frequency_rank": 515,
       "audio": null,
       "example": "Je monte dans le bus devant la gare.",
+      "example_en": "I get on the bus in front of the station.",
+      "mini_text": {
+        "fr": "Le matin, Anna monte dans le train à sept heures. Le soir, elle monte les escaliers jusqu'à son appartement. Il n'y a pas d'ascenseur.",
+        "en": "In the morning, Anna gets on the train at seven o'clock. In the evening, she goes up the stairs to her flat. There is no lift."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5144,6 +6780,11 @@
       "frequency_rank": 1760,
       "audio": null,
       "example": "Ce train est très rapide.",
+      "example_en": "This train is very fast.",
+      "mini_text": {
+        "fr": "Hier, Nora a pris le TGV pour aller à Marseille. Ce train est très rapide, donc elle est arrivée en trois heures. Elle adore les trains rapides.",
+        "en": "Yesterday, Nora took the TGV to go to Marseille. This train is very fast, so she arrived in three hours. She loves fast trains."
+      },
       "feminine": "rapide",
       "article_f": null,
       "example_f": null,
@@ -5162,6 +6803,11 @@
       "frequency_rank": 3240,
       "audio": null,
       "example": "Le bus est très lent le matin.",
+      "example_en": "The bus is very slow in the morning.",
+      "mini_text": {
+        "fr": "Ce matin, le bus de Paul a été très lent. Il est arrivé en retard, donc demain il va prendre son vélo. Le vélo n'est pas lent !",
+        "en": "This morning, Paul's bus was very slow. He arrived late, so tomorrow he is going to take his bike. The bike isn't slow!"
+      },
       "feminine": "lente",
       "article_f": null,
       "example_f": null,
@@ -5180,6 +6826,11 @@
       "frequency_rank": 655,
       "audio": null,
       "example": "La route est longue jusqu'à la mer.",
+      "example_en": "The road to the sea is long.",
+      "mini_text": {
+        "fr": "Samedi, nous sommes partis à la mer en voiture. La route a été longue, mais très belle. Sur la route, on a mangé dans un petit village.",
+        "en": "On Saturday, we went to the sea by car. The road was long, but very beautiful. On the way, we ate in a small village."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5198,6 +6849,11 @@
       "frequency_rank": 2290,
       "audio": null,
       "example": "J'ai eu mon permis de conduire l'année dernière.",
+      "example_en": "I got my driving license last year.",
+      "mini_text": {
+        "fr": "Thomas a vingt ans. Il a passé son permis la semaine dernière, mais il n'a pas réussi. Il va repasser son permis en juin.",
+        "en": "Thomas is twenty. He took his driving test last week, but he didn't pass. He is going to take his driving test again in June."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5216,6 +6872,11 @@
       "frequency_rank": 1110,
       "audio": null,
       "example": "Mon téléphone est sur la table.",
+      "example_en": "My phone is on the table.",
+      "mini_text": {
+        "fr": "Marie cherche son téléphone dans la cuisine. Il n'est pas sur la table. Où est son téléphone ? Il est dans son sac !",
+        "en": "Marie is looking for her phone in the kitchen. It isn't on the table. Where is her phone? It's in her bag!"
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5234,6 +6895,11 @@
       "frequency_rank": 1830,
       "audio": null,
       "example": "J'ai un nouveau message de ma sœur.",
+      "example_en": "I have a new message from my sister.",
+      "mini_text": {
+        "fr": "Le soir, Paul lit ses messages sur son téléphone. Il y a un message de son ami Hugo. Hugo veut aller au cinéma.",
+        "en": "In the evening, Paul reads his messages on his phone. There is a message from his friend Hugo. Hugo wants to go to the cinema."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5252,6 +6918,11 @@
       "frequency_rank": 318,
       "audio": null,
       "example": "J'appelle ma mère tous les dimanches.",
+      "example_en": "I call my mother every Sunday.",
+      "mini_text": {
+        "fr": "Le dimanche, Sarah appelle sa grand-mère. Elles parlent pendant une heure. Sa grand-mère aime beaucoup ces appels.",
+        "en": "On Sundays, Sarah calls her grandmother. They talk for an hour. Her grandmother really loves these calls."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5270,6 +6941,11 @@
       "frequency_rank": 1770,
       "audio": null,
       "example": "Je prends une photo de la tour Eiffel.",
+      "example_en": "I'm taking a photo of the Eiffel Tower.",
+      "mini_text": {
+        "fr": "Pendant les vacances, Léa prend beaucoup de photos. Ce soir, elle montre une photo de la plage à sa mère.",
+        "en": "During the holidays, Léa takes a lot of photos. Tonight, she shows her mother a photo of the beach."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5288,6 +6964,11 @@
       "frequency_rank": 2190,
       "audio": null,
       "example": "J'ai un ordinateur pour le travail.",
+      "example_en": "I have a computer for work.",
+      "mini_text": {
+        "fr": "Mon frère a un nouvel ordinateur. Il travaille sur son ordinateur tous les soirs. Il joue aussi à des jeux vidéo.",
+        "en": "My brother has a new computer. He works on his computer every evening. He also plays video games."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5306,6 +6987,18 @@
       "frequency_rank": 615,
       "audio": null,
       "example": "J'envoie une photo à mon ami.",
+      "example_en": "I'm sending a photo to my friend.",
+      "mini_text": {
+        "fr": "Hier, j'ai envoyé une carte postale à ma grand-mère. Elle m'envoie souvent des lettres. J'adore ça.",
+        "en": "Yesterday, I sent a postcard to my grandmother. She often sends me letters. I love that."
+      },
+      "forms": [
+        "envoie",
+        "envoies",
+        "envoient",
+        "enverrai",
+        "enverra"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5324,6 +7017,11 @@
       "frequency_rank": 485,
       "audio": null,
       "example": "Je réponds à ton message ce soir.",
+      "example_en": "I'll answer your message tonight.",
+      "mini_text": {
+        "fr": "Le matin, Nadia lit ses messages au café. Elle répond à son patron et à ses amis. Elle ne répond pas aux publicités.",
+        "en": "In the morning, Nadia reads her messages at the café. She answers her boss and her friends. She doesn't answer the ads."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5342,6 +7040,11 @@
       "frequency_rank": 2360,
       "audio": null,
       "example": "Je regarde une vidéo sur mon téléphone.",
+      "example_en": "I'm watching a video on my phone.",
+      "mini_text": {
+        "fr": "Hier soir, Lucas a regardé une vidéo drôle sur son téléphone. Il a envoyé la vidéo à sa sœur, et elle a beaucoup ri.",
+        "en": "Last night, Lucas watched a funny video on his phone. He sent the video to his sister, and she laughed a lot."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5360,6 +7063,11 @@
       "frequency_rank": 535,
       "audio": null,
       "example": "J'utilise mon ordinateur pour travailler.",
+      "example_en": "I use my computer to work.",
+      "mini_text": {
+        "fr": "Au bureau, Nina utilise un ordinateur. À la maison, elle utilise son téléphone pour lire les nouvelles.",
+        "en": "At the office, Nina uses a computer. At home, she uses her phone to read the news."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5378,6 +7086,11 @@
       "frequency_rank": 1940,
       "audio": null,
       "example": "Quel est ton numéro de téléphone ?",
+      "example_en": "What's your phone number?",
+      "mini_text": {
+        "fr": "Emma habite au numéro douze de la rue Victor Hugo. Elle donne son numéro de téléphone à sa nouvelle amie.",
+        "en": "Emma lives at number twelve on Victor Hugo Street. She gives her phone number to her new friend."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5396,6 +7109,11 @@
       "frequency_rank": 2040,
       "audio": null,
       "example": "L'écran de mon téléphone est cassé.",
+      "example_en": "My phone screen is broken.",
+      "mini_text": {
+        "fr": "Hier, Tom a fait tomber son téléphone et l'écran est cassé. Il va acheter un nouvel écran parce qu'il ne peut pas lire ses messages.",
+        "en": "Yesterday, Tom dropped his phone and the screen is broken. He is going to buy a new screen because he can't read his messages."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5414,6 +7132,11 @@
       "frequency_rank": 2460,
       "audio": null,
       "example": "J'utilise une application pour apprendre le français.",
+      "example_en": "I use an app to learn French.",
+      "mini_text": {
+        "fr": "Ma mère a téléchargé une application pour faire du sport. Elle utilise cette application tous les matins, donc elle a plus d'énergie.",
+        "en": "My mother downloaded an app for exercising. She uses this app every morning, so she has more energy."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5432,6 +7155,11 @@
       "frequency_rank": 5100,
       "audio": null,
       "example": "J'ai téléchargé une nouvelle application.",
+      "example_en": "I downloaded a new app.",
+      "mini_text": {
+        "fr": "Hier soir, Marc a téléchargé un film pour le voyage. Dans l'avion, il n'y a pas de réseau. Il va aussi télécharger de la musique.",
+        "en": "Last night, Marc downloaded a film for the trip. On the plane, there is no signal. He is also going to download some music."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5450,6 +7178,11 @@
       "frequency_rank": 3580,
       "audio": null,
       "example": "Mon téléphone est cassé depuis hier.",
+      "example_en": "My phone has been broken since yesterday.",
+      "mini_text": {
+        "fr": "Ce matin, Julie a fait tomber sa tasse, et maintenant elle est cassée. Son vélo est cassé aussi, donc elle va prendre le bus.",
+        "en": "This morning, Julie dropped her cup, and now it's broken. Her bike is broken too, so she is going to take the bus."
+      },
       "feminine": "cassée",
       "article_f": null,
       "example_f": null,
@@ -5468,6 +7201,11 @@
       "frequency_rank": 1590,
       "audio": null,
       "example": "Il n'y a pas de réseau dans ce village.",
+      "example_en": "There's no signal in this village.",
+      "mini_text": {
+        "fr": "Paul passe le week-end à la montagne. Il n'y a pas de réseau dans son chalet, donc il va appeler sa mère du village. Là-bas, le réseau est bon.",
+        "en": "Paul is spending the weekend in the mountains. There is no signal in his chalet, so he is going to call his mother from the village. There, the signal is good."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5486,6 +7224,11 @@
       "frequency_rank": 4150,
       "audio": null,
       "example": "Ma batterie est presque vide.",
+      "example_en": "My battery is almost empty.",
+      "mini_text": {
+        "fr": "Hier, Léa a oublié son chargeur. À midi, sa batterie est tombée à zéro, donc elle n'a pas pu appeler son ami. Ce soir, elle va recharger la batterie.",
+        "en": "Yesterday, Léa forgot her charger. At noon, her battery went down to zero, so she couldn't call her friend. Tonight, she is going to recharge the battery."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5504,6 +7247,11 @@
       "frequency_rank": 1595,
       "audio": null,
       "example": "Ma sœur a une voiture rouge.",
+      "example_en": "My sister has a red car.",
+      "mini_text": {
+        "fr": "Paul a un vélo rouge. Il porte aussi un pull rouge. Sa couleur préférée est le rouge !",
+        "en": "Paul has a red bike. He is also wearing a red sweater. His favourite colour is red!"
+      },
       "feminine": "rouge",
       "article_f": null,
       "example_f": null,
@@ -5522,6 +7270,11 @@
       "frequency_rank": 1610,
       "audio": null,
       "example": "Le ciel est bleu aujourd'hui.",
+      "example_en": "The sky is blue today.",
+      "mini_text": {
+        "fr": "Lucie a les yeux bleus. Aujourd'hui, elle porte une robe bleue et un sac blanc.",
+        "en": "Lucie has blue eyes. Today, she is wearing a blue dress and a white bag."
+      },
       "feminine": "bleue",
       "article_f": null,
       "example_f": null,
@@ -5540,6 +7293,11 @@
       "frequency_rank": 2010,
       "audio": null,
       "example": "La porte de ma maison est verte.",
+      "example_en": "The door of my house is green.",
+      "mini_text": {
+        "fr": "Au printemps, les arbres du parc sont verts. Anna aime la couleur verte. Sa chambre est verte aussi.",
+        "en": "In spring, the trees in the park are green. Anna likes the colour green. Her bedroom is green too."
+      },
       "feminine": "verte",
       "article_f": null,
       "example_f": null,
@@ -5558,6 +7316,11 @@
       "frequency_rank": 1045,
       "audio": null,
       "example": "Je bois mon café noir le matin.",
+      "example_en": "I drink my coffee black in the morning.",
+      "mini_text": {
+        "fr": "Ce soir, Marc porte un pantalon noir et une chemise noire. Il va au restaurant avec ses amis.",
+        "en": "Tonight, Marc is wearing black trousers and a black shirt. He is going to the restaurant with his friends."
+      },
       "feminine": "noire",
       "article_f": null,
       "example_f": null,
@@ -5576,6 +7339,11 @@
       "frequency_rank": 1205,
       "audio": null,
       "example": "Elle porte une chemise blanche.",
+      "example_en": "She is wearing a white shirt.",
+      "mini_text": {
+        "fr": "En hiver, la montagne est blanche. Pierre a un chat blanc. Il dort sur le lit toute la journée.",
+        "en": "In winter, the mountain is white. Pierre has a white cat. It sleeps on the bed all day."
+      },
       "feminine": "blanche",
       "article_f": null,
       "example_f": null,
@@ -5594,6 +7362,11 @@
       "frequency_rank": 2580,
       "audio": null,
       "example": "Mon vélo est jaune et noir.",
+      "example_en": "My bike is yellow and black.",
+      "mini_text": {
+        "fr": "Hier, Sophie a acheté des fleurs jaunes au marché. Elle va peindre sa cuisine en jaune parce qu'elle aime cette couleur.",
+        "en": "Yesterday, Sophie bought yellow flowers at the market. She is going to paint her kitchen yellow because she likes this colour."
+      },
       "feminine": "jaune",
       "article_f": null,
       "example_f": null,
@@ -5612,6 +7385,11 @@
       "frequency_rank": 1340,
       "audio": null,
       "example": "J'aime la couleur de ta voiture.",
+      "example_en": "I like the colour of your car.",
+      "mini_text": {
+        "fr": "Quelle est ta couleur préférée ? Pour Hugo, c'est le bleu. Il a un sac et un vélo de la même couleur.",
+        "en": "What is your favourite colour? For Hugo, it's blue. He has a bag and a bike of the same colour."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5630,6 +7408,11 @@
       "frequency_rank": 2230,
       "audio": null,
       "example": "Le ciel est gris en hiver.",
+      "example_en": "The sky is gray in winter.",
+      "mini_text": {
+        "fr": "Aujourd'hui, le ciel est gris à Paris. Il pleut. Claire porte un manteau gris et une écharpe grise.",
+        "en": "Today, the sky is grey in Paris. It's raining. Claire is wearing a grey coat and a grey scarf."
+      },
       "feminine": "grise",
       "article_f": null,
       "example_f": null,
@@ -5648,6 +7431,11 @@
       "frequency_rank": 635,
       "audio": null,
       "example": "Mon fils compte jusqu'à cent.",
+      "example_en": "My son counts up to a hundred.",
+      "mini_text": {
+        "fr": "Léo a cinq ans. Il compte ses jouets dans sa chambre. Il ne compte pas encore jusqu'à cent.",
+        "en": "Léo is five years old. He counts his toys in his bedroom. He can't count to a hundred yet."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5666,6 +7454,11 @@
       "frequency_rank": 2690,
       "audio": null,
       "example": "Ma fille adore les vêtements roses.",
+      "example_en": "My daughter loves pink clothes.",
+      "mini_text": {
+        "fr": "Pour son anniversaire, Emma a reçu un vélo rose. Elle va porter sa robe rose à la fête samedi.",
+        "en": "For her birthday, Emma got a pink bike. She is going to wear her pink dress to the party on Saturday."
+      },
       "feminine": "rose",
       "article_f": null,
       "example_f": null,
@@ -5690,6 +7483,11 @@
       "frequency_rank": 4620,
       "audio": null,
       "example": "Mon chien a les yeux marron.",
+      "example_en": "My dog has brown eyes.",
+      "mini_text": {
+        "fr": "Hier, Thomas a acheté des chaussures marron au marché. Ce soir, il va mettre son pull marron et ses nouvelles chaussures.",
+        "en": "Yesterday, Thomas bought brown shoes at the market. Tonight, he is going to put on his brown sweater and his new shoes."
+      },
       "feminine": "marron",
       "article_f": null,
       "example_f": null,
@@ -5708,6 +7506,11 @@
       "frequency_rank": 645,
       "audio": null,
       "example": "Il y a un grand nombre de touristes en été.",
+      "example_en": "There are a large number of tourists in summer.",
+      "mini_text": {
+        "fr": "Samedi, il y a eu un grand nombre de personnes au concert. Paul a compté le nombre de billets vendus : mille !",
+        "en": "On Saturday, there were a large number of people at the concert. Paul counted the number of tickets sold: a thousand!"
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5726,6 +7529,11 @@
       "frequency_rank": 1910,
       "audio": null,
       "example": "J'ai mangé la moitié de la pizza.",
+      "example_en": "I ate half of the pizza.",
+      "mini_text": {
+        "fr": "Ce matin, Inès a mangé la moitié de son gâteau. Elle va donner l'autre moitié à son frère ce soir.",
+        "en": "This morning, Inès ate half of her cake. She is going to give the other half to her brother tonight."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5744,6 +7552,11 @@
       "frequency_rank": 3460,
       "audio": null,
       "example": "J'ai invité une dizaine d'amis.",
+      "example_en": "I invited about ten friends.",
+      "mini_text": {
+        "fr": "Pour son anniversaire, Marc a invité une dizaine d'amis. Ils ont mangé une dizaine de pizzas !",
+        "en": "For his birthday, Marc invited about ten friends. They ate about ten pizzas!"
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5762,6 +7575,14 @@
       "frequency_rank": 4980,
       "audio": null,
       "example": "On a peint la cuisine en jaune.",
+      "example_en": "We painted the kitchen yellow.",
+      "mini_text": {
+        "fr": "Le week-end dernier, Hugo a peint sa chambre en bleu. Demain, il va peindre la porte du salon avec son père.",
+        "en": "Last weekend, Hugo painted his bedroom blue. Tomorrow, he is going to paint the living room door with his father."
+      },
+      "forms": [
+        "peint"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5780,6 +7601,11 @@
       "frequency_rank": 6200,
       "audio": null,
       "example": "Les enfants colorient des dessins à l'école.",
+      "example_en": "The children color drawings at school.",
+      "mini_text": {
+        "fr": "Hier, la petite Zoé a colorié un dessin de chat. Demain, elle va colorier un chien, parce qu'elle adore les animaux.",
+        "en": "Yesterday, little Zoé coloured a drawing of a cat. Tomorrow, she is going to colour a dog, because she loves animals."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5798,6 +7624,11 @@
       "frequency_rank": 1501,
       "audio": null,
       "example": "J'ai très faim après le sport.",
+      "example_en": "I'm very hungry after sport.",
+      "mini_text": {
+        "fr": "Il est midi et Paul a faim. Il va à la boulangerie. Sa sœur n'a pas faim. Elle boit un café.",
+        "en": "It's noon and Paul is hungry. He goes to the bakery. His sister isn't hungry. She drinks a coffee."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5816,6 +7647,11 @@
       "frequency_rank": 61,
       "audio": null,
       "example": "Je n'ai pas le temps ce soir.",
+      "example_en": "I don't have time tonight.",
+      "mini_text": {
+        "fr": "Quel temps fait-il ? Aujourd'hui, il fait mauvais. Je n'ai pas le temps de sortir de toute façon.",
+        "en": "What's the weather like? Today, the weather is bad. I don't have time to go out anyway."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5840,6 +7676,11 @@
       "frequency_rank": 151,
       "audio": null,
       "example": "Cette femme travaille à la banque.",
+      "example_en": "This woman works at the bank.",
+      "mini_text": {
+        "fr": "Dans le bus, une femme lit un livre. À côté d'elle, une autre femme parle au téléphone. Il y a beaucoup de bruit.",
+        "en": "On the bus, a woman is reading a book. Next to her, another woman is talking on the phone. There is a lot of noise."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5864,6 +7705,11 @@
       "frequency_rank": 301,
       "audio": null,
       "example": "Une petite fille joue dans le jardin.",
+      "example_en": "A little girl is playing in the garden.",
+      "mini_text": {
+        "fr": "Marie a deux enfants : un garçon et une fille. Sa fille a six ans. Elle va à l'école près de la maison.",
+        "en": "Marie has two children: a boy and a girl. Her daughter is six. She goes to the school near the house."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5888,6 +7734,11 @@
       "frequency_rank": 4001,
       "audio": null,
       "example": "Le garçon nous apporte deux cafés.",
+      "example_en": "The waiter brings us two coffees.",
+      "mini_text": {
+        "fr": "Hier soir, nous sommes allés au restaurant. Le garçon a été très gentil, donc on a laissé un pourboire. Après, j'ai demandé l'addition au garçon.",
+        "en": "Last night, we went to the restaurant. The waiter was very nice, so we left a tip. Afterwards, I asked the waiter for the bill."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5912,6 +7763,11 @@
       "frequency_rank": 1201,
       "audio": null,
       "example": "J'ai de bons souvenirs de cet été.",
+      "example_en": "I have good memories of that summer.",
+      "mini_text": {
+        "fr": "Cet été, Léa est partie en Italie avec ses amis. Elle a de bons souvenirs de Rome, et ce voyage reste un très beau souvenir pour elle.",
+        "en": "This summer, Léa went to Italy with her friends. She has good memories of Rome, and this trip is still a very lovely memory for her."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5936,6 +7792,11 @@
       "frequency_rank": 2201,
       "audio": null,
       "example": "Elle gagne bien sa vie comme médecin.",
+      "example_en": "She earns a good living as a doctor.",
+      "mini_text": {
+        "fr": "Karim travaille dans un restaurant. Il ne gagne pas beaucoup, mais il aime son travail. L'année prochaine, il va gagner plus parce qu'il va devenir chef.",
+        "en": "Karim works in a restaurant. He doesn't earn much, but he likes his job. Next year, he is going to earn more because he is going to become a chef."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5960,6 +7821,11 @@
       "frequency_rank": 3301,
       "audio": null,
       "example": "Il y a des roses dans le jardin.",
+      "example_en": "There are roses in the garden.",
+      "mini_text": {
+        "fr": "Dimanche, Hugo est allé au marché avec sa femme. Il a acheté des roses rouges parce que c'est son anniversaire. Elle adore les roses.",
+        "en": "On Sunday, Hugo went to the market with his wife. He bought red roses because it's her birthday. She loves roses."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -5984,6 +7850,11 @@
       "frequency_rank": 1301,
       "audio": null,
       "example": "On va au cinéma samedi soir.",
+      "example_en": "We're going to the cinema on Saturday night.",
+      "mini_text": {
+        "fr": "Le samedi, Léa et son ami vont au cinéma. Ils aiment les films drôles. Après le cinéma, ils mangent une pizza.",
+        "en": "On Saturdays, Léa and her friend go to the cinema. They like funny films. After the cinema, they eat a pizza."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -6002,6 +7873,11 @@
       "frequency_rank": 1101,
       "audio": null,
       "example": "Mon chien dort sur le canapé.",
+      "example_en": "My dog sleeps on the sofa.",
+      "mini_text": {
+        "fr": "Paul a un petit chien noir. Le matin, il promène son chien au parc. Le chien adore jouer avec les enfants.",
+        "en": "Paul has a little black dog. In the morning, he walks his dog in the park. The dog loves playing with the children."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -6020,6 +7896,15 @@
       "frequency_rank": 501,
       "audio": null,
       "example": "Je vis avec mes parents à Lyon.",
+      "example_en": "I live with my parents in Lyon.",
+      "mini_text": {
+        "fr": "Sophie vit à Paris avec son chat. Ses parents vivent à la campagne. Elle aime vivre en ville.",
+        "en": "Sophie lives in Paris with her cat. Her parents live in the countryside. She likes living in the city."
+      },
+      "forms": [
+        "vis",
+        "vit"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -6038,6 +7923,11 @@
       "frequency_rank": 2001,
       "audio": null,
       "example": "J'embrasse ma grand-mère le dimanche.",
+      "example_en": "I kiss my grandmother on Sundays.",
+      "mini_text": {
+        "fr": "Le matin, Lucas embrasse ses enfants avant le travail. Le dimanche, toute la famille va chez Mamie, et tout le monde embrasse Mamie.",
+        "en": "In the morning, Lucas kisses his children before work. On Sundays, the whole family goes to Grandma's, and everyone gives Grandma a kiss."
+      },
       "feminine": null,
       "article_f": null,
       "example_f": null,
@@ -6056,6 +7946,90 @@
       "frequency_rank": 901,
       "audio": null,
       "example": "Je marche trente minutes tous les jours.",
+      "example_en": "I walk for thirty minutes every day.",
+      "mini_text": {
+        "fr": "Claire n'a pas de voiture. Elle marche jusqu'au bureau tous les matins. Elle aime marcher dans le parc.",
+        "en": "Claire doesn't have a car. She walks to the office every morning. She likes walking in the park."
+      },
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
+    },
+    {
+      "id": "w0331",
+      "french": "vacances",
+      "english": "holidays, vacation",
+      "pos": "noun",
+      "gender": "f",
+      "article": "les",
+      "level": 2,
+      "theme": "travel",
+      "frequency_rank": 950,
+      "audio": null,
+      "example": "Pendant les vacances, je vais à la mer.",
+      "example_en": "During the holidays, I go to the seaside.",
+      "mini_text": {
+        "fr": "Les vacances commencent la semaine prochaine. Cette année, je vais passer mes vacances à la montagne. J'ai besoin de vacances !",
+        "en": "The holidays start next week. This year, I'm going to spend my holidays in the mountains. I need a holiday!"
+      },
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
+    },
+    {
+      "id": "w0332",
+      "french": "projet",
+      "english": "project, plan",
+      "pos": "noun",
+      "gender": "m",
+      "article": "le",
+      "level": 2,
+      "theme": "work-school",
+      "frequency_rank": 750,
+      "audio": null,
+      "example": "Nous avons un nouveau projet au travail.",
+      "example_en": "We have a new project at work.",
+      "mini_text": {
+        "fr": "Mon équipe travaille sur un grand projet. Le projet va durer six mois. C'est un projet intéressant.",
+        "en": "My team is working on a big project. The project is going to last six months. It's an interesting project."
+      },
+      "feminine": null,
+      "article_f": null,
+      "example_f": null,
+      "note": null,
+      "other_meanings": []
+    },
+    {
+      "id": "w0333",
+      "french": "sortir",
+      "english": "to go out",
+      "pos": "verb",
+      "gender": null,
+      "article": null,
+      "level": 2,
+      "theme": "hobbies-sport",
+      "frequency_rank": 330,
+      "audio": null,
+      "example": "Ce soir, je sors avec mes amis.",
+      "example_en": "Tonight, I'm going out with my friends.",
+      "mini_text": {
+        "fr": "Le samedi soir, nous sortons en ville. Hier, je suis sorti avec ma sœur. Nous sommes rentrés tard.",
+        "en": "On Saturday evenings, we go out in town. Yesterday, I went out with my sister. We came back late."
+      },
+      "forms": [
+        "sors",
+        "sort",
+        "sortons",
+        "sortez",
+        "sortent",
+        "sorti",
+        "sortie",
+        "sortis"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,
