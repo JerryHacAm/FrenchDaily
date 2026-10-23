@@ -1,5 +1,5 @@
 {
-  "_note": "Draft by Claude. Jerry to review. 5 levels, 15 templates each (9 statements + 6 questions). fits_pos lists which target-word types the template works with. examples maps a part of speech to [sample word, example sentence, English translation]. The English translations are a Claude draft (2026-10-23). Goal: everyday French a normal person uses, not literary French.",
+  "_note": "Draft by Claude. Jerry to review. 5 levels, 15 templates each (9 statements + 6 questions). fits_pos lists which target-word types the template works with. examples maps a part of speech to [sample word, example sentence, English translation]. The English translations are a Claude draft (2026-10-23), reviewed by Jerry (2026-10-24). Goal: everyday French a normal person uses, not literary French.",
   "structures": [
     { "id": "s101", "type": "statement", "level": 1, "fits_pos": ["noun", "verb"], "pattern": "Subject + verb + object + place",
       "examples": { "noun": ["pomme", "Elle achète une pomme au marché.", "She buys an apple at the market."], "verb": ["acheter", "Elle achète du pain au marché.", "She buys bread at the market."] } },

@@ -9,8 +9,6 @@ Going live, step by step: docs/SETUP.md.
 
 ## Next up
 - [ ] Review the Claude drafts in data/words.json: example_en and mini_text for ~310 words, forms — @jerry
-- [ ] Review the English translations in data/structures.json (Claude draft, 135 sentences) — @jerry
-- [ ] grammar_rules.json: "verb-avoir" and "avoir-expressions" both cover age; keep age in one — @jerry
 - [ ] Review the merged data/grammar_rules.json (quantrungvu's tag names, Jerry's explanations) and tests/sentences.json — @jerry
 - [ ] Review data/roleplay_scenarios.json and prompts/coach.md, prompts/roleplay.md — @jerry
 - [ ] Confirm the open decisions built as recommended (README section 12: completed word, review words count, local day) — @jerry
@@ -29,7 +27,7 @@ Going live, step by step: docs/SETUP.md.
 
 ## Done
 - [x] Learner gender in the profile, sent to the AI check; female examples on the word page; tests j31 + j31b (2026-10-24, Jerry)
-- [x] English translations for all structure examples (Claude draft); fix step shows "Your fix" next to the answer (2026-10-24, Jerry)
+- [x] English translations for all structure examples (Claude draft, reviewed by Jerry); fix step shows "Your fix" next to the answer (2026-10-24, Jerry)
 - [x] AI grader: 9 tests pointed at the wrong template, fixed (full run 65/67, then the 2 left were fixed and pass) (2026-10-24, Jerry)
 - [x] Invite-only access (ALLOWED_EMAILS), separate Sign in / Create account screens, Next.js 16.4.3 security update (2026-10-24, Jerry)
 - [x] MVP: phases A–F of the roadmap built and tested locally (2026-10-10, quantrungvu) — branch feature/mvp-quantrungvu
