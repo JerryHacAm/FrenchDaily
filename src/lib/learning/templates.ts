@@ -68,6 +68,12 @@ export function exampleFor(s: Structure, pos: Pos): string | null {
   return ex ? ex[1] : null;
 }
 
+/** English translation of exampleFor(). */
+export function exampleEnFor(s: Structure, pos: Pos): string | null {
+  const ex = s.examples[pos] ?? Object.values(s.examples)[0];
+  return ex ? ex[2] : null;
+}
+
 /** First words of the example, as a "sentence starter" for level 1. */
 export function starterFor(s: Structure, pos: Pos): string | null {
   const ex = exampleFor(s, pos);

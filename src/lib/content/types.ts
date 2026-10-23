@@ -27,6 +27,8 @@ export type Word = {
   frequency_rank: number;
   audio: string | null;
   example: string;
+  /** Same example for a female learner, only where "je" needs agreement (Je suis fatiguée). */
+  example_f?: string | null;
   example_en: string;
   /** Short text (2–3 sentences) shown before writing: read → notice → write. */
   mini_text: { fr: string; en: string };
@@ -40,8 +42,8 @@ export type Structure = {
   level: number;
   fits_pos: Pos[];
   pattern: string;
-  /** For each part of speech: [sample word, example sentence]. */
-  examples: Partial<Record<Pos, [string, string]>>;
+  /** For each part of speech: [sample word, example sentence, English translation]. */
+  examples: Partial<Record<Pos, [string, string, string]>>;
 };
 
 export type GrammarRule = {

@@ -101,6 +101,7 @@ export function submitSentence(deps: Deps, input: { sentence: string }) {
     const result = await callAi(deps, "check", () =>
       deps.ai.checkSentence({
         level: state.profile.level,
+        learnerGender: state.profile.gender ?? null,
         word,
         itemType: item.type,
         templatePattern: template?.pattern ?? "",

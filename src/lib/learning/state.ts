@@ -78,6 +78,8 @@ export type ItemProgress = {
   /** Feedback from the first accepted-structure check (what we learn from). */
   firstFeedback: Feedback | null;
   fixTries: number;
+  /** What the learner typed in the fix step (optional: older saves don't have it). */
+  fixAttempt?: string | null;
   retypeTries: number;
   fixOutcome: "self" | "shown" | "skipped" | null;
   sentenceId: string | null;
@@ -151,6 +153,8 @@ export type LearnerState = {
   profile: {
     name: string;
     level: number;
+    /** Who is speaking when they write "je" (README 3.2a). Optional: older saves don't have it. */
+    gender?: LearnerGender;
     timezone: string;
     onboarded: boolean;
     createdAt: string;
@@ -173,6 +177,9 @@ export type LearnerState = {
   notices: string[];
 };
 
+/** null = not set: the AI accepts both forms. */
+export type LearnerGender = "male" | "female" | null;
+
 export const MAX_RECENT_ITEMS = 100;
 export const MAX_RECENT_TEMPLATES = 20;
 export const DAILY_KEEP_DAYS = 90;
@@ -183,6 +190,7 @@ export function createInitialState(nowIso: string, timezone: string): LearnerSta
     profile: {
       name: "",
       level: 1,
+      gender: null,
       timezone,
       onboarded: false,
       createdAt: nowIso,

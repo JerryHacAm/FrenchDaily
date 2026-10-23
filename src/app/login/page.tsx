@@ -5,7 +5,7 @@ import { LoginForm } from "./LoginForm";
 export default function LoginPage() {
   return (
     <div className="mx-auto max-w-sm">
-      <PageTitle title="Sign in" subtitle="French Daily: write real French every day." />
+      <PageTitle title="French Daily" subtitle="Write real French every day." />
       {STORAGE === "supabase" ? (
         <Card>
           <LoginForm />

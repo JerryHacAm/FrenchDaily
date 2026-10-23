@@ -15,11 +15,14 @@ export function FeedbackCard({
   sentence,
   feedback,
   sentenceId,
+  fixAttempt,
   mode,
 }: {
   sentence: string;
   feedback: Feedback;
   sentenceId?: string | null;
+  /** The learner's fix try, if it was still wrong. */
+  fixAttempt?: string | null;
   mode: "hints" | "full";
 }) {
   const correct = feedback.is_correct;
@@ -56,6 +59,11 @@ export function FeedbackCard({
           <p className="mt-1 text-sm text-muted">
             You wrote: <Highlight text={sentence} parts={feedback.mistakes.map((m) => m.original)} tone="bad" />
           </p>
+          {fixAttempt && (
+            <p className="mt-1 text-sm text-muted">
+              Your fix: <span className="fr">{fixAttempt}</span>
+            </p>
+          )}
           <ul className="mt-3 space-y-2">
             {feedback.mistakes.map((m, i) => (
               <li key={i} className="rounded-lg border border-line bg-surface px-3 py-2 text-sm">

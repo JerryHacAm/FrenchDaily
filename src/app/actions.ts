@@ -91,6 +91,7 @@ export async function saveProfileAction(_prev: unknown, formData: FormData) {
     saveProfile(d, {
       name: str(formData.get("name"), 40),
       level: Number(formData.get("level")),
+      gender: str(formData.get("gender"), 10),
       timezone: str(formData.get("timezone"), 64) || undefined,
     }),
   );

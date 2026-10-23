@@ -16,6 +16,12 @@ export function useTimezone(): string {
   return tz;
 }
 
+const GENDERS = [
+  { value: "male", label: "I'm a man (fatigué)" },
+  { value: "female", label: "I'm a woman (fatiguée)" },
+  { value: "", label: "Don't check this" },
+];
+
 const LEVELS = [
   { value: 1, label: "Level 1", hint: "I'm starting from zero, or I know a few words." },
   { value: 2, label: "Level 2", hint: "I can write simple sentences in the present." },
@@ -27,10 +33,12 @@ const LEVELS = [
 export function ProfileForm({
   initialName = "",
   initialLevel = 1,
+  initialGender = null,
   submitLabel,
 }: {
   initialName?: string;
   initialLevel?: number;
+  initialGender?: "male" | "female" | null;
   submitLabel: string;
 }) {
   const router = useRouter();
@@ -54,6 +62,21 @@ export function ProfileForm({
           className="mt-1 block w-full rounded-xl border border-line bg-surface px-3 py-2.5"
         />
       </label>
+      <fieldset>
+        <legend className="text-sm font-medium">When you write about yourself</legend>
+        <p className="text-sm text-muted">
+          French changes some words for who is speaking: a man writes <span className="fr">je suis fatigué</span>, a woman{" "}
+          <span className="fr">je suis fatiguée</span>.
+        </p>
+        <div className="mt-2 flex flex-wrap gap-2">
+          {GENDERS.map((g) => (
+            <label key={g.value} className="flex cursor-pointer items-center gap-2 rounded-xl border border-line px-3 py-2 has-[:checked]:border-accent has-[:checked]:bg-accent-soft">
+              <input type="radio" name="gender" value={g.value} defaultChecked={g.value === (initialGender ?? "")} />
+              <span className="text-sm">{g.label}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
       <fieldset>
         <legend className="text-sm font-medium">Where are you starting?</legend>
         <p className="text-sm text-muted">Pick the closest. The app moves you up or down by itself later.</p>

@@ -71,6 +71,9 @@ is very cheap: a full day of practice costs a fraction of a cent.
 ## 5. Switch your computer to the real database
 
 1. In `.env`: `STORAGE=supabase` and `ADMIN_EMAILS=you@example.com,jerry@example.com`.
+   Also set `ALLOWED_EMAILS=` to every friend's email (comma separated). The app
+   is invite-only: other emails can't sign up or use it. If you leave it empty,
+   anyone with the link can sign up and use your Claude credit.
 2. Restart `npm run dev`. You'll see a **Sign in** page: create your account.
 3. Practise one word, then check Supabase → **Table Editor** → `learner_state`
    has a row. Your local `.data/store.json` progress does not move over.

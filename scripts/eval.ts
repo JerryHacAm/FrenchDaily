@@ -19,6 +19,7 @@ type TestItem = {
   type: "statement" | "question";
   template: string;
   sentence: string;
+  learner_gender?: "male" | "female";
   expect: { structure_ok: boolean; is_correct: boolean | null; tags: string[][]; has_major?: boolean };
   /** Not run yet; the reason why (e.g. needs a feature the app doesn't have). */
   skip?: string;
@@ -47,6 +48,7 @@ async function main() {
     const template = content.structureById.get(t.template);
     const r = await ai.checkSentence({
       level: t.level,
+      learnerGender: t.learner_gender ?? null,
       word,
       itemType: t.type,
       templatePattern: template?.pattern ?? "",

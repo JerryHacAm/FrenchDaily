@@ -215,6 +215,13 @@ function ReadStep({
           {word.gender && <Badge tone={GENDER_BADGE[word.gender].tone}>{GENDER_BADGE[word.gender].label}</Badge>}
         </div>
         <Speak text={word.display} className="mt-2" />
+        <div className="mt-4 border-t border-line pt-3">
+          <p className="fr">
+            {word.example}
+            <Speak text={word.example} label="" className="ml-1 align-middle" />
+          </p>
+          <p className="text-sm text-muted">{word.exampleEn}</p>
+        </div>
       </Card>
 
       <Card>
@@ -313,6 +320,7 @@ function ItemStep({
             {item.example && (
               <div className="mt-1 text-muted">
                 e.g. <span className="fr italic">{item.example}</span>
+                {item.exampleEn && <span className="block text-xs">{item.exampleEn}</span>}
               </div>
             )}
             {item.starter && (
@@ -334,7 +342,13 @@ function ItemStep({
 
       {item.stage === "retype" && item.feedback && item.sentence && (
         <>
-          <FeedbackCard sentence={item.sentence} feedback={item.feedback} sentenceId={item.sentenceId} mode="full" />
+          <FeedbackCard
+            sentence={item.sentence}
+            feedback={item.feedback}
+            sentenceId={item.sentenceId}
+            fixAttempt={item.fixAttempt}
+            mode="full"
+          />
           <p className="text-sm font-medium">Now type the corrected sentence yourself (it helps you remember):</p>
         </>
       )}

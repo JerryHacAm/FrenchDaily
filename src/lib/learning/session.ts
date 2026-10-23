@@ -173,6 +173,7 @@ export function applyFixAttempt(
   const item = currentItem(state);
   if (item.stage !== "fix" || !item.feedback) throw new FlowError("Nothing to fix right now.");
   item.fixTries += 1;
+  item.fixAttempt = attempt;
   if (isSelfFixed(attempt, item.feedback)) {
     state = acceptItem(state, content, rules, today, "self");
     return { state, outcome: "accepted" };

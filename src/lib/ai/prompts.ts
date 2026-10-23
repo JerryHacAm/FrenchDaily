@@ -58,6 +58,7 @@ export function checkUserMessage(input: CheckInput): string {
     "",
     "<task>",
     `level: ${input.level}`,
+    `learner_gender: ${input.learnerGender ?? "not set"}`,
     `target_word: "${w.french}" (${w.pos}${w.gender ? `, ${GENDER_TEXT[w.gender]}` : ""}, shown as "${displayWord(w)}", means "${w.english}")`,
     `item_type: ${input.itemType}`,
     `template: ${input.templatePattern}`,

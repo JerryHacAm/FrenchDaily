@@ -17,6 +17,8 @@ export type AiResult<T> = { data: T; usage: Usage | null; model: string; latency
 
 export type CheckInput = {
   level: number;
+  /** null = not set: accept both forms when the learner writes about themselves. */
+  learnerGender: "male" | "female" | null;
   word: Word;
   itemType: "statement" | "question";
   templatePattern: string;

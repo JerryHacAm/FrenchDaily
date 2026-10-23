@@ -2,7 +2,8 @@
 
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
-import { STORAGE } from "@/lib/config";
+import { isEmailAllowed, NOT_INVITED } from "@/lib/access";
+import { ADMIN_EMAILS, ALLOWED_EMAILS, STORAGE } from "@/lib/config";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 // Sign in / sign up / sign out with Supabase Auth (ROADMAP A6).
@@ -20,6 +21,7 @@ export async function signInAction(_prev: AuthResult, formData: FormData): Promi
   if (STORAGE !== "supabase") redirect("/");
   const { email, password } = readForm(formData);
   if (!email || !password) return { ok: false, error: "Enter your email and password." };
+  if (!isEmailAllowed(email, ALLOWED_EMAILS, ADMIN_EMAILS)) return { ok: false, error: NOT_INVITED };
   const supabase = await createSupabaseServerClient();
   const { error } = await supabase.auth.signInWithPassword({ email, password });
   if (error) return { ok: false, error: error.message };
@@ -30,6 +32,8 @@ export async function signUpAction(_prev: AuthResult, formData: FormData): Promi
   if (STORAGE !== "supabase") redirect("/");
   const { email, password } = readForm(formData);
   if (!email || password.length < 8) return { ok: false, error: "Use your email and a password of at least 8 characters." };
+  if (password !== String(formData.get("password2") ?? "").slice(0, 200)) return { ok: false, error: "The two passwords are different. Type them again." };
+  if (!isEmailAllowed(email, ALLOWED_EMAILS, ADMIN_EMAILS)) return { ok: false, error: NOT_INVITED };
   const h = await headers();
   const origin = `${h.get("x-forwarded-proto") ?? "http"}://${h.get("host")}`;
   const supabase = await createSupabaseServerClient();

@@ -158,6 +158,7 @@ describe("practice session flow", () => {
     s = applyCheck(s, REAL_CONTENT, TEST_RULES, today, "Je mange un pomme le matin.", f, "x").state;
     s = applyFixAttempt(s, REAL_CONTENT, TEST_RULES, today, "Je mange un pomme.").state;
     expect(currentItem(s).stage).toBe("retype");
+    expect(buildPracticeView(s, REAL_CONTENT, TEST_RULES, today).session?.items[0].fixAttempt).toBe("Je mange un pomme.");
     expect(() => skipRetype(s, REAL_CONTENT, TEST_RULES, today)).toThrow(FlowError);
     s = applyRetype(s, REAL_CONTENT, TEST_RULES, today, "Je mange une pome le matin.", sameSentence).state;
     s = applyRetype(s, REAL_CONTENT, TEST_RULES, today, "Je mange une pome le matin.", sameSentence).state;
@@ -165,6 +166,16 @@ describe("practice session flow", () => {
     const ok = applyRetype(s, REAL_CONTENT, TEST_RULES, today, "je mange une pomme le matin", sameSentence);
     expect(ok.outcome).toBe("accepted");
     expect(ok.state.session!.words[0].items[0].fixOutcome).toBe("shown");
+  });
+
+  it("shows the female example (example_f) to a female learner only", () => {
+    const s = start();
+    s.session!.words[0].wordId = "w0068"; // fatigué
+    const example = (gender: "male" | "female" | null) =>
+      buildPracticeView({ ...s, profile: { ...s.profile, gender } }, REAL_CONTENT, TEST_RULES, today).session?.word?.example;
+    expect(example("female")).toBe("Je suis fatiguée après le travail.");
+    expect(example("male")).toBe("Je suis fatigué après le travail.");
+    expect(example(null)).toBe("Je suis fatigué après le travail.");
   });
 
   it("can reveal the answer without trying", () => {
