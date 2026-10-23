@@ -75,8 +75,16 @@ export const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
 export const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "";
 export const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY ?? "";
 
+const emailList = (v: string | undefined) =>
+  (v ?? "")
+    .split(",")
+    .map((e) => e.trim().toLowerCase())
+    .filter(Boolean);
+
 // Emails allowed to open /stats when STORAGE=supabase (comma separated).
-export const ADMIN_EMAILS = (process.env.ADMIN_EMAILS ?? "")
-  .split(",")
-  .map((e) => e.trim().toLowerCase())
-  .filter(Boolean);
+export const ADMIN_EMAILS = emailList(process.env.ADMIN_EMAILS);
+
+// Invite-only: the only emails that can sign up and use the app when
+// STORAGE=supabase (comma separated). ADMIN_EMAILS are always allowed.
+// Empty = anyone can sign up (and spend your Claude credit).
+export const ALLOWED_EMAILS = emailList(process.env.ALLOWED_EMAILS);
