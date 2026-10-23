@@ -116,8 +116,8 @@ async function ProgressContent() {
 
       <Card>
         <h2 className="font-semibold">Settings</h2>
-        <p className="mb-3 text-sm text-muted">Change your name or level. The app also moves your level by itself.</p>
-        <ProfileForm initialName={profile.name} initialLevel={profile.level} submitLabel="Save" />
+        <p className="mb-3 text-sm text-muted">Change your name, how you write about yourself, or your level. The app also moves your level by itself.</p>
+        <ProfileForm initialName={profile.name} initialLevel={profile.level} initialGender={profile.gender} submitLabel="Save" />
       </Card>
     </div>
   );
