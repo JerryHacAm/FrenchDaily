@@ -128,7 +128,7 @@ export function buildPracticeView(state: LearnerState, content: Content, rules: 
               english: word.english,
               pos: word.pos,
               gender: word.gender,
-              example: word.example,
+              example: (state.profile.gender === "female" && word.example_f) || word.example,
               exampleEn: word.example_en,
               miniText: word.mini_text,
               reason: wp.reason,

@@ -215,6 +215,13 @@ function ReadStep({
           {word.gender && <Badge tone={GENDER_BADGE[word.gender].tone}>{GENDER_BADGE[word.gender].label}</Badge>}
         </div>
         <Speak text={word.display} className="mt-2" />
+        <div className="mt-4 border-t border-line pt-3">
+          <p className="fr">
+            {word.example}
+            <Speak text={word.example} label="" className="ml-1 align-middle" />
+          </p>
+          <p className="text-sm text-muted">{word.exampleEn}</p>
+        </div>
       </Card>
 
       <Card>

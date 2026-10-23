@@ -168,6 +168,16 @@ describe("practice session flow", () => {
     expect(ok.state.session!.words[0].items[0].fixOutcome).toBe("shown");
   });
 
+  it("shows the female example (example_f) to a female learner only", () => {
+    const s = start();
+    s.session!.words[0].wordId = "w0068"; // fatigué
+    const example = (gender: "male" | "female" | null) =>
+      buildPracticeView({ ...s, profile: { ...s.profile, gender } }, REAL_CONTENT, TEST_RULES, today).session?.word?.example;
+    expect(example("female")).toBe("Je suis fatiguée après le travail.");
+    expect(example("male")).toBe("Je suis fatigué après le travail.");
+    expect(example(null)).toBe("Je suis fatigué après le travail.");
+  });
+
   it("can reveal the answer without trying", () => {
     let s = start();
     const f = feedback({ is_correct: false, mistakes: [genderMistake] }, "Je mange un pomme le matin.");
