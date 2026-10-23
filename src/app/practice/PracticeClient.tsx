@@ -313,6 +313,7 @@ function ItemStep({
             {item.example && (
               <div className="mt-1 text-muted">
                 e.g. <span className="fr italic">{item.example}</span>
+                {item.exampleEn && <span className="block text-xs">{item.exampleEn}</span>}
               </div>
             )}
             {item.starter && (
@@ -334,7 +335,13 @@ function ItemStep({
 
       {item.stage === "retype" && item.feedback && item.sentence && (
         <>
-          <FeedbackCard sentence={item.sentence} feedback={item.feedback} sentenceId={item.sentenceId} mode="full" />
+          <FeedbackCard
+            sentence={item.sentence}
+            feedback={item.feedback}
+            sentenceId={item.sentenceId}
+            fixAttempt={item.fixAttempt}
+            mode="full"
+          />
           <p className="text-sm font-medium">Now type the corrected sentence yourself (it helps you remember):</p>
         </>
       )}

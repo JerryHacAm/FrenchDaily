@@ -40,8 +40,8 @@ export type Structure = {
   level: number;
   fits_pos: Pos[];
   pattern: string;
-  /** For each part of speech: [sample word, example sentence]. */
-  examples: Partial<Record<Pos, [string, string]>>;
+  /** For each part of speech: [sample word, example sentence, English translation]. */
+  examples: Partial<Record<Pos, [string, string, string]>>;
 };
 
 export type GrammarRule = {

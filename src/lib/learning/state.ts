@@ -78,6 +78,8 @@ export type ItemProgress = {
   /** Feedback from the first accepted-structure check (what we learn from). */
   firstFeedback: Feedback | null;
   fixTries: number;
+  /** What the learner typed in the fix step (optional: older saves don't have it). */
+  fixAttempt?: string | null;
   retypeTries: number;
   fixOutcome: "self" | "shown" | "skipped" | null;
   sentenceId: string | null;

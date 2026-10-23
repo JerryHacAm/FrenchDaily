@@ -60,6 +60,10 @@ export function validateContent(input: {
     if (!text(s.pattern)) problems.push(`${at}: pattern is missing`);
     for (const key of Object.keys(s.examples ?? {})) {
       if (!s.fits_pos?.includes(key as Word["pos"])) problems.push(`${at}: example for "${key}" but it's not in fits_pos`);
+      const ex = s.examples[key as Word["pos"]];
+      if (!Array.isArray(ex) || ex.length !== 3 || !ex.every(text)) {
+        problems.push(`${at}: example for "${key}" must be [word, French sentence, English translation]`);
+      }
     }
   }
 

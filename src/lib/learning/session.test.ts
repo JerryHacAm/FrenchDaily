@@ -158,6 +158,7 @@ describe("practice session flow", () => {
     s = applyCheck(s, REAL_CONTENT, TEST_RULES, today, "Je mange un pomme le matin.", f, "x").state;
     s = applyFixAttempt(s, REAL_CONTENT, TEST_RULES, today, "Je mange un pomme.").state;
     expect(currentItem(s).stage).toBe("retype");
+    expect(buildPracticeView(s, REAL_CONTENT, TEST_RULES, today).session?.items[0].fixAttempt).toBe("Je mange un pomme.");
     expect(() => skipRetype(s, REAL_CONTENT, TEST_RULES, today)).toThrow(FlowError);
     s = applyRetype(s, REAL_CONTENT, TEST_RULES, today, "Je mange une pome le matin.", sameSentence).state;
     s = applyRetype(s, REAL_CONTENT, TEST_RULES, today, "Je mange une pome le matin.", sameSentence).state;
