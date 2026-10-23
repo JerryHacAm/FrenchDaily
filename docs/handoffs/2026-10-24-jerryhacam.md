@@ -29,8 +29,6 @@ The plan changed: this is my personal app, plus a few friends. So I made **my ow
 - [ ] Jerry: after the merge, Vercel: import `JerryHacAm/FrenchDaily`, add every `.env` line except `DATA_DIR` (STORAGE=supabase), deploy
 - [ ] Jerry: Supabase → Authentication → URL Configuration: Site URL = the Vercel link, Redirect URLs + `https://<link>/**`
 - [ ] Jerry: put friends' emails in `ALLOWED_EMAILS` (in Vercel), send them the link
-- [ ] Jerry: review the English translations in `data/structures.json` (Claude draft)
-- [ ] Jerry: `grammar_rules.json`: "verb-avoir" and "avoir-expressions" both mention age; keep it in one
 - [ ] Later: show the word's `note` and N.B. on the word page; `corrected_english` in the AI answer
 
 ## 4. Notes
@@ -42,3 +40,4 @@ The plan changed: this is my personal app, plus a few friends. So I made **my ow
 - On Windows, stopping `npm run dev` from Claude can leave the real server running. "Another next dev server is already running" → `taskkill /PID <pid> /F /T`.
 - On start, Next.js printed a security warning with a `next upgrade --agent=security …` command. I didn't run that command; I checked with `npm audit` and updated the version by hand.
 - The "Your fix" line only shows for fix attempts made after this change.
+- Jerry reviewed the English translations in `data/structures.json`. "verb-avoir" and "avoir-expressions" both mention age **on purpose**: they have different purposes (conjugating avoir vs. using avoir instead of être). Keep both, and keep accepting either tag in tests like t13.
