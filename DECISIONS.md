@@ -211,3 +211,13 @@ on the same day, in different formats. Jerry's choices:
   expects (no {{slots}}).
 Revisit if: a tag name feels wrong to Jerry (change it together with
 tests/sentences.json, and old saved mistakes keep the old name).
+
+## 2026-10-24 — Personal app for Jerry and a few invited friends; Jerry's own Supabase
+Why: the goal is to finish fast and use it, not to launch a consumer app. So
+the pilot, /stats and production mode are not a priority. Friends get a link
+(Vercel) and need their own progress, so the app runs with STORAGE=supabase
+on a Supabase project Jerry created and owns (not the earlier one). It is
+invite-only: ALLOWED_EMAILS (+ ADMIN_EMAILS) are the only emails that can
+sign up, sign in or load a page, to protect the Claude credit.
+Revisit if: more people want to use it (then think about per-user cost
+limits and production mode again).
