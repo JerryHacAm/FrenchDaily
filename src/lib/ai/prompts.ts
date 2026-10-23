@@ -25,9 +25,13 @@ export function loadPrompt(name: "check-sentence" | "coach" | "roleplay"): strin
 }
 
 export function grammarRulesBlock(rules: GrammarRule[]): string {
-  const lines = rules.map(
-    (r) => `- ${r.id} (level ${r.level}): ${r.title}. ${r.rule} Wrong: "${r.wrong}" → Right: "${r.right}"`,
-  );
+  const quote = (xs: string[]) => xs.map((x) => `"${x}"`).join(", ");
+  const lines = rules.map((r) => {
+    const head = `- ${r.id} (level ${r.level}${r.severity ? `, usually ${r.severity}` : ""}): ${r.title}. ${r.rule}`;
+    const ex = r.examples ?? { wrong: r.wrong ? [r.wrong] : [], right: r.right ? [r.right] : [] };
+    if (!ex.wrong.length && !ex.right.length) return head;
+    return `${head} Wrong: ${quote(ex.wrong)} → Right: ${quote(ex.right)}`;
+  });
   return ["## Grammar rule set", "Use these ids as mistake tags. Use \"other\" only if none fits.", ...lines].join("\n");
 }
 
@@ -41,6 +45,12 @@ function fence(tag: string, text: string): string {
   return `<${tag}>\n${safe}\n</${tag}>`;
 }
 
+const GENDER_TEXT = {
+  m: "masculine",
+  f: "feminine",
+  "m/f": "masculine or feminine depending on the person, both forms are correct",
+} as const;
+
 export function checkUserMessage(input: CheckInput): string {
   const w = input.word;
   const lines = [
@@ -48,7 +58,7 @@ export function checkUserMessage(input: CheckInput): string {
     "",
     "<task>",
     `level: ${input.level}`,
-    `target_word: "${w.french}" (${w.pos}${w.gender ? `, ${w.gender === "f" ? "feminine" : "masculine"}` : ""}, shown as "${displayWord(w)}", means "${w.english}")`,
+    `target_word: "${w.french}" (${w.pos}${w.gender ? `, ${GENDER_TEXT[w.gender]}` : ""}, shown as "${displayWord(w)}", means "${w.english}")`,
     `item_type: ${input.itemType}`,
     `template: ${input.templatePattern}`,
   ];

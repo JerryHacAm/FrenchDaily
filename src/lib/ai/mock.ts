@@ -20,7 +20,8 @@ function result<T>(data: T): AiResult<T> {
 function findNoun(content: Content, token: string): Word | undefined {
   const t = normalize(token);
   return content.words.find(
-    (w) => w.pos === "noun" && w.gender && (normalize(w.french) === t || normalize(w.french) + "s" === t),
+    // "m/f" nouns (le voisin / la voisine) take both articles, so skip them.
+    (w) => w.pos === "noun" && (w.gender === "m" || w.gender === "f") && (normalize(w.french) === t || normalize(w.french) + "s" === t),
   );
 }
 

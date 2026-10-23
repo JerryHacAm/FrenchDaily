@@ -1,4 +1,4 @@
-import type { Content, Pos } from "@/lib/content/types";
+import type { Content, Pos, Word } from "@/lib/content/types";
 import { displayWord } from "@/lib/content/types";
 import { minWordsFor } from "./checks";
 import type { Rules } from "./rules";
@@ -43,7 +43,7 @@ export type PracticeView = {
       display: string;
       english: string;
       pos: Pos;
-      gender: "m" | "f" | null;
+      gender: Word["gender"];
       example: string;
       exampleEn: string;
       miniText: { fr: string; en: string };

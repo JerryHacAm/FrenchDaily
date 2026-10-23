@@ -17,32 +17,35 @@ describe("normalize / tokenize / wordCount", () => {
 
 describe("containsWord", () => {
   it.each([
-    ["w006", "Nous mangeons à midi."], // manger, regular -er
-    ["w051", "Je vais au marché."], // aller, irregular form from words.json
-    ["w051", "Nous allons au cinéma."],
-    ["w001", "J'aime les pommes."], // plural noun
-    ["w020", "Elle est grande."], // feminine adjective
-    ["w003", "Je bois de l'eau."], // elided article
-    ["w027", "Ma sœur habite ici."], // œ
-    ["w092", "Ce week-end, je dors."], // two-part word
-    ["w040", "Nous commençons à huit heures."], // ç
-    ["w094", "Ma ville est belle."], // irregular adjective form
+    ["w0006", "Nous mangeons à midi."], // manger, regular -er
+    ["w0171", "Je vais au marché."], // aller, irregular form from words.json
+    ["w0171", "Nous allons au cinéma."],
+    ["w0001", "J'aime les pommes."], // plural noun
+    ["w0182", "Elle est grande."], // feminine adjective
+    ["w0003", "Je bois de l'eau."], // elided article
+    ["w0045", "Ma sœur habite ici."], // œ
+    ["w0118", "Ce week-end, je dors."], // two-part word
+    ["w0121", "Nous commençons à huit heures."], // ç
+    ["w0186", "Ma ville est belle."], // irregular adjective form
+    ["w0040", "Ma voisine est gentille."], // feminine of an "m/f" noun
+    ["w0060", "Je me lève à sept heures."], // reflexive verb, conjugated
+    ["w0072", "Elle s'habille vite le matin."], // reflexive verb with s'
   ])("finds %s in %s", (id, sentence) => {
     expect(containsWord(sentence, word(id))).toBe(true);
   });
 
   it("is lenient with missing accents", () => {
-    expect(containsWord("Je bois un cafe.", word("w004"))).toBe(true);
+    expect(containsWord("Je bois un cafe.", word("w0004"))).toBe(true);
   });
 
   it("does not match a different longer word", () => {
-    expect(containsWord("Je cherche mes clés.", word("w055"))).toBe(false); // cher ≠ chercher
-    expect(containsWord("Je mange une banane.", word("w001"))).toBe(false);
+    expect(containsWord("Je cherche mes clés.", word("w0155"))).toBe(false); // cher ≠ chercher
+    expect(containsWord("Je mange une banane.", word("w0001"))).toBe(false);
   });
 
   it("finds all known words in a sentence", () => {
-    const words = [word("w006"), word("w001"), word("w013"), word("w051")];
-    expect(findWordsUsed("Je mange une pomme à la maison.", words).sort()).toEqual(["w001", "w006", "w013"]);
+    const words = [word("w0006"), word("w0001"), word("w0023"), word("w0171")];
+    expect(findWordsUsed("Je mange une pomme à la maison.", words).sort()).toEqual(["w0001", "w0006", "w0023"]);
   });
 });
 

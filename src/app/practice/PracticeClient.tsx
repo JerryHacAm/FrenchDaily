@@ -32,6 +32,12 @@ const REASON: Record<string, { label: string; tone: "accent" | "good" | "warn" |
   extra: { label: "Extra", tone: "neutral" },
 };
 
+const GENDER_BADGE: Record<"m" | "f" | "m/f", { label: string; tone: "accent" | "bad" | "neutral" }> = {
+  m: { label: "masculine (le / un)", tone: "accent" },
+  f: { label: "feminine (la / une)", tone: "bad" },
+  "m/f": { label: "man or woman (both forms)", tone: "neutral" },
+};
+
 export function PracticeClient({
   initial,
   focusTag,
@@ -206,7 +212,7 @@ function ReadStep({
         <div className="mt-1 text-lg text-muted">{word.english}</div>
         <div className="mt-2 flex flex-wrap justify-center gap-2">
           <Badge>{word.pos}</Badge>
-          {word.gender && <Badge tone={word.gender === "f" ? "bad" : "accent"}>{word.gender === "f" ? "feminine (la / une)" : "masculine (le / un)"}</Badge>}
+          {word.gender && <Badge tone={GENDER_BADGE[word.gender].tone}>{GENDER_BADGE[word.gender].label}</Badge>}
         </div>
         <Speak text={word.display} className="mt-2" />
       </Card>

@@ -10,7 +10,7 @@ import { recordStreakDay, rollStreak, visibleStreak } from "./streak";
 
 describe("spaced repetition boxes", () => {
   it("moves up one box without major mistakes, back to box 1 with one", () => {
-    let uw = newUserWord("w001", "2026-10-01");
+    let uw = newUserWord("w0001", "2026-10-01");
     expect(uw.dueOn).toBe("2026-10-02");
     uw = applyWordCompletion(uw, false, "2026-10-01");
     expect([uw.box, uw.dueOn]).toEqual([2, "2026-10-04"]);
@@ -22,13 +22,13 @@ describe("spaced repetition boxes", () => {
   });
 
   it("never goes above box 5 (30 days)", () => {
-    let uw = { ...newUserWord("w001", "2026-10-01"), box: 5 };
+    let uw = { ...newUserWord("w0001", "2026-10-01"), box: 5 };
     uw = applyWordCompletion(uw, false, "2026-10-01");
     expect([uw.box, uw.dueOn]).toEqual([5, dueDateFor(5, "2026-10-01")]);
   });
 
   it("counts using a word on your own as a review only when it is due, once a day", () => {
-    const due = { ...newUserWord("w001", "2026-10-01"), box: 1, dueOn: "2026-10-02" };
+    const due = { ...newUserWord("w0001", "2026-10-01"), box: 1, dueOn: "2026-10-02" };
     const used = applySelfUse(due, "2026-10-02");
     expect([used.box, used.selfUseCount, used.dueOn]).toEqual([2, 1, "2026-10-05"]);
     const again = applySelfUse(used, "2026-10-02");
@@ -119,7 +119,7 @@ describe("level gates", () => {
 });
 
 describe("code checks before the AI", () => {
-  const base = { word: word("w001"), itemType: "statement" as const, level: 2 };
+  const base = { word: word("w0001"), itemType: "statement" as const, level: 2 };
 
   it("accepts a good sentence and tidies spaces", () => {
     expect(codeCheck({ ...base, sentence: "  Je mange une pomme   au marché le matin. " }, TEST_RULES)).toEqual({

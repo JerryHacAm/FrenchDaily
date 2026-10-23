@@ -59,9 +59,21 @@ Instead, code picks words from a curated list of about 1,000 high-frequency Fren
   "theme": "food",
   "frequency_rank": 812,
   "audio": null,
-  "example": "Je mange une pomme."
+  "example": "Je mange une pomme.",
+  "feminine": null,
+  "article_f": null,
+  "example_f": null,
+  "note": null,
+  "other_meanings": []
 }
 ```
+
+Extra fields:
+
+- **Both forms, one word:** a person noun with a masculine and a feminine form is one entry with `gender: "m/f"`, for example `ami` + `feminine: "amie"`. It is shown as **l'ami / l'amie**, and either form counts as the target word. Adjectives also store their feminine form (`grand` → `grande`).
+- **`example_f`:** a second example for female learners, only where "je" needs agreement (*Je suis fatiguée*). See 3.2a.
+- **`note`:** a short tip for the word card, for example why a reflexive verb has "se".
+- **`other_meanings`:** other common meanings of the same French word. When a meaning is worth its own practice, it is a separate entry, and the two are linked by `word_id` (*temps* = weather, *temps* = time). Otherwise `word_id` is null and it is an N.B. only (*été* = summer, also "been").
 
 **Selection logic (pseudocode):**
 
@@ -73,6 +85,9 @@ pick(user, count):
        theme  = user.current_theme
        pool   = words where level/theme match AND user has not seen them
        ensure the set has at least 1 verb and 1 noun (add a connector/adjective if possible)
+       if the theme has no unseen verb left, borrow an unseen verb from the
+         "basics" theme (same level); never serve a word the user has already
+         seen as a new word. Seen words only come back through reviews (3.5).
        sort by frequency_rank, pick randomly among the top candidates
 ```
 
@@ -84,7 +99,19 @@ Every word is shown with:
 - English meaning
 - Gender (le/la) clearly marked, because learning nouns without gender is a common beginner mistake
 - **Audio pronunciation** with a play button
-- One short example sentence
+- One short example sentence (the `example_f` version for female learners when there is one)
+- Both forms when the word has them (**l'ami / l'amie**, **grand / grande**)
+- The word's `note`, if it has one. For reflexive verbs it explains why there is "se": *lever* = to lift, *se lever* = to lift yourself = to get up.
+- **N.B. for other meanings:** if the word has another meaning, show a short "N.B." line. For a linked meaning (`word_id`), show it when the user has already seen the other entry: *"N.B. You learned 'temps' = weather. Here it means time."* For an N.B.-only meaning, always show it.
+
+### 3.2a Learner gender
+
+French changes some words depending on who is speaking: a woman writes *je suis fatiguée* and *je suis allée*, a man writes *je suis fatigué* and *je suis allé*. To build the right habit from day one:
+
+- The user picks once, in their profile: **male**, **female**, or **not set**.
+- Word card examples use `example_f` for female learners.
+- The AI check expects the matching form when the user writes about themselves with "je". Using the other form is a mistake (tag `speaker-agreement`). With **not set**, both forms are accepted.
+- The AI's own example sentences match the user's gender.
 
 **Audio options** (decide in Phase 1):
 
@@ -144,7 +171,7 @@ Matching the model example from the project idea: *"I like eating ice cream beca
 | Level | Requirement |
 |---|---|
 | 1 | Basic present tense: place, time, simple reason, negation, il y a, est-ce que / rising tone / où / combien. Minimum length: `MIN_SENTENCE_WORDS` (default 6). |
-| 2 | Everyday connectors (mais, quand, donc, et), passé composé, near future (aller + infinitive), devoir / pouvoir / avoir envie de, pourquoi / comment / quel. |
+| 2 | Everyday connectors (mais, quand, donc, et), passé composé, near future (aller + infinitive), devoir / pouvoir / avoir envie de, reflexive verbs (se lever, s'habiller), pourquoi / comment / quel. |
 | 3 | Natural spoken French: on, c'est, pronouns (le / la / les, en, y), ça fait ... que, je trouve que, pendant que, informal questions ("Tu as déjà ... ?", "Tu peux ... ?"). |
 | 4 | Telling stories and comparing: imparfait with passé composé, comparatives and superlatives, relative clauses (qui / que), ne ... plus / jamais, futur simple, avant de. |
 | 5 | Hypotheses and nuance: si + conditional, subjunctive after il faut que, plus-que-parfait, même si, lui / leur, polite requests, advice (tu devrais). |
@@ -169,16 +196,19 @@ The danger is a wall of corrections that discourages a beginner. Every response 
 
 If the sentence is already correct, say so and still give the two example sentences.
 
-**Required AI output (JSON, validated by code):**
+**Required AI output (JSON, validated by code):** the format as built is in `src/lib/ai/schemas.ts` (it also has `hint`, `structure_note`, `words_used`, `encouragement`). `structure_feedback` is called `structure_note` there, and `corrected_english` is not built yet (see `TASKS.md`).
 
 ```json
 {
   "structure_ok": true,
+  "structure_feedback": null,
   "is_correct": false,
   "corrected_sentence": "Je mange une pomme parce que j'ai faim.",
+  "corrected_english": "I'm eating an apple because I'm hungry.",
   "mistakes": [
     {
       "tag": "article-gender",
+      "severity": "major",
       "original": "un pomme",
       "fix": "une pomme",
       "short_explanation": "'Pomme' is feminine, so it takes 'une'.",

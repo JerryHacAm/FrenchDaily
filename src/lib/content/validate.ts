@@ -31,8 +31,11 @@ export function validateContent(input: {
     if (!level(w.level)) problems.push(`${at}: level must be 1 to 5`);
     if (typeof w.frequency_rank !== "number") problems.push(`${at}: frequency_rank must be a number`);
     if (w.pos === "noun") {
-      if (w.gender !== "m" && w.gender !== "f") problems.push(`${at}: nouns need gender "m" or "f"`);
+      if (w.gender !== "m" && w.gender !== "f" && w.gender !== "m/f") problems.push(`${at}: nouns need gender "m", "f" or "m/f"`);
       if (!["le", "la", "l'", "les"].includes(w.article ?? "")) problems.push(`${at}: nouns need article le, la, l' or les`);
+      if (w.gender === "m/f" && (!text(w.feminine) || !["la", "l'", "les"].includes(w.article_f ?? ""))) {
+        problems.push(`${at}: "m/f" nouns need "feminine" and "article_f" (la, l' or les)`);
+      }
     } else if (w.gender !== null || w.article !== null) {
       problems.push(`${at}: only nouns have gender and article (use null)`);
     }

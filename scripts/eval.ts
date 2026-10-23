@@ -19,7 +19,9 @@ type TestItem = {
   type: "statement" | "question";
   template: string;
   sentence: string;
-  expect: { structure_ok: boolean; is_correct: boolean | null; tags: string[][] };
+  expect: { structure_ok: boolean; is_correct: boolean | null; tags: string[][]; has_major?: boolean };
+  /** Not run yet; the reason why (e.g. needs a feature the app doesn't have). */
+  skip?: string;
 };
 
 async function main() {
@@ -36,7 +38,11 @@ async function main() {
   let ms = 0;
   const failures: string[] = [];
 
-  for (const t of items.filter((i) => !only || i.id === only)) {
+  const selected = items.filter((i) => !only || i.id === only);
+  const skipped = selected.filter((i) => i.skip);
+  for (const t of skipped) console.log(`  - ${t.id} skipped: ${t.skip}`);
+
+  for (const t of selected.filter((i) => !i.skip)) {
     const word = content.wordById.get(t.word)!;
     const template = content.structureById.get(t.template);
     const r = await ai.checkSentence({
@@ -61,6 +67,10 @@ async function main() {
     for (const group of t.expect.tags) {
       if (!group.some((g) => tags.includes(g))) problems.push(`missing tag ${group.join(" or ")} (got ${tags.join(", ") || "none"})`);
     }
+    const hasMajor = f.mistakes.some((m) => m.severity === "major");
+    if (t.expect.structure_ok && t.expect.has_major !== undefined && hasMajor !== t.expect.has_major) {
+      problems.push(`has_major ${hasMajor}, expected ${t.expect.has_major}`);
+    }
     if (problems.length === 0) {
       passed += 1;
       console.log(`  ✓ ${t.id}`);
@@ -70,8 +80,9 @@ async function main() {
     }
   }
 
-  const total = only ? 1 : items.length;
-  console.log(`\nPassed ${passed}/${total} (${Math.round((passed / total) * 100)}%)`);
+  const total = selected.length - skipped.length;
+  const skippedNote = skipped.length ? ` · ${skipped.length} skipped` : "";
+  console.log(`\nPassed ${passed}/${total} (${Math.round((passed / total) * 100)}%)${skippedNote}`);
   if (failures.length) console.log(`Failed: ${failures.join(", ")}`);
   if (ai.mode === "claude") console.log(`Estimated cost: $${cost.toFixed(4)} · average ${Math.round(ms / total)} ms per check`);
 }

@@ -35,20 +35,26 @@ export function wordCount(text: string): number {
 const NOUN_ADJ_ENDINGS = new Set(["", "e", "s", "es", "x", "ee", "ees", "le", "les", "ne", "nes", "te", "tes", "se", "ses"]);
 
 type Stem = { stem: string; maxExtra: number; endings: Set<string> | null };
-type Matcher = { exact: Set<string>; stems: Stem[]; phrase: string[] | null };
+type Matcher = { exact: Set<string>; forms: Set<string>; stems: Stem[]; phrase: string[] | null };
 
 const matcherCache = new WeakMap<Word, Matcher>();
 
 function buildMatcher(word: Word): Matcher {
-  const base = normalize(word.french).trim();
-  const baseTokens = tokenize(base);
-  const exact = new Set<string>([base]);
-  for (const f of word.forms ?? []) for (const t of tokenize(f)) exact.add(t);
+  let base = normalize(word.french).trim();
+  let baseTokens = tokenize(base);
+  // Reflexive verbs: "se lever" is written "je me lève", so match the verb part.
+  if (word.pos === "verb" && baseTokens.length === 2 && (baseTokens[0] === "se" || baseTokens[0] === "s")) {
+    base = baseTokens[1];
+    baseTokens = [base];
+  }
+  const forms = new Set<string>();
+  for (const f of word.forms ?? []) for (const t of tokenize(f)) forms.add(t);
+  const exact = new Set<string>([base, ...forms]);
   const stems: Matcher["stems"] = [];
 
   if (baseTokens.length > 1) {
     // Multi-word entries ("pomme de terre") must appear as a phrase.
-    return { exact, stems, phrase: baseTokens };
+    return { exact, forms, stems, phrase: baseTokens };
   }
 
   if (word.pos === "verb") {
@@ -57,10 +63,12 @@ function buildMatcher(word: Word): Matcher {
     if (stem.length >= 3) stems.push({ stem, maxExtra: 6, endings: null });
   } else {
     for (const suffix of ["s", "x", "e", "es"]) exact.add(base + suffix);
+    // Feminine forms the endings below can't guess (voisine, professeure, patronne).
+    if (word.feminine) for (const f of [word.feminine, word.feminine + "s"]) exact.add(normalize(f).trim());
     const stem = base.endsWith("e") ? base.slice(0, -1) : base;
     if (stem.length >= 4) stems.push({ stem, maxExtra: 3, endings: NOUN_ADJ_ENDINGS });
   }
-  return { exact, stems, phrase: null };
+  return { exact, forms, stems, phrase: null };
 }
 
 function matcherFor(word: Word): Matcher {
@@ -79,7 +87,8 @@ function tokensContainWord(tokens: string[], word: Word): boolean {
     for (let i = 0; i + p.length <= tokens.length; i++) {
       if (p.every((t, j) => tokens[i + j] === t || tokens[i + j] === t + "s")) return true;
     }
-    return false;
+    // Irregular forms listed in words.json still count.
+    return m.forms.size > 0 && tokens.some((t) => m.forms.has(t));
   }
   return tokens.some(
     (t) =>

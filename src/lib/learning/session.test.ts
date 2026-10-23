@@ -202,12 +202,12 @@ describe("practice session flow", () => {
 
   it("counts words the learner used on their own (not the target word)", () => {
     let s = onboardedState();
-    s.words.w006 = { wordId: "w006", introducedOn: "2026-10-01", box: 1, dueOn: "2026-10-02", timesSeen: 1, lastSeenOn: today, completedCount: 1, selfUseCount: 0, lastSelfUseOn: null, lastBoxMoveOn: null, tags: {} };
+    s.words.w0006 = { wordId: "w0006", introducedOn: "2026-10-01", box: 1, dueOn: "2026-10-02", timesSeen: 1, lastSeenOn: today, completedCount: 1, selfUseCount: 0, lastSelfUseOn: null, lastBoxMoveOn: null, tags: {} };
     s = start(s);
     const target = currentWordProgress(s).wordId;
-    s = acceptCurrent(s); // feedback words_used includes "manger" (w006)
-    expect(target).not.toBe("w006"); // seen today, so not picked again
-    expect(s.words.w006.selfUseCount).toBe(1);
-    expect(s.words.w006.box).toBe(2); // it was due → using it counts as a review
+    s = acceptCurrent(s); // feedback words_used includes "manger" (w0006)
+    expect(target).not.toBe("w0006"); // seen today, so not picked again
+    expect(s.words.w0006.selfUseCount).toBe(1);
+    expect(s.words.w0006.box).toBe(2); // it was due → using it counts as a review
   });
 });

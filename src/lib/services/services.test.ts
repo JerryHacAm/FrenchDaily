@@ -249,7 +249,7 @@ describe("AI prompts, mock and cost", () => {
   it("fences the learner's sentence so it can't act as instructions", () => {
     const msg = checkUserMessage({
       level: 1,
-      word: word("w001"),
+      word: word("w0001"),
       itemType: "statement",
       templatePattern: "Subject + verb + object",
       templateExample: null,
