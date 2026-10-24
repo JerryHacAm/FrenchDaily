@@ -106,3 +106,46 @@ Claude built the three "pair" tasks from TASKS.md: the word page shows the tips 
 - Invited friends can use the code too (Jerry's choice, to test as a normal user). They could fake streaks if they learn it; it costs no Claude credit.
 - The code is only in `.env` (never committed). quantrungvu: ask Jerry for it and add `TEST_BYPASS_CODE=...` to your own `.env`.
 - It is off when APP_MODE=production or when `TEST_BYPASS_CODE` is empty.
+
+---
+
+# Fourth session 2026-10-24: accents, invites table, levels 3–5, word matcher
+
+Branches: `feature/content-review-jerryhacam` (PR #12), `feature/invite-table-jerryhacam` (PR #13), `feature/levels3-5-jerryhacam` (PR #14), all merged. This branch: only this handoff + TASKS.md.
+
+## 1. Changes
+
+- **Accent slips are always minor (PR #12):** the AI sometimes called "a l'ecole → à l'école" a major mistake (2 of 9 runs of eval j23), which sends the word back to review box 1. Code now makes any mistake whose original and fix differ only in accents `minor` with the tag `spelling-accent` (`feedback.ts`, `onlyAccentsDiffer()` in `text.ts`). There's also a new line in `prompts/check-sentence.md`. Jerry reviewed it and the `corrected_english` line.
+- **Invite list in Supabase (PR #13):** new table `invites` (`supabase/migrations/20261024000000_invites.sql`). An email in the table **or** in `ALLOWED_EMAILS` may use the app. Only the server can read the table. If it can't be read, the app stays invite-only. The list is cached for 30 seconds (`src/lib/invites.ts`, `mergeInvites()` in `access.ts`). Jerry ran the SQL, and the table has 4 emails.
+- **Levels 3–5 (PR #14):**
+  - `data/words.json`: 644 new words (w0334–w0977, **977 in total**). Level 3 = 247, level 4 = 219, level 5 = 178. 4 new themes that only exist at levels 3–5: opinions-ideas, money-admin, culture-media, society-environment.
+  - `data/structures.json`: 6 adjective templates (s310, q307, s410, q407, s510, q507). There are 81 templates in total.
+  - `data/grammar_rules.json`: 10 rules for level 3–5 grammar (c-est-il-est, depuis-ca-fait, venir-de-en-train-de, negation-plus-jamais-rien, futur-simple, infinitive-after-preposition, plus-que-parfait, tense-after-quand, conditional-polite, indirect-pronoun). The older level 3–5 rules also got a severity.
+  - `tests/sentences.json`: c01–c10. New picker test: level 3–5 learners get words and templates of their own level.
+- **Word matcher (PR #14, `src/lib/learning/text.ts`):**
+  - Verbs match only with a real French ending ("dans" ≠ danser, "cuisine" ≠ cuire).
+  - When a word without its accent is another common word (ne/né, sur/sûr, sale/salé, marche/marché…), the accent must match.
+  - New optional words.json field `not_forms` (grandir: grand…).
+  - This fixed two bugs: *naître* matched every "ne", and *mot de passe* matched every "de".
+- Docs: README, ROADMAP, DECISIONS (2 entries), SETUP.md, .env.example.
+- Tests: 117 pass (was 106). `npm run eval`: 77/77.
+
+## 2. What I did
+
+I made sure a missing accent can never reset a word's progress. I moved the invite list into Supabase, so adding a friend is now just one row in the Table Editor, with no Vercel change or redeploy. Then Claude built levels 3–5: 644 everyday words (written by 6 helper agents, each checked by the app's own validator), the missing adjective templates and grammar rules. While checking the new words, we found and fixed look-alike matching in the word checker. I tested on my phone: after changing my level to 5 and finishing the batch I was in, I got level 5 words, and the 💡 tip on *se lever* shows.
+
+## 3. To do next
+
+- [ ] quantrungvu: review and merge this handoff PR
+- [ ] Jerry: review the level 3–5 drafts as you meet them (words, templates s310–q507, the 10 new rules, tests c01–c10). No need to read all 644 at once.
+- [ ] Jerry: check *sale* (N.B. line) on the word page when it comes up
+- [ ] Jerry: send the link to the invited friends; practise daily
+
+## 4. Notes
+
+- **Changing your level** saves straight away, but the batch you're in keeps its old words. The next batch uses the new level (reviews first, then new words of that level). The automatic level change waits 7 days after a manual change.
+- **Jumping from level 1 to 5 skips levels 2–4.** Lower-level words only come after every level 5 word has been seen.
+- **Adding a friend:** Supabase → Table Editor → `invites` → Insert row → email → Save. It works within about 30 seconds. To remove someone, delete their row (and remove them from `ALLOWED_EMAILS` too, if they're there).
+- **Look-alikes the matcher can't separate:** real homographs like *il lit* / *le lit* and *cours*. The AI judges these from the meaning.
+- Level 3–5 content is all **Claude drafts**. Frequency ranks are estimates (no free official B1/B2 list was found). Only nouns, verbs and adjectives are included, because there are no templates for adverbs or connectors.
+- In eval, test c08 first failed on `structure_ok`: its template asked for "lui", and the test sentence used "l'". The test was moved to a neutral template. When a test fails, check whether the template matches the mistake before blaming the AI.
