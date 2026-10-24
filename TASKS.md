@@ -7,13 +7,13 @@ Going live, step by step: docs/SETUP.md.
 - [ ] Send the live link (https://french-daily-seven.vercel.app) to invited friends; practise daily on the phone — @jerry
 
 ## Next up
+- [ ] Review and merge PR "word tips, English corrections, basics verbs, test code" — @quantrungvu
+- [ ] Add TEST_BYPASS_CODE in Vercel and redeploy, so the test code works online — @jerry
+- [ ] Review the corrected_english line in prompts/check-sentence.md (Claude draft) — @jerry
 - [ ] Review the Claude drafts in data/words.json: example_en and mini_text for ~310 words, forms — @jerry
 - [ ] Review the merged data/grammar_rules.json (quantrungvu's tag names, Jerry's explanations) and tests/sentences.json — @jerry
 - [ ] Review data/roleplay_scenarios.json and prompts/coach.md, prompts/roleplay.md — @jerry
 - [ ] Confirm the open decisions built as recommended (README section 12: completed word, review words count, local day) — @jerry
-- [ ] Word card: show the note and the N.B. for other meanings — pair
-- [ ] Add corrected_english to the AI answer (schemas.ts + FeedbackCard) — pair
-- [ ] Check the word picker borrows an unseen verb from "basics" when a theme has none left (DECISIONS 2026-10-10) — pair
 - [ ] Grow the word list toward ~1000 words (levels 3–5 have no words yet) — @jerry
 - [ ] (Lower priority now: personal app, see DECISIONS 2026-10-24) Start the 2-week pilot, then decide the daily load from /stats (ROADMAP F3) — pair
 - [ ] Improve the AI prompt with `npm run eval` until the test set passes — @jerry, pair
@@ -25,6 +25,7 @@ Going live, step by step: docs/SETUP.md.
 - [ ] Review and revise cost controls before public launch
 
 ## Done
+- [x] Word page shows note + N.B.; corrected_english in the AI answer; picker borrows verbs from "basics"; test code TEST_BYPASS_CODE for admins + invited emails (2026-10-24, Jerry)
 - [x] App online: Vercel (https://french-daily-seven.vercel.app) + Jerry's Supabase, invite-only; PRs #8 and #9 merged (2026-10-24, Jerry)
 - [x] Learner gender in the profile, sent to the AI check; female examples on the word page; tests j31 + j31b (2026-10-24, Jerry)
 - [x] English translations for all structure examples (Claude draft, reviewed by Jerry); fix step shows "Your fix" next to the answer (2026-10-24, Jerry)
