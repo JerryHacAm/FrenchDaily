@@ -221,3 +221,11 @@ invite-only: ALLOWED_EMAILS (+ ADMIN_EMAILS) are the only emails that can
 sign up, sign in or load a page, to protect the Claude credit.
 Revisit if: more people want to use it (then think about per-user cost
 limits and production mode again).
+
+## 2026-10-24 — Invite list also in a Supabase table (`invites`)
+Why: adding a friend through ALLOWED_EMAILS in Vercel meant retyping the whole
+list and redeploying. Now Jerry adds a row in Supabase and it works within a
+minute. ALLOWED_EMAILS still works; an email in either place is allowed. If the
+table can't be read, the app stays invite-only (never open to everyone). Only
+the server can read the table.
+Revisit if: we need invite links or a sign-up waiting list.

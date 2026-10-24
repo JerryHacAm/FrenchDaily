@@ -43,6 +43,7 @@ Useful commands:
 
 1. Supabase → **SQL Editor** → **New query**.
 2. Open `supabase/migrations/20261010000000_init.sql`, copy all of it, paste, click **Run**.
+   Then do the same with `supabase/migrations/20261024000000_invites.sql` (the invite list).
 3. You should see "Success. No rows returned".
 
 ## 3. Set up login in Supabase
@@ -74,6 +75,9 @@ is very cheap: a full day of practice costs a fraction of a cent.
    Also set `ALLOWED_EMAILS=` to every friend's email (comma separated). The app
    is invite-only: other emails can't sign up or use it. If you leave it empty,
    anyone with the link can sign up and use your Claude credit.
+   **Adding friends later:** Supabase → **Table Editor** → `invites` → **Insert row**
+   → type their email → **Save**. It works within a minute, with no Vercel change
+   and no redeploy. An email in the table or in `ALLOWED_EMAILS` may use the app.
 2. Restart `npm run dev`. You'll see a **Sign in** page: create your account.
 3. Practise one word, then check Supabase → **Table Editor** → `learner_state`
    has a row. Your local `.data/store.json` progress does not move over.

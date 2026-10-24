@@ -1,7 +1,8 @@
 import "server-only";
 import { connection } from "next/server";
 import { isEmailAllowed } from "@/lib/access";
-import { ADMIN_EMAILS, ALLOWED_EMAILS, DATA_DIR, STORAGE } from "@/lib/config";
+import { ADMIN_EMAILS, DATA_DIR, STORAGE } from "@/lib/config";
+import { getInviteList } from "@/lib/invites";
 import { FileStore } from "@/lib/store/file";
 import { SupabaseStore } from "@/lib/store/supabase";
 import type { Store } from "@/lib/store/types";
@@ -32,7 +33,7 @@ export async function getContext(): Promise<RequestContext> {
   if (!data.user) return { user: null, store, loginRequired: true };
   const email = data.user.email?.toLowerCase() ?? null;
   // Invite-only: an account made outside the app (straight through Supabase) still gets nothing.
-  if (!isEmailAllowed(email, ALLOWED_EMAILS, ADMIN_EMAILS)) return { user: null, store, loginRequired: true };
+  if (!isEmailAllowed(email, await getInviteList(), ADMIN_EMAILS)) return { user: null, store, loginRequired: true };
   return {
     user: { id: data.user.id, email, isAdmin: email !== null && ADMIN_EMAILS.includes(email) },
     store,

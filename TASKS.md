@@ -7,6 +7,8 @@ Going live, step by step: docs/SETUP.md.
 - [ ] Send the live link (https://french-daily-seven.vercel.app) to invited friends; practise daily on the phone — @jerry
 
 ## Next up
+- [ ] Review and merge PR "invite list in a Supabase table" — @quantrungvu
+- [ ] Supabase → SQL Editor: run supabase/migrations/20261024000000_invites.sql, then add new friends in Table Editor → invites — @jerry
 - [ ] Review and merge PR "word tips, English corrections, basics verbs, test code" — @quantrungvu
 - [ ] Add TEST_BYPASS_CODE in Vercel and redeploy, so the test code works online — @jerry
 - [ ] Review the corrected_english line in prompts/check-sentence.md (Claude draft) — @jerry
@@ -25,6 +27,7 @@ Going live, step by step: docs/SETUP.md.
 - [ ] Review and revise cost controls before public launch
 
 ## Done
+- [x] Invite list also in a Supabase table `invites`: add friends without a redeploy (2026-10-24, Jerry)
 - [x] Word page shows note + N.B.; corrected_english in the AI answer; picker borrows verbs from "basics"; test code TEST_BYPASS_CODE for admins + invited emails (2026-10-24, Jerry)
 - [x] App online: Vercel (https://french-daily-seven.vercel.app) + Jerry's Supabase, invite-only; PRs #8 and #9 merged (2026-10-24, Jerry)
 - [x] Learner gender in the profile, sent to the AI check; female examples on the word page; tests j31 + j31b (2026-10-24, Jerry)
