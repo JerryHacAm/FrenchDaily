@@ -5,7 +5,7 @@ import { applySelfUse } from "@/lib/learning/srs";
 import { cloneState, type LearnerState, type RoleplaySession } from "@/lib/learning/state";
 import { lemmasToSeenWordIds } from "@/lib/learning/usage";
 import type { RoleplayInput } from "@/lib/ai/types";
-import { callAi, fail, load, logEvent, ok, save, userMessage, type Deps, type Loaded, type Result } from "./common";
+import { callAi, fail, isBypass, load, logEvent, ok, save, userMessage, type Deps, type Loaded, type Result } from "./common";
 
 // Weekly role-play (ROADMAP D1): a short chat with the AI using the week's
 // words. No corrections during the chat; feedback at the end. Each learner
@@ -79,7 +79,8 @@ function input(deps: Deps, state: LearnerState, session: RoleplaySession): Rolep
     scenario,
     level: state.profile.level,
     weekWords: session.weekWords,
-    messages: session.messages,
+    // Test-code messages are not real French: the AI never sees them.
+    messages: session.messages.filter((m) => !(m.from === "learner" && isBypass(deps, m.fr))),
     maxTurns: deps.rules.roleplayMaxTurns,
   };
 }
@@ -103,9 +104,20 @@ export function startRoleplay(deps: Deps, scenarioId: string) {
   });
 }
 
+/** Feedback when every message was the test code: no AI call. */
+const BYPASS_SUMMARY = {
+  overall: "Test code: no feedback for this chat.",
+  praise: "",
+  corrections: [],
+  words_used: [],
+};
+
 async function finish(deps: Deps, state: LearnerState, today: string): Promise<LearnerState> {
   const session = state.roleplay!;
-  const r = await callAi(deps, "roleplay_summary", () => deps.ai.roleplaySummary(input(deps, state, session)));
+  const realTurns = session.messages.some((m) => m.from === "learner" && !isBypass(deps, m.fr));
+  const r = realTurns
+    ? await callAi(deps, "roleplay_summary", () => deps.ai.roleplaySummary(input(deps, state, session)))
+    : { data: BYPASS_SUMMARY };
   const known = new Set(deps.content.grammarRules.map((g) => g.id));
   const corrections = r.data.corrections
     .slice(0, 5)
@@ -144,11 +156,15 @@ export function sendRoleplayMessage(deps: Deps, text: string) {
     if (message.length > MAX_MESSAGE_CHARS) return { state, error: `Keep it under ${MAX_MESSAGE_CHARS} characters.` };
     const turns = session.messages.filter((m) => m.from === "learner").length;
     if (turns >= deps.rules.roleplayMaxTurns) return { state, error: "This chat is over. See your feedback below." };
-    if (checksLeft(state, today, deps.rules) <= 0) return { state, error: "No AI checks left today. Come back tomorrow!" };
+    const bypass = isBypass(deps, message);
+    if (!bypass && checksLeft(state, today, deps.rules) <= 0) return { state, error: "No AI checks left today. Come back tomorrow!" };
 
-    let next = countCheck(cloneState(state), today);
+    // The test code gets a fixed reply: no AI call, no check counted.
+    let next = bypass ? cloneState(state) : countCheck(cloneState(state), today);
     next.roleplay = { ...session, messages: [...session.messages, { from: "learner", fr: message }] };
-    const r = await callAi(deps, "roleplay_turn", () => deps.ai.roleplayTurn(input(deps, next, next.roleplay!)));
+    const r = bypass
+      ? { data: { reply_fr: "D'accord !", reply_en: "Okay! (test code: no AI reply)", should_end: false } }
+      : await callAi(deps, "roleplay_turn", () => deps.ai.roleplayTurn(input(deps, next, next.roleplay!)));
     next.roleplay = {
       ...next.roleplay,
       messages: [...next.roleplay.messages, { from: "ai", fr: r.data.reply_fr, en: r.data.reply_en }],

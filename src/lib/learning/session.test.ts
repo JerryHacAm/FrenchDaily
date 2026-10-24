@@ -29,6 +29,7 @@ function raw(partial: Partial<RawFeedback> = {}): RawFeedback {
     is_question: false,
     is_correct: true,
     corrected_sentence: "Je mange une pomme le matin.",
+    corrected_english: "I eat an apple in the morning.",
     mistakes: [],
     example_sentences: [
       { french: "La pomme est rouge.", english: "The apple is red." },

@@ -5,6 +5,7 @@ import { chooseTheme, planBatch } from "./picker";
 import { seededRng } from "./random";
 import { TEST_RULES } from "./rules";
 import { pickTemplates } from "./templates";
+import { nbLines } from "./view";
 import { lemmasToSeenWordIds, quietWords, wordBank, wordsYouCanUse } from "./usage";
 
 const today = "2026-10-10";
@@ -59,10 +60,40 @@ describe("planBatch (word picker)", () => {
     expect(plan.words.every((p) => REAL_CONTENT.wordById.get(p.wordId)!.pos === "noun")).toBe(true);
   });
 
+  it("borrows an unseen verb from basics when the theme has none left", () => {
+    const foodVerbs = REAL_CONTENT.words.filter((w) => w.theme === "food" && w.level === 1 && w.pos === "verb").map((w) => w.id);
+    let s = withWords(onboardedState(), foodVerbs, "2026-10-09", { dueOn: "2027-01-01" });
+    s = { ...s, theme: { current: "food", startedOn: today } };
+    // A very common verb from another theme must not win over basics.
+    const words = REAL_CONTENT.words.map((w) =>
+      w.pos === "verb" && w.level === 1 && w.theme === "travel" ? { ...w, frequency_rank: 0 } : w,
+    );
+    const content = { ...REAL_CONTENT, words };
+    for (let seed = 1; seed <= 10; seed++) {
+      const plan = planBatch(s, content, TEST_RULES, today, seededRng(seed));
+      const verbs = plan.words
+        .filter((p) => p.reason === "new")
+        .map((p) => REAL_CONTENT.wordById.get(p.wordId)!)
+        .filter((w) => w.pos === "verb");
+      expect(verbs[0]).toMatchObject({ theme: "basics", level: 1 });
+    }
+  });
+
   it("moves to the next theme after themeDays", () => {
     const s = { ...onboardedState(), theme: { current: "food", startedOn: "2026-10-01" } };
     expect(chooseTheme(s, REAL_CONTENT, 1, "2026-10-05", TEST_RULES)?.current).toBe("food");
     expect(chooseTheme(s, REAL_CONTENT, 1, "2026-10-08", TEST_RULES)).toEqual({ current: "home", startedOn: "2026-10-08" });
+  });
+});
+
+describe("word page N.B. (other meanings)", () => {
+  it("always shows an N.B.-only meaning, and a linked one after the other entry was seen", () => {
+    const sale = REAL_CONTENT.wordById.get("w0039")!; // N.B. only
+    expect(nbLines(sale, onboardedState(), REAL_CONTENT)).toEqual([sale.other_meanings![0].nb]);
+    const time = REAL_CONTENT.wordById.get("w0319")!; // temps = time, linked to temps = weather (w0235)
+    expect(nbLines(time, onboardedState(), REAL_CONTENT)).toEqual([]);
+    const seen = withWords(onboardedState(), ["w0235"], "2026-10-01");
+    expect(nbLines(time, seen, REAL_CONTENT)).toEqual(["You learned 'temps' = weather. Here it means time."]);
   });
 });
 

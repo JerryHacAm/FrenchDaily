@@ -20,6 +20,8 @@ export type Feedback = {
   structure_note: string;
   is_correct: boolean;
   corrected_sentence: string;
+  /** English meaning of corrected_sentence. Missing in feedback saved before 2026-10-24. */
+  corrected_english?: string;
   mistakes: Mistake[];
   example_sentences: { french: string; english: string }[];
   /** Base forms (lemmas) of the French words the learner used. */

@@ -11,6 +11,19 @@ import { wordBank, type WordBankEntry } from "./usage";
 // Turns the saved state into exactly what the practice screen shows.
 // Plain data only (it is sent to the browser), no functions, no secrets.
 
+/**
+ * The "N.B." lines for other meanings (README 3.2). An N.B.-only meaning is
+ * always shown; a linked one only once the learner has seen the other entry.
+ */
+export function nbLines(word: Word, state: LearnerState, content: Content): string[] {
+  return (word.other_meanings ?? []).flatMap((m) => {
+    if (!m.word_id) return [m.nb];
+    const other = content.wordById.get(m.word_id);
+    if (!other || !state.words[other.id]) return [];
+    return [`You learned '${other.french}' = ${other.english}. Here it means ${word.english}.`];
+  });
+}
+
 export type ItemView = {
   type: "statement" | "question";
   pattern: string;
@@ -50,6 +63,8 @@ export type PracticeView = {
       example: string;
       exampleEn: string;
       miniText: { fr: string; en: string };
+      note: string | null;
+      nb: string[];
       reason: BatchReason;
       stage: "read" | "write" | "done";
     };
@@ -131,6 +146,8 @@ export function buildPracticeView(state: LearnerState, content: Content, rules: 
               example: (state.profile.gender === "female" && word.example_f) || word.example,
               exampleEn: word.example_en,
               miniText: word.mini_text,
+              note: word.note ?? null,
+              nb: nbLines(word, state, content),
               reason: wp.reason,
               stage: wp.stage,
             }

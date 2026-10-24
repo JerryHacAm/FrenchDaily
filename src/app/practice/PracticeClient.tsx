@@ -222,6 +222,21 @@ function ReadStep({
           </p>
           <p className="text-sm text-muted">{word.exampleEn}</p>
         </div>
+        {(word.note || word.nb.length > 0) && (
+          <div className="mt-3 space-y-2 text-left text-sm">
+            {word.note && (
+              <p className="rounded-lg bg-surface-2 px-3 py-2">
+                <span aria-hidden>💡 </span>
+                {word.note}
+              </p>
+            )}
+            {word.nb.map((line, i) => (
+              <p key={i} className="rounded-lg bg-warn-soft px-3 py-2 text-warn">
+                <span className="font-medium">N.B.</span> {line}
+              </p>
+            ))}
+          </div>
+        )}
       </Card>
 
       <Card>

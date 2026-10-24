@@ -50,6 +50,7 @@ Grammar mistakes do NOT make structure_ok false. A sentence can have wrong gramm
 - The student's own gender (`learner_gender`): when the student talks about themselves with "je" (adjectives like fatigué, content, seul, and past forms with être like allé, levé), the form must match them. A female student writes "je suis fatiguée", a male student "je suis fatigué". If the form doesn't match, it is a "speaker-agreement" mistake (major): fix it and explain in one line that the ending follows who is speaking. If learner_gender is "not set", accept either form and don't mark it. This only applies to the student talking about themselves, never to other people in the sentence.
 - Reflexive verbs (verbs with "se", like se lever): if the target word is one and the student left out "se" or used the wrong one (je se lève), explain in plain words why it's there: "se" means you do the action to yourself ("lever" = to lift, "se lever" = to lift yourself = to get up), and it changes with the person (je me, tu te, il se). Tag "reflexive-verbs".
 - **corrected_sentence**: the student's sentence with all the needed fixes.
+- **corrected_english**: a natural English translation of corrected_sentence, so the student knows what it means. <!-- Claude draft 2026-10-24, Jerry to review -->
 - **is_correct**: true only if the corrected sentence is the same as the student's sentence (ignore spaces before ? and ! and a missing final full stop). Then mistakes is empty.
 
 ## Step 3: choose at most 2 mistakes to show (mistakes)
@@ -88,6 +89,7 @@ For the target word "pomme" and the sentence "Je mange un pomme parce que j'ai f
   "is_question": false,
   "is_correct": false,
   "corrected_sentence": "Je mange une pomme parce que j'ai faim.",
+  "corrected_english": "I'm eating an apple because I'm hungry.",
   "mistakes": [
     {
       "tag": "article-gender",

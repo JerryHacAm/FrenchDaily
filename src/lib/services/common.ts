@@ -22,7 +22,14 @@ export type Deps = {
   rng: Rng;
   newId: () => string;
   prices: { inputPerMTok: number; outputPerMTok: number };
+  /** TEST_BYPASS_CODE for this user (admins only), or null when off. */
+  bypassCode?: string | null;
 };
+
+/** True when the learner typed the test code: skip every check and the AI. */
+export function isBypass(deps: Deps, text: string): boolean {
+  return !!deps.bypassCode && text.trim().toLowerCase() === deps.bypassCode.toLowerCase();
+}
 
 /** What every server action returns to the browser. */
 export type Result<T> = { ok: true; data: T; message?: string } | { ok: false; error: string; data?: T };

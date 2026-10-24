@@ -32,6 +32,7 @@ export function FeedbackCard({
         <div>
           <Badge tone="good">✓ Correct</Badge>
           <p className="fr mt-2">{sentence}</p>
+          {feedback.corrected_english && <p className="mt-1 text-sm text-muted">{feedback.corrected_english}</p>}
           {feedback.encouragement && <p className="mt-1 text-sm text-muted">{feedback.encouragement}</p>}
         </div>
       ) : mode === "hints" ? (
@@ -56,6 +57,7 @@ export function FeedbackCard({
             <Highlight text={feedback.corrected_sentence} parts={feedback.mistakes.map((m) => m.fix)} tone="good" />
             <Speak text={feedback.corrected_sentence} className="ml-1 align-middle" />
           </p>
+          {feedback.corrected_english && <p className="mt-1 text-sm text-muted">{feedback.corrected_english}</p>}
           <p className="mt-1 text-sm text-muted">
             You wrote: <Highlight text={sentence} parts={feedback.mistakes.map((m) => m.original)} tone="bad" />
           </p>
