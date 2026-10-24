@@ -79,6 +79,13 @@ describe("normalizeFeedback (product rules on the AI answer)", () => {
     expect(f.corrected_sentence).toBe("Je mange une pomme le matin.");
   });
 
+  it("makes an accent-only slip minor, even when the AI called it major", () => {
+    const accent = { ...genderMistake, tag: "prepositions-place", original: "a l'ecole", fix: "à l'école" };
+    const f = normalizeFeedback(raw({ is_correct: false, mistakes: [accent, genderMistake] }), input);
+    expect(f.mistakes[0]).toMatchObject({ severity: "minor", tag: "spelling-accent" });
+    expect(f.mistakes[1].severity).toBe("major"); // a real grammar mistake stays major
+  });
+
   it("fails the structure when a question was asked for but not written", () => {
     const f = normalizeFeedback(raw({ is_question: false }), { ...input, itemType: "question" });
     expect(f.structure_ok).toBe(false);

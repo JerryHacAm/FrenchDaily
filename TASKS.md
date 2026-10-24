@@ -9,9 +9,7 @@ Going live, step by step: docs/SETUP.md.
 ## Next up
 - [ ] Review and merge PR "invite list in a Supabase table" — @quantrungvu
 - [ ] Supabase → SQL Editor: run supabase/migrations/20261024000000_invites.sql, then add new friends in Table Editor → invites — @jerry
-- [ ] Review and merge PR "word tips, English corrections, basics verbs, test code" — @quantrungvu
-- [ ] Add TEST_BYPASS_CODE in Vercel and redeploy, so the test code works online — @jerry
-- [ ] Review the corrected_english line in prompts/check-sentence.md (Claude draft) — @jerry
+- [ ] See *se lever* (💡 tip) and *sale* (N.B.) on the word page when they come up (level 2) — @jerry
 - [ ] Review the Claude drafts in data/words.json: example_en and mini_text for ~310 words, forms — @jerry
 - [ ] Review the merged data/grammar_rules.json (quantrungvu's tag names, Jerry's explanations) and tests/sentences.json — @jerry
 - [ ] Review data/roleplay_scenarios.json and prompts/coach.md, prompts/roleplay.md — @jerry
@@ -28,6 +26,7 @@ Going live, step by step: docs/SETUP.md.
 
 ## Done
 - [x] Invite list also in a Supabase table `invites`: add friends without a redeploy (2026-10-24, Jerry)
+- [x] Accent-only slips (a → à) are always minor: code safety net + prompt line; corrected_english line reviewed; TEST_BYPASS_CODE added in Vercel; eval 67/67 (2026-10-24, Jerry)
 - [x] Word page shows note + N.B.; corrected_english in the AI answer; picker borrows verbs from "basics"; test code TEST_BYPASS_CODE for admins + invited emails (2026-10-24, Jerry)
 - [x] App online: Vercel (https://french-daily-seven.vercel.app) + Jerry's Supabase, invite-only; PRs #8 and #9 merged (2026-10-24, Jerry)
 - [x] Learner gender in the profile, sent to the AI check; female examples on the word page; tests j31 + j31b (2026-10-24, Jerry)
