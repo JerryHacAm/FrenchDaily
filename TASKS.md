@@ -4,8 +4,7 @@ The full plan with phases and status lives in docs/ROADMAP.md.
 Going live, step by step: docs/SETUP.md.
 
 ## In progress
-- [ ] Go live for Jerry + invited friends: Jerry's own Supabase is set up and works locally; next: merge this PR, then Vercel (docs/SETUP.md step 6) — @jerry
-- [ ] Review PR: Next.js security update, learner gender, English for structure examples, invite-only, login screens — branch: feature/finish-jerryhacam — quantrungvu
+- [ ] Send the live link (https://french-daily-seven.vercel.app) to invited friends; practise daily on the phone — @jerry
 
 ## Next up
 - [ ] Review the Claude drafts in data/words.json: example_en and mini_text for ~310 words, forms — @jerry
@@ -26,6 +25,7 @@ Going live, step by step: docs/SETUP.md.
 - [ ] Review and revise cost controls before public launch
 
 ## Done
+- [x] App online: Vercel (https://french-daily-seven.vercel.app) + Jerry's Supabase, invite-only; PRs #8 and #9 merged (2026-10-24, Jerry)
 - [x] Learner gender in the profile, sent to the AI check; female examples on the word page; tests j31 + j31b (2026-10-24, Jerry)
 - [x] English translations for all structure examples (Claude draft, reviewed by Jerry); fix step shows "Your fix" next to the answer (2026-10-24, Jerry)
 - [x] AI grader: 9 tests pointed at the wrong template, fixed (full run 65/67, then the 2 left were fixed and pass) (2026-10-24, Jerry)
