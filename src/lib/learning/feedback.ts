@@ -1,5 +1,5 @@
 import type { Feedback, Mistake } from "./state";
-import { includesFix, sameSentence } from "./text";
+import { includesFix, onlyAccentsDiffer, sameSentence } from "./text";
 
 // Makes the AI's answer safe to show (README 6, step 6): never more than 2
 // mistakes, exactly 2 examples, known tags only, consistent flags. The AI
@@ -7,6 +7,7 @@ import { includesFix, sameSentence } from "./text";
 
 export const MAX_MISTAKES = 2;
 export const OTHER_TAG = "other";
+export const ACCENT_TAG = "spelling-accent";
 
 export type RawFeedback = {
   structure_ok: boolean;
@@ -28,11 +29,18 @@ export function normalizeFeedback(
   const mistakes = raw.mistakes
     .filter((m) => m.original.trim() || m.fix.trim())
     .slice(0, MAX_MISTAKES)
-    .map((m) => ({
-      ...m,
-      tag: input.knownTags.has(m.tag) ? m.tag : OTHER_TAG,
-      severity: m.severity === "minor" ? ("minor" as const) : ("major" as const),
-    }));
+    .map((m) => {
+      // A slip that is only accents (a → à) is always minor, whatever the AI
+      // said: a major mistake sends the word back to review box 1.
+      if (onlyAccentsDiffer(m.original, m.fix)) {
+        return { ...m, tag: input.knownTags.has(ACCENT_TAG) ? ACCENT_TAG : OTHER_TAG, severity: "minor" as const };
+      }
+      return {
+        ...m,
+        tag: input.knownTags.has(m.tag) ? m.tag : OTHER_TAG,
+        severity: m.severity === "minor" ? ("minor" as const) : ("major" as const),
+      };
+    });
 
   let structureOk = raw.structure_ok;
   let structureNote = raw.structure_note.trim();

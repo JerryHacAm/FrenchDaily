@@ -135,6 +135,13 @@ export function simplifyForCompare(text: string): string {
     .trim();
 }
 
+/** True when two texts differ only in accents: "a l'ecole" vs "à l'école". */
+export function onlyAccentsDiffer(a: string, b: string): boolean {
+  const sa = simplifyForCompare(a);
+  const sb = simplifyForCompare(b);
+  return sa !== sb && normalize(sa) === normalize(sb);
+}
+
 /** Same as simplifyForCompare but also used to look for a fix inside a sentence. */
 export function includesFix(sentence: string, fix: string): boolean {
   const s = simplifyForCompare(sentence);
