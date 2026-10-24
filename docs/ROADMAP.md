@@ -118,7 +118,7 @@ AI prompt. "Pair" = both.
 
 | # | Task | Done when | Status |
 |---|---|---|---|
-| B1 | Content: `data/words.json`, mini-texts, `data/grammar_rules.json`, `prompts/check-sentence.md`, `tests/sentences.json` | Jerry has reviewed the drafts; word list grows toward ~1000 | 🟡 drafts: 98 words, 31 rules, 6 scenarios, 3 prompts, 31 test sentences; Jerry reviews |
+| B1 | Content: `data/words.json`, mini-texts, `data/grammar_rules.json`, `prompts/check-sentence.md`, `tests/sentences.json` | Jerry has reviewed the drafts; word list grows toward ~1000 | 🟡 drafts: 977 words (levels 1–5), 53 rules, 81 templates, 6 scenarios, 3 prompts, 77 test sentences; Jerry reviews |
 | B2 | Word picker (level, theme, part-of-speech mix, reviews first) + template picker (2 statements + 1 question, all different, recent ones avoided) | covered by tests | ✅ |
 | B3 | Read → notice → write: mini-text + audio before writing | shown for every word | ✅ mini-text + browser audio |
 | B4 | Easier level 1 | shorter minimum, starter, example, word bank at level 1 | ✅ min 4 words, starter, example, word bank |

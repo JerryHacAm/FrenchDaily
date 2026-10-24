@@ -34,6 +34,8 @@ export type Word = {
   mini_text: { fr: string; en: string };
   /** Irregular forms the simple matching rules can't guess (e.g. "vais" for aller). */
   forms?: string[];
+  /** Look-alike words that never count as this word (e.g. "grand" for grandir). */
+  not_forms?: string[];
   /** A short tip for the word page (e.g. why "se lever" has "se"). */
   note?: string | null;
   /** Other common meanings (README 3.1). */

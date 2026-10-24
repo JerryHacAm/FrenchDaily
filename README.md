@@ -37,7 +37,7 @@ The product succeeds if a user who spends about 10 minutes a day is writing noti
 
 AI does **not** choose words. Fully random words are the biggest risk: a beginner could get "gouvernement", "cependant", and "parapluie" on day one, which is frustrating and builds on nothing.
 
-Instead, code picks words from a curated list of about 1,000 high-frequency French words, **random only inside a controlled pool**:
+Instead, code picks words from a curated list of about 1,000 high-frequency French words (977 now: levels 1–2 from 2026-10-10, levels 3–5 added 2026-10-24), **random only inside a controlled pool**:
 
 - **Level:** words are tagged by level (1 = absolute beginner, up to 5; see the level table in 3.3). Users start at level 1 and move up.
 - **Theme:** words are grouped into themes (food, travel, family, home, daily routine...). Run one theme for about a week so words reinforce each other.
@@ -160,9 +160,9 @@ Template format (draft):
 
 **Slot idea:** a noun target word fills the object slot, a verb target word fills the verb slot, and an adjective target word fills the description slot. So most templates work for both nouns and verbs, and each template has one example per part of speech it fits.
 
-A first draft of **75 templates** (5 levels, 15 each: 9 statements and 6 questions) is in `/data/structures.json`. It was written from standard CEFR A1, A2 and B1 grammar topics plus common spoken French. Jerry reviews and edits the list.
+**81 templates** are in `/data/structures.json`: 15 per level at levels 1–2 (9 statements and 6 questions) and 17 at levels 3–5 (2 extra adjective templates each, added 2026-10-24). It was written from standard CEFR A1, A2 and B1 grammar topics plus common spoken French. Jerry reviews and edits the list.
 
-**Known gap:** adjectives fit only 1 to 3 templates per type and level, because there are fewer adjective words and they have fewer natural slots. That is enough for now, but check variety once the word list exists. Connectors and other word types (adverbs, prepositions) have no templates yet.
+**Known gap:** adjectives fit only 2 to 4 templates per type and level, because they have fewer natural slots. Levels 3–5 now have at least 2 statements and 2 questions each for adjectives. Connectors and other word types (adverbs, prepositions) have no templates yet.
 
 Matching the model example from the project idea: *"I like eating ice cream because it is really sweet and cool."*
 
