@@ -1,5 +1,5 @@
 {
-  "_note": "Draft by Claude. Jerry to review. 5 levels, 15 templates each (9 statements + 6 questions). fits_pos lists which target-word types the template works with. examples maps a part of speech to [sample word, example sentence, English translation]. The English translations are a Claude draft (2026-10-23), reviewed by Jerry (2026-10-24). Goal: everyday French a normal person uses, not literary French.",
+  "_note": "Draft by Claude. Jerry to review. 5 levels: 15 templates each at levels 1-2 (9 statements + 6 questions), 17 at levels 3-5 (2 extra adjective templates each, Claude draft 2026-10-24). fits_pos lists which target-word types the template works with. examples maps a part of speech to [sample word, example sentence, English translation]. The English translations are a Claude draft (2026-10-23), reviewed by Jerry (2026-10-24). Goal: everyday French a normal person uses, not literary French.",
   "structures": [
     { "id": "s101", "type": "statement", "level": 1, "fits_pos": ["noun", "verb"], "pattern": "Subject + verb + object + place",
       "examples": { "noun": ["pomme", "Elle achète une pomme au marché.", "She buys an apple at the market."], "verb": ["acheter", "Elle achète du pain au marché.", "She buys bread at the market."] } },
@@ -93,6 +93,10 @@
       "examples": { "noun": ["pomme", "Ça fait combien de temps que tu manges des pommes bio ?", "How long have you been eating organic apples?"], "verb": ["travailler", "Ça fait combien de temps que tu travailles ici ?", "How long have you been working here?"] } },
     { "id": "q306", "type": "question", "level": 3, "fits_pos": ["adjective"], "pattern": "Tu trouves + object + adjective + ?",
       "examples": { "adjective": ["salé", "Tu trouves cette soupe trop salée ce soir ?", "Do you find this soup too salty tonight?"] } },
+    { "id": "s310", "type": "statement", "level": 3, "fits_pos": ["adjective"], "pattern": "Je le / la / les trouve + adjective + parce que + reason (le / la / les = him, her, them)",
+      "examples": { "adjective": ["timide", "Je la trouve un peu timide parce qu'elle ne parle pas beaucoup en classe.", "I find her a bit shy because she doesn't talk much in class."] } },
+    { "id": "q307", "type": "question", "level": 3, "fits_pos": ["adjective"], "pattern": "Tu ne trouves pas que + noun + est un peu + adjective ? (informal)",
+      "examples": { "adjective": ["cher", "Tu ne trouves pas que ce restaurant est un peu cher ?", "Don't you think this restaurant is a bit expensive?"] } },
 
     { "id": "s401", "type": "statement", "level": 4, "fits_pos": ["noun", "verb"], "pattern": "Quand + imparfait (past habit), + imparfait + object",
       "examples": { "noun": ["pomme", "Quand j'étais petit, je mangeais une pomme chaque matin.", "When I was little, I used to eat an apple every morning."], "verb": ["manger", "Quand j'étais petit, je mangeais toujours chez ma grand-mère.", "When I was little, I always used to eat at my grandmother's."] } },
@@ -124,6 +128,10 @@
       "examples": { "adjective": ["long", "Tu trouves que ce film est trop long ?", "Do you think this film is too long?"] } },
     { "id": "q406", "type": "question", "level": 4, "fits_pos": ["noun", "verb"], "pattern": "Pourquoi est-ce que + subject + ne ... pas + passé composé + object + time ?",
       "examples": { "noun": ["pomme", "Pourquoi est-ce que tu n'as pas acheté de pommes hier ?", "Why didn't you buy apples yesterday?"], "verb": ["travailler", "Pourquoi est-ce que tu n'as pas travaillé hier ?", "Why didn't you work yesterday?"] } },
+    { "id": "s410", "type": "statement", "level": 4, "fits_pos": ["adjective"], "pattern": "Avant, + subject + imparfait (être + adjective), mais maintenant + present",
+      "examples": { "adjective": ["timide", "Avant, j'étais très timide, mais maintenant je parle à tout le monde.", "I used to be very shy, but now I talk to everyone."] } },
+    { "id": "q407", "type": "question", "level": 4, "fits_pos": ["adjective"], "pattern": "Qui est le plus / la plus + adjective + de + group ?",
+      "examples": { "adjective": ["drôle", "Qui est le plus drôle de tes amis ?", "Who is the funniest of your friends?"] } },
 
     { "id": "s501", "type": "statement", "level": 5, "fits_pos": ["noun", "verb"], "pattern": "Si + imparfait, + conditionnel + object",
       "examples": { "noun": ["pomme", "Si j'avais plus d'argent, j'achèterais des pommes bio.", "If I had more money, I would buy organic apples."], "verb": ["voyager", "Si j'avais plus de temps, je voyagerais plus souvent.", "If I had more time, I would travel more often."] } },
@@ -154,6 +162,10 @@
     { "id": "q505", "type": "question", "level": 5, "fits_pos": ["noun", "verb"], "pattern": "Est-ce qu'il faut que + subject + subjonctif + object + time ?",
       "examples": { "noun": ["pomme", "Est-ce qu'il faut que j'achète des pommes pour demain ?", "Do I need to buy apples for tomorrow?"], "verb": ["réserver", "Est-ce qu'il faut que je réserve une table ce soir ?", "Do I need to book a table for tonight?"] } },
     { "id": "q506", "type": "question", "level": 5, "fits_pos": ["noun", "verb"], "pattern": "Tu sais + question word + je peux + infinitive + object + place ?",
-      "examples": { "noun": ["pomme", "Tu sais où je peux acheter des pommes bio près d'ici ?", "Do you know where I can buy organic apples near here?"], "verb": ["trouver", "Tu sais comment je peux trouver un bon restaurant près d'ici ?", "Do you know how I can find a good restaurant near here?"] } }
+      "examples": { "noun": ["pomme", "Tu sais où je peux acheter des pommes bio près d'ici ?", "Do you know where I can buy organic apples near here?"], "verb": ["trouver", "Tu sais comment je peux trouver un bon restaurant près d'ici ?", "Do you know how I can find a good restaurant near here?"] } },
+    { "id": "s510", "type": "statement", "level": 5, "fits_pos": ["adjective"], "pattern": "Je ne pense pas que + subject + soit + adjective + , + reason or advice (subjunctive after a negative opinion)",
+      "examples": { "adjective": ["grave", "Je ne pense pas que ce soit grave, mais tu devrais voir un médecin.", "I don't think it's serious, but you should see a doctor."] } },
+    { "id": "q507", "type": "question", "level": 5, "fits_pos": ["adjective"], "pattern": "Tu serais + adjective + si + imparfait ?",
+      "examples": { "adjective": ["déçu", "Tu serais déçu si on annulait le voyage ?", "Would you be disappointed if we cancelled the trip?"] } }
   ]
 }

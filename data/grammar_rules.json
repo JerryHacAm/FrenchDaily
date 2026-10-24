@@ -1,5 +1,5 @@
 {
-  "_note": "Merged 2026-10-10 from Jerry's and quantrungvu's drafts (Claude). Jerry reviews. id = the mistake 'tag' used by the AI, stats and coach (quantrungvu's names kept; change an id only together with tests/sentences.json). rule = plain-English explanation the AI builds its short_explanation from. severity: 'major' = wrong meaning or core grammar (word goes back to box 1); 'minor' = accents, small spelling, punctuation. wrong/right = the main example; examples = all of Jerry's examples. focus_pos = kinds of target words that are good practice for the rule (coach's 'Practise this' button). Keep a rule with id 'other'.",
+  "_note": "Merged 2026-10-10 from Jerry's and quantrungvu's drafts (Claude). Jerry reviews. id = the mistake 'tag' used by the AI, stats and coach (quantrungvu's names kept; change an id only together with tests/sentences.json). rule = plain-English explanation the AI builds its short_explanation from. severity: 'major' = wrong meaning or core grammar (word goes back to box 1); 'minor' = accents, small spelling, punctuation. wrong/right = the main example; examples = all of Jerry's examples. focus_pos = kinds of target words that are good practice for the rule (coach's 'Practise this' button). Keep a rule with id 'other'. Added 2026-10-24 (Claude draft, Jerry to review): rules for levels 3-5 (c-est-il-est, depuis-ca-fait, venir-de-en-train-de, negation-plus-jamais-rien, futur-simple, infinitive-after-preposition, plus-que-parfait, tense-after-quand, conditional-polite, indirect-pronoun) and a severity for the older level 3-5 rules.",
   "rules": [
     {
       "id": "article-gender",
@@ -470,6 +470,7 @@
       "id": "pronoun",
       "level": 3,
       "title": "Object pronouns (le, la, lui, en, y)",
+      "severity": "major",
       "rule": "Object pronouns go before the verb: je le mange, j'y vais, j'en veux.",
       "wrong": "Je mange le.",
       "right": "Je le mange.",
@@ -482,6 +483,7 @@
       "id": "imparfait-passe-compose",
       "level": 4,
       "title": "Imparfait or passé composé",
+      "severity": "major",
       "rule": "Use the imparfait for background and habits in the past (il faisait beau), and the passé composé for a finished action (je suis sorti).",
       "wrong": "Quand j'étais petit, j'ai joué au foot tous les jours.",
       "right": "Quand j'étais petit, je jouais au foot tous les jours.",
@@ -493,6 +495,7 @@
       "id": "comparative",
       "level": 4,
       "title": "Comparing (plus, moins, aussi … que)",
+      "severity": "major",
       "rule": "Compare with plus/moins/aussi + adjective + que. Bon becomes meilleur.",
       "wrong": "Ce café est plus bon que l'autre.",
       "right": "Ce café est meilleur que l'autre.",
@@ -504,6 +507,7 @@
       "id": "relative-pronoun",
       "level": 4,
       "title": "Qui or que",
+      "severity": "major",
       "rule": "Use qui when the next word is a verb (the person who does), que when a new subject follows (the thing that I see).",
       "wrong": "Le livre qui je lis est bon.",
       "right": "Le livre que je lis est bon.",
@@ -515,6 +519,7 @@
       "id": "conditional-si",
       "level": 5,
       "title": "Si + imparfait, conditionnel",
+      "severity": "major",
       "rule": "For an imagined situation: si + imparfait, then the conditional: si j'avais le temps, je voyagerais.",
       "wrong": "Si j'aurais le temps, je voyagerais.",
       "right": "Si j'avais le temps, je voyagerais.",
@@ -526,6 +531,7 @@
       "id": "subjunctive",
       "level": 5,
       "title": "Subjunctive after il faut que",
+      "severity": "major",
       "rule": "After il faut que, je veux que, pour que and similar, use the subjunctive: il faut que je parte.",
       "wrong": "Il faut que je pars.",
       "right": "Il faut que je parte.",
@@ -865,6 +871,229 @@
         "right": [
           "Quelle heure est-il ?",
           "Quels films tu aimes ?"
+        ]
+      }
+    },
+    {
+      "id": "c-est-il-est",
+      "level": 3,
+      "title": "C'est or il / elle est",
+      "severity": "major",
+      "rule": "Use c'est before a noun with a word like un, le or mon (c'est un ami). Use il / elle est before an adjective alone or a job (il est sympa, elle est médecin). For a general opinion, use c'est + masculine adjective (c'est bon).",
+      "wrong": "Il est un bon ami.",
+      "right": "C'est un bon ami.",
+      "focus_pos": [
+        "noun",
+        "adjective"
+      ],
+      "examples": {
+        "wrong": [
+          "Il est un bon ami.",
+          "Elle est une médecin.",
+          "La pizza, elle est bon."
+        ],
+        "right": [
+          "C'est un bon ami.",
+          "Elle est médecin.",
+          "La pizza, c'est bon."
+        ]
+      }
+    },
+    {
+      "id": "depuis-ca-fait",
+      "level": 3,
+      "title": "Depuis / ça fait … que + present",
+      "severity": "major",
+      "rule": "For something that started in the past and is still going on, French uses the present tense with depuis or ça fait … que: j'habite ici depuis deux ans.",
+      "wrong": "J'ai habité ici depuis deux ans.",
+      "right": "J'habite ici depuis deux ans.",
+      "focus_pos": [
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "J'ai habité ici depuis deux ans.",
+          "Ça fait un an que j'ai appris le français."
+        ],
+        "right": [
+          "J'habite ici depuis deux ans.",
+          "Ça fait un an que j'apprends le français."
+        ]
+      }
+    },
+    {
+      "id": "venir-de-en-train-de",
+      "level": 3,
+      "title": "Venir de / être en train de",
+      "severity": "major",
+      "rule": "venir de + infinitive = just did (je viens de manger). être en train de + infinitive = in the middle of doing (je suis en train de manger). Both need 'de' and an infinitive.",
+      "wrong": "Je viens manger.",
+      "right": "Je viens de manger.",
+      "focus_pos": [
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "Je viens manger. (for 'I just ate')",
+          "Il est en train regarder un film."
+        ],
+        "right": [
+          "Je viens de manger.",
+          "Il est en train de regarder un film."
+        ]
+      }
+    },
+    {
+      "id": "negation-plus-jamais-rien",
+      "level": 4,
+      "title": "Ne … plus / jamais / rien / personne",
+      "severity": "major",
+      "rule": "These negatives work like ne … pas: ne before the verb, plus / jamais / rien / personne after it. In the passé composé they go around avoir or être (je n'ai jamais vu), except personne, which goes after the participle.",
+      "wrong": "Je ne mange pas jamais de viande.",
+      "right": "Je ne mange jamais de viande.",
+      "focus_pos": [
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "Je ne mange pas jamais de viande.",
+          "Je n'ai vu rien.",
+          "Il ne travaille pas plus ici."
+        ],
+        "right": [
+          "Je ne mange jamais de viande.",
+          "Je n'ai rien vu.",
+          "Il ne travaille plus ici."
+        ]
+      }
+    },
+    {
+      "id": "futur-simple",
+      "level": 4,
+      "title": "Futur simple",
+      "severity": "major",
+      "rule": "The futur simple is the infinitive + -ai, -as, -a, -ons, -ez, -ont (je parlerai). Some common verbs have a special stem: être → ser-, avoir → aur-, aller → ir-, faire → fer-, venir → viendr-, pouvoir → pourr-.",
+      "wrong": "Demain, je vais être là et je fairai les courses.",
+      "right": "Demain, je serai là et je ferai les courses.",
+      "focus_pos": [
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "Je fairai les courses demain.",
+          "L'année prochaine, j'allerai en France."
+        ],
+        "right": [
+          "Je ferai les courses demain.",
+          "L'année prochaine, j'irai en France."
+        ]
+      }
+    },
+    {
+      "id": "infinitive-after-preposition",
+      "level": 4,
+      "title": "Avant de, pour, sans + infinitive",
+      "severity": "major",
+      "rule": "After avant de, pour, sans and other prepositions, the verb stays in the infinitive: avant de partir, pour apprendre.",
+      "wrong": "Avant de je pars, je ferme la porte.",
+      "right": "Avant de partir, je ferme la porte.",
+      "focus_pos": [
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "Avant de je pars, je ferme la porte.",
+          "Je travaille pour je gagne de l'argent."
+        ],
+        "right": [
+          "Avant de partir, je ferme la porte.",
+          "Je travaille pour gagner de l'argent."
+        ]
+      }
+    },
+    {
+      "id": "plus-que-parfait",
+      "level": 5,
+      "title": "Plus-que-parfait",
+      "severity": "major",
+      "rule": "For something that happened before another past event, use avoir / être in the imparfait + past participle: quand je suis arrivé, le film avait déjà commencé.",
+      "wrong": "Quand je suis arrivé, le film a déjà commencé.",
+      "right": "Quand je suis arrivé, le film avait déjà commencé.",
+      "focus_pos": [
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "Quand je suis arrivé, le film a déjà commencé.",
+          "Elle était fatiguée parce qu'elle a mal dormi la veille."
+        ],
+        "right": [
+          "Quand je suis arrivé, le film avait déjà commencé.",
+          "Elle était fatiguée parce qu'elle avait mal dormi la veille."
+        ]
+      }
+    },
+    {
+      "id": "tense-after-quand",
+      "level": 5,
+      "title": "Future after quand / dès que",
+      "severity": "major",
+      "rule": "When quand or dès que talks about the future, French uses the future in both parts: quand j'aurai le temps, je t'appellerai (not the present like English).",
+      "wrong": "Quand j'ai le temps demain, je t'appellerai.",
+      "right": "Quand j'aurai le temps demain, je t'appellerai.",
+      "focus_pos": [
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "Dès que j'arrive à Paris ce soir, je t'enverrai un message."
+        ],
+        "right": [
+          "Dès que j'arriverai à Paris ce soir, je t'enverrai un message."
+        ]
+      }
+    },
+    {
+      "id": "conditional-polite",
+      "level": 5,
+      "title": "Conditional for polite requests and advice",
+      "severity": "minor",
+      "rule": "Use the conditional to be polite or give advice: je voudrais, pourriez-vous, tu devrais. The present (je veux, tu dois) is correct grammar but sounds more direct.",
+      "wrong": "Je veux un café, s'il vous plaît.",
+      "right": "Je voudrais un café, s'il vous plaît.",
+      "focus_pos": [
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "Je veux un café, s'il vous plaît.",
+          "Tu dois dormir plus. (as friendly advice)"
+        ],
+        "right": [
+          "Je voudrais un café, s'il vous plaît.",
+          "Tu devrais dormir plus."
+        ]
+      }
+    },
+    {
+      "id": "indirect-pronoun",
+      "level": 5,
+      "title": "Lui / leur (to him, to her, to them)",
+      "severity": "major",
+      "rule": "With verbs that take à + a person (parler à, téléphoner à, donner à, demander à), replace the person with lui (one person) or leur (several), before the verb: je lui parle. Don't use le / la here.",
+      "wrong": "Je la téléphone ce soir.",
+      "right": "Je lui téléphone ce soir.",
+      "focus_pos": [
+        "verb"
+      ],
+      "examples": {
+        "wrong": [
+          "Je la téléphone ce soir.",
+          "Je les ai donné un cadeau."
+        ],
+        "right": [
+          "Je lui téléphone ce soir.",
+          "Je leur ai donné un cadeau."
         ]
       }
     },

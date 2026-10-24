@@ -229,3 +229,16 @@ minute. ALLOWED_EMAILS still works; an email in either place is allowed. If the
 table can't be read, the app stays invite-only (never open to everyone). Only
 the server can read the table.
 Revisit if: we need invite links or a sign-up waiting list.
+
+## 2026-10-24 — Words and grammar for levels 3 to 5
+Why: the goal is everyday spoken French by level 5. Added 644 words (977 in
+total): level 3 = 247, level 4 = 219, level 5 = 178, chosen from high-frequency
+everyday words (about the top 3000 of a frequency dictionary) and common CEFR
+A2+/B1 topics. Four new themes only exist at levels 3-5: opinions-ideas,
+money-admin, culture-media, society-environment. Also 6 adjective templates
+(levels 3-5 had only one adjective question each) and 10 grammar rules for the
+level 3-5 structures, so mistakes get a real tag instead of "other". Still only
+nouns, verbs and adjectives (no templates for adverbs or connectors). All
+Claude drafts; frequency ranks are estimates.
+Revisit if: Jerry's review finds words at the wrong level, or the pilot shows
+level 3 is too big a jump.

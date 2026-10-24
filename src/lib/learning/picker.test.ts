@@ -22,6 +22,20 @@ describe("planBatch (word picker)", () => {
     expect(plan.theme?.current).toBe("food");
   });
 
+  it("gives level 3, 4 and 5 learners words of their own level, each with templates of that level", () => {
+    for (const level of [3, 4, 5]) {
+      const plan = planBatch(onboardedState(level), REAL_CONTENT, TEST_RULES, today, seededRng(level));
+      expect(plan.words).toHaveLength(TEST_RULES.batchSize);
+      const words = plan.words.map((p) => REAL_CONTENT.wordById.get(p.wordId)!);
+      expect(words.every((w) => w.level === level)).toBe(true);
+      expect(new Set(words.map((w) => w.pos)).has("verb")).toBe(true);
+      for (const w of words) {
+        const t = pickTemplates(REAL_CONTENT.structures, w.pos, level, [], seededRng(1));
+        expect(t.every((s) => s.level === level)).toBe(true);
+      }
+    }
+  });
+
   it("puts due reviews first", () => {
     let s = withWords(onboardedState(), ["w0023", "w0025"], "2026-10-01", { dueOn: "2026-10-09", lastSeenOn: "2026-10-08" });
     s = withWords(s, ["w0027"], "2026-10-01", { dueOn: "2026-10-20", lastSeenOn: "2026-10-08", selfUseCount: 1 });
