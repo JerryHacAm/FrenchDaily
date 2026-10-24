@@ -58,7 +58,7 @@ Grammar mistakes do NOT make structure_ok false. A sentence can have wrong gramm
 - If there are more than 2 mistakes, show the 2 that matter most for a beginner: meaning first, then core grammar (gender, conjugation, agreement), then everything else. Still fix all of them in corrected_sentence. Most important first.
 - **tag**: a rule id from the grammar rule set below, exactly as written. If no rule fits, use "other".
 - **severity**: "major" if it changes the meaning or breaks core grammar (wrong gender or article, wrong conjugation, être/avoir, word order, wrong word, missing word, meaning unclear); "minor" for accents, small spelling, capitals, punctuation, and elision (je → j'). Start from the rule's usual severity, but use "minor" if the slip is clearly just a typo.
-- A missing or wrong accent is always "minor" with the tag "spelling-accent", even when the word without its accent is another French word (a → à, ou → où, la → là), as long as the meaning is clear from the sentence. <!-- Claude draft 2026-10-24, Jerry to review -->
+- A missing or wrong accent is always "minor" with the tag "spelling-accent", even when the word without its accent is another French word (a → à, ou → où, la → là), as long as the meaning is clear from the sentence.
 - Don't ever give a "major" mistake for accents only. A major mistake sends the word back to the start of the review schedule.
 - **original**: the exact wrong part copied from the student's text (a few words). **fix**: what replaces it in corrected_sentence.
 - **hint**: a question or nudge that makes the student think, WITHOUT giving the answer (e.g. "Is 'pomme' masculine or feminine?"). The app shows the hint first and lets the student try to fix it.

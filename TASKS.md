@@ -8,7 +8,6 @@ Going live, step by step: docs/SETUP.md.
 
 ## Next up
 - [ ] Review and merge PR "accent slips are always minor" — @quantrungvu
-- [ ] Review the new accent line in prompts/check-sentence.md (Claude draft) — @jerry
 - [ ] See *se lever* (💡 tip) and *sale* (N.B.) on the word page when they come up (level 2) — @jerry
 - [ ] Review the Claude drafts in data/words.json: example_en and mini_text for ~310 words, forms — @jerry
 - [ ] Review the merged data/grammar_rules.json (quantrungvu's tag names, Jerry's explanations) and tests/sentences.json — @jerry
