@@ -65,6 +65,8 @@ describe("containsWord", () => {
     expect(containsWord("Le livre est sur la table.", word("w0461"))).toBe(false); // sur ≠ sûr
     expect(containsWord("Ta chemise est sale.", word("w0348"))).toBe(false); // sale ≠ salé
     expect(containsWord("Elle marche dans le parc.", word("w0153"))).toBe(false); // marche ≠ marché
+    expect(containsWord("Je bois un verre de lait.", word("w0526"))).toBe(false); // "de" alone ≠ mot de passe
+    expect(containsWord("Tes mots de passe sont trop simples.", word("w0526"))).toBe(true);
   });
 
   it("finds all known words in a sentence", () => {
