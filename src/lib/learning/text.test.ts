@@ -43,6 +43,30 @@ describe("containsWord", () => {
     expect(containsWord("Je mange une banane.", word("w0001"))).toBe(false);
   });
 
+  it.each([
+    ["w0330", "Il marche vite le matin."], // marcher: "marche" without accent is still the verb
+    ["w0288", "J'appelle ma mère le soir."], // appeler: doubled l
+    ["w0263", "J'essaie une nouvelle recette."], // essayer: y → i
+    ["w0672", "J'ai suivi un cours de cuisine."], // suivre: participle in -i
+    ["w0123", "Il attend le bus."], // attendre: no ending
+    ["w0173", "Nous pouvons venir demain."], // pouvoir: -oir verb
+    ["w0121", "Nous commençons à huit heures."], // commencer: ç
+    ["w0607", "Mon fils grandit vite."], // grandir
+    ["w0461", "Je suis sûre de moi."], // sûr with its accent
+  ])("still finds %s in %s", (id, sentence) => {
+    expect(containsWord(sentence, word(id))).toBe(true);
+  });
+
+  it("does not count look-alike words (only real verb endings, accents where they change the word)", () => {
+    expect(containsWord("Il est dans la cuisine.", word("w0207"))).toBe(false); // dans ≠ danser
+    expect(containsWord("Il est dans la cuisine.", word("w0587"))).toBe(false); // cuisine ≠ cuire
+    expect(containsWord("Mon frère est très grand.", word("w0607"))).toBe(false); // grand ≠ grandir (not_forms)
+    expect(containsWord("Je ne sais pas.", word("w0057"))).toBe(false); // ne ≠ né (naître)
+    expect(containsWord("Le livre est sur la table.", word("w0461"))).toBe(false); // sur ≠ sûr
+    expect(containsWord("Ta chemise est sale.", word("w0348"))).toBe(false); // sale ≠ salé
+    expect(containsWord("Elle marche dans le parc.", word("w0153"))).toBe(false); // marche ≠ marché
+  });
+
   it("finds all known words in a sentence", () => {
     const words = [word("w0006"), word("w0001"), word("w0023"), word("w0171")];
     expect(findWordsUsed("Je mange une pomme à la maison.", words).sort()).toEqual(["w0001", "w0006", "w0023"]);

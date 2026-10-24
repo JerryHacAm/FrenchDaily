@@ -1,5 +1,5 @@
 {
-  "_note": "Merged 2026-10-10 from Jerry's list (330 words) and quantrungvu's starter list (3 extra words: w0331-w0333). Drafts by Claude. Levels 1-2 first (2026-10-10); levels 3-5 added 2026-10-24 (w0334-w0977, 644 words, 4 new themes for levels 3-5: opinions-ideas, money-admin, culture-media, society-environment). Jerry to review, especially example_en and mini_text, which Claude drafted for most words. Only nouns, verbs and adjectives for now, because /data/structures.json has templates only for those. frequency_rank is an estimate, not from a corpus. Field guide: gender is 'm', 'f', or 'm/f' (a person noun with both forms, one word: shown as 'le voisin / la voisine'). feminine + article_f give the feminine form (nouns with m/f, and every adjective; same spelling when it doesn't change). example_en is the English of example. mini_text is the short text shown before writing (read -> notice -> write); it must use the word. forms lists irregular forms the matcher can't guess (vais, allons for aller). example_f is the example for a female learner, only where 'je' needs agreement; otherwise use example for everyone. note is a short tip for the word card (e.g. why a verb has 'se'). other_meanings lists other common meanings of the same French word: word_id links to that meaning's own entry, or null when it is an N.B. only; nb is the reminder shown to the learner. npm test checks this file.",
+  "_note": "Merged 2026-10-10 from Jerry's list (330 words) and quantrungvu's starter list (3 extra words: w0331-w0333). Drafts by Claude. Levels 1-2 first (2026-10-10); levels 3-5 added 2026-10-24 (w0334-w0977, 644 words, 4 new themes for levels 3-5: opinions-ideas, money-admin, culture-media, society-environment). Jerry to review, especially example_en and mini_text, which Claude drafted for most words. Only nouns, verbs and adjectives for now, because /data/structures.json has templates only for those. frequency_rank is an estimate, not from a corpus. Field guide: gender is 'm', 'f', or 'm/f' (a person noun with both forms, one word: shown as 'le voisin / la voisine'). feminine + article_f give the feminine form (nouns with m/f, and every adjective; same spelling when it doesn't change). example_en is the English of example. mini_text is the short text shown before writing (read -> notice -> write); it must use the word. forms lists irregular forms the matcher can't guess (vais, allons for aller). not_forms (optional) lists look-alike words that must never count as this word (grand for grandir). example_f is the example for a female learner, only where 'je' needs agreement; otherwise use example for everyone. note is a short tip for the word card (e.g. why a verb has 'se'). other_meanings lists other common meanings of the same French word: word_id links to that meaning's own entry, or null when it is an N.B. only; nb is the reminder shown to the learner. npm test checks this file.",
   "themes": [
     "food",
     "home",
@@ -14740,6 +14740,12 @@
         "fr": "Inès a grandi à Marseille. Quand elle était petite, elle voulait grandir plus vite pour sortir seule. Maintenant, ses enfants grandissent trop vite !",
         "en": "Inès grew up in Marseille. When she was little, she wanted to grow up faster so she could go out alone. Now her children are growing up too fast!"
       },
+      "not_forms": [
+        "grand",
+        "grande",
+        "grands",
+        "grandes"
+      ],
       "feminine": null,
       "article_f": null,
       "example_f": null,

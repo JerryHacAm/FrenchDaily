@@ -44,6 +44,9 @@ export function validateContent(input: {
     } else if (!containsWord(w.mini_text.fr, w)) {
       problems.push(`${at}: mini_text.fr does not use the word (add the form to "forms" if it's irregular)`);
     }
+    if (w.not_forms !== undefined && (!Array.isArray(w.not_forms) || !w.not_forms.every(text))) {
+      problems.push(`${at}: not_forms must be a list of words`);
+    }
     if (text(w.example) && !containsWord(w.example, w)) {
       problems.push(`${at}: example does not use the word (add the form to "forms" if it's irregular)`);
     }

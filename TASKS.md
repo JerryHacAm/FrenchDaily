@@ -15,7 +15,6 @@ Going live, step by step: docs/SETUP.md.
 - [ ] Review data/roleplay_scenarios.json and prompts/coach.md, prompts/roleplay.md — @jerry
 - [ ] Confirm the open decisions built as recommended (README section 12: completed word, review words count, local day) — @jerry
 - [ ] Review the level 3–5 drafts: 644 new words in data/words.json (w0334–w0977), 6 new templates (s310, q307, s410, q407, s510, q507), 10 new grammar rules, tests c01–c10 — @jerry
-- [ ] Word matcher: a few verbs also match other words (grandir ↔ grand, cuire ↔ cuisine, danser ↔ dans; sûr ↔ sur). Only affects word-bank counts; fix in src/lib/learning/text.ts — later
 - [ ] (Lower priority now: personal app, see DECISIONS 2026-10-24) Start the 2-week pilot, then decide the daily load from /stats (ROADMAP F3) — pair
 - [ ] Improve the AI prompt with `npm run eval` until the test set passes — @jerry, pair
 - [ ] Error monitoring (ROADMAP A9) and reminders (E4) — later
@@ -27,6 +26,7 @@ Going live, step by step: docs/SETUP.md.
 
 ## Done
 - [x] Levels 3–5: 644 new words (977 total, 4 new themes), 6 adjective templates, 10 grammar rules, 10 AI grader tests; eval 77/77 (2026-10-24, Jerry)
+- [x] Word matcher: verbs need a real ending (dans ≠ danser, cuisine ≠ cuire); accents count where they change the word (ne ≠ né, sur ≠ sûr, sale ≠ salé); new optional `not_forms` (grand ≠ grandir) (2026-10-24, Jerry)
 - [x] Invite list also in a Supabase table `invites`: add friends without a redeploy (2026-10-24, Jerry)
 - [x] Accent-only slips (a → à) are always minor: code safety net + prompt line; corrected_english line reviewed; TEST_BYPASS_CODE added in Vercel; eval 67/67 (2026-10-24, Jerry)
 - [x] Word page shows note + N.B.; corrected_english in the AI answer; picker borrows verbs from "basics"; test code TEST_BYPASS_CODE for admins + invited emails (2026-10-24, Jerry)
