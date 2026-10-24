@@ -41,3 +41,34 @@ The plan changed: this is my personal app, plus a few friends. So I made **my ow
 - On start, Next.js printed a security warning with a `next upgrade --agent=security …` command. I didn't run that command; I checked with `npm audit` and updated the version by hand.
 - The "Your fix" line only shows for fix attempts made after this change.
 - Jerry reviewed the English translations in `data/structures.json`. "verb-avoir" and "avoir-expressions" both mention age **on purpose**: they have different purposes (conjugating avoir vs. using avoir instead of être). Keep both, and keep accepting either tag in tests like t13.
+
+---
+
+# Later session 2026-10-24: the app is online
+
+Branch: `feature/go-live-jerryhacam` (only this handoff + TASKS.md)
+
+## 1. Changes
+
+- No code changes. PR #8 and PR #9 are merged into `main`.
+- **The app is live:** https://french-daily-seven.vercel.app (Vercel project `french-daily`, production branch `main`).
+- Vercel environment variables: every `.env` line (STORAGE=supabase, real Claude key, ADMIN_EMAILS, ALLOWED_EMAILS). Pasted in one go from `.env`.
+- Supabase → Authentication → URL Configuration: Site URL = the Vercel link, Redirect URLs include `https://french-daily-seven.vercel.app/**` (and `http://localhost:3000/**`).
+
+## 2. What I did
+
+I put the app online with Vercel. At first the domain said "No Deployment"; after that was sorted, the app opened on my phone and works. I told Supabase about the new address so login email links go to the online app, not my laptop. I updated the invite list (`ALLOWED_EMAILS`) in Vercel and redeployed so it takes effect.
+
+## 3. To do next
+
+- [ ] Jerry: send the link to friends; they tap **Create account** with the exact email on the list
+- [ ] Jerry: practise daily on the phone; note anything confusing
+- [ ] Later: show the word's `note` and N.B. on the word page; `corrected_english` in the AI answer
+
+## 4. Notes
+
+- The "Don't deploy today's `main`" note above is outdated: invite-only is on `main` now and deployed.
+- **Use the domain link, not the deployment link.** `french-daily-seven.vercel.app` stays the same forever. The long `french-daily-<random>-ratt.vercel.app` links change with every deploy and ask visitors to log in to Vercel.
+- **Changing a Vercel setting does nothing until you redeploy** (Deployments → ⋯ → Redeploy, leave "Use existing Build Cache" unticked).
+- Vercel saves variables as **Secret**: the value box looks empty when you edit it. Whatever you type **replaces** the whole value, so type the full email list. Never save `ALLOWED_EMAILS` empty (empty = anyone can sign up).
+- Every merge into `main` now redeploys the live app automatically.
