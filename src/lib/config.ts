@@ -91,5 +91,6 @@ export const ALLOWED_EMAILS = emailList(process.env.ALLOWED_EMAILS);
 
 // Test shortcut (APP_MODE=test only): typing this word in any answer box skips
 // every check and the AI, so the flow and the streak can be tested for free.
-// Works only for admins (ADMIN_EMAILS), or locally with STORAGE=file. Empty = off.
+// Works for admins (ADMIN_EMAILS) and invited emails (ALLOWED_EMAILS), and
+// locally with STORAGE=file. Empty = off.
 export const TEST_BYPASS_CODE = APP_MODE === "test" ? (process.env.TEST_BYPASS_CODE ?? "").trim() : "";

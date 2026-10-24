@@ -22,7 +22,7 @@ export type Deps = {
   rng: Rng;
   newId: () => string;
   prices: { inputPerMTok: number; outputPerMTok: number };
-  /** TEST_BYPASS_CODE for this user (admins only), or null when off. */
+  /** TEST_BYPASS_CODE for this user (admins and invited emails), or null when off. */
   bypassCode?: string | null;
 };
 
