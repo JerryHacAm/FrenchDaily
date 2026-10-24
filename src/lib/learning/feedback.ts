@@ -14,6 +14,7 @@ export type RawFeedback = {
   is_question: boolean;
   is_correct: boolean;
   corrected_sentence: string;
+  corrected_english: string;
   mistakes: Mistake[];
   example_sentences: { french: string; english: string }[];
   words_used: string[];
@@ -68,6 +69,7 @@ export function normalizeFeedback(
     structure_note: structureNote,
     is_correct: isCorrect,
     corrected_sentence: corrected,
+    corrected_english: raw.corrected_english.trim(),
     mistakes,
     example_sentences: examples,
     words_used: raw.words_used.map((w) => w.trim()).filter(Boolean),

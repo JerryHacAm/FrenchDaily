@@ -15,10 +15,10 @@ import {
   skipRetype,
   startSession,
 } from "@/lib/learning/session";
-import { cloneState, getDaily, type LearnerState } from "@/lib/learning/state";
+import { cloneState, getDaily, type Feedback, type LearnerState } from "@/lib/learning/state";
 import { sameSentence } from "@/lib/learning/text";
 import { buildPracticeView, type PracticeView } from "@/lib/learning/view";
-import { callAi, fail, load, logEvent, ok, save, userMessage, type Deps, type Loaded, type Result } from "./common";
+import { callAi, fail, isBypass, load, logEvent, ok, save, userMessage, type Deps, type Loaded, type Result } from "./common";
 
 // The practice flow behind the buttons (ROADMAP B2–B8, C1–C5).
 // Each function: load → change → save → return what the screen shows.
@@ -79,12 +79,49 @@ export function startWriting(deps: Deps) {
   return run(deps, undefined, async ({ state }) => ({ state: beginWriting(state) }));
 }
 
+/** What the test code (TEST_BYPASS_CODE) gets instead of AI feedback: accepted, no mistakes. */
+function bypassFeedback(sentence: string): Feedback {
+  return {
+    structure_ok: true,
+    structure_note: "",
+    is_correct: true,
+    corrected_sentence: sentence,
+    corrected_english: "",
+    mistakes: [],
+    example_sentences: [],
+    words_used: [],
+    encouragement: "Test code: skipped the check.",
+  };
+}
+
 export function submitSentence(deps: Deps, input: { sentence: string }) {
   return run(deps, undefined, async ({ state, today }) => {
     const wp = currentWordProgress(state);
     const item = currentItem(state);
     if (item.stage !== "write") return { state, error: "This sentence was already checked." };
     const word = deps.content.wordById.get(wp.wordId)!;
+    if (isBypass(deps, input.sentence)) {
+      // No code check, no AI call, no check counted.
+      const sentence = input.sentence.trim();
+      const feedback = bypassFeedback(sentence);
+      const sentenceId = deps.newId();
+      await deps.store.addSentence({
+        id: sentenceId,
+        userId: deps.userId,
+        createdAt: deps.now().toISOString(),
+        localDate: today,
+        wordId: word.id,
+        itemType: item.type,
+        templateId: item.templateId,
+        original: sentence,
+        feedback,
+      });
+      const wordsBefore = getDaily(state, today).wordsCompleted.length;
+      const applied = applyCheck(state, deps.content, deps.rules, today, sentence, feedback, sentenceId);
+      await logEvent(deps, "item_checked", today, { wordId: word.id, firstCheck: item.checks === 0, bypass: true });
+      await afterAccept(deps, applied.state, today, wordsBefore, true);
+      return { state: applied.state, message: feedback.encouragement };
+    }
     const template = deps.content.structureById.get(item.templateId);
     const check = codeCheck(
       { sentence: input.sentence, word, itemType: item.type, level: state.profile.level },
@@ -171,7 +208,9 @@ export function submitFix(deps: Deps, input: { attempt: string }) {
   return run(deps, undefined, async ({ state, today }) => {
     if (!input.attempt.trim()) return { state, error: "Write your corrected sentence first." };
     const wordsBefore = getDaily(state, today).wordsCompleted.length;
-    const r = applyFixAttempt(state, deps.content, deps.rules, today, input.attempt);
+    // The test code counts as the right fix.
+    const attempt = isBypass(deps, input.attempt) ? (currentItem(state).feedback?.corrected_sentence ?? input.attempt) : input.attempt;
+    const r = applyFixAttempt(state, deps.content, deps.rules, today, attempt);
     await afterAccept(deps, r.state, today, wordsBefore, r.outcome === "accepted");
     return {
       state: r.state,
@@ -187,7 +226,9 @@ export function showAnswer(deps: Deps) {
 export function submitRetype(deps: Deps, input: { text: string }) {
   return run(deps, undefined, async ({ state, today }) => {
     const wordsBefore = getDaily(state, today).wordsCompleted.length;
-    const r = applyRetype(state, deps.content, deps.rules, today, input.text, sameSentence);
+    // The test code counts as a correct retype.
+    const text = isBypass(deps, input.text) ? (currentItem(state).feedback?.corrected_sentence ?? input.text) : input.text;
+    const r = applyRetype(state, deps.content, deps.rules, today, text, sameSentence);
     await afterAccept(deps, r.state, today, wordsBefore, r.outcome === "accepted");
     if (r.outcome === "try_again") {
       return { state: r.state, error: "Not the same yet. Check accents and small words, then try again." };

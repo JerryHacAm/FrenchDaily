@@ -34,6 +34,17 @@ export type Word = {
   mini_text: { fr: string; en: string };
   /** Irregular forms the simple matching rules can't guess (e.g. "vais" for aller). */
   forms?: string[];
+  /** A short tip for the word page (e.g. why "se lever" has "se"). */
+  note?: string | null;
+  /** Other common meanings (README 3.1). */
+  other_meanings?: OtherMeaning[];
+};
+
+export type OtherMeaning = {
+  /** The separate entry for this meaning, or null when it is an N.B. only. */
+  word_id: string | null;
+  english: string;
+  nb: string;
 };
 
 export type Structure = {

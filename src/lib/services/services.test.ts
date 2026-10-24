@@ -226,6 +226,57 @@ describe("role-play service", () => {
   });
 });
 
+describe("test code (TEST_BYPASS_CODE)", () => {
+  it("skips every check and the AI: 5 words and a streak with no checks used", async () => {
+    const { deps } = testDeps({ bypassCode: "ratt" });
+    await onboard(deps);
+    let v = data(await startPractice(deps, {}));
+    for (let i = 0; i < TEST_RULES.batchSize; i++) {
+      v = data(await startWriting(deps));
+      for (let j = 0; j < 3; j++) v = data(await submitSentence(deps, { sentence: j === 0 ? " RATT " : "ratt" }));
+    }
+    expect(v.session!.finished).toBe(true);
+    expect(v.today).toMatchObject({ completed: 5, checksUsed: 0 });
+    expect(v.streak).toBe(1);
+  });
+
+  it("is off without a code, and counts as the right fix and retype", async () => {
+    const off = testDeps();
+    await onboard(off.deps);
+    data(await startPractice(off.deps, {}));
+    data(await startWriting(off.deps));
+    expect((await submitSentence(off.deps, { sentence: "ratt" })).ok).toBe(false); // too short
+
+    const { deps } = testDeps({ bypassCode: "ratt" });
+    await onboard(deps);
+    data(await startPractice(deps, { focusTag: "article-gender" }));
+    let v = data(await startWriting(deps));
+    const w = word(v.session!.word!.id);
+    const wrong = `Le soir, je pense à ${w.gender === "f" ? "un" : "une"} ${w.french} avec mon ami.`;
+    v = data(await submitSentence(deps, { sentence: wrong }));
+    expect(v.session!.items[0].stage).toBe("fix");
+    v = data(await submitFix(deps, { attempt: "ratt" }));
+    expect(v.session!.items[0]).toMatchObject({ stage: "accepted", fixOutcome: "self" });
+    v = data(await submitSentence(deps, { sentence: wrong.replace("Le soir", "Le matin") }));
+    v = data(await showAnswer(deps));
+    v = data(await submitRetype(deps, { text: "ratt" }));
+    expect(v.session!.items[1]).toMatchObject({ stage: "accepted", fixOutcome: "shown" });
+  });
+
+  it("role-play: a fixed reply, no check used, no AI feedback", async () => {
+    const { deps } = testDeps({ bypassCode: "ratt" }, { ...TEST_RULES, roleplayMaxTurns: 2 });
+    await onboard(deps);
+    let r = data(await startRoleplay(deps, "cafe"));
+    const before = r.checksLeft;
+    r = data(await sendRoleplayMessage(deps, "ratt"));
+    expect(r.session!.messages.at(-1)).toMatchObject({ from: "ai", fr: "D'accord !" });
+    r = data(await sendRoleplayMessage(deps, "ratt"));
+    expect(r.session!.finished).toBe(true);
+    expect(r.session!.summary!.overall).toContain("Test code");
+    expect(r.checksLeft).toBe(before);
+  });
+});
+
 describe("stores", () => {
   it("refuses a save when another tab saved first", async () => {
     const store = new MemoryStore();

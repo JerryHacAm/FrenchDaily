@@ -72,3 +72,37 @@ I put the app online with Vercel. At first the domain said "No Deployment"; afte
 - **Changing a Vercel setting does nothing until you redeploy** (Deployments → ⋯ → Redeploy, leave "Use existing Build Cache" unticked).
 - Vercel saves variables as **Secret**: the value box looks empty when you edit it. Whatever you type **replaces** the whole value, so type the full email list. Never save `ALLOWED_EMAILS` empty (empty = anyone can sign up).
 - Every merge into `main` now redeploys the live app automatically.
+
+---
+
+# Third session 2026-10-24: word tips, English corrections, basics verbs, test code
+
+Branch: `feature/tips-bypass-jerryhacam`
+
+## 1. Changes
+
+- **Word page:** shows the word's `note` (💡 tip) and N.B. lines for `other_meanings`. An N.B.-only meaning (word_id null, e.g. *sale*) always shows. A linked meaning (e.g. *temps* = time ↔ weather) shows only once the learner has seen the other entry: "You learned 'temps' = weather. Here it means time." (README 3.2). Code: `nbLines()` in `src/lib/learning/view.ts`, `ReadStep` in `PracticeClient.tsx`, `note`/`other_meanings` added to `Word` in `content/types.ts`.
+- **`corrected_english`:** new field in the AI answer (`schemas.ts`, `feedback.ts`, `state.ts`, mock). Shown under the corrected sentence in `FeedbackCard` (practice + Review). Not shown in the hint step (it would give the answer away). Old saved feedback has no translation and just shows none. `prompts/check-sentence.md`: one new line + the example answer, **marked Claude draft**.
+- **Word picker:** when the theme has no unseen verb at the learner's level, it now always borrows one from "basics" (`BORROW_VERBS_FROM` in `picker.ts`). Before, it took the most common verb from any theme; with today's word list that was almost always basics by luck.
+- **Test code (`TEST_BYPASS_CODE` in `.env`):** typing it in any answer box (sentence, question, fix, retype, role-play) skips the code checks and the AI, uses no daily check, and accepts the item. Role-play gets a fixed reply ("D'accord !") and, if every message was the code, a fixed summary. Works only with APP_MODE=test, for admins + `ALLOWED_EMAILS` (an empty invite list = admins only), and always locally with STORAGE=file. Code: `isBypass()` in `services/common.ts`, `canUseBypass()` in `access.ts`, used in `practice.ts`, `roleplay.ts`, `deps.ts`. Documented in `.env.example`.
+- Tests: 102 pass (was 96). New: picker borrows from basics, N.B. lines, test code (practice, fix/retype, role-play, who may use it).
+- `npm run eval` (prompt changed): 65/67, then 67/67 on a second run. The first-run failures (j15, j23) were the AI being inconsistent; in j23 it called a missing accent a major mistake. ~$0.08 total.
+
+## 2. What I did
+
+Claude built the three "pair" tasks from TASKS.md: the word page shows the tips and N.B. reminders already in words.json, the AI now also gives the English meaning of the corrected sentence, and new verbs come from "basics" when a theme runs out. I also asked for a secret test code: typing it instead of a sentence skips the AI, so I can test the flow and the streak without spending time or Claude credit. It works for admins and invited friends.
+
+## 3. To do next
+
+- [ ] quantrungvu: review and merge this PR
+- [ ] Jerry: in Vercel, add `TEST_BYPASS_CODE` (the code is in Jerry's `.env`), then Redeploy, so the code works on the phone
+- [ ] Jerry: review the `corrected_english` line in `prompts/check-sentence.md` (Claude draft)
+- [ ] Jerry: try the word page on *se lever* (tip) and *sale* (N.B.) in the browser; not checked in a browser yet, only by tests
+- [ ] Look at the AI grading accent-only slips as major (eval j23), if it keeps happening
+
+## 4. Notes
+
+- **The test code changes real progress.** Items done with it count as completed, move the word up a review box, and appear on the Review page as the code word. Use a test account if you don't want that in your real learning.
+- Invited friends can use the code too (Jerry's choice, to test as a normal user). They could fake streaks if they learn it; it costs no Claude credit.
+- The code is only in `.env` (never committed). quantrungvu: ask Jerry for it and add `TEST_BYPASS_CODE=...` to your own `.env`.
+- It is off when APP_MODE=production or when `TEST_BYPASS_CODE` is empty.

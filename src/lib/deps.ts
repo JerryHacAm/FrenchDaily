@@ -1,6 +1,7 @@
 import "server-only";
 import { getAi } from "@/lib/ai";
-import { AI_PRICE_INPUT_PER_MTOK, AI_PRICE_OUTPUT_PER_MTOK, RULES } from "@/lib/config";
+import { canUseBypass } from "@/lib/access";
+import { AI_PRICE_INPUT_PER_MTOK, AI_PRICE_OUTPUT_PER_MTOK, ALLOWED_EMAILS, RULES, TEST_BYPASS_CODE } from "@/lib/config";
 import { getContent } from "@/lib/content";
 import { getContext, type AppUser } from "@/lib/context";
 import type { Deps } from "@/lib/services/common";
@@ -21,6 +22,8 @@ export async function appDeps(): Promise<{ deps: Deps; user: AppUser } | null> {
       rng: Math.random,
       newId: () => crypto.randomUUID(),
       prices: { inputPerMTok: AI_PRICE_INPUT_PER_MTOK, outputPerMTok: AI_PRICE_OUTPUT_PER_MTOK },
+      bypassCode:
+        TEST_BYPASS_CODE && canUseBypass(ctx.user.email, ctx.user.isAdmin, ALLOWED_EMAILS) ? TEST_BYPASS_CODE : null,
     },
   };
 }

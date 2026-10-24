@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { isEmailAllowed } from "./access";
+import { canUseBypass, isEmailAllowed } from "./access";
 
 describe("isEmailAllowed (invite-only list)", () => {
   const allowed = ["friend@example.com"];
@@ -17,5 +17,15 @@ describe("isEmailAllowed (invite-only list)", () => {
 
   it("is open to anyone when the invite list is empty", () => {
     expect(isEmailAllowed("stranger@example.com", [], admins)).toBe(true);
+  });
+});
+
+describe("canUseBypass (test code)", () => {
+  it("works for admins and invited emails, not for anyone else", () => {
+    expect(canUseBypass(null, true, [])).toBe(true); // admin, or the local learner
+    expect(canUseBypass(" Friend@Example.com ", false, ["friend@example.com"])).toBe(true);
+    expect(canUseBypass("stranger@example.com", false, ["friend@example.com"])).toBe(false);
+    expect(canUseBypass("stranger@example.com", false, [])).toBe(false);
+    expect(canUseBypass(null, false, ["friend@example.com"])).toBe(false);
   });
 });

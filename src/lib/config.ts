@@ -88,3 +88,9 @@ export const ADMIN_EMAILS = emailList(process.env.ADMIN_EMAILS);
 // STORAGE=supabase (comma separated). ADMIN_EMAILS are always allowed.
 // Empty = anyone can sign up (and spend your Claude credit).
 export const ALLOWED_EMAILS = emailList(process.env.ALLOWED_EMAILS);
+
+// Test shortcut (APP_MODE=test only): typing this word in any answer box skips
+// every check and the AI, so the flow and the streak can be tested for free.
+// Works for admins (ADMIN_EMAILS) and invited emails (ALLOWED_EMAILS), and
+// locally with STORAGE=file. Empty = off.
+export const TEST_BYPASS_CODE = APP_MODE === "test" ? (process.env.TEST_BYPASS_CODE ?? "").trim() : "";

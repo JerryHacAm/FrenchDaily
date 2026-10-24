@@ -89,6 +89,7 @@ export class MockAi implements AiClient {
       is_question: /\?\s*$/.test(input.sentence),
       is_correct: mistakes.length === 0,
       corrected_sentence: corrected,
+      corrected_english: "(Mock mode: the real AI translates the corrected sentence here.)",
       mistakes,
       example_sentences: [
         { french: input.word.example, english: input.word.example_en },

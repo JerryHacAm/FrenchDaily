@@ -24,6 +24,7 @@ export const FeedbackSchema = z.object({
   is_question: z.boolean(),
   is_correct: z.boolean(),
   corrected_sentence: z.string(),
+  corrected_english: z.string().describe("English translation of corrected_sentence."),
   mistakes: z.array(MistakeSchema),
   example_sentences: z.array(z.object({ french: z.string(), english: z.string() })),
   words_used: z.array(z.string()).describe("Base forms of the French words used (infinitives, masculine singular)."),

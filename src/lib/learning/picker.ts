@@ -17,6 +17,8 @@ import { quietWords } from "./usage";
 // Words are chosen by code, never by AI.
 
 export const TOP_CANDIDATES = 8;
+/** Where to borrow a verb when the theme has no unseen verb left (DECISIONS 2026-10-10). */
+export const BORROW_VERBS_FROM = "basics";
 
 export type PlannedWord = { wordId: string; reason: BatchReason };
 export type BatchPlan = {
@@ -81,9 +83,14 @@ export function pickNewWords(
   const chosen: Word[] = [];
   const need = (pos: Word["pos"]) => count >= 2 && !chosen.some((w) => w.pos === pos);
   // Part-of-speech mix: try to include at least one noun and one verb.
+  // No unseen verb left in the theme at this level: borrow one from "basics".
   for (const pos of ["noun", "verb"] as const) {
     if (chosen.length < count && need(pos)) {
-      const w = ordered.find((x) => x.pos === pos && !chosen.includes(x));
+      const options = ordered.filter((x) => x.pos === pos && !chosen.includes(x));
+      const w =
+        options.find((x) => x.level === level && x.theme === theme) ??
+        (pos === "verb" ? options.find((x) => x.level === level && x.theme === BORROW_VERBS_FROM) : undefined) ??
+        options[0];
       if (w) chosen.push(w);
     }
   }
