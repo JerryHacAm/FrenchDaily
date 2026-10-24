@@ -1,15 +1,28 @@
 // Invite-only access for the online app (STORAGE=supabase). Pure, so it is tested.
 
+/** The invite list: emails, and whether invite-only is on at all. */
+export type InviteList = { emails: string[]; inviteOnly: boolean };
+
 /**
- * True if this email may use the app. `allowed` = ALLOWED_EMAILS,
- * `admins` = ADMIN_EMAILS (always allowed). An empty ALLOWED_EMAILS
- * means the invite list is off: anyone may sign up.
+ * Joins ALLOWED_EMAILS with the emails in the `invites` table. `tableEmails`
+ * is null when the table couldn't be read: then invite-only stays on (only
+ * ALLOWED_EMAILS and admins get in), so a database hiccup never opens the
+ * app to everyone. Both empty = invite-only is off: anyone may sign up.
  */
-export function isEmailAllowed(email: string | null, allowed: readonly string[], admins: readonly string[]): boolean {
-  if (allowed.length === 0) return true;
+export function mergeInvites(envEmails: readonly string[], tableEmails: readonly string[] | null): InviteList {
+  const fromTable = (tableEmails ?? []).map((e) => e.trim().toLowerCase()).filter(Boolean);
+  const emails = [...new Set([...envEmails, ...fromTable])];
+  return { emails, inviteOnly: tableEmails === null || emails.length > 0 };
+}
+
+/**
+ * True if this email may use the app. `admins` = ADMIN_EMAILS (always allowed).
+ */
+export function isEmailAllowed(email: string | null, invites: InviteList, admins: readonly string[]): boolean {
+  if (!invites.inviteOnly) return true;
   const e = email?.trim().toLowerCase();
   if (!e) return false;
-  return allowed.includes(e) || admins.includes(e);
+  return invites.emails.includes(e) || admins.includes(e);
 }
 
 /**

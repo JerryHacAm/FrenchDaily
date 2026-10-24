@@ -86,7 +86,8 @@ export const ADMIN_EMAILS = emailList(process.env.ADMIN_EMAILS);
 
 // Invite-only: the only emails that can sign up and use the app when
 // STORAGE=supabase (comma separated). ADMIN_EMAILS are always allowed.
-// Empty = anyone can sign up (and spend your Claude credit).
+// Empty = anyone can sign up (and spend your Claude credit). The Supabase
+// table `invites` adds more emails without a redeploy: src/lib/invites.ts.
 export const ALLOWED_EMAILS = emailList(process.env.ALLOWED_EMAILS);
 
 // Test shortcut (APP_MODE=test only): typing this word in any answer box skips
