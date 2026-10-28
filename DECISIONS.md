@@ -242,3 +242,11 @@ nouns, verbs and adjectives (no templates for adverbs or connectors). All
 Claude drafts; frequency ranks are estimates.
 Revisit if: Jerry's review finds words at the wrong level, or the pilot shows
 level 3 is too big a jump.
+
+## 2026-10-28 — "Ask about French" chat: shares the 50 daily checks, sarcastic tone
+Why: Jerry's choice. One question = one AI check from MAX_CHECKS_PER_DAY (like
+role-play), so one cap protects the Claude credit. The chat teases the learner
+like a sarcastic French friend (French humour, one short joke at most, never
+personal, kind again if the learner is upset). This is on purpose different
+from the sentence checker, which stays encouraging and never mocks.
+Revisit if: friends run out of checks because of the chat, or the jokes upset someone.

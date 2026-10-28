@@ -7,7 +7,8 @@ Going live, step by step: docs/SETUP.md.
 - [ ] Send the live link (https://french-daily-seven.vercel.app) to invited friends; practise daily on the phone — @jerry
 
 ## Next up
-- [ ] Review and merge PR "handoff 2026-10-24 (fourth session)" — @quantrungvu
+- [ ] Review and merge the zod security PR (feature/zod-fix-jerryhacam), then the "Ask about French" chatbot PR (feature/french-chat-jerryhacam) — @quantrungvu
+- [ ] Try the "Ask about French" chat in a browser and on the phone; review the sarcastic tone in prompts/ask-french.md (Claude draft) — @jerry
 - [ ] See *sale* (N.B. line) on the word page when it comes up (level 2) — @jerry
 - [ ] Review the Claude drafts in data/words.json: example_en and mini_text for ~310 words, forms — @jerry
 - [ ] Review the merged data/grammar_rules.json (quantrungvu's tag names, Jerry's explanations) and tests/sentences.json — @jerry
@@ -24,6 +25,7 @@ Going live, step by step: docs/SETUP.md.
 - [ ] Review and revise cost controls before public launch
 
 ## Done
+- [x] "Ask about French" chat bubble on every page (Claude answers any French question, sarcastic French tone; shares the 50 daily checks); zod security update; 120 tests (2026-10-28, Jerry)
 - [x] Invites table set up in Supabase (4 emails); tested level 5 and the 💡 tip on *se lever* on the phone; PRs #12, #13, #14 merged (2026-10-24, Jerry)
 - [x] Levels 3–5: 644 new words (977 total, 4 new themes), 6 adjective templates, 10 grammar rules, 10 AI grader tests; eval 77/77 (2026-10-24, Jerry)
 - [x] Word matcher: verbs need a real ending (dans ≠ danser, cuisine ≠ cuire); accents count where they change the word (ne ≠ né, sur ≠ sûr, sale ≠ salé); new optional `not_forms` (grand ≠ grandir) (2026-10-24, Jerry)
