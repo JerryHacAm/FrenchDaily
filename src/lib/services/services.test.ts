@@ -15,6 +15,7 @@ import { ConflictError } from "@/lib/store/types";
 import { createInitialState } from "@/lib/learning/state";
 import { REAL_CONTENT, testDeps, word } from "@/test/fixtures";
 import { getProfile, saveProfile } from "./account";
+import { ASK_HISTORY, askFrench, cleanHistory } from "./ask";
 import { getDailyNote, getProgress, writeWeeklyReport } from "./coach";
 import type { Deps, Result } from "./common";
 import {
@@ -226,6 +227,46 @@ describe("role-play service", () => {
   });
 });
 
+describe("ask about French", () => {
+  it("answers, uses one AI check and logs the question", async () => {
+    const { deps, store } = testDeps();
+    await onboard(deps);
+    const r = data(await askFrench(deps, { question: "What is apple in French?", history: [] }));
+    expect(r.answer).toContain("**la pomme**");
+    expect(r.checksLeft).toBe(TEST_RULES.maxChecksPerDay - 1);
+    expect((await store.listEvents("2000-01-01")).some((e) => e.type === "question_asked")).toBe(true);
+  });
+
+  it("refuses empty or too long questions, and stops at the daily cap", async () => {
+    const { deps } = testDeps({}, { ...TEST_RULES, maxChecksPerDay: 1 });
+    await onboard(deps);
+    expect((await askFrench(deps, { question: "   ", history: [] })).ok).toBe(false);
+    expect((await askFrench(deps, { question: "a".repeat(501), history: [] })).ok).toBe(false);
+    expect((await askFrench(deps, { question: "How do I say 25?", history: [] })).ok).toBe(true);
+    const r = await askFrench(deps, { question: "And 26?", history: [] });
+    expect(r.ok ? "" : r.error).toContain("No AI checks left");
+  });
+
+  it("sends the AI only well-formed, recent messages from the browser", async () => {
+    expect(cleanHistory("nope")).toEqual([]);
+    const junk = [null, { from: "admin", text: "x" }, { from: "ai", text: 5 }, { from: "learner", text: "  " }];
+    const many = Array.from({ length: 20 }, (_, i) => ({ from: i % 2 ? "ai" : "learner", text: `m${i}` }));
+    const clean = cleanHistory([...junk, ...many]);
+    expect(clean).toHaveLength(ASK_HISTORY);
+    expect(clean.at(-1)).toEqual({ from: "ai", text: "m19" });
+    let seen: unknown = null;
+    const { deps } = testDeps();
+    deps.ai = Object.assign(Object.create(deps.ai), {
+      askFrench: async (input: unknown) => {
+        seen = input;
+        return { data: { answer: "ok" }, usage: null, model: "mock", latencyMs: 0 };
+      },
+    });
+    data(await askFrench(deps, { question: "Et 27 ?", history: [{ from: "learner", text: "25 ?" }, { from: "ai", text: "**vingt-cinq**" }] }));
+    expect(seen).toMatchObject({ level: 1, messages: [{ text: "25 ?" }, { text: "**vingt-cinq**" }, { from: "learner", text: "Et 27 ?" }] });
+  });
+});
+
 describe("test code (TEST_BYPASS_CODE)", () => {
   it("skips every check and the AI: 5 words and a streak with no checks used", async () => {
     const { deps } = testDeps({ bypassCode: "ratt" });
@@ -326,6 +367,7 @@ describe("AI prompts, mock and cost", () => {
     expect(system).not.toMatch(/\d{4}-\d{2}-\d{2}T/); // nothing that would break prompt caching
     expect(loadPrompt("coach")).toContain("topMistakes");
     expect(loadPrompt("roleplay")).toContain("should_end");
+    expect(loadPrompt("ask-french")).toContain("**bold**");
   });
 
   it("mock catches article gender and elision", () => {

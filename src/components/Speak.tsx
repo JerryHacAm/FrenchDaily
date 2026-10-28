@@ -11,6 +11,17 @@ function frenchVoice(): SpeechSynthesisVoice | undefined {
   return voices.find((v) => v.lang === "fr-FR") ?? voices.find((v) => v.lang.startsWith("fr"));
 }
 
+export function speakFrench(text: string) {
+  if (!("speechSynthesis" in window)) return;
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = "fr-FR";
+  const voice = frenchVoice();
+  if (voice) u.voice = voice;
+  u.rate = 0.9;
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(u);
+}
+
 export function Speak({ text, label = "Listen", className }: { text: string; label?: string; className?: string }) {
   const [supported, setSupported] = useState(false);
   useEffect(() => {
@@ -22,15 +33,7 @@ export function Speak({ text, label = "Listen", className }: { text: string; lab
   return (
     <button
       type="button"
-      onClick={() => {
-        const u = new SpeechSynthesisUtterance(text);
-        u.lang = "fr-FR";
-        const voice = frenchVoice();
-        if (voice) u.voice = voice;
-        u.rate = 0.9;
-        window.speechSynthesis.cancel();
-        window.speechSynthesis.speak(u);
-      }}
+      onClick={() => speakFrench(text)}
       className={cx(
         "inline-flex min-h-9 items-center gap-1 rounded-lg px-2 text-sm text-accent hover:bg-accent-soft",
         className,

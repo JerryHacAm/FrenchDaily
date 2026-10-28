@@ -61,7 +61,12 @@ export const RoleplaySummarySchema = z.object({
   words_used: z.array(z.string()),
 });
 
+export const AskReplySchema = z.object({
+  answer: z.string().describe("The answer for the learner. French words and phrases in **bold**."),
+});
+
 export type CoachNoteOut = z.infer<typeof CoachNoteSchema>;
 export type WeeklyReportOut = z.infer<typeof WeeklyReportSchema>;
 export type RoleplayReplyOut = z.infer<typeof RoleplayReplySchema>;
 export type RoleplaySummaryOut = z.infer<typeof RoleplaySummarySchema>;
+export type AskReplyOut = z.infer<typeof AskReplySchema>;

@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+import { Suspense } from "react";
+import { AskFrenchSlot } from "@/components/AskFrenchSlot";
 import { Nav } from "@/components/Nav";
 import { AI_MODE, APP_MODE, STORAGE } from "@/lib/config";
 import "./globals.css";
@@ -50,7 +52,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           </div>
         </header>
         <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-6 sm:py-8">{children}</main>
-        <footer className="mx-auto w-full max-w-3xl px-4 pb-8 text-xs text-muted">
+        <footer className="mx-auto w-full max-w-3xl px-4 pb-24 text-xs text-muted">
           <div className="flex flex-wrap gap-x-4 gap-y-1 border-t border-line pt-4">
             <span>French Daily · Jerry &amp; quantrungvu</span>
             <Link href="/stats" className="hover:text-foreground">
@@ -63,6 +65,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             )}
           </div>
         </footer>
+        <Suspense fallback={null}>
+          <AskFrenchSlot />
+        </Suspense>
       </body>
     </html>
   );

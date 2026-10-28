@@ -6,6 +6,7 @@
 
 import { appDeps } from "@/lib/deps";
 import { saveProfile } from "@/lib/services/account";
+import { askFrench } from "@/lib/services/ask";
 import { writeWeeklyReport } from "@/lib/services/coach";
 import type { Result } from "@/lib/services/common";
 import {
@@ -114,4 +115,9 @@ export async function finishRoleplayAction() {
 }
 export async function closeRoleplayAction() {
   return withDeps((d) => closeRoleplay(d));
+}
+
+// Ask about French ------------------------------------------------------------
+export async function askFrenchAction(question: string, history: unknown) {
+  return withDeps((d) => askFrench(d, { question: str(question, 600), history: safeContext({ history }).history }));
 }

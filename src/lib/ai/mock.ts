@@ -1,10 +1,10 @@
-import type { Content, Word } from "@/lib/content/types";
+import { displayWord, type Content, type Word } from "@/lib/content/types";
 import { fallbackCoachNote, type CoachStats } from "@/lib/learning/coach";
 import type { RawFeedback } from "@/lib/learning/feedback";
 import type { Mistake } from "@/lib/learning/state";
 import { findWordsUsed, normalize } from "@/lib/learning/text";
-import type { CoachNoteOut, RoleplayReplyOut, RoleplaySummaryOut, WeeklyReportOut } from "./schemas";
-import type { AiClient, AiResult, CheckInput, RoleplayInput } from "./types";
+import type { AskReplyOut, CoachNoteOut, RoleplayReplyOut, RoleplaySummaryOut, WeeklyReportOut } from "./schemas";
+import type { AiClient, AiResult, AskInput, CheckInput, RoleplayInput } from "./types";
 
 // Fake AI for development and tests (AI_MODE=mock, the default without an
 // API key). It is NOT a French checker: it only catches two easy beginner
@@ -148,5 +148,18 @@ export class MockAi implements AiClient {
       corrections: corrections.slice(0, 5),
       words_used: [...used],
     });
+  }
+
+  /** Only knows the word list: "What is apple in French?" → la pomme. */
+  async askFrench(input: AskInput): Promise<AiResult<AskReplyOut>> {
+    const spaced = (s: string) => ` ${s.toLowerCase().replace(/[^\p{L}' ]+/gu, " ").replace(/\s+/g, " ")} `;
+    const question = spaced(input.messages.at(-1)?.text ?? "");
+    const best = this.content.words
+      .filter((w) => question.includes(spaced(w.english.replace(/^to /, ""))))
+      .sort((a, b) => b.english.length - a.english.length)[0];
+    const answer = best
+      ? `"${best.english}" in French is **${displayWord(best)}**.\n\nExample: **${best.example}**\n\n(Mock mode: real answers need the Claude API.)`
+      : 'Mock mode: I can only translate words from the word list, like "What is apple in French?". Real answers need the Claude API.';
+    return result({ answer });
   }
 }

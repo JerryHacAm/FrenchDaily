@@ -52,7 +52,8 @@ export type EventType =
   | "batch_finished"
   | "roleplay_turn"
   | "roleplay_finished"
-  | "report_sent";
+  | "report_sent"
+  | "question_asked";
 
 export type EventRecord = {
   id: string;

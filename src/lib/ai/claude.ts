@@ -5,6 +5,7 @@ import type * as z from "zod";
 import type { Content } from "@/lib/content/types";
 import type { CoachStats } from "@/lib/learning/coach";
 import {
+  askUserMessage,
   checkSystemPrompt,
   checkUserMessage,
   coachSystemPrompt,
@@ -15,13 +16,14 @@ import {
   roleplayTurnMessage,
 } from "./prompts";
 import {
+  AskReplySchema,
   CoachNoteSchema,
   FeedbackSchema,
   RoleplayReplySchema,
   RoleplaySummarySchema,
   WeeklyReportSchema,
 } from "./schemas";
-import { AiError, type AiClient, type AiResult, type CheckInput, type RoleplayInput, type Usage } from "./types";
+import { AiError, type AiClient, type AiResult, type AskInput, type CheckInput, type RoleplayInput, type Usage } from "./types";
 
 // Real Claude API calls (server only). Model and effort come from .env
 // (CLAUDE_MODEL, CLAUDE_EFFORT); never hardcode a model name here.
@@ -122,5 +124,9 @@ export class ClaudeAi implements AiClient {
       roleplaySystemPrompt(loadPrompt("roleplay"), this.content.grammarRules),
       roleplaySummaryMessage(input),
     );
+  }
+
+  askFrench(input: AskInput) {
+    return this.call(AskReplySchema, loadPrompt("ask-french").trim(), askUserMessage(input));
   }
 }
