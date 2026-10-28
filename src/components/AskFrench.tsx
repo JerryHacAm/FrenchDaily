@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, useTransition, type ReactNode } from "react";
 import { askFrenchAction } from "@/app/actions";
 import type { AskMessage } from "@/lib/ai/types";
-import { speakFrench } from "./Speak";
+import { loadVoices, NO_FRENCH_VOICE, speakFrench } from "./Speak";
 import { cx } from "./ui";
 
 // "Ask about French": a round button at the bottom right of every page that
@@ -15,7 +15,7 @@ const MAX_CHARS = 500;
 const SUGGESTIONS = ["What is “apple” in French?", "How do I say 25?", "When do I use “tu” or “vous”?"];
 
 /** **bold** = French (tap to hear). Lines starting with "- " become a list. */
-function renderAnswer(text: string): ReactNode {
+function renderAnswer(text: string, speak: (fr: string) => void): ReactNode {
   const inline = (line: string) =>
     line.split(/\*\*(.+?)\*\*/g).map((part, i) =>
       i % 2 === 1 ? (
@@ -24,7 +24,7 @@ function renderAnswer(text: string): ReactNode {
           type="button"
           lang="fr"
           title="Tap to hear"
-          onClick={() => speakFrench(part)}
+          onClick={() => speak(part)}
           className="fr inline font-semibold text-accent underline decoration-dotted underline-offset-2"
         >
           {part}
@@ -73,9 +73,17 @@ export function AskFrench() {
   }, [messages.length, pending, open]);
 
   useEffect(() => {
+    loadVoices();
+  }, []);
+
+  useEffect(() => {
     // Not on phones: the keyboard would pop up over the chat.
     if (open && window.matchMedia("(pointer: fine)").matches) input.current?.focus();
   }, [open]);
+
+  function speak(fr: string) {
+    if (!speakFrench(fr)) setError(NO_FRENCH_VOICE);
+  }
 
   function ask(question: string) {
     const q = question.trim();
@@ -166,7 +174,7 @@ export function AskFrench() {
                     m.from === "learner" ? "whitespace-pre-wrap bg-accent text-accent-fg" : "bg-surface-2",
                   )}
                 >
-                  {m.from === "learner" ? m.text : renderAnswer(m.text)}
+                  {m.from === "learner" ? m.text : renderAnswer(m.text, speak)}
                 </div>
               </div>
             ))}
