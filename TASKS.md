@@ -8,7 +8,7 @@ Going live, step by step: docs/SETUP.md.
 
 ## Next up
 - [ ] Review and merge the zod security PR (feature/zod-fix-jerryhacam), then the "Ask about French" chatbot PR (feature/french-chat-jerryhacam) — @quantrungvu
-- [ ] Try the "Ask about French" chat in a browser and on the phone; review the sarcastic tone in prompts/ask-french.md (Claude draft) — @jerry
+- [ ] Try the "Ask about French" chat in a browser and on the phone; check the sarcastic jokes stay varied (prompts/ask-french.md) — @jerry
 - [ ] See *sale* (N.B. line) on the word page when it comes up (level 2) — @jerry
 - [ ] Review the Claude drafts in data/words.json: example_en and mini_text for ~310 words, forms — @jerry
 - [ ] Review the merged data/grammar_rules.json (quantrungvu's tag names, Jerry's explanations) and tests/sentences.json — @jerry
