@@ -3,7 +3,7 @@ import path from "node:path";
 import type { GrammarRule } from "@/lib/content/types";
 import { displayWord } from "@/lib/content/types";
 import type { CoachStats } from "@/lib/learning/coach";
-import type { CheckInput, RoleplayInput } from "./types";
+import type { AskInput, CheckInput, RoleplayInput } from "./types";
 
 // Builds the text sent to Claude. The instructions live in /prompts/*.md
 // (Jerry owns them, edit those files, not this one). This file only adds the
@@ -15,7 +15,7 @@ import type { CheckInput, RoleplayInput } from "./types";
 const PROMPT_DIR = path.join(process.cwd(), "prompts");
 const cache = new Map<string, string>();
 
-export function loadPrompt(name: "check-sentence" | "coach" | "roleplay"): string {
+export function loadPrompt(name: "check-sentence" | "coach" | "roleplay" | "ask-french"): string {
   let text = cache.get(name);
   if (text === undefined) {
     text = fs.readFileSync(path.join(PROMPT_DIR, `${name}.md`), "utf8");
@@ -126,5 +126,14 @@ export function roleplaySummaryMessage(input: RoleplayInput): string {
     "The role-play is over. Write the end-of-chat feedback for the learner.",
     scenarioBlock(input),
     fence("conversation", transcript(input)),
+  ].join("\n\n");
+}
+
+export function askUserMessage(input: AskInput): string {
+  const chat = input.messages.map((m) => (m.from === "ai" ? `YOU: ${m.text}` : `LEARNER: ${m.text}`)).join("\n\n");
+  return [
+    "Answer the learner's last message.",
+    ["<learner>", `level: ${input.level}`, `learner_gender: ${input.learnerGender ?? "not set"}`, "</learner>"].join("\n"),
+    fence("conversation", chat),
   ].join("\n\n");
 }

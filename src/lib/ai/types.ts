@@ -2,9 +2,9 @@ import type { Scenario, Word } from "@/lib/content/types";
 import type { CoachStats } from "@/lib/learning/coach";
 import type { RawFeedback } from "@/lib/learning/feedback";
 import type { RoleplayMessage } from "@/lib/learning/state";
-import type { CoachNoteOut, RoleplayReplyOut, RoleplaySummaryOut, WeeklyReportOut } from "./schemas";
+import type { AskReplyOut, CoachNoteOut, RoleplayReplyOut, RoleplaySummaryOut, WeeklyReportOut } from "./schemas";
 
-export type AiPurpose = "check" | "coach" | "weekly" | "roleplay_turn" | "roleplay_summary";
+export type AiPurpose = "check" | "coach" | "weekly" | "roleplay_turn" | "roleplay_summary" | "ask";
 
 export type Usage = {
   inputTokens: number;
@@ -36,6 +36,15 @@ export type RoleplayInput = {
   maxTurns: number;
 };
 
+export type AskMessage = { from: "learner" | "ai"; text: string };
+
+export type AskInput = {
+  level: number;
+  learnerGender: "male" | "female" | null;
+  /** The chat so far; the last message is the learner's new question. */
+  messages: AskMessage[];
+};
+
 export interface AiClient {
   readonly mode: "claude" | "mock";
   checkSentence(input: CheckInput): Promise<AiResult<RawFeedback>>;
@@ -43,6 +52,7 @@ export interface AiClient {
   weeklyReport(stats: CoachStats): Promise<AiResult<WeeklyReportOut>>;
   roleplayTurn(input: RoleplayInput): Promise<AiResult<RoleplayReplyOut>>;
   roleplaySummary(input: RoleplayInput): Promise<AiResult<RoleplaySummaryOut>>;
+  askFrench(input: AskInput): Promise<AiResult<AskReplyOut>>;
 }
 
 /** A failure we can explain to the learner in plain words. */
