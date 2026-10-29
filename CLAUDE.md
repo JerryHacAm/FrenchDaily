@@ -1,6 +1,6 @@
 # French Daily
 
-See @README.md for the full project description
+README.md has the full project description (open it when a task needs the details; it is not auto-loaded).
 
 ## Team
 - Jerry: idea owner, learner, owns the AI feedback prompt.
@@ -47,9 +47,6 @@ See @README.md for the full project description
   at https://docs.claude.com instead of guessing.
 
 ## Commands
-- Install: `npm install`
-- Run: `npm run dev` (then open http://localhost:3000)
-- Test: `npm test` (Vitest, `src/**/*.test.ts`)
 - Before pushing: `npm run check` (type check + lint + tests) and `npm run build`
 - AI grader test: `npm run eval` (real AI calls if CLAUDE_API_KEY is set; run
   before changing prompts/ or CLAUDE_MODEL)
