@@ -7,6 +7,9 @@ Going live, step by step: docs/SETUP.md.
 - [ ] Send the live link (https://french-daily-seven.vercel.app) to invited friends; practise daily on the phone — @jerry
 
 ## Next up
+- [ ] Review and merge the template fix PR (feature/template-fit-jerryhacam) — @quantrungvu
+- [ ] After deploy: do a full level-1 batch on the phone and check every structure fits the word — @jerry
+- [ ] Decide: reports list on the Pilot stats page? (reports are only in Supabase → `reports` table now) — @jerry
 - [ ] Review and merge the zod security PR (feature/zod-fix-jerryhacam), then the "Ask about French" chatbot PR (feature/french-chat-jerryhacam) — @quantrungvu
 - [ ] Try the "Ask about French" chat in a browser and on the phone; check the sarcastic jokes stay varied (prompts/ask-french.md) — @jerry
 - [ ] See *sale* (N.B. line) on the word page when it comes up (level 2) — @jerry
