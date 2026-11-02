@@ -123,6 +123,16 @@ describe("templates", () => {
     const second = pickTemplates(REAL_CONTENT.structures, "noun", 1, first.map((x) => x.id), seededRng(5));
     expect(second.some((x) => first.map((f) => f.id).includes(x.id))).toBe(false);
   });
+
+  it("repeats a recent template rather than use one made for another part of speech", () => {
+    // Bug: once every level-1 verb template was recent, "manger" got
+    // "Subject + être + adjective" (adjective only).
+    const verbTemplatesSeen = REAL_CONTENT.structures.filter((s) => s.fits_pos.includes("verb")).map((s) => s.id);
+    for (let seed = 1; seed <= 20; seed++) {
+      const t = pickTemplates(REAL_CONTENT.structures, "verb", 1, verbTemplatesSeen, seededRng(seed));
+      expect(t.every((x) => x.fits_pos.includes("verb"))).toBe(true);
+    }
+  });
 });
 
 describe("word bank, quiet words, words you can use", () => {

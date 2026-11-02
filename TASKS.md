@@ -7,6 +7,9 @@ Going live, step by step: docs/SETUP.md.
 - [ ] Send the live link (https://french-daily-seven.vercel.app) to invited friends; practise daily on the phone — @jerry
 
 ## Next up
+- [ ] Review and merge the template fix PR (feature/template-fit-jerryhacam) — @quantrungvu
+- [ ] After deploy: do a full level-1 batch on the phone and check every structure fits the word — @jerry
+- [ ] Decide: reports list on the Pilot stats page? (reports are only in Supabase → `reports` table now) — @jerry
 - [ ] Review and merge the zod security PR (feature/zod-fix-jerryhacam), then the "Ask about French" chatbot PR (feature/french-chat-jerryhacam) — @quantrungvu
 - [ ] Try the "Ask about French" chat in a browser and on the phone; check the sarcastic jokes stay varied (prompts/ask-french.md) — @jerry
 - [ ] See *sale* (N.B. line) on the word page when it comes up (level 2) — @jerry
@@ -25,6 +28,7 @@ Going live, step by step: docs/SETUP.md.
 - [ ] Review and revise cost controls before public launch
 
 ## Done
+- [x] Bug fixes from phone testing: a word no longer gets a structure made for another word type (manger got "être + adjective"); removed "Start like this" (it showed the example's verb, e.g. "Je mange" for boire); 121 tests (2026-11-02, Jerry)
 - [x] "Ask about French" chat bubble on every page (Claude answers any French question, sarcastic French tone; shares the 50 daily checks); zod security update; 120 tests (2026-10-28, Jerry)
 - [x] Invites table set up in Supabase (4 emails); tested level 5 and the 💡 tip on *se lever* on the phone; PRs #12, #13, #14 merged (2026-10-24, Jerry)
 - [x] Levels 3–5: 644 new words (977 total, 4 new themes), 6 adjective templates, 10 grammar rules, 10 AI grader tests; eval 77/77 (2026-10-24, Jerry)

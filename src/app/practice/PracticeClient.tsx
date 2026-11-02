@@ -338,11 +338,6 @@ function ItemStep({
                 {item.exampleEn && <span className="block text-xs">{item.exampleEn}</span>}
               </div>
             )}
-            {item.starter && (
-              <div className="mt-1 text-muted">
-                Start like this: <span className="fr">{item.starter}</span>
-              </div>
-            )}
           </div>
           {structureNote && <Notice tone="warn">{structureNote}</Notice>}
         </>

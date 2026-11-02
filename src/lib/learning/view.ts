@@ -5,7 +5,7 @@ import type { Rules } from "./rules";
 import { RETYPE_TRIES_BEFORE_SKIP } from "./session";
 import { getDaily, type BatchReason, type Feedback, type ItemStage, type LearnerState } from "./state";
 import { visibleStreak } from "./streak";
-import { exampleEnFor, exampleFor, starterFor } from "./templates";
+import { exampleEnFor, exampleFor } from "./templates";
 import { wordBank, type WordBankEntry } from "./usage";
 
 // Turns the saved state into exactly what the practice screen shows.
@@ -29,7 +29,6 @@ export type ItemView = {
   pattern: string;
   example: string | null;
   exampleEn: string | null;
-  starter: string | null;
   stage: ItemStage;
   sentence: string | null;
   /** The learner's failed fix try, shown next to the answer. */
@@ -106,7 +105,6 @@ export function buildPracticeView(state: LearnerState, content: Content, rules: 
             pattern: t?.pattern ?? "",
             example: t ? exampleFor(t, word.pos) : null,
             exampleEn: t ? exampleEnFor(t, word.pos) : null,
-            starter: t && level <= 1 ? starterFor(t, word.pos) : null,
             stage: it.stage,
             sentence: it.sentence,
             fixAttempt: it.fixAttempt ?? null,

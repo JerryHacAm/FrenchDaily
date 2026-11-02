@@ -15,11 +15,12 @@ function candidates(
   level: number,
 ): Structure[][] {
   // Groups in order of preference: exact level, then lower levels (nearest
-  // first), then any template of this type at the level (pos ignored).
+  // first). Never a template made for another part of speech: repeating a
+  // recent template is better than "être + adjective" for the verb manger.
+  // content.test.ts checks every word has enough fitting templates.
   const fits = structures.filter((s) => s.type === type && s.fits_pos.includes(pos));
   const groups: Structure[][] = [fits.filter((s) => s.level === level)];
   for (let l = level - 1; l >= 1; l--) groups.push(fits.filter((s) => s.level === l));
-  groups.push(structures.filter((s) => s.type === type && s.level <= level));
   return groups;
 }
 
@@ -72,12 +73,4 @@ export function exampleFor(s: Structure, pos: Pos): string | null {
 export function exampleEnFor(s: Structure, pos: Pos): string | null {
   const ex = s.examples[pos] ?? Object.values(s.examples)[0];
   return ex ? ex[2] : null;
-}
-
-/** First words of the example, as a "sentence starter" for level 1. */
-export function starterFor(s: Structure, pos: Pos): string | null {
-  const ex = exampleFor(s, pos);
-  if (!ex) return null;
-  const words = ex.split(/\s+/);
-  return words.slice(0, Math.min(2, words.length - 1)).join(" ") + " …";
 }
