@@ -11,11 +11,12 @@ describe("content files in /data", () => {
     expect(validateContent(rawContent())).toEqual([]);
   });
 
-  it("give every word 2 statement + 1 question templates at every level", () => {
+  it("give every word 2 statement + 1 question templates at every level, made for its part of speech", () => {
     for (const w of REAL_CONTENT.words) {
       for (let level = 1; level <= 5; level++) {
         const t = pickTemplates(REAL_CONTENT.structures, w.pos, level, [], seededRng(1));
         expect(t.map((x) => x.type)).toEqual(["statement", "statement", "question"]);
+        expect(t.every((x) => x.fits_pos.includes(w.pos) && x.examples[w.pos]), `${w.id} level ${level}`).toBe(true);
       }
     }
   });
