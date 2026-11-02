@@ -251,3 +251,9 @@ joking even if the learner complains: the app is for a few friends who want
 that. The answer always comes first and stays correct. This is on purpose
 different from the sentence checker, which stays encouraging and never mocks.
 Revisit if: friends run out of checks because of the chat, or the jokes upset someone.
+
+## 2026-11-02 — No "Start like this" starter at level 1
+Why: Jerry's choice. The starter was the first words of the template's
+example, which is about a sample word, so it misled (boire showed "Je
+mange …"). The structure and the example are enough.
+Revisit if: absolute beginners get stuck on the first words again.
