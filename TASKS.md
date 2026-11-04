@@ -7,11 +7,10 @@ Going live, step by step: docs/SETUP.md.
 - [ ] Send the live link (https://french-daily-seven.vercel.app) to invited friends; practise daily on the phone — @jerry
 
 ## Next up
-- [ ] Review and merge the template fix PR (feature/template-fit-jerryhacam) — @quantrungvu
+- [ ] Review and merge the chat joke bubble PR (feature/chat-teaser-jerryhacam) — @quantrungvu
+- [ ] After deploy: check the joke bubble on the phone; edit the jokes in src/components/askTeasers.ts if wanted (Claude draft) — @jerry
 - [ ] After deploy: do a full level-1 batch on the phone and check every structure fits the word — @jerry
 - [ ] Decide: reports list on the Pilot stats page? (reports are only in Supabase → `reports` table now) — @jerry
-- [ ] Review and merge the zod security PR (feature/zod-fix-jerryhacam), then the "Ask about French" chatbot PR (feature/french-chat-jerryhacam) — @quantrungvu
-- [ ] Try the "Ask about French" chat in a browser and on the phone; check the sarcastic jokes stay varied (prompts/ask-french.md) — @jerry
 - [ ] See *sale* (N.B. line) on the word page when it comes up (level 2) — @jerry
 - [ ] Review the Claude drafts in data/words.json: example_en and mini_text for ~310 words, forms — @jerry
 - [ ] Review the merged data/grammar_rules.json (quantrungvu's tag names, Jerry's explanations) and tests/sentences.json — @jerry
@@ -28,6 +27,7 @@ Going live, step by step: docs/SETUP.md.
 - [ ] Review and revise cost controls before public launch
 
 ## Done
+- [x] Chat joke bubble: a short joke pops up above the chat button now and then (at most every 15 min) so learners notice the chat; phone check of the chat passed (jokes varied, Send button not covered, French voice); 123 tests (2026-11-04, Jerry)
 - [x] Bug fixes from phone testing: a word no longer gets a structure made for another word type (manger got "être + adjective"); removed "Start like this" (it showed the example's verb, e.g. "Je mange" for boire); 121 tests (2026-11-02, Jerry)
 - [x] "Ask about French" chat bubble on every page (Claude answers any French question, sarcastic French tone; shares the 50 daily checks); zod security update; 120 tests (2026-10-28, Jerry)
 - [x] Invites table set up in Supabase (4 emails); tested level 5 and the 💡 tip on *se lever* on the phone; PRs #12, #13, #14 merged (2026-10-24, Jerry)
