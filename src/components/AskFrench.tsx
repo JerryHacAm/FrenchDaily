@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, useTransition, type ReactNode } from "react";
 import { askFrenchAction } from "@/app/actions";
 import type { AskMessage } from "@/lib/ai/types";
+import { pickTeaser } from "./askTeasers";
 import { loadVoices, NO_FRENCH_VOICE, speakFrench } from "./Speak";
 import { cx } from "./ui";
 
@@ -13,6 +14,29 @@ import { cx } from "./ui";
 const MAX_CHARS = 500;
 
 const SUGGESTIONS = ["What is “apple” in French?", "How do I say 25?", "When do I use “tu” or “vous”?"];
+
+// The joke bubble next to the button: shows after a short wait, hides by
+// itself, and at most once per TEASER_GAP_MS so it doesn't nag.
+const TEASER_DELAY_MS = 6_000;
+const TEASER_SHOW_MS = 10_000;
+const TEASER_GAP_MS = 15 * 60_000;
+const TEASER_KEY = "askTeaserShownAt";
+
+function teaserShownRecently(now: number): boolean {
+  try {
+    return now - Number(localStorage.getItem(TEASER_KEY) ?? 0) < TEASER_GAP_MS;
+  } catch {
+    return false; // Storage blocked (private mode): just show it.
+  }
+}
+
+function rememberTeaserShown(now: number) {
+  try {
+    localStorage.setItem(TEASER_KEY, String(now));
+  } catch {
+    // Storage blocked: the teaser may show again sooner, which is harmless.
+  }
+}
 
 /** **bold** = French (tap to hear). Lines starting with "- " become a list. */
 function renderAnswer(text: string, speak: (fr: string) => void): ReactNode {
@@ -64,8 +88,23 @@ export function AskFrench() {
   const [error, setError] = useState<string | null>(null);
   const [checksLeft, setChecksLeft] = useState<number | null>(null);
   const [pending, start] = useTransition();
+  const [teaser, setTeaser] = useState<string | null>(null);
   const bottom = useRef<HTMLDivElement>(null);
   const input = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    if (teaserShownRecently(Date.now())) return;
+    let hide: ReturnType<typeof setTimeout> | undefined;
+    const show = setTimeout(() => {
+      rememberTeaserShown(Date.now());
+      setTeaser(pickTeaser());
+      hide = setTimeout(() => setTeaser(null), TEASER_SHOW_MS);
+    }, TEASER_DELAY_MS);
+    return () => {
+      clearTimeout(show);
+      clearTimeout(hide);
+    };
+  }, []);
 
   useEffect(() => {
     // Block body on purpose: newer browsers return a Promise from scrollIntoView.
@@ -228,9 +267,38 @@ export function AskFrench() {
         </div>
       )}
 
+      {teaser && !open && (
+        <div
+          className="fixed right-4 z-50 flex w-max max-w-[min(15rem,calc(100vw-2rem))] items-start gap-1 rounded-2xl rounded-br-sm bg-accent py-1.5 pl-3.5 pr-1 text-sm leading-snug text-accent-fg shadow-lg transition duration-300 starting:translate-y-2 starting:opacity-0"
+          style={{ bottom: "calc(4.75rem + env(safe-area-inset-bottom))" }}
+        >
+          <button
+            type="button"
+            onClick={() => {
+              setTeaser(null);
+              setOpen(true);
+            }}
+            className="py-1 text-left"
+          >
+            {teaser}
+          </button>
+          <button
+            type="button"
+            onClick={() => setTeaser(null)}
+            aria-label="Hide"
+            className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full hover:bg-white/15"
+          >
+            ×
+          </button>
+        </div>
+      )}
+
       <button
         type="button"
-        onClick={() => setOpen(!open)}
+        onClick={() => {
+          setTeaser(null);
+          setOpen(!open);
+        }}
         aria-label={open ? "Close Ask about French" : "Ask about French"}
         aria-expanded={open}
         className="fixed right-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-accent text-accent-fg shadow-lg transition hover:scale-105"
